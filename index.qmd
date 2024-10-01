@@ -1,8 +1,8 @@
 ---
-title: "About Me"
+title: "C Andrew Basham"
 about:
   id: me
-  template: broadside
+  template: vapor
   image: img/profile.png
 ---
 
