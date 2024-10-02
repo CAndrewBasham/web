@@ -1,7 +1,7 @@
 project:
   type: website
   output-dir: docs
-  
+
 website:
   title: "C. Andrew Basham"
   navbar:
@@ -9,6 +9,25 @@ website:
       - href: index.qmd
         text: Home
       - projects.qmd
+      - text: Projects
+      - text: Home
+        href: index.qmd
+      - text: CV
+        href: cv/index.qmd
+      - text: Job Applications
+        href: job_applications/index.qmd
+      - text: Scientific and medical writing
+        href: sci_med_writing/index.qmd
+      - text: Blog
+        href: blog/index.qmd
+      - text: Contact Me
+        href: contact/index.qmd
+      - text: Software
+        href: software/index.qmd
+      - text: Media
+        href: media/index.qmd
+      - projects.qmd
+    
     tools:      
       - icon: twitter
         href: https://twitter.com/CAndrewBasham/
@@ -17,11 +36,9 @@ website:
   page-footer:
     right: "Built with [Quarto](https://quarto.org/)"
     left: "&copy; Copyright 2024, C. Andrew Basham"
-
 format:
   html:
     theme: vapor
     toc: true
 
 editor: source
-
