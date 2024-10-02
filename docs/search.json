@@ -18,14 +18,14 @@
     "href": "index.html",
     "title": "C Andrew Basham",
     "section": "",
-    "text": "Population and Public Health University of British Columbia\nEnrolled in Program: September 2017 Completed Program Requirements: October 2021 Convocation and Graduation: November 2021\nThesis:\n\n\n\n\nResearch Fellow in Medicine, Harvard Medical School\nThanks for checking out my web site!"
+    "text": "Population and Public Health, University of British Columbia\nEnrolled: September 2017 | Completed: October 2021 | Graduated: November 2021\nThesis: Tuberculosis Survivor Health\n\n\n\nCommunity Health Sciences, University of Manitoba\nEnrolled: September 2010 | Completed: January 2016 | Graduated: February 2016\nThesis: Tuberculosis prevention, diagnosis, and care in Manitoba, 2008-2010: a performance analysis\n\n\n\nEnvironmental/Urban Studies, University of Winnipeg\nEnrolled: September 2004 | Completed: March 2008 | Graduated: May 2008\nProgram Concentration: Issues in Sustainability"
   },
   {
     "objectID": "index.html#education",
     "href": "index.html#education",
     "title": "C Andrew Basham",
     "section": "",
-    "text": "Population and Public Health University of British Columbia\nEnrolled in Program: September 2017 Completed Program Requirements: October 2021 Convocation and Graduation: November 2021\nThesis:"
+    "text": "Population and Public Health, University of British Columbia\nEnrolled: September 2017 | Completed: October 2021 | Graduated: November 2021\nThesis: Tuberculosis Survivor Health\n\n\n\nCommunity Health Sciences, University of Manitoba\nEnrolled: September 2010 | Completed: January 2016 | Graduated: February 2016\nThesis: Tuberculosis prevention, diagnosis, and care in Manitoba, 2008-2010: a performance analysis\n\n\n\nEnvironmental/Urban Studies, University of Winnipeg\nEnrolled: September 2004 | Completed: March 2008 | Graduated: May 2008\nProgram Concentration: Issues in Sustainability"
   },
   {
     "objectID": "index.html#experience",
@@ -33,5 +33,33 @@
     "title": "C Andrew Basham",
     "section": "",
     "text": "Research Fellow in Medicine, Harvard Medical School"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Descriptive and causal inference about post-critical illness survivor health, quality of life, and socioeconomic outcomes;"
+  },
+  {
+    "objectID": "projects.html#survivorship-epidemiology",
+    "href": "projects.html#survivorship-epidemiology",
+    "title": "Projects",
+    "section": "",
+    "text": "Descriptive and causal inference about post-critical illness survivor health, quality of life, and socioeconomic outcomes;"
+  },
+  {
+    "objectID": "projects.html#foundations-for-pharmacoequity",
+    "href": "projects.html#foundations-for-pharmacoequity",
+    "title": "Projects",
+    "section": "Foundations for Pharmacoequity:",
+    "text": "Foundations for Pharmacoequity:\nData provenance, lineage, and epidemiological analysis methods for health equity, focusing on race and ethnicity data use in pharmacoepidemiology;"
+  },
+  {
+    "objectID": "projects.html#causing-careers",
+    "href": "projects.html#causing-careers",
+    "title": "Projects",
+    "section": "Causing Careers:",
+    "text": "Causing Careers:\nepidemiological approaches to education and career planning, delivery, and evaluation."
   }
 ]

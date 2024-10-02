@@ -9,8 +9,7 @@ website:
       - href: index.qmd
         text: Home
       - projects.qmd
-    tools:
-      
+    tools:      
       - icon: twitter
         href: https://twitter.com/CAndrewBasham/
       - icon: github

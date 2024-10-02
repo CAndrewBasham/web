@@ -2,8 +2,11 @@
 title: "Projects"
 ---
 
-## Project 1
+## Survivorship Epidemiology: 
+Descriptive and causal inference about post-critical illness survivor health, quality of life, and socioeconomic outcomes;
 
-## Project 2
+## Foundations for Pharmacoequity: 
+Data provenance, lineage, and epidemiological analysis methods for health equity, focusing on race and ethnicity data use in pharmacoepidemiology; 
 
-## Project 3
+## Causing Careers:
+epidemiological approaches to education and career planning, delivery, and evaluation. 

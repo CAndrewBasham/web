@@ -2,11 +2,8 @@
 title: "C Andrew Basham"
 about:
   id: me
-  template: vapor
+  template: broadside
   image: img/profile.png
-editor: 
-  markdown: 
-    wrap: 72
 ---
 
 ## Education
