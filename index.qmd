@@ -4,25 +4,44 @@ about:
   id: me
   template: vapor
   image: img/profile.png
+editor: 
+  markdown: 
+    wrap: 72
 ---
-
-:::{#me}
 
 ## Education
 
-### Doctor of Philosophy (2021)
-Population and Public Health
-University of British Columbia
+### Doctor of Philosophy (2021) 
 
-Enrolled in Program: September 2017
-Completed Program Requirements: October 2021
-Convocation and Graduation: November 2021
+Population and Public Health, University of British Columbia
 
-Thesis: 
+Enrolled: September 2017 \| Completed: October 2021 \| Graduated:
+November 2021
 
-## Experience
-Research Fellow in Medicine, Harvard Medical School
+Thesis: [Tuberculosis Survivor
+Health](https://dx.doi.org/10.14288/1.0402446)
 
-:::
+### Master of Science (2016)
 
-Thanks for checking out my web site!
+Community Health Sciences, University of Manitoba
+
+Enrolled: September 2010 \| Completed: January 2016 \| Graduated:
+February 2016
+
+Thesis: [Tuberculosis prevention, diagnosis, and care in Manitoba,
+2008-2010: a performance analysis](http://hdl.handle.net/1993/31050)
+
+### Bachelor of Arts (2008)
+
+Environmental/Urban Studies, University of Winnipeg
+
+Enrolled: September 2004 \| Completed: March 2008 \| Graduated: May 2008
+
+Program Concentration: Issues in Sustainability
+
+# Experience
+
+### Research Fellow in Medicine - Pharmacoepidemiology
+
+Division of Pharmacoepidemiology and Pharmacoeconomics Brigham and
+Women's Hospital and Harvard Medical School March 2022 - June 2024
