@@ -8,26 +8,11 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - projects.qmd
+      - href: projects.qmd
       - text: Projects
-      - text: Home
-        href: index.qmd
+      - href: cv/index.qmd
       - text: CV
-        href: cv/index.qmd
-      - text: Job Applications
-        href: job_applications/index.qmd
-      - text: Scientific and medical writing
-        href: sci_med_writing/index.qmd
-      - text: Blog
-        href: blog/index.qmd
-      - text: Contact Me
-        href: contact/index.qmd
-      - text: Software
-        href: software/index.qmd
-      - text: Media
-        href: media/index.qmd
-      - projects.qmd
-    
+      
     tools:      
       - icon: twitter
         href: https://twitter.com/CAndrewBasham/
@@ -42,3 +27,5 @@ format:
     toc: true
 
 editor: source
+
+
