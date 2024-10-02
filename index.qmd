@@ -2,17 +2,26 @@
 title: "C Andrew Basham"
 about:
   id: me
-  template: vapor
+  template: broadside
   image: img/profile.png
 ---
 
 :::{#me}
 
-## Goals
-
 ## Education
 
+### Doctor of Philosophy (2021)
+Population and Public Health
+University of British Columbia
+
+Enrolled in Program: September 2017
+Completed Program Requirements: October 2021
+Convocation and Graduation: November 2021
+
+Thesis: 
+
 ## Experience
+Research Fellow in Medicine, Harvard Medical School
 
 :::
 

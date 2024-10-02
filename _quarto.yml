@@ -10,8 +10,8 @@ website:
         text: Home
       - projects.qmd
     tools:
-      - icon: osf
-        href: https://osf.io/mny8b/
+      - icon: twitter
+        href: https://twitter.com/CAndrewBasham/
       - icon: github
         href: https://github.com/CAndrewBasham/web
   page-footer:
