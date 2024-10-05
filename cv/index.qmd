@@ -3,8 +3,6 @@ title: "Curriculum Vitae"
 author: "C. Andrew Basham, BA, MSc, PhD"
 date: "September 27, 2024"
 ---
-<<<<<<< HEAD
-=======
 **The Faculty of Medicine of Harvard University**
 **Curriculum Vitae**
 
@@ -242,5 +240,3 @@ Reports:
     6. Lix LM, Plourde PJ, Larcombe L, Kinew KA, Basham CA, Derksen S, Srisakuldee W, Schultz J, and McCulloch S. Exploring Tuberculosis Treatment, Management, and Prevention in Manitoba’s Administrative Health Data. Winnipeg, MB. Manitoba Centre for Health Policy. Autumn 2018. http://mchp-appserv.cpe.umanitoba.ca/reference/MBTB_Report_web.pdf
     7. Katz A, Kinew KA, Star L, Taylor C, Koseva I, Lavoie J, Burchill C, Urquia ML, Basham CA, Rajotte L, Ramayanam V, Jarmasz J, Burchill S. The Health Status of and Access to Healthcare by Registered First Nation Peoples in Manitoba. Winnipeg, MB. Manitoba Centre for Health Policy. Fall 2019. https://mchp-appserv.cpe.umanitoba.ca/reference/FN_Report_web.pdf
 
-
->>>>>>> 6352eb196761aa32d6f909d3400d2c0763c335a0
