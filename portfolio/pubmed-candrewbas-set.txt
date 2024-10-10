@@ -1,0 +1,2302 @@
+PMID- 31354140
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20190802
+LR  - 20221207
+IS  - 1474-547X (Electronic)
+IS  - 0140-6736 (Linking)
+VI  - 394
+IP  - 10195
+DP  - 2019 Jul 27
+TI  - Tuberculosis elimination in Canada.
+PG  - 300-301
+LID - S0140-6736(19)31122-5 [pii]
+LID - 10.1016/S0140-6736(19)31122-5 [doi]
+FAU - Basham, C Andrew
+AU  - Basham CA
+AD  - University of British Columbia, British Columbia Centre for Disease Control, 
+      Vancouver V5Z 4R4, BC, Canada. Electronic address: umbashac@myumanitoba.ca.
+FAU - Elias, Brenda
+AU  - Elias B
+AD  - Department of Community Health Sciences, University of Manitoba, Winnipeg, MB, 
+      Canada.
+FAU - Orr, Pamela
+AU  - Orr P
+AD  - Department of Community Health Sciences, University of Manitoba, Winnipeg, MB, 
+      Canada.
+LA  - eng
+PT  - Comment
+PT  - Letter
+PL  - England
+TA  - Lancet
+JT  - Lancet (London, England)
+JID - 2985213R
+SB  - IM
+CON - Lancet. 2019 Mar 30;393(10178):1275-1276. doi: 10.1016/S0140-6736(19)30681-6. 
+      PMID: 30904264
+MH  - Canada
+MH  - Humans
+MH  - *Inuit
+MH  - Research
+MH  - *Tuberculosis
+EDAT- 2019/07/30 06:00
+MHDA- 2019/08/03 06:00
+CRDT- 2019/07/30 06:00
+PHST- 2019/04/04 00:00 [received]
+PHST- 2019/04/17 00:00 [accepted]
+PHST- 2019/07/30 06:00 [entrez]
+PHST- 2019/07/30 06:00 [pubmed]
+PHST- 2019/08/03 06:00 [medline]
+AID - S0140-6736(19)31122-5 [pii]
+AID - 10.1016/S0140-6736(19)31122-5 [doi]
+PST - ppublish
+SO  - Lancet. 2019 Jul 27;394(10195):300-301. doi: 10.1016/S0140-6736(19)31122-5.
+
+PMID- 31676282
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20200703
+LR  - 20200703
+IS  - 2213-2619 (Electronic)
+IS  - 2213-2600 (Linking)
+VI  - 7
+IP  - 12
+DP  - 2019 Dec
+TI  - Life after tuberculosis: planning for health.
+PG  - 1004-1006
+LID - S2213-2600(19)30371-6 [pii]
+LID - 10.1016/S2213-2600(19)30371-6 [doi]
+FAU - Basham, C Andrew
+AU  - Basham CA
+AD  - Provincial Tuberculosis Services, British Columbia Centre for Disease Control, 
+      Vancouver V5Z 4R4, BC, Canada; School of Population and Public Health, University 
+      of British Columbia, Vancouver, BC, Canada. Electronic address: 
+      umbashac@myumanitoba.ca.
+FAU - Romanowski, Kamila
+AU  - Romanowski K
+AD  - Provincial Tuberculosis Services, British Columbia Centre for Disease Control, 
+      Vancouver V5Z 4R4, BC, Canada; Department of Medicine, University of British 
+      Columbia, Vancouver, BC, Canada.
+FAU - Johnston, James C
+AU  - Johnston JC
+AD  - Provincial Tuberculosis Services, British Columbia Centre for Disease Control, 
+      Vancouver V5Z 4R4, BC, Canada; School of Population and Public Health, University 
+      of British Columbia, Vancouver, BC, Canada; Department of Medicine, University of 
+      British Columbia, Vancouver, BC, Canada.
+LA  - eng
+PT  - Journal Article
+DEP - 20191031
+PL  - England
+TA  - Lancet Respir Med
+JT  - The Lancet. Respiratory medicine
+JID - 101605555
+SB  - IM
+MH  - Disease Management
+MH  - Health Planning/*organization & administration
+MH  - Health Services Accessibility/*organization & administration
+MH  - Humans
+MH  - Tuberculosis/complications/epidemiology/*therapy
+EDAT- 2019/11/05 06:00
+MHDA- 2020/07/04 06:00
+CRDT- 2019/11/03 06:00
+PHST- 2019/07/05 00:00 [received]
+PHST- 2019/08/12 00:00 [revised]
+PHST- 2019/08/29 00:00 [accepted]
+PHST- 2019/11/05 06:00 [pubmed]
+PHST- 2020/07/04 06:00 [medline]
+PHST- 2019/11/03 06:00 [entrez]
+AID - S2213-2600(19)30371-6 [pii]
+AID - 10.1016/S2213-2600(19)30371-6 [doi]
+PST - ppublish
+SO  - Lancet Respir Med. 2019 Dec;7(12):1004-1006. doi: 10.1016/S2213-2600(19)30371-6. 
+      Epub 2019 Oct 31.
+
+PMID- 36459364
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20230327
+LR  - 20231203
+IS  - 1920-7476 (Electronic)
+IS  - 0008-4263 (Print)
+IS  - 0008-4263 (Linking)
+VI  - 114
+IP  - 2
+DP  - 2023 Apr
+TI  - Multimorbidity prevalence and chronic disease patterns among tuberculosis 
+      survivors in a high-income setting.
+PG  - 264-276
+LID - 10.17269/s41997-022-00711-y [doi]
+AB  - OBJECTIVES: Multimorbidity is the presence of two or more chronic health 
+      conditions. Tuberculosis (TB) survivors are known to have higher prevalence of 
+      multimorbidity, although prevalence estimates from high-income low-TB incidence 
+      jurisdictions are not available and potential differences in the patterns of 
+      chronic disease among TB survivors with multimorbidity are poorly understood. In 
+      this study, we aimed to (1) compare the prevalence of multimorbidity among TB 
+      survivors with matched non-TB controls in a high-income setting; (2) assess the 
+      robustness of aim 1 analyses to different modelling strategies, unmeasured 
+      confounding, and misclassification bias; and (3) among people with 
+      multimorbidity, elucidate chronic disease patterns specific to TB survivors. 
+      METHODS: A population-based cohort study of people immigrating to British 
+      Columbia, Canada, 1985-2015, using health administrative data. Participants were 
+      divided into two groups: people diagnosed with TB (TB survivors) and people not 
+      diagnosed with TB (non-TB controls) in British Columbia. Coarsened exact matching 
+      (CEM) balanced demographic, immigration, and socioeconomic covariates between TB 
+      survivors and matched non-TB controls. Our primary outcome was multimorbidity, 
+      defined as ≥2 chronic diseases from the Elixhauser comorbidity index. RESULTS: In 
+      the CEM-matched sample (n=1962 TB survivors; n=1962 non-TB controls), we 
+      estimated that 21.2% of TB survivors (n=416), compared with 12% of non-TB 
+      controls (n=236), had multimorbidity. In our primary analysis, we found a 
+      double-adjusted prevalence ratio of 1.74 (95% CI: 1.49-2.05) between TB survivors 
+      and matched non-TB controls for multimorbidity. Among people with multimorbidity, 
+      differences were observed in chronic disease frequencies between TB survivors and 
+      matched controls. CONCLUSION: TB survivors had a 74% higher prevalence of 
+      multimorbidity compared with CEM-matched non-TB controls. TB-specific 
+      multimorbidity patterns were observed through differences in chronic disease 
+      frequencies between the matched samples. These findings suggest a need for 
+      TB-specific multimorbidity interventions in high-income settings such as Canada. 
+      We suggest TB survivorship as a framework for developing person-centred 
+      interventions for multimorbidity among TB survivors.
+CI  - © 2022. The Author(s) under exclusive license to The Canadian Public Health 
+      Association.
+FAU - Basham, C Andrew
+AU  - Basham CA
+AUID- ORCID: 0000-0003-0506-7936
+AD  - Division of Pharmacoepidemiology and Pharmacoeconomics, Department of Medicine, 
+      Brigham and Women's Hospital, Boston, MA, USA. cabasham@bwh.harvard.edu.
+AD  - Department of Medicine, Harvard Medical School, Boston, MA, USA. 
+      cabasham@bwh.harvard.edu.
+FAU - Karim, Mohammad Ehsanul
+AU  - Karim ME
+AD  - School of Population and Public Health, University of British Columbia, 
+      Vancouver, BC, Canada.
+AD  - Centre for Health Evaluative and Outcome Sciences, University of British 
+      Columbia, Vancouver, BC, Canada.
+FAU - Johnston, James C
+AU  - Johnston JC
+AD  - School of Population and Public Health, University of British Columbia, 
+      Vancouver, BC, Canada.
+AD  - Department of Medicine, University of British Columbia, Vancouver, BC, Canada.
+AD  - British Columbia Centre for Disease Control, Vancouver, BC, Canada.
+LA  - eng
+GR  - PJT-153213/CIHR/Canada
+PT  - Journal Article
+PT  - Research Support, Non-U.S. Gov't
+DEP - 20221202
+PL  - Switzerland
+TA  - Can J Public Health
+JT  - Canadian journal of public health = Revue canadienne de sante publique
+JID - 0372714
+SB  - IM
+MH  - Humans
+MH  - *Multimorbidity
+MH  - Comorbidity
+MH  - Cohort Studies
+MH  - Prevalence
+MH  - Chronic Disease
+MH  - *Tuberculosis/epidemiology
+MH  - Survivors
+MH  - British Columbia/epidemiology
+PMC - PMC10036698
+OTO - NOTNLM
+OT  - Chronic disease
+OT  - Matched group
+OT  - Multimorbidity
+OT  - Propensity score
+OT  - Routinely collected health data
+OT  - Tuberculosis
+COIS- Mohammad Ehsanul Karim has received consulting fees from Biogen, Inc., 
+      independent of this manuscript. All other authors declare no conflict of 
+      interest.
+EDAT- 2022/12/03 06:00
+MHDA- 2023/03/28 06:00
+PMCR- 2023/12/02
+CRDT- 2022/12/02 11:50
+PHST- 2022/02/15 00:00 [received]
+PHST- 2022/10/07 00:00 [accepted]
+PHST- 2022/12/03 06:00 [pubmed]
+PHST- 2023/03/28 06:00 [medline]
+PHST- 2022/12/02 11:50 [entrez]
+PHST- 2023/12/02 00:00 [pmc-release]
+AID - 10.17269/s41997-022-00711-y [pii]
+AID - 711 [pii]
+AID - 10.17269/s41997-022-00711-y [doi]
+PST - ppublish
+SO  - Can J Public Health. 2023 Apr;114(2):264-276. doi: 10.17269/s41997-022-00711-y. 
+      Epub 2022 Dec 2.
+
+PMID- 34146707
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20211019
+LR  - 20211019
+IS  - 1873-2585 (Electronic)
+IS  - 1047-2797 (Linking)
+VI  - 63
+DP  - 2021 Nov
+TI  - Tuberculosis-associated depression: a population-based cohort study of people 
+      immigrating to British Columbia, Canada, 1985-2015.
+PG  - 7-14
+LID - S1047-2797(21)00125-3 [pii]
+LID - 10.1016/j.annepidem.2021.06.002 [doi]
+AB  - PURPOSE: To estimate the risk of tuberculosis (TB)-associated depression. A 
+      second aim was to estimate the extent to which any increased risk of depression 
+      among TB patients may be mediated by the length of hospital length stay (LOS) 
+      METHODS: Retrospective cohort study of linked healthcare claims and public health 
+      surveillance data. Our primary outcome, time-to-depression, was analyzed using 
+      Cox proportional hazards (PH) regressions. Causal mediation analysis was used to 
+      estimate the natural direct and indirect effect of TB mediated by hospital LOS. 
+      RESULTS: Among 755,836 participants (52.2% female, median age=35 years, median 
+      follow-up=8.75 years), 2295 were diagnosed with TB (exposure), and 128,963 were 
+      diagnosed with depression (outcome). We observed a covariate-adjusted hazard 
+      ratio (aHR) of 1.24 (95% CI, 1.14-1.34) for depression by TB. The total effect of 
+      TB on depression was decomposed into a natural direct effect of TB of aHR=1.11 
+      (95% CI, 1.02-1.21) and an indirect effect through hospital LOS of aHR=1.11 (95% 
+      CI, 1.10-1.12), indicating that TB's total effect was mediated by 50% (95% CI, 
+      35-82%) through hospital LOS. CONCLUSIONS: TB patients had a 24% higher risk of 
+      developing depression. TB's effect was mediated substantially by hospital LOS, 
+      requiring further study. Depression screening among TB patients is warranted.
+CI  - Copyright © 2021 Elsevier Inc. All rights reserved.
+FAU - Basham, C Andrew
+AU  - Basham CA
+AD  - School of Population and Public Health, University of British Columbia, 
+      Vancouver, Canada; British Columbia Centre for Disease Control, Vancouver, 
+      Canada. Electronic address: umbashac@myumanitoba.ca.
+FAU - Karim, Mohammad Ehsanul
+AU  - Karim ME
+AD  - School of Population and Public Health, University of British Columbia, 
+      Vancouver, Canada; Centre for Health Evaluative and Outcome Sciences, University 
+      of British Columbia, Vancouver, Canada.
+FAU - Cook, Victoria J
+AU  - Cook VJ
+AD  - British Columbia Centre for Disease Control, Vancouver, Canada; Department of 
+      Medicine, University of British Columbia, Vancouver, Canada.
+FAU - Patrick, David M
+AU  - Patrick DM
+AD  - School of Population and Public Health, University of British Columbia, 
+      Vancouver, Canada; British Columbia Centre for Disease Control, Vancouver, 
+      Canada; Department of Medicine, University of British Columbia, Vancouver, 
+      Canada.
+FAU - Johnston, James C
+AU  - Johnston JC
+AD  - School of Population and Public Health, University of British Columbia, 
+      Vancouver, Canada; British Columbia Centre for Disease Control, Vancouver, 
+      Canada; Department of Medicine, University of British Columbia, Vancouver, 
+      Canada.
+LA  - eng
+GR  - PJT-153213/CIHR/Canada
+PT  - Journal Article
+PT  - Research Support, Non-U.S. Gov't
+DEP - 20210616
+PL  - United States
+TA  - Ann Epidemiol
+JT  - Annals of epidemiology
+JID - 9100013
+SB  - IM
+MH  - Adult
+MH  - British Columbia/epidemiology
+MH  - Cohort Studies
+MH  - *Depression/epidemiology
+MH  - Female
+MH  - Humans
+MH  - Male
+MH  - Retrospective Studies
+MH  - Risk Factors
+MH  - *Tuberculosis/epidemiology
+OTO - NOTNLM
+OT  - British Columbia
+OT  - Depression
+OT  - Detection bias
+OT  - Mediation analysis
+OT  - Natural direct effect (NDE)
+OT  - Natural indirect effect (NIE)
+OT  - Tuberculosis
+EDAT- 2021/06/20 06:00
+MHDA- 2021/10/21 06:00
+CRDT- 2021/06/19 20:12
+PHST- 2021/01/28 00:00 [received]
+PHST- 2021/05/28 00:00 [revised]
+PHST- 2021/06/06 00:00 [accepted]
+PHST- 2021/06/20 06:00 [pubmed]
+PHST- 2021/10/21 06:00 [medline]
+PHST- 2021/06/19 20:12 [entrez]
+AID - S1047-2797(21)00125-3 [pii]
+AID - 10.1016/j.annepidem.2021.06.002 [doi]
+PST - ppublish
+SO  - Ann Epidemiol. 2021 Nov;63:7-14. doi: 10.1016/j.annepidem.2021.06.002. Epub 2021 
+      Jun 16.
+
+PMID- 38876295
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20240920
+LR  - 20240923
+IS  - 1873-2607 (Electronic)
+IS  - 0749-3797 (Print)
+IS  - 0749-3797 (Linking)
+VI  - 67
+IP  - 4
+DP  - 2024 Oct
+TI  - Tramadol use in U.S. Adults With Commercial Health Insurance, 2005-2021.
+PG  - 558-567
+LID - S0749-3797(24)00199-5 [pii]
+LID - 10.1016/j.amepre.2024.06.009 [doi]
+AB  - INTRODUCTION: Tramadol has been associated with chronic opioid use and emergency 
+      room (ER) visits. However, little is known about trends in prescription tramadol 
+      use in the U.S. METHODS: Optum's de-identified Clinformatics® Data Mart Database 
+      was used to assess trends in monthly incident and prevalent tramadol use from 
+      2005 to 2021, stratified by sex and age (18-64 vs. ≥65 years). State-specific 
+      trends following scheduling of tramadol as Class IV controlled substance in 
+      August 2014 were analyzed with random effects regression models. Demographics, 
+      comorbidities, initiation setting, dose, and co-dispensing with other opioids and 
+      central nervous system (CNS) agents were assessed in people initiating tramadol, 
+      stratified by age and initiation year (2005-2010, 2011-2015, 2016-2021). Analyses 
+      were performed in 2023 and 2024. RESULTS: During 2005-2021, the mean percentage 
+      using tramadol in a given month was 0.88% of younger females, 0.55% of younger 
+      males, 1.97% of older females, and 1.14% of older males; 5,729,652 initiations 
+      were identified. Since 2014, estimated relative yearly decrease was 4% (95% CI 
+      3%; 5%) in use and 5% (95% CI 4%; 5%) in initiation, with variation across 
+      states. Primary care percentage of tramadol initiations declined from 49.2% in 
+      2005-2010 to 37.2% in 2016-2021. During 2016-2021, co-dispensing with other CNS 
+      agents occurred in 37.8% of younger and 32.1% of older adults initiating 
+      tramadol. CONCLUSIONS: Tramadol use was higher in females and older adults, 
+      exhibited heterogeneous trends across states, and shifted from primary care to ER 
+      and specialist settings over time. Co-dispensing with other CNS agents was common 
+      and warrants further monitoring.
+CI  - Copyright © 2024 Elsevier Inc. All rights reserved.
+FAU - Basham, Christopher Andrew
+AU  - Basham CA
+AD  - Division of Pharmacoepidemiology and Pharmacoeconomics, Department of Medicine, 
+      Brigham and Women's Hospital and Harvard Medical School, Boston, Massachusetts.
+FAU - Edrees, Heba
+AU  - Edrees H
+AD  - Division of Pharmacoepidemiology and Pharmacoeconomics, Department of Medicine, 
+      Brigham and Women's Hospital and Harvard Medical School, Boston, Massachusetts.
+FAU - Huybrechts, Krista F
+AU  - Huybrechts KF
+AD  - Division of Pharmacoepidemiology and Pharmacoeconomics, Department of Medicine, 
+      Brigham and Women's Hospital and Harvard Medical School, Boston, Massachusetts.
+FAU - Hwang, Catherine S
+AU  - Hwang CS
+AD  - Division of Pharmacoepidemiology and Pharmacoeconomics, Department of Medicine, 
+      Brigham and Women's Hospital and Harvard Medical School, Boston, Massachusetts.
+FAU - Bateman, Brian T
+AU  - Bateman BT
+AD  - Department of Anesthesiology, Perioperative and Pain Medicine, Stanford 
+      University Medical School, San Francisco, California.
+FAU - Bykov, Katsiaryna
+AU  - Bykov K
+AD  - Division of Pharmacoepidemiology and Pharmacoeconomics, Department of Medicine, 
+      Brigham and Women's Hospital and Harvard Medical School, Boston, Massachusetts. 
+      Electronic address: kbykov@bwh.harvard.edu.
+LA  - eng
+GR  - K01 AG068365/AG/NIA NIH HHS/United States
+GR  - R01 HS027623/HS/AHRQ HHS/United States
+PT  - Journal Article
+DEP - 20240612
+PL  - Netherlands
+TA  - Am J Prev Med
+JT  - American journal of preventive medicine
+JID - 8704773
+RN  - 39J1LGJ30J (Tramadol)
+RN  - 0 (Analgesics, Opioid)
+SB  - IM
+MH  - Humans
+MH  - *Tramadol/administration & dosage/therapeutic use
+MH  - Male
+MH  - Female
+MH  - Adult
+MH  - Middle Aged
+MH  - *Analgesics, Opioid/administration & dosage
+MH  - United States
+MH  - Young Adult
+MH  - Aged
+MH  - Adolescent
+MH  - Insurance, Health/statistics & numerical data
+MH  - Databases, Factual
+PMC - PMC11416325
+MID - NIHMS2004236
+EDAT- 2024/06/15 10:44
+MHDA- 2024/09/21 11:43
+PMCR- 2025/10/01
+CRDT- 2024/06/14 19:26
+PHST- 2024/01/22 00:00 [received]
+PHST- 2024/06/07 00:00 [revised]
+PHST- 2024/06/07 00:00 [accepted]
+PHST- 2025/10/01 00:00 [pmc-release]
+PHST- 2024/09/21 11:43 [medline]
+PHST- 2024/06/15 10:44 [pubmed]
+PHST- 2024/06/14 19:26 [entrez]
+AID - S0749-3797(24)00199-5 [pii]
+AID - 10.1016/j.amepre.2024.06.009 [doi]
+PST - ppublish
+SO  - Am J Prev Med. 2024 Oct;67(4):558-567. doi: 10.1016/j.amepre.2024.06.009. Epub 
+      2024 Jun 12.
+
+PMID- 37467225
+OWN - NLM
+STAT- PubMed-not-MEDLINE
+LR  - 20230721
+IS  - 2767-3375 (Electronic)
+IS  - 2767-3375 (Linking)
+VI  - 3
+IP  - 7
+DP  - 2023
+TI  - The association of SARS-CoV-2 infection and tuberculosis disease with unfavorable 
+      treatment outcomes: A systematic review.
+PG  - e0002163
+LID - 10.1371/journal.pgph.0002163 [doi]
+LID - e0002163
+AB  - BACKGROUND: Whether SARS-CoV-2 infection and its management influence 
+      tuberculosis (TB) treatment outcomes is uncertain. We synthesized evidence on the 
+      association of SARS-CoV-2 coinfection (Coinfection Review) and its management 
+      (Clinical Management Review) on treatment outcomes among people with tuberculosis 
+      (TB) disease. METHODS: We systematically searched the literature from 1 January 
+      2020 to 6 February 2022. Primary outcomes included: unfavorable (death, treatment 
+      failure, loss-to-follow-up) TB treatment outcomes (Coinfection and Clinical 
+      Management Review) and/or severe or critical COVID-19 or death (Clinical 
+      Management Review). Study quality was assessed with an adapted Newcastle Ottawa 
+      Scale. Data were heterogeneous and a narrative review was performed. An updated 
+      search was performed on April 3, 2023. FINDINGS: From 9,529 records, we included 
+      11 studies and 7305 unique participants. No study reported data relevant to our 
+      review in their primary publication and data had to be contributed by study 
+      authors after contact. Evidence from all studies was low quality. Eight studies 
+      of 5749 persons treated for TB (286 [5%] with SARS-CoV-2) were included in the 
+      Coinfection Review. Across five studies reporting our primary outcome, there was 
+      no significant association between SARS-CoV-2 coinfection and unfavorable TB 
+      treatment outcomes. Four studies of 1572 TB patients-of whom 291 (19%) received 
+      corticosteroids or other immunomodulating treatment-were included in the Clinical 
+      Management Review, and two addressed a primary outcome. Studies were likely 
+      confounded by indication and discordant findings existed among studies. When 
+      updating our search, we still did not identify any study reporting data relevant 
+      to this review in their primary publication. INTERPRETATION: No study was 
+      designed to answer our research questions of interest. It remains unclear whether 
+      TB/SARS-CoV-2 and its therapeutic management are associated with unfavorable 
+      outcomes. Research is needed to improve our understanding of risk and optimal 
+      management of persons with TB and SARS-CoV-2 infection. TRIAL REGISTRATION: 
+      Registration: PROSPERO (CRD42022309818).
+CI  - Copyright: © 2023 Vadlamudi et al. This is an open access article distributed 
+      under the terms of the Creative Commons Attribution License, which permits 
+      unrestricted use, distribution, and reproduction in any medium, provided the 
+      original author and source are credited.
+FAU - Vadlamudi, Nirma Khatri
+AU  - Vadlamudi NK
+AUID- ORCID: 0000-0001-5513-7926
+AD  - Faculty of Medicine, Department of Pediatrics, The University of British 
+      Columbia, Vancouver, Canada.
+FAU - Basham, C Andrew
+AU  - Basham CA
+AUID- ORCID: 0000-0003-0506-7936
+AD  - Division of Pharmacoepidemiology and Pharmacoeconomics, Brigham and Women's 
+      Hospital and Harvard Medical School, Boston, Massachusetts, United States of 
+      America.
+FAU - Johnston, James C
+AU  - Johnston JC
+AUID- ORCID: 0000-0002-8879-4989
+AD  - Faculty of Medicine, Department of Medicine, The University of British Columbia, 
+      Vancouver, Canada.
+FAU - Ahmad Khan, Faiz
+AU  - Ahmad Khan F
+AD  - Research Institute of the McGill University Health Centre, Respiratory 
+      Epidemiology and Clinical Research Unit, Centre for Outcomes Research & 
+      Evaluation, Montreal, Canada.
+AD  - McGill International TB Centre, Montreal, Canada.
+FAU - Battista Migliori, Giovanni
+AU  - Battista Migliori G
+AD  - Istituti Clinici Scientifici Maugeri IRCCS, Servizio di Epidemiologia Clinica 
+      delle Malattie Respiratorie, Tradate, Italy.
+FAU - Centis, Rosella
+AU  - Centis R
+AUID- ORCID: 0000-0002-8551-3598
+AD  - Istituti Clinici Scientifici Maugeri IRCCS, Servizio di Epidemiologia Clinica 
+      delle Malattie Respiratorie, Tradate, Italy.
+FAU - D'Ambrosio, Lia
+AU  - D'Ambrosio L
+AD  - Public Health Consulting Group, Lugano, Switzerland.
+FAU - Jassat, Waasila
+AU  - Jassat W
+AD  - National Institute for Communicable Diseases (NICD) of the National Health 
+      Laboratory Service, Division of Public Health Surveillance and Response, 
+      Johannesburg, South Africa.
+AD  - Right to Care, Pretoria, South Africa.
+FAU - Davies, Mary-Ann
+AU  - Davies MA
+AD  - Western Cape Government, Health and Wellness, Cape Town, South Africa.
+AD  - School of Public Health and Family Medicine, University of Cape Town, Cape Town, 
+      South Africa.
+FAU - Schwartzman, Kevin
+AU  - Schwartzman K
+AD  - Research Institute of the McGill University Health Centre, Respiratory 
+      Epidemiology and Clinical Research Unit, Centre for Outcomes Research & 
+      Evaluation, Montreal, Canada.
+AD  - McGill International TB Centre, Montreal, Canada.
+AD  - Respiratory Division, McGill University, Montreal, Canada.
+FAU - Campbell, Jonathon R
+AU  - Campbell JR
+AUID- ORCID: 0000-0003-2341-2166
+AD  - Research Institute of the McGill University Health Centre, Respiratory 
+      Epidemiology and Clinical Research Unit, Centre for Outcomes Research & 
+      Evaluation, Montreal, Canada.
+AD  - McGill International TB Centre, Montreal, Canada.
+AD  - Department of Medicine & Department of Global and Public Health, McGill 
+      University, Montreal, Canada.
+LA  - eng
+PT  - Journal Article
+DEP - 20230719
+PL  - United States
+TA  - PLOS Glob Public Health
+JT  - PLOS global public health
+JID - 9918283779606676
+PMC - PMC10355446
+COIS- The authors have read the journal’s policy and have the following competing 
+      interests: NKV reports receiving consulting fees from Broadstreet HEOR for 
+      unrelated projects outside of the submitted work. JRC reports receiving 
+      consulting fees from the COVID-19 Immunity Task Force (Canada) and The World 
+      Bank, for unrelated projects outside of the submitted work. This does not alter 
+      our adherence to PLOS policies on sharing data and materials.
+EDAT- 2023/07/19 19:08
+MHDA- 2023/07/19 19:09
+PMCR- 2023/07/19
+CRDT- 2023/07/19 13:35
+PHST- 2023/04/15 00:00 [received]
+PHST- 2023/05/28 00:00 [accepted]
+PHST- 2023/07/19 19:09 [medline]
+PHST- 2023/07/19 19:08 [pubmed]
+PHST- 2023/07/19 13:35 [entrez]
+PHST- 2023/07/19 00:00 [pmc-release]
+AID - PGPH-D-23-00670 [pii]
+AID - 10.1371/journal.pgph.0002163 [doi]
+PST - epublish
+SO  - PLOS Glob Public Health. 2023 Jul 19;3(7):e0002163. doi: 
+      10.1371/journal.pgph.0002163. eCollection 2023.
+
+PMID- 34973421
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20220504
+LR  - 20220504
+IS  - 1873-2585 (Electronic)
+IS  - 1047-2797 (Linking)
+VI  - 68
+DP  - 2022 Apr
+TI  - An E-value analysis of potential unmeasured or residual confounding in systematic 
+      reviews of post-tuberculosis mortality, respiratory disease, and cardiovascular 
+      disease.
+PG  - 24-31
+LID - S1047-2797(21)00351-3 [pii]
+LID - 10.1016/j.annepidem.2021.12.009 [doi]
+AB  - INTRODUCTION: Unmeasured confounding poses a serious threat to observational 
+      studies of post-TB health outcomes. E-values have been recently proposed as a 
+      method to assess the magnitude of unmeasured confounding necessary to nullify, or 
+      to render non-significant, relative effect estimates from observational studies. 
+      METHODS: We calculated E-values for both the risk ratio (RR) point estimates and 
+      their lower 95% confidence limits (LCL) from studies of post-TB mortality, 
+      respiratory disease, and cardiovascular disease (CVD) included in published 
+      systematic reviews within and across post-TB outcome domains. We also employed a 
+      meta-analytic E-value approach to estimate the proportion of unconfounded study 
+      RRs greater than 1.1 at different levels of unmeasured confounding. RESULTS: 
+      Across post-TB health outcome domains, we observed a median E-value of 5.59 
+      (IQR = 3.19-7.35) for RRs, and 2.95 (IQR = 1.71-4.61) for LCLs. Post-TB mortality 
+      studies had higher median E-values (E-value(RR) = 6.90 and E-value(LCL) = 4.54) 
+      than studies of respiratory disease (E-value(RR) = 5.59, E-value(LCL) = 2.94) or 
+      CVD (E-value(RR) = 3.90, E-value(LCL) = 1.81). The E-value at which the estimated 
+      proportion of studies with unconfounded RRs greater than 1.1 would remain over 
+      0.7 was 3.45 for post-TB mortality, 3.96 for post-TB respiratory disease, and 
+      1.71 for post-TB CVD meta-analyses. CONCLUSIONS: Unmeasured confounding with an 
+      association of 2.95 or greater with both the exposure (TB) and outcome, on the 
+      risk ratio scale, could render most post-TB health studies' findings 
+      statistically non-significant. Post-TB mortality and respiratory disease studies 
+      had higher E-values than TB-CVD studies, indicating that either (a) TB-CVD 
+      studies may be more susceptible to unmeasured confounding bias, or (b) the true 
+      effect of TB on CVD is lower.
+CI  - Copyright © 2021 Elsevier Inc. All rights reserved.
+FAU - Basham, C Andrew
+AU  - Basham CA
+AD  - School of Population and Public Health, University of British Columbia, 
+      Vancouver, Canada; British Columbia Centre for Disease Control, Vancouver, 
+      Canada. Electronic address: umbashac@myumanitoba.ca.
+FAU - Karim, Mohammad Ehsanul
+AU  - Karim ME
+AD  - School of Population and Public Health, University of British Columbia, 
+      Vancouver, Canada; Centre for Health Evaluation and Outcome Sciences, Vancouver, 
+      Canada.
+LA  - eng
+GR  - PJT-153213/CIHR/Canada
+PT  - Journal Article
+PT  - Research Support, Non-U.S. Gov't
+DEP - 20211229
+PL  - United States
+TA  - Ann Epidemiol
+JT  - Annals of epidemiology
+JID - 9100013
+SB  - IM
+MH  - Bias
+MH  - *Cardiovascular Diseases
+MH  - Humans
+MH  - Odds Ratio
+MH  - *Respiratory Tract Diseases
+MH  - Systematic Reviews as Topic
+MH  - *Tuberculosis
+OTO - NOTNLM
+OT  - E-value
+OT  - Observational studies
+OT  - Posttuberculosis
+OT  - Sensitivity analysis
+OT  - Systematic reviews
+OT  - Tuberculosis
+COIS- Declaration of Competing Interest CAB declares no conflicts or competing 
+      interests. MEK has received consulting fees from Biogen, Inc., unrelated to this 
+      manuscript.
+EDAT- 2022/01/02 06:00
+MHDA- 2022/05/06 06:00
+CRDT- 2022/01/01 20:11
+PHST- 2021/07/04 00:00 [received]
+PHST- 2021/11/25 00:00 [revised]
+PHST- 2021/12/15 00:00 [accepted]
+PHST- 2022/01/02 06:00 [pubmed]
+PHST- 2022/05/06 06:00 [medline]
+PHST- 2022/01/01 20:11 [entrez]
+AID - S1047-2797(21)00351-3 [pii]
+AID - 10.1016/j.annepidem.2021.12.009 [doi]
+PST - ppublish
+SO  - Ann Epidemiol. 2022 Apr;68:24-31. doi: 10.1016/j.annepidem.2021.12.009. Epub 2021 
+      Dec 29.
+
+PMID- 37990170
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20231123
+LR  - 20231124
+IS  - 1471-2458 (Electronic)
+IS  - 1471-2458 (Linking)
+VI  - 23
+IP  - 1
+DP  - 2023 Nov 21
+TI  - Examining gender and sexual orientation differences in physical intimate partner 
+      violence experienced and perpetrated by youth living in eThekwini district South 
+      Africa during the COVID-19 pandemic.
+PG  - 2300
+LID - 10.1186/s12889-023-17199-x [doi]
+LID - 2300
+AB  - BACKGROUND: Young women and Lesbian, Gay, Bisexual, Trans, Non-binary/no gender, 
+      or Questioning (LGBTQ+) youth in South Africa face some of the highest global 
+      levels of intimate partner violence (IPV). Given limited evidence in the wake of 
+      the COVID-19 pandemic, which has fuelled IPV globally, we aimed to describe and 
+      compare experiences and perpetration of IPV of youth aged 16-24 by sexual 
+      orientation and gender identity (SOGI). METHODS: During the study period 
+      (December 2021-May 2022), youth aged 16-24 from eThekwini district, South Africa 
+      completed an online survey to understand multilevel impacts of the pandemic on 
+      youth. Participants were asked about experiences and perpetration of physical IPV 
+      since the start of the COVID-19 pandemic (March 2020). Descriptive statistics and 
+      adjusted logistic regressions compared the likelihood of experiencing and/or 
+      perpetrating physical IPV between cisgender and transgender inclusive 
+      heterosexual men; heterosexual women; gay, bisexual, or questioning men [GBQM]; 
+      lesbian, gay, bisexual, or questioning women [LGBQW]; or gender/sexual 
+      non-conforming youth [non-conforming]. RESULTS: Of 1,588 youth (mean age = 21.7 
+      [SD = 2.3]; 71.7% Black) with non-missing SOGI and physical IPV data, 238 (15.0%) 
+      were LGBTQ+ (40.3% LGBQW and 36.1% non-conforming). Overall, 14.6% of respondents 
+      experienced physical IPV and 9.8% perpetrated physical IPV since the start of the 
+      pandemic, which differed by SOGI (12.3% of heterosexual men, 13.9% of 
+      heterosexual women, 22.0% of GBQM, 18.2% of LGBQW, and 25.0% of non-conforming 
+      youth experienced and 10.3% of heterosexual men; 7.7% of heterosexual women; 
+      10.0% of GBQM; 18.2% of LGBQW; and 16.7% of non-conforming youth perpetrated). In 
+      adjusted models, compared to heterosexual women, non-conforming youth had 
+      increased odds of experiencing (adjusted odds ratio [aOR] = 2.36; 95%CI, 
+      1.26-4.39) physical IPV and compared to heterosexual men, non-conforming youth 
+      had greater odds of perpetrating physical IPV (aOR = 2.19; 95%CI, 
+      1.07-4.48) during the pandemic. CONCLUSION: Over one in six youth in our study 
+      experienced and one in ten perpetrated physical IPV since the onset of the 
+      COVID-19 pandemic, with gender and sexual non-conforming youth experiencing and 
+      perpetrating IPV at significantly greater rates than cisgender/heterosexual 
+      peers. Our findings highlight the need for gender transformative efforts that 
+      move beyond the gender binary to support healthy relationships and IPV prevention 
+      for LGBTQ + youth in South Africa and globally.
+CI  - © 2023. The Author(s).
+FAU - Closson, Kalysha
+AU  - Closson K
+AD  - Faculty of Health Sciences, Simon Fraser University, Burnaby, Canada.
+AD  - Center on Gender Equity and Health, School of Medicine, University of California, 
+      San Diego, California, USA.
+FAU - Zulu, Bongiwe
+AU  - Zulu B
+AD  - Maternal Adolescent and Child Health Research Unit (MRU), Faculty of Health 
+      Sciences, University of the Witwatersrand, Durban, South Africa.
+FAU - Jesson, Julie
+AU  - Jesson J
+AD  - Center for Epidemiology and Research in POpulation Health (CERPOP), Université de 
+      Toulouse, Toulouse, France.
+FAU - Dietrich, Janan J
+AU  - Dietrich JJ
+AD  - Perinatal HIV Research Unit (PHRU), Faculty of Health Sciences, University of the 
+      Witwatersrand, Johannesburg, South Africa.
+AD  - Health Systems Research Unit, South African Medical Research Council, Cape Town, 
+      South Africa.
+FAU - Pakhomova, Tatiana
+AU  - Pakhomova T
+AD  - Faculty of Health Sciences, Simon Fraser University, Burnaby, Canada.
+FAU - Basham, C Andrew
+AU  - Basham CA
+AD  - Division of Pharmacoepidemiology and Pharmacoeconomics, Brigham and Women's 
+      Hospital/Harvard Medical School, Boston, MA, USA.
+FAU - Beksinska, Mags
+AU  - Beksinska M
+AD  - Maternal Adolescent and Child Health Research Unit (MRU), Faculty of Health 
+      Sciences, University of the Witwatersrand, Durban, South Africa.
+FAU - Kaida, Angela
+AU  - Kaida A
+AD  - Faculty of Health Sciences, Simon Fraser University, Burnaby, Canada. 
+      angela_kaida@sfu.ca.
+LA  - eng
+GR  - CIHR/Canada
+PT  - Journal Article
+PT  - Research Support, Non-U.S. Gov't
+DEP - 20231121
+PL  - England
+TA  - BMC Public Health
+JT  - BMC public health
+JID - 100968562
+SB  - IM
+MH  - Female
+MH  - Humans
+MH  - Male
+MH  - Adolescent
+MH  - Young Adult
+MH  - Adult
+MH  - Gender Identity
+MH  - Pandemics
+MH  - South Africa/epidemiology
+MH  - Risk Factors
+MH  - *COVID-19/epidemiology
+MH  - Sexual Behavior
+MH  - *Intimate Partner Violence
+MH  - *Homosexuality, Female
+MH  - Surveys and Questionnaires
+MH  - *Sexual and Gender Minorities
+PMC - PMC10664660
+OTO - NOTNLM
+OT  - COVID-19
+OT  - Gender
+OT  - Intimate partner violence
+OT  - LGBTQ+
+OT  - South Africa
+OT  - Youth
+COIS- The authors declare no competing interests.
+EDAT- 2023/11/22 06:43
+MHDA- 2023/11/23 06:42
+PMCR- 2023/11/21
+CRDT- 2023/11/22 01:04
+PHST- 2022/12/22 00:00 [received]
+PHST- 2023/11/09 00:00 [accepted]
+PHST- 2023/11/23 06:42 [medline]
+PHST- 2023/11/22 06:43 [pubmed]
+PHST- 2023/11/22 01:04 [entrez]
+PHST- 2023/11/21 00:00 [pmc-release]
+AID - 10.1186/s12889-023-17199-x [pii]
+AID - 17199 [pii]
+AID - 10.1186/s12889-023-17199-x [doi]
+PST - epublish
+SO  - BMC Public Health. 2023 Nov 21;23(1):2300. doi: 10.1186/s12889-023-17199-x.
+
+PMID- 32649721
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20200914
+LR  - 20240730
+IS  - 1932-6203 (Electronic)
+IS  - 1932-6203 (Linking)
+VI  - 15
+IP  - 7
+DP  - 2020
+TI  - Cardiovascular morbidity and mortality among persons diagnosed with tuberculosis: 
+      A systematic review and meta-analysis.
+PG  - e0235821
+LID - 10.1371/journal.pone.0235821 [doi]
+LID - e0235821
+AB  - INTRODUCTION: The emerging epidemiological evidence of increased cardiovascular 
+      disease (CVD) risk among persons diagnosed with tuberculosis (TB) has not been 
+      systematically reviewed to date. Our aim was to review the existing 
+      epidemiological evidence for elevated risk of CVD morbidity and mortality among 
+      persons diagnosed with TB compared to controls. MATERIALS AND METHODS: EMBASE, 
+      MEDLINE, and Cochrane databases were searched (inception to January 2020) for 
+      terms related to "tuberculosis" and "cardiovascular diseases". Inclusion 
+      criteria: trial, cohort, or case-control study design; patient population 
+      included persons diagnosed with TB infection or disease; relative risk (RR) 
+      estimate and confidence interval reported for CVD morbidity or mortality compared 
+      to suitable controls. Exclusion criteria: no TB or CVD outcome definition; 
+      duplicate study; non-English abstract; non-human participants. Two reviewers 
+      screened studies, applied ROBINS-I tool to assess risk of bias, and extracted 
+      data independently. Random effects meta-analysis estimated a pooled RR of CVD 
+      morbidity and mortality for persons diagnosed with TB compared to controls. 
+      RESULTS: 6,042 articles were identified, 244 full texts were reviewed, and 16 
+      were included, meta-analyzing subsets of 8 studies' RR estimates. We estimated a 
+      pooled RR of 1.51 (95% CI: 1.16-1.97) for major adverse cardiac events among 
+      those diagnosed with TB compared to non-TB controls (p = 0.0024). A 'serious' 
+      pooled risk of bias was found across studies with between-study heterogeneity (I2 
+      = 75.3%). CONCLUSIONS: TB appears to be a marker for increased CVD risk; however, 
+      the literature is limited and is accompanied by serious risk of confounding bias 
+      and evidence of publication bias. Further retrospective and prospective studies 
+      are needed. Pending this evidence, best practice may be to consider persons 
+      diagnosed with TB at higher risk of CVD as a precautionary measure.
+FAU - Basham, Christopher Andrew
+AU  - Basham CA
+AUID- ORCID: 0000-0003-0506-7936
+AD  - Provincial TB Services, British Columbia Centre for Disease Control, Vancouver, 
+      Canada.
+AD  - School of Population and Public Health, University of British Columbia, 
+      Vancouver, Canada.
+FAU - Smith, Sarah J
+AU  - Smith SJ
+AD  - Max Rady College of Medicine, Rady Faculty of Health Sciences, University of 
+      Manitoba, Winnipeg, Canada.
+FAU - Romanowski, Kamila
+AU  - Romanowski K
+AD  - Provincial TB Services, British Columbia Centre for Disease Control, Vancouver, 
+      Canada.
+AD  - Department of Medicine, University of British Columbia, Vancouver, Canada.
+FAU - Johnston, James C
+AU  - Johnston JC
+AD  - Provincial TB Services, British Columbia Centre for Disease Control, Vancouver, 
+      Canada.
+AD  - School of Population and Public Health, University of British Columbia, 
+      Vancouver, Canada.
+AD  - Department of Medicine, University of British Columbia, Vancouver, Canada.
+LA  - eng
+GR  - PJT-153213/CIHR/Canada
+PT  - Journal Article
+PT  - Meta-Analysis
+PT  - Research Support, Non-U.S. Gov't
+PT  - Systematic Review
+DEP - 20200710
+PL  - United States
+TA  - PLoS One
+JT  - PloS one
+JID - 101285081
+SB  - IM
+MH  - Cardiovascular Diseases/*etiology/mortality/virology
+MH  - Humans
+MH  - Mycobacterium tuberculosis/isolation & purification
+MH  - Risk Factors
+MH  - Tuberculosis/*complications/virology
+PMC - PMC7351210
+COIS- The authors have declared that no competing interests exist.
+EDAT- 2020/07/11 06:00
+MHDA- 2020/09/15 06:00
+PMCR- 2020/07/10
+CRDT- 2020/07/11 06:00
+PHST- 2019/12/10 00:00 [received]
+PHST- 2020/06/23 00:00 [accepted]
+PHST- 2020/07/11 06:00 [entrez]
+PHST- 2020/07/11 06:00 [pubmed]
+PHST- 2020/09/15 06:00 [medline]
+PHST- 2020/07/10 00:00 [pmc-release]
+AID - PONE-D-19-34201 [pii]
+AID - 10.1371/journal.pone.0235821 [doi]
+PST - epublish
+SO  - PLoS One. 2020 Jul 10;15(7):e0235821. doi: 10.1371/journal.pone.0235821. 
+      eCollection 2020.
+
+PMID- 33718847
+OWN - NLM
+STAT- PubMed-not-MEDLINE
+LR  - 20220421
+IS  - 2589-5370 (Electronic)
+IS  - 2589-5370 (Linking)
+VI  - 33
+DP  - 2021 Mar
+TI  - Post-tuberculosis airway disease: A population-based cohort study of people 
+      immigrating to British Columbia, Canada, 1985-2015.
+PG  - 100752
+LID - 10.1016/j.eclinm.2021.100752 [doi]
+LID - 100752
+AB  - BACKGROUND: Current epidemiological evidence of post-TB airway disease is largely 
+      cross-sectional and derived from high-TB-incidence settings. We present the first 
+      cohort study of post-TB airway disease in a low-TB-incidence setting. AIMS: (1) 
+      analyze the risk of airway disease by respiratory TB, (2) assess potential 
+      unmeasured confounding between TB and airway disease, and (3) investigate TB 
+      effect measure modification. METHODS: A population-based cohort study using 
+      healthcare claims data for immigrants to British Columbia (BC), Canada, 
+      1985-2015. Airway disease included chronic airway obstruction, asthma, 
+      bronchitis, bronchiolitis, and emphysema. Respiratory TB was defined from TB 
+      registry data. Cox proportional hazards (PH) regressions were used to analyze 
+      time-to-airway disease by respiratory TB. Sensitivity analyses included varying 
+      definitions of TB and airway disease. Potential unmeasured confounding by smoking 
+      was evaluated by E-value and hybrid least absolute shrinkage and selection 
+      operator (LASSO)-high-dimensional propensity score (hdPS). FINDINGS: In our 
+      cohort (N = 1 005 328; n(TB)=1141) there were 116 840 incident cases of airway 
+      disease during our 30-year study period (10.43 per 1,000 person-years of 
+      follow-up), with cumulative incidence of 42·5% among respiratory TB patients 
+      compared with 11·6% among non-TB controls. The covariate-adjusted hazard ratio 
+      (aHR) for airway disease by respiratory TB was 2·08 (95% CI: 1·91-2·28) with 
+      E-value=3·58. The LASSO-hdPS analysis produced aHR=2·26 (95% CI: 2·07-2·47). 
+      INTERPRETATION: A twofold higher risk of airway disease was observed among 
+      immigrants diagnosed with respiratory TB, compared with non-TB controls, in a 
+      low-TB-incidence setting. Unmeasured confounding is unlikely to explain this 
+      relationship. Models of post-TB care are needed. FUNDING: Canadian Institutes of 
+      Health Research.
+CI  - © 2021 The Authors.
+FAU - Basham, C Andrew
+AU  - Basham CA
+AD  - School of Population and Public Health, University of British Columbia, 
+      Vancouver, Canada.
+AD  - British Columbia Centre for Disease Control, Vancouver, Canada.
+FAU - Karim, Mohammad E
+AU  - Karim ME
+AD  - School of Population and Public Health, University of British Columbia, 
+      Vancouver, Canada.
+AD  - Centre for Health Evaluative and Outcome Sciences, University of British 
+      Columbia, Vancouver, Canada.
+FAU - Cook, Victoria J
+AU  - Cook VJ
+AD  - British Columbia Centre for Disease Control, Vancouver, Canada.
+AD  - Department of Medicine, University of British Columbia, Vancouver, Canada.
+FAU - Patrick, David M
+AU  - Patrick DM
+AD  - School of Population and Public Health, University of British Columbia, 
+      Vancouver, Canada.
+AD  - British Columbia Centre for Disease Control, Vancouver, Canada.
+AD  - Department of Medicine, University of British Columbia, Vancouver, Canada.
+FAU - Johnston, James C
+AU  - Johnston JC
+AD  - School of Population and Public Health, University of British Columbia, 
+      Vancouver, Canada.
+AD  - British Columbia Centre for Disease Control, Vancouver, Canada.
+AD  - Department of Medicine, University of British Columbia, Vancouver, Canada.
+LA  - eng
+PT  - Journal Article
+DEP - 20210226
+PL  - England
+TA  - EClinicalMedicine
+JT  - EClinicalMedicine
+JID - 101733727
+PMC - PMC7933261
+OTO - NOTNLM
+OT  - Asthma
+OT  - British Columbia
+OT  - COPD
+OT  - Canada
+OT  - Cohort study
+OT  - Propensity scores
+OT  - Respiratory tract diseases
+OT  - Survival analysis
+OT  - Tuberculosis
+COIS- CAB reports grants from Canadian Institutes of Health Research, during the 
+      conduct of the study. JCJ reports grants from Canadian Institutes for Health 
+      Research, and a grant from Michael Smith Foundation for Health Research, during 
+      the conduct of the study. MEK reports consultation fees from Biogen, Inc 
+      (unrelated to this content). All other authors declare no competing interests.
+EDAT- 2021/03/16 06:00
+MHDA- 2021/03/16 06:01
+PMCR- 2021/02/26
+CRDT- 2021/03/15 07:14
+PHST- 2020/10/01 00:00 [received]
+PHST- 2021/01/23 00:00 [revised]
+PHST- 2021/01/26 00:00 [accepted]
+PHST- 2021/03/15 07:14 [entrez]
+PHST- 2021/03/16 06:00 [pubmed]
+PHST- 2021/03/16 06:01 [medline]
+PHST- 2021/02/26 00:00 [pmc-release]
+AID - S2589-5370(21)00032-8 [pii]
+AID - 100752 [pii]
+AID - 10.1016/j.eclinm.2021.100752 [doi]
+PST - epublish
+SO  - EClinicalMedicine. 2021 Feb 26;33:100752. doi: 10.1016/j.eclinm.2021.100752. 
+      eCollection 2021 Mar.
+
+PMID- 27763837
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20170525
+LR  - 20200205
+IS  - 1920-7476 (Electronic)
+IS  - 0008-4263 (Print)
+IS  - 0008-4263 (Linking)
+VI  - 107
+IP  - 3
+DP  - 2016 Oct 20
+TI  - Homicide mortality rates in Canada, 2000-2009: Youth at increased risk.
+PG  - e239-e244
+LID - 10.17269/cjph.107.5391 [doi]
+AB  - OBJECTIVES: To estimate and compare Canadian homicide mortality rates (HMRs) and 
+      trends in HMRs across age groups, with a focus on trends for youth. METHODS: Data 
+      for the period of 2000 to 2009 were collected from Statistics Canada's CANSIM 
+      (Canadian Statistical Information Management) Table 102-0540 with the following 
+      ICD-10-CA coded external causes of death: X85 to Y09 (assault) and Y87.1 
+      (sequelae of assault). Annual population counts from 2000 to 2009 were obtained 
+      from Statistics Canada's CANSIM Table 051-0001. Both death and population counts 
+      were organized into five-year age groups. A random effects negative binomial 
+      regression analysis was conducted to estimate age group-specific rates, rate 
+      ratios, and trends in homicide mortality. RESULTS: There were 9,878 homicide 
+      deaths in Canada during the study period. The increase in the overall homicide 
+      mortality rate (HMR) of 0.3% per year was not statistically significant (95% CI: 
+      -1.1% to +1.8%). Canadians aged 15-19 years and 20-24 years had the highest HMRs 
+      during the study period, and experienced statistically significant annual 
+      increases in their HMRs of 3% and 4% respectively (p &lt; 0.05). A general, 
+      though not statistically significant, decrease in the HMR was observed for all 
+      age groups 50+ years. A fixed effects negative binomial regression model showed 
+      that the HMR for males was higher than for females over the study period 
+      [RRfemale/male = 0.473 (95% CI: 0.361, 0.621)], but no significant difference in 
+      sex-specific trends in the HMR was found. CONCLUSION: An increasing risk of 
+      homicide mortality was identified among Canadian youth, ages 15-24, over the 
+      10-year study period. Research that seeks to understand the reasons for the 
+      increased homicide risk facing Canada's youth, and public policy responses to 
+      reduce this risk, are warranted.
+FAU - Basham, C Andrew
+AU  - Basham CA
+AD  - Manitoba Centre for Health Policy, Department of Community Health Sciences, 
+      University of Manitoba, Winnipeg, MB. andrew_basham@cpe.umanitoba.ca.
+FAU - Snider, Carolyn
+AU  - Snider C
+LA  - eng
+PT  - Journal Article
+DEP - 20161020
+PL  - Switzerland
+TA  - Can J Public Health
+JT  - Canadian journal of public health = Revue canadienne de sante publique
+JID - 0372714
+SB  - IM
+MH  - Adolescent
+MH  - Adult
+MH  - Age Distribution
+MH  - Aged
+MH  - Aged, 80 and over
+MH  - Canada/epidemiology
+MH  - Child
+MH  - Child, Preschool
+MH  - Female
+MH  - Homicide/*statistics & numerical data/*trends
+MH  - Humans
+MH  - Infant
+MH  - Infant, Newborn
+MH  - Male
+MH  - Middle Aged
+MH  - Mortality/*trends
+MH  - Risk Assessment
+MH  - Young Adult
+PMC - PMC6972158
+EDAT- 2016/10/21 06:00
+MHDA- 2017/05/26 06:00
+PMCR- 2017/05/01
+CRDT- 2016/10/21 06:00
+PHST- 2015/11/19 00:00 [received]
+PHST- 2016/04/15 00:00 [accepted]
+PHST- 2016/07/22 00:00 [revised]
+PHST- 2016/10/21 06:00 [pubmed]
+PHST- 2017/05/26 06:00 [medline]
+PHST- 2016/10/21 06:00 [entrez]
+PHST- 2017/05/01 00:00 [pmc-release]
+AID - 10703239 [pii]
+AID - 10.17269/cjph.107.5391 [doi]
+PST - epublish
+SO  - Can J Public Health. 2016 Oct 20;107(3):e239-e244. doi: 10.17269/cjph.107.5391.
+
+PMID- 31324519
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20200610
+LR  - 20210714
+IS  - 1474-4457 (Electronic)
+IS  - 1473-3099 (Linking)
+VI  - 19
+IP  - 10
+DP  - 2019 Oct
+TI  - Long-term all-cause mortality in people treated for tuberculosis: a systematic 
+      review and meta-analysis.
+PG  - 1129-1137
+LID - S1473-3099(19)30309-3 [pii]
+LID - 10.1016/S1473-3099(19)30309-3 [doi]
+AB  - BACKGROUND: Accurate estimates of long-term mortality following tuberculosis 
+      treatment are scarce. This systematic review and meta-analysis aimed to estimate 
+      the post-treatment mortality among tuberculosis survivors, and examine 
+      differences in mortality risk by demographic and clinical characteristics. 
+      METHODS: We systematically searched Embase, MEDLINE, and the Cochrane Database of 
+      Systematic Reviews for cohort studies published in English between Jan 1, 1997, 
+      and May 31, 2018. We included research papers that used a cohort study design, 
+      included bacteriological or clinical confirmation of tuberculosis disease for all 
+      participants, and reported, or provided enough data to calculate, mortality 
+      estimates for people with tuberculosis and a valid control group representative 
+      of the general population. We excluded studies that reported duplicate data, had 
+      a study population of fewer than 50 people overall, had a follow-up period 
+      shorter than 12 months after treatment completion, or had a loss to follow-up of 
+      more than 30%. From eligible studies, we extracted standardised mortality ratios 
+      (SMRs), or calculated them when the data were sufficient, by dividing the sum of 
+      the observed deaths by the sum of the expected deaths. For studies that did not 
+      report SMR as their mortality estimate, either mortality hazard ratios or 
+      mortality rate ratios were extracted and pooled with SMRs. Random-effects 
+      meta-analysis was used to obtain pooled SMRs. Between-study heterogeneity was 
+      estimated with I(2). This study was prospectively registered in PROSPERO 
+      (CRD42018092592). FINDINGS: Of the 7283 unique studies identified, data from ten 
+      studies, reporting on 40 781 individuals and 6922 deaths, were included. The 
+      pooled SMR for all-cause mortality among people with tuberculosis, compared with 
+      the control group, was 2·91 (95% CI 2·21-3·84; I(2)=99%, 
+      p(heterogeneity)<0·0001). When restricted to people with confirmed treatment 
+      completion or cure, the pooled SMR was 3·76 (95% CI 3·04-4·66; I(2)=95%). Effect 
+      estimates were similar when stratified by tuberculosis type, sex, age, and 
+      country income category. Causes of mortality were extracted for 4226 deaths that 
+      occurred post-treatment, with most deaths attributable to cardiovascular disease 
+      (20% [95% CI 15-26]; I(2)=92%). INTERPRETATION: People treated for tuberculosis 
+      have significantly increased mortality following treatment compared with the 
+      general population or matched controls. These findings support the need for 
+      further research to understand and address the biomedical and social factors that 
+      affect the long-term prognosis of this population. FUNDING: None.
+CI  - Copyright © 2019 Elsevier Ltd. All rights reserved.
+FAU - Romanowski, Kamila
+AU  - Romanowski K
+AD  - Provincial TB Services, British Columbia Centre for Disease Control, Vancouver, 
+      BC, Canada.
+FAU - Baumann, Brett
+AU  - Baumann B
+AD  - Department of Medicine, University of British Columbia, Vancouver, BC, Canada.
+FAU - Basham, C Andrew
+AU  - Basham CA
+AD  - Provincial TB Services, British Columbia Centre for Disease Control, Vancouver, 
+      BC, Canada; School of Population and Public Health, University of British 
+      Columbia, Vancouver, BC, Canada.
+FAU - Ahmad Khan, Faiz
+AU  - Ahmad Khan F
+AD  - Respiratory Epidemiology and Clinical Research Unity, Centre for Outcomes 
+      Research and Evaluation, Research Institute of McGill University Health Centre, 
+      Faculty of Medicine, McGill University, Montreal, QC, Canada; McGill 
+      International TB Centre and Respiratory Division, Faculty of Medicine, McGill 
+      University, Montreal, QC, Canada.
+FAU - Fox, Greg J
+AU  - Fox GJ
+AD  - McGill International TB Centre and Respiratory Division, Faculty of Medicine, 
+      McGill University, Montreal, QC, Canada; Central Clinical School, Faculty of 
+      Medicine and Health, The University of Sydney, Sydney, NSW, Australia.
+FAU - Johnston, James C
+AU  - Johnston JC
+AD  - Provincial TB Services, British Columbia Centre for Disease Control, Vancouver, 
+      BC, Canada; Department of Medicine, University of British Columbia, Vancouver, 
+      BC, Canada; School of Population and Public Health, University of British 
+      Columbia, Vancouver, BC, Canada; McGill International TB Centre and Respiratory 
+      Division, Faculty of Medicine, McGill University, Montreal, QC, Canada. 
+      Electronic address: james.johnston@bccdc.ca.
+LA  - eng
+PT  - Journal Article
+PT  - Meta-Analysis
+PT  - Research Support, Non-U.S. Gov't
+PT  - Systematic Review
+DEP - 20190716
+PL  - United States
+TA  - Lancet Infect Dis
+JT  - The Lancet. Infectious diseases
+JID - 101130150
+SB  - IM
+CIN - Lancet Infect Dis. 2019 Oct;19(10):1045-1047. doi: 10.1016/S1473-3099(19)30387-1. 
+      PMID: 31324515
+CIN - Lancet Infect Dis. 2019 Nov;19(11):1170-1171. doi: 10.1016/S1473-3099(19)30564-X. 
+      PMID: 31657778
+CIN - Lancet Infect Dis. 2021 Jul;21(7):896-897. doi: 10.1016/S1473-3099(20)30941-5. 
+      PMID: 33640078
+MH  - Cardiovascular Diseases/mortality
+MH  - *Cause of Death
+MH  - Cohort Studies
+MH  - *Death Certificates
+MH  - Humans
+MH  - Mortality
+MH  - Prognosis
+MH  - Risk Factors
+MH  - Survivors
+MH  - Tuberculosis, Pulmonary/drug therapy/*epidemiology/*mortality
+EDAT- 2019/07/22 06:00
+MHDA- 2020/06/11 06:00
+CRDT- 2019/07/21 06:00
+PHST- 2018/11/30 00:00 [received]
+PHST- 2019/04/07 00:00 [revised]
+PHST- 2019/05/03 00:00 [accepted]
+PHST- 2019/07/22 06:00 [pubmed]
+PHST- 2020/06/11 06:00 [medline]
+PHST- 2019/07/21 06:00 [entrez]
+AID - S1473-3099(19)30309-3 [pii]
+AID - 10.1016/S1473-3099(19)30309-3 [doi]
+PST - ppublish
+SO  - Lancet Infect Dis. 2019 Oct;19(10):1129-1137. doi: 10.1016/S1473-3099(19)30309-3. 
+      Epub 2019 Jul 16.
+
+PMID- 31286459
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20200409
+LR  - 20200708
+IS  - 1920-7476 (Electronic)
+IS  - 0008-4263 (Print)
+IS  - 0008-4263 (Linking)
+VI  - 110
+IP  - 6
+DP  - 2019 Dec
+TI  - Tuberculosis among northern Manitoba First Nations, 2008-2012: program 
+      performance on- and off-reserve.
+PG  - 688-696
+LID - 10.17269/s41997-019-00231-2 [doi]
+AB  - OBJECTIVES: The objectives of this study were to: (1) report tuberculosis (TB) 
+      program performance for northern First Nations in the province of Manitoba; (2) 
+      present methods for TB program performance measurement using routinely collected 
+      surveillance data; and (3) advance dialogue on performance measurement of 
+      Canadian TB programs. METHODS: Data on a retrospective cohort of people diagnosed 
+      with TB in Manitoba between January 1, 2008 and December 31, 2010, and their 
+      contacts, were extracted from the Manitoba TB Registry. Performance measures 
+      based on US-CDC were analyzed. Adjusted probability ratios (aPR) and 95% 
+      confidence intervals (CIs) were reported with comparisons between on-/off-reserve 
+      First Nations, adjusted for age, sex, and treatment history. RESULTS: A cohort of 
+      n = 149 people diagnosed with TB and n = 3560 contacts were identified. 
+      Comparisons off-/on-reserve: Treatment completion (aPR = 1.03; 95% CI 
+      0.995-1.07); early detection (aPR = 0.87; 95% CI 0.57-1.33); HIV testing and 
+      reporting (aPR = 0.42; 95% CI 0.21-0.83); pediatric TB (age < 15 years) 
+      (aPR = 1.20; 95% CI 0.47-3.06); retreatment for TB (aPR = 0.93; 95% CI 
+      0.89-0.97); contact elicitation (aPR = 0.94; 95% CI 0.84-1.05); contact 
+      assessment (aPR = 0.69; 95% CI 0.50-0.94). Pediatric (ages < 15 years) TB 
+      incidence in northern Manitoba was 37.1 per 100,000/year. CONCLUSION: TB program 
+      performance varies depending on residence in a reserve or non-reserve community. 
+      Action is urgently needed to address TB program performance in terms of contact 
+      investigation and HIV testing/reporting for First Nations off-reserve and to 
+      address high rates of pediatric TB in northern Manitoba. First Nations 
+      collaboration and models of care should be considered both on- and off-reserve to 
+      improve TB program performance.
+FAU - Basham, C Andrew
+AU  - Basham CA
+AUID- ORCID: 0000-0003-0506-7936
+AD  - School of Population and Public Health, University of British Columbia, 
+      Vancouver, BC, Canada. umbashac@myumanitoba.ca.
+AD  - Provincial TB Services, British Columbia Centre for Disease Control, Vancouver, 
+      BC, Canada. umbashac@myumanitoba.ca.
+FAU - Elias, Brenda
+AU  - Elias B
+AD  - Department of Community Health Sciences, University of Manitoba, Winnipeg, MB, 
+      Canada.
+FAU - Fanning, Anne
+AU  - Fanning A
+AD  - Emeritus, Department of Medicine, University of Alberta, Edmonton, AB, Canada.
+FAU - Orr, Pamela
+AU  - Orr P
+AD  - Department of Community Health Sciences, University of Manitoba, Winnipeg, MB, 
+      Canada.
+AD  - Department of Internal Medicine, University of Manitoba, Winnipeg, MB, Canada.
+AD  - Department of Medical Microbiology, University of Manitoba, Winnipeg, MB, Canada.
+LA  - eng
+GR  - HOA 80062/CIHR/Canada
+PT  - Journal Article
+DEP - 20190708
+PL  - Switzerland
+TA  - Can J Public Health
+JT  - Canadian journal of public health = Revue canadienne de sante publique
+JID - 0372714
+SB  - IM
+MH  - Adolescent
+MH  - Adult
+MH  - Child
+MH  - Child, Preschool
+MH  - Female
+MH  - Humans
+MH  - Incidence
+MH  - Indians, North American/*statistics & numerical data
+MH  - Infant
+MH  - Infant, Newborn
+MH  - Male
+MH  - Manitoba/epidemiology
+MH  - Middle Aged
+MH  - Program Evaluation
+MH  - Residence Characteristics/*statistics & numerical data
+MH  - Retrospective Studies
+MH  - Tuberculosis/*ethnology/*prevention & control
+MH  - Young Adult
+PMC - PMC6964554
+OTO - NOTNLM
+OT  - First Nations
+OT  - Health care quality, access, and evaluation
+OT  - Indigenous population
+OT  - Manitoba
+OT  - Performance measurement
+OT  - Tuberculosis
+COIS- The authors declare that they have no conflict of interest.
+EDAT- 2019/07/10 06:00
+MHDA- 2020/04/10 06:00
+PMCR- 2020/07/08
+CRDT- 2019/07/10 06:00
+PHST- 2018/11/16 00:00 [received]
+PHST- 2019/05/23 00:00 [accepted]
+PHST- 2019/03/31 00:00 [revised]
+PHST- 2019/07/10 06:00 [pubmed]
+PHST- 2020/04/10 06:00 [medline]
+PHST- 2019/07/10 06:00 [entrez]
+PHST- 2020/07/08 00:00 [pmc-release]
+AID - 10.17269/s41997-019-00231-2 [pii]
+AID - 231 [pii]
+AID - 10.17269/s41997-019-00231-2 [doi]
+PST - ppublish
+SO  - Can J Public Health. 2019 Dec;110(6):688-696. doi: 10.17269/s41997-019-00231-2. 
+      Epub 2019 Jul 8.
+
+PMID- 31043136
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20200129
+LR  - 20240802
+IS  - 2242-3982 (Electronic)
+IS  - 1239-9736 (Print)
+IS  - 1239-9736 (Linking)
+VI  - 78
+IP  - 1
+DP  - 2019 Dec
+TI  - Multimorbidity prevalence in Canada: a comparison of Northern Territories with 
+      Provinces, 2013/14.
+PG  - 1607703
+LID - 10.1080/22423982.2019.1607703 [doi]
+LID - 1607703
+AB  - Rapid social, economic, and environmental changes in the northern territories of 
+      Canada have raised concerns about potentially increasing levels of chronic 
+      disease. This concern prompted us to compare multimorbidity prevalence in Canada 
+      between the territories and provinces. We analyzed Canadian Community Health 
+      Survey data for 2013/14. We defined multimorbidity, the outcome, as having 3 or 
+      more chronic conditions and used survey-weighted multivariable logistic 
+      regression for comparisons between territories and provinces. We found a 
+      prevalence of multimorbidity in Canada of 14.0% (95% CI: 13.6, 14.3). We could 
+      not find significant difference in multimorbidity prevalence between the 
+      territories and provinces of Canada overall; however, the territories tended to 
+      have lower prevalence estimates than provinces for multimorbidity (adj-OR = 0.88; 
+      95% CI: 0.74-1.04). Sensitivity analyses from propensity score analyses had 
+      similar conclusions. Effect modification analyses identified lower multimorbidity 
+      in territories versus provinces among households without a post-secondary 
+      graduate (adj-OR = 0.46; 95% CI: 0.34-0.61 for northern residence), males 
+      (adj-OR = 0.71; 95% CI: 0.54-0.93), and ages 12-29 years (adj-OR = 0.63; 95% CI: 
+      0.39-0.99). Caution is needed in interpreting the results in light of 
+      representativeness of CCHS in northern populations of Canada.
+FAU - Basham, C Andrew
+AU  - Basham CA
+AUID- ORCID: 0000-0003-0506-7936
+AD  - a School of Population and Public Health , University of British Columbia , 
+      Vancouver , Canada.
+AD  - b TB Services , British Columbia Centre for Disease Control , Vancouver , Canada.
+FAU - Karim, Mohammad Ehsanul
+AU  - Karim ME
+AUID- ORCID: 0000-0002-0346-2871
+AD  - a School of Population and Public Health , University of British Columbia , 
+      Vancouver , Canada.
+AD  - c Centre for Health Evaluation and Outcome Sciences , Providence Health Care , 
+      Vancouver , Canada.
+LA  - eng
+PT  - Journal Article
+PT  - Research Support, Non-U.S. Gov't
+PL  - United States
+TA  - Int J Circumpolar Health
+JT  - International journal of circumpolar health
+JID - 9713056
+SB  - IM
+MH  - Adolescent
+MH  - Adult
+MH  - Age Factors
+MH  - Aged
+MH  - Alcohol Drinking/ethnology
+MH  - Arctic Regions/epidemiology
+MH  - Canada/epidemiology
+MH  - Cross-Sectional Studies
+MH  - Health Behavior/ethnology
+MH  - Health Surveys
+MH  - Humans
+MH  - Male
+MH  - Middle Aged
+MH  - Multiple Chronic Conditions/*epidemiology/ethnology
+MH  - Prevalence
+MH  - Propensity Score
+MH  - Risk Factors
+MH  - Sex Factors
+MH  - Smoking/ethnology
+MH  - Socioeconomic Factors
+MH  - Young Adult
+PMC - PMC6507926
+OTO - NOTNLM
+OT  - Canada
+OT  - Chronic disease
+OT  - cross-sectional studies
+OT  - epidemiology
+OT  - multimorbidity
+OT  - surveys and questionnaires
+COIS- No potential conflict of interest was reported by the authors.
+EDAT- 2019/05/03 06:00
+MHDA- 2020/01/30 06:00
+PMCR- 2019/01/01
+CRDT- 2019/05/03 06:00
+PHST- 2019/05/03 06:00 [entrez]
+PHST- 2019/05/03 06:00 [pubmed]
+PHST- 2020/01/30 06:00 [medline]
+PHST- 2019/01/01 00:00 [pmc-release]
+AID - 1607703 [pii]
+AID - 10.1080/22423982.2019.1607703 [doi]
+PST - ppublish
+SO  - Int J Circumpolar Health. 2019 Dec;78(1):1607703. doi: 
+      10.1080/22423982.2019.1607703.
+
+PMID- 37607656
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20240205
+LR  - 20240223
+IS  - 1532-821X (Electronic)
+IS  - 0003-9993 (Linking)
+VI  - 105
+IP  - 2
+DP  - 2024 Feb
+TI  - Experiential Aspects of Participation in Employment and Mobility for Adults With 
+      Physical Disabilities: Testing Cross-Sectional Models of Contextual Influences 
+      and Well-Being Outcomes.
+PG  - 303-313
+LID - S0003-9993(23)00462-8 [pii]
+LID - 10.1016/j.apmr.2023.08.004 [doi]
+AB  - OBJECTIVE: To use structural equation modeling to test research- and 
+      theory-informed models of potential predictors and outcomes of subjective 
+      experiences of employment and mobility participation in a national sample of 
+      people with physical disabilities. DESIGN: Cross-sectional survey. SETTING: 
+      Canada. PARTICIPANTS: English or French-speaking adults with a physical 
+      impairment affecting mobility and restricting activities or participation, and 
+      who participated in employment (n=457) or mobility (n=711) life domains. 
+      INTERVENTIONS: N/A. MAIN OUTCOME MEASURES: Participants completed standardized 
+      measures of perceived health, and employment-specific and/or mobility-specific 
+      measures of perceived abilities, social support, accessibility and policies 
+      (predictor variables); the Measure of Experiential Aspects of Participation 
+      (MeEAP) in employment and/or mobility; and standardized measures of emotional 
+      well-being, social well-being and life satisfaction (outcome variables). RESULTS: 
+      Analyses using structural equation modeling showed that in both employment and 
+      mobility domains, perceived health, abilities, social support, and accessibility 
+      were positively related to experiential aspects of participation. Participation 
+      experiences were positively related to social well-being, emotional well-being, 
+      and life satisfaction. CONCLUSIONS: Results support and extend current theorizing 
+      on participation experiences among adults with physical disabilities. 
+      Intrapersonal and environmental factors may play a role in optimizing 
+      participation experiences in employment and mobility which, in turn, may lead to 
+      better well-being and life satisfaction. These results emphasize the importance 
+      of conceptualizing participation from an experiential perspective and provide a 
+      basis for advancing theory and practice to understand and improve the 
+      participation experiences and well-being of adults living with physical 
+      disabilities.
+CI  - Copyright © 2023 American Congress of Rehabilitation Medicine. Published by 
+      Elsevier Inc. All rights reserved.
+FAU - Martin Ginis, Kathleen A
+AU  - Martin Ginis KA
+AD  - Department of Medicine, Division of Physical Medicine & Rehabilitation, 
+      University of British Columbia, Vancouver, Canada; Centre for Chronic Disease 
+      Prevention and Management, Kelowna, Canada; School of Health and Exercise 
+      Sciences, University of British Columbia, Kelowna, Canada; International 
+      Collaboration on Repair Discoveries (ICORD), University of British Columbia, 
+      Vancouver, Canada. Electronic address: kathleen_martin.ginis@ubc.ca.
+FAU - Sinden, Adrienne R
+AU  - Sinden AR
+AD  - School of Health and Exercise Sciences, University of British Columbia, Kelowna, 
+      Canada.
+FAU - Bonaccio, Silvia
+AU  - Bonaccio S
+AD  - Telfer School of Management, University of Ottawa, Ottawa, Canada; Institute for 
+      Work & Health, Toronto, Canada.
+FAU - Labbé, Delphine
+AU  - Labbé D
+AD  - Disability and Human Development Department, College of Applied Health Sciences, 
+      University of Illinois, Chicago, IL.
+FAU - Guertin, Camille
+AU  - Guertin C
+AD  - School of Health and Exercise Sciences, University of British Columbia, Kelowna, 
+      Canada.
+FAU - Gellatly, Ian R
+AU  - Gellatly IR
+AD  - Department of Strategy, Entrepreneurship, and Management, Alberta School of 
+      Business, University of Alberta, Edmonton, Canada.
+FAU - Koch, Laura
+AU  - Koch L
+AD  - Temerty Faculty of Medicine, University of Toronto, Toronto, Canada.
+FAU - Ben Mortenson, W
+AU  - Ben Mortenson W
+AD  - International Collaboration on Repair Discoveries (ICORD), University of British 
+      Columbia, Vancouver, Canada; Department of Occupational Science and Occupational 
+      Therapy, University of British Columbia, Vancouver, Canada; Rehabilitation 
+      Research Program, Vancouver Coastal Health Research Institute, Vancouver, Canada.
+FAU - Routhier, François
+AU  - Routhier F
+AD  - Center for Interdisciplinary Research in Rehabilitation and Social Integration, 
+      Quebec, Canada; Department of Rehabilitation, Faculty of Medicine, Université 
+      Laval, Quebec, Canada.
+FAU - Basham, C Andrew
+AU  - Basham CA
+AD  - School of Population and Public Health, Faculty of Medicine, University of 
+      British Columbia, Vancouver, Canada.
+FAU - Jetha, Arif
+AU  - Jetha A
+AD  - Institute for Work & Health, Toronto, Canada; Dalla Lana School of Public Health, 
+      University of Toronto, Toronto, Canada.
+FAU - Miller, William C
+AU  - Miller WC
+AD  - International Collaboration on Repair Discoveries (ICORD), University of British 
+      Columbia, Vancouver, Canada; Department of Occupational Science and Occupational 
+      Therapy, University of British Columbia, Vancouver, Canada.
+LA  - eng
+PT  - Journal Article
+PT  - Research Support, Non-U.S. Gov't
+DEP - 20230820
+PL  - United States
+TA  - Arch Phys Med Rehabil
+JT  - Archives of physical medicine and rehabilitation
+JID - 2985158R
+SB  - IM
+MH  - Adult
+MH  - Humans
+MH  - Cross-Sectional Studies
+MH  - *Social Participation
+MH  - *Disabled Persons/psychology
+MH  - Social Support
+MH  - Employment
+OTO - NOTNLM
+OT  - Psychological theory
+OT  - Psychological well-being
+OT  - Quality of life
+OT  - Rehabilitation
+OT  - Social functioning
+OT  - Social participation
+OT  - Social support
+EDAT- 2023/08/23 00:42
+MHDA- 2024/02/05 06:42
+CRDT- 2023/08/22 19:19
+PHST- 2023/03/29 00:00 [received]
+PHST- 2023/07/18 00:00 [revised]
+PHST- 2023/08/03 00:00 [accepted]
+PHST- 2024/02/05 06:42 [medline]
+PHST- 2023/08/23 00:42 [pubmed]
+PHST- 2023/08/22 19:19 [entrez]
+AID - S0003-9993(23)00462-8 [pii]
+AID - 10.1016/j.apmr.2023.08.004 [doi]
+PST - ppublish
+SO  - Arch Phys Med Rehabil. 2024 Feb;105(2):303-313. doi: 10.1016/j.apmr.2023.08.004. 
+      Epub 2023 Aug 20.
+
+PMID- 32666352
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20211012
+LR  - 20231110
+IS  - 1920-7476 (Electronic)
+IS  - 0008-4263 (Print)
+IS  - 0008-4263 (Linking)
+VI  - 112
+IP  - 1
+DP  - 2021 Feb
+TI  - Post-tuberculosis mortality risk among immigrants to British Columbia, Canada, 
+      1985-2015: a time-dependent Cox regression analysis of linked immigration, public 
+      health, and vital statistics data.
+PG  - 132-141
+LID - 10.17269/s41997-020-00345-y [doi]
+AB  - OBJECTIVE: To compare non-tuberculosis (non-TB)-cause mortality risk overall and 
+      cause-specific mortality risks within the immigrant population of British 
+      Columbia (BC) with and without TB diagnosis through time-dependent Cox 
+      regressions. METHODS: All people immigrating to BC during 1985-2015 
+      (N = 1,030,873) were included with n = 2435 TB patients, and the remaining as 
+      non-TB controls. Outcomes were time-to-mortality for all non-TB causes, 
+      respiratory diseases, cardiovascular diseases, cancers, and injuries/poisonings, 
+      and were ascertained using ICD-coded vital statistics data. Cox regressions were 
+      used, with a time-varying exposure variable for TB diagnosis. RESULTS: The 
+      non-TB-cause mortality hazard ratio (HR) was 4.01 (95% CI 3.57-4.51) with 
+      covariate-adjusted HR of 1.69 (95% CI 1.50-1.91). Cause-specific 
+      covariate-adjusted mortality risk was elevated for respiratory diseases 
+      (aHR = 2.96; 95% CI 2.18-4.00), cardiovascular diseases (aHR = 1.63; 95% CI 
+      1.32-2.02), cancers (aHR = 1.40; 95% CI 1.13-1.75), and injuries/poisonings 
+      (aHR = 1.85; 95% CI 1.25-2.72). CONCLUSIONS: In any given year, if an immigrant 
+      to BC was diagnosed with TB, their risk of non-TB mortality was 69% higher than 
+      if they were not diagnosed with TB. Healthcare providers should consider multiple 
+      potential threats to the long-term health of TB patients during and after TB 
+      treatment. TB guidelines in high-income settings should address TB survivor 
+      health.
+FAU - Basham, C Andrew
+AU  - Basham CA
+AUID- ORCID: 0000-0003-0506-7936
+AD  - School of Population and Public Health, University of British Columbia, 
+      Vancouver, BC, Canada. umbashac@myumanitoba.ca.
+AD  - British Columbia Centre for Disease Control, 655 W 12th Ave., Vancouver, BC, V5Z 
+      4R4, Canada. umbashac@myumanitoba.ca.
+FAU - Karim, Mohammad Ehsanul
+AU  - Karim ME
+AD  - School of Population and Public Health, University of British Columbia, 
+      Vancouver, BC, Canada.
+AD  - Centre for Health Evaluation and Outcomes Science, University of British 
+      Columbia, Vancouver, BC, Canada.
+FAU - Cook, Victoria J
+AU  - Cook VJ
+AD  - British Columbia Centre for Disease Control, 655 W 12th Ave., Vancouver, BC, V5Z 
+      4R4, Canada.
+AD  - Division of Respiratory Medicine, University of British Columbia, Vancouver, BC, 
+      Canada.
+FAU - Patrick, David M
+AU  - Patrick DM
+AD  - School of Population and Public Health, University of British Columbia, 
+      Vancouver, BC, Canada.
+AD  - British Columbia Centre for Disease Control, 655 W 12th Ave., Vancouver, BC, V5Z 
+      4R4, Canada.
+FAU - Johnston, James C
+AU  - Johnston JC
+AD  - School of Population and Public Health, University of British Columbia, 
+      Vancouver, BC, Canada.
+AD  - British Columbia Centre for Disease Control, 655 W 12th Ave., Vancouver, BC, V5Z 
+      4R4, Canada.
+AD  - Division of Respiratory Medicine, University of British Columbia, Vancouver, BC, 
+      Canada.
+LA  - eng
+GR  - PJT#153213/CIHR/Canada
+PT  - Journal Article
+DEP - 20200714
+PL  - Switzerland
+TA  - Can J Public Health
+JT  - Canadian journal of public health = Revue canadienne de sante publique
+JID - 0372714
+SB  - IM
+MH  - Adult
+MH  - Aged
+MH  - British Columbia/epidemiology
+MH  - *Emigrants and Immigrants/statistics & numerical data
+MH  - Emigration and Immigration
+MH  - Female
+MH  - Humans
+MH  - Male
+MH  - Middle Aged
+MH  - *Mortality/trends
+MH  - Proportional Hazards Models
+MH  - Public Health
+MH  - Regression Analysis
+MH  - *Tuberculosis/epidemiology
+MH  - Vital Statistics
+PMC - PMC7851220
+OTO - NOTNLM
+OT  - Administrative data
+OT  - British Columbia
+OT  - Canada
+OT  - Cohort studies
+OT  - Mortality
+OT  - Post-tuberculosis
+OT  - Survival analysis
+COIS- Over the last three years, MEK has received consulting fees from Biogen Inc. 
+      (unrelated to this manuscript). The other authors declare that they have no 
+      conflict of interest.
+EDAT- 2020/07/16 06:00
+MHDA- 2021/10/13 06:00
+PMCR- 2021/07/14
+CRDT- 2020/07/16 06:00
+PHST- 2020/02/24 00:00 [received]
+PHST- 2020/05/14 00:00 [accepted]
+PHST- 2020/07/16 06:00 [pubmed]
+PHST- 2021/10/13 06:00 [medline]
+PHST- 2020/07/16 06:00 [entrez]
+PHST- 2021/07/14 00:00 [pmc-release]
+AID - 10.17269/s41997-020-00345-y [pii]
+AID - 345 [pii]
+AID - 10.17269/s41997-020-00345-y [doi]
+PST - ppublish
+SO  - Can J Public Health. 2021 Feb;112(1):132-141. doi: 10.17269/s41997-020-00345-y. 
+      Epub 2020 Jul 14.
+
+PMID- 33819740
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20210517
+LR  - 20210517
+IS  - 2352-3964 (Electronic)
+IS  - 2352-3964 (Linking)
+VI  - 66
+DP  - 2021 Apr
+TI  - The contrasting role of nasopharyngeal angiotensin converting enzyme 2 (ACE2) 
+      transcription in SARS-CoV-2 infection: A cross-sectional study of people tested 
+      for COVID-19 in British Columbia, Canada.
+PG  - 103316
+LID - S2352-3964(21)00109-2 [pii]
+LID - 10.1016/j.ebiom.2021.103316 [doi]
+LID - 103316
+AB  - BACKGROUND: Angiotensin converting enzyme 2 (ACE2) protein serves as the host 
+      receptor for SARS-CoV-2, with a critical role in viral infection. We aim to 
+      understand population level variation of nasopharyngeal ACE2 transcription in 
+      people tested for COVID-19 and the relationship between ACE2 transcription and 
+      SARS-CoV-2 viral load, while adjusting for expression of: (i) the complementary 
+      protease, Transmembrane serine protease 2 (TMPRSS2), (ii) soluble ACE2, (iii) 
+      age, and (iv) biological sex. The ACE2 gene was targeted to measure expression of 
+      transmembrane and soluble transcripts. METHODS: A cross-sectional study of 
+      n = 424 "participants" aged 1-104 years referred for COVID-19 testing was 
+      performed in British Columbia, Canada. Patients who tested positive for COVID-19 
+      were matched by age and biological sex to patients who tested negative. Viral 
+      load and host gene expression were assessed by quantitative reverse-transcriptase 
+      polymerase chain reaction. Bivariate analysis and multiple linear regression were 
+      performed to understand the role of nasopharyngeal ACE2 expression in SARS-CoV-2 
+      infection. FINDINGS: Analysis showed no association between age and 
+      nasopharyngeal ACE2 transcription in those who tested negative for COVID-19 
+      (P = 0•092). Mean relative transcription of transmembrane (P = 0•00012) and 
+      soluble (P<0•0001) ACE2 isoforms, as well as TMPRSS2 (P<0•0001) was higher in 
+      COVID-19-negative participants than COVID--19 positive ones, yielding a negative 
+      correlation between targeted host gene expression and positive COVID-19 
+      diagnosis. In bivariate analysis of COVID-19-positive participants, transcription 
+      of transmembrane ACE2 positively correlated with SARS-CoV-2 viral RNA load 
+      (B = 0•49, R(2)=0•14, P<0•0001), transcription of soluble ACE2 negatively 
+      correlated (B= -0•85, R(2)= 0•26, P<0•0001), and no correlation was found with 
+      TMPRSS2 transcription (B= -0•042, R(2)=<0•10, P = 0•69). Multivariable analysis 
+      showed that the greatest viral RNA loads were observed in participants with high 
+      transmembrane ACE2 transcription (Β= 0•89, 95%CI: [0•59 to 1•18]), while 
+      transcription of the soluble isoform appears to protect against high viral RNA 
+      load in the upper respiratory tract (Β= -0•099, 95%CI: [-0•18 to -0•022]). 
+      INTERPRETATION: Nasopharyngeal ACE2 transcription plays a dual, contrasting role 
+      in SARS-CoV-2 infection of the upper respiratory tract. Transcription of the 
+      transmembrane ACE2 isoform positively correlates, while transcription of the 
+      soluble isoform negatively correlates with viral RNA load after adjusting for 
+      age, biological sex, and transcription of TMPRSS2. FUNDING: This project (COV-55) 
+      was funded by Genome British Columbia as part of their COVID-19 rapid response 
+      initiative.
+CI  - Copyright © 2021 The Authors. Published by Elsevier B.V. All rights reserved.
+FAU - Nikiforuk, Aidan M
+AU  - Nikiforuk AM
+AD  - British Columbia Centre for Disease Control, Vancouver, BC V5Z 4R4, Canada; 
+      School of Population and Public Health, University of British Columbia, 
+      Vancouver, BC V6T 1Z4, Canada.
+FAU - Kuchinski, Kevin S
+AU  - Kuchinski KS
+AD  - British Columbia Centre for Disease Control, Vancouver, BC V5Z 4R4, Canada; 
+      Department of Pathology and Laboratory Medicine, University of British Columbia, 
+      Vancouver, BC V6T 1Z4, Canada.
+FAU - Twa, David D W
+AU  - Twa DDW
+AD  - Department of Pathology and Laboratory Medicine, University of British Columbia, 
+      Vancouver, BC V6T 1Z4, Canada; British Columbia Cancer Research Centre, 
+      Vancouver, BC V5Z 1L3, Canada.
+FAU - Lukac, Christine D
+AU  - Lukac CD
+AD  - British Columbia Centre for Disease Control, Vancouver, BC V5Z 4R4, Canada.
+FAU - Sbihi, Hind
+AU  - Sbihi H
+AD  - British Columbia Centre for Disease Control, Vancouver, BC V5Z 4R4, Canada; 
+      School of Population and Public Health, University of British Columbia, 
+      Vancouver, BC V6T 1Z4, Canada.
+FAU - Basham, C Andrew
+AU  - Basham CA
+AD  - British Columbia Centre for Disease Control, Vancouver, BC V5Z 4R4, Canada; 
+      School of Population and Public Health, University of British Columbia, 
+      Vancouver, BC V6T 1Z4, Canada.
+FAU - Steidl, Christian
+AU  - Steidl C
+AD  - British Columbia Cancer Research Centre, Vancouver, BC V5Z 1L3, Canada.
+FAU - Prystajecky, Natalie A
+AU  - Prystajecky NA
+AD  - British Columbia Centre for Disease Control, Vancouver, BC V5Z 4R4, Canada; 
+      Department of Pathology and Laboratory Medicine, University of British Columbia, 
+      Vancouver, BC V6T 1Z4, Canada.
+FAU - Jassem, Agatha N
+AU  - Jassem AN
+AD  - British Columbia Centre for Disease Control, Vancouver, BC V5Z 4R4, Canada; 
+      Department of Pathology and Laboratory Medicine, University of British Columbia, 
+      Vancouver, BC V6T 1Z4, Canada.
+FAU - Krajden, Mel
+AU  - Krajden M
+AD  - British Columbia Centre for Disease Control, Vancouver, BC V5Z 4R4, Canada; 
+      Department of Pathology and Laboratory Medicine, University of British Columbia, 
+      Vancouver, BC V6T 1Z4, Canada.
+FAU - Patrick, David M
+AU  - Patrick DM
+AD  - British Columbia Centre for Disease Control, Vancouver, BC V5Z 4R4, Canada; 
+      School of Population and Public Health, University of British Columbia, 
+      Vancouver, BC V6T 1Z4, Canada.
+FAU - Sekirov, Inna
+AU  - Sekirov I
+AD  - British Columbia Centre for Disease Control, Vancouver, BC V5Z 4R4, Canada; 
+      Department of Pathology and Laboratory Medicine, University of British Columbia, 
+      Vancouver, BC V6T 1Z4, Canada. Electronic address: inna.sekirov@bccdc.ca.
+LA  - eng
+PT  - Journal Article
+DEP - 20210402
+PL  - Netherlands
+TA  - EBioMedicine
+JT  - EBioMedicine
+JID - 101647039
+RN  - 0 (RNA, Viral)
+RN  - EC 3.4.17.23 (ACE2 protein, human)
+RN  - EC 3.4.17.23 (Angiotensin-Converting Enzyme 2)
+RN  - EC 3.4.21.- (Serine Endopeptidases)
+RN  - EC 3.4.21.- (TMPRSS2 protein, human)
+SB  - IM
+MH  - Adult
+MH  - Age Factors
+MH  - Aged
+MH  - Aged, 80 and over
+MH  - Angiotensin-Converting Enzyme 2/*genetics
+MH  - British Columbia
+MH  - COVID-19/*genetics/virology
+MH  - *COVID-19 Testing
+MH  - Cross-Sectional Studies
+MH  - Female
+MH  - Host-Pathogen Interactions/genetics
+MH  - Humans
+MH  - Male
+MH  - Middle Aged
+MH  - Nasopharynx/physiology/*virology
+MH  - RNA, Viral/analysis
+MH  - Serine Endopeptidases/genetics
+MH  - Transcription, Genetic
+MH  - Viral Load
+PMC - PMC8016616
+OTO - NOTNLM
+OT  - ACE2 transcription
+OT  - COVID-19
+OT  - Cross-sectional study
+OT  - Nasopharynx
+OT  - SARS-CoV-2
+OT  - Soluble ACE2
+OT  - Viral RNA load
+COIS- Declaration of Competing Interests The authors have no conflicts of interest to 
+      declare.
+EDAT- 2021/04/06 06:00
+MHDA- 2021/05/18 06:00
+PMCR- 2021/04/02
+CRDT- 2021/04/05 20:15
+PHST- 2020/12/09 00:00 [received]
+PHST- 2021/03/06 00:00 [revised]
+PHST- 2021/03/15 00:00 [accepted]
+PHST- 2021/04/06 06:00 [pubmed]
+PHST- 2021/05/18 06:00 [medline]
+PHST- 2021/04/05 20:15 [entrez]
+PHST- 2021/04/02 00:00 [pmc-release]
+AID - S2352-3964(21)00109-2 [pii]
+AID - 103316 [pii]
+AID - 10.1016/j.ebiom.2021.103316 [doi]
+PST - ppublish
+SO  - EBioMedicine. 2021 Apr;66:103316. doi: 10.1016/j.ebiom.2021.103316. Epub 2021 Apr 
+      2.
+
+PMID- 38778712
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20240805
+LR  - 20240805
+IS  - 1475-2727 (Electronic)
+IS  - 1368-9800 (Linking)
+VI  - 27
+IP  - 1
+DP  - 2024 May 23
+TI  - Increased difficulty accessing food and income change during the COVID-19 
+      pandemic among youth living in the eThekwini district, South Africa.
+PG  - e145
+LID - 10.1017/S1368980024001174 [doi]
+AB  - OBJECTIVE: To estimate the effect of income change on difficulty accessing food 
+      since the COVID-19 pandemic for South African youth and evaluate whether this 
+      effect was modified by receiving social grants. DESIGN: A cross-sectional, online 
+      survey was conducted between December 2021 and May 2022. Primary outcome was 
+      increased difficulty accessing food since the COVID-19 pandemic. Income change 
+      was categorised as 'Decreased a lot', 'Decreased slightly' and 'Unchanged or 
+      increased'. Multivariable logistic regressions were used, with an interaction 
+      term between social grant receipt and income change. SETTING: eThekwini district, 
+      South Africa. PARTICIPANTS: Youth aged 16-24 years. RESULTS: Among 1,620 
+      participants, median age was 22 years (IQR 19-24); 861 (53 %) were women; 476 (29 
+      %) reported increased difficulty accessing food; 297 (18 %) reported that income 
+      decreased a lot, of whom 149 (50 %) did not receive social grants. Experiencing a 
+      large income decrease was highly associated with increased difficulty accessing 
+      food during the COVID-19 pandemic (adjusted OR [aOR] 3·63, 95 % CI 2·70, 4·88). 
+      The aOR for the effect of a large income decrease on difficulty accessing food, 
+      compared to no income change, were 1·49 (95 % CI 0·98, 2·28) among participants 
+      receiving social grants, and 6·63 (95 % CI 4·39, 9·99) among participants not 
+      receiving social grants. CONCLUSIONS: While social grant support made a great 
+      difference in lowering the effect of income decrease on difficulty accessing 
+      food, it was insufficient to fully protect youth from those difficulties. In 
+      post-pandemic recovery efforts, there is a critical need to support youth through 
+      economic empowerment programming and food schemes.
+FAU - Jesson, Julie
+AU  - Jesson J
+AUID- ORCID: 0000-0002-9461-2520
+AD  - Center for Epidemiology and Research in POPulation Health (CERPOP), Inserm, 
+      Université de Toulouse, Université Paul Sabatier, Toulouse, France.
+FAU - Zulu, Bongiwe
+AU  - Zulu B
+AD  - MRU (MatCH Research Unit), Department of Obstetrics and Gynaecology, Faculty of 
+      Health Sciences, University of the Witwatersrand, Durban, South Africa.
+FAU - Closson, Kalysha
+AU  - Closson K
+AD  - Center of Gender Equity and Health, University of California San Diego, La Jolla, 
+      CA, USA.
+AD  - Faculty of Health Sciences, Simon Fraser University, Burnaby, BC, Canada.
+FAU - Basham, C Andrew
+AU  - Basham CA
+AD  - Division of Pharmacoepidemiology and Pharmacoeconomics, Department of Medicine, 
+      Brigham and Women's Hospital, Boston, MA, USA.
+AD  - Department of Medicine, Harvard Medical School, Boston, MA, USA.
+FAU - Beksinska, Mags
+AU  - Beksinska M
+AD  - MRU (MatCH Research Unit), Department of Obstetrics and Gynaecology, Faculty of 
+      Health Sciences, University of the Witwatersrand, Durban, South Africa.
+FAU - Dong, Erica
+AU  - Dong E
+AD  - Faculty of Health Sciences, Simon Fraser University, Burnaby, BC, Canada.
+FAU - Zharima, Campion
+AU  - Zharima C
+AD  - Perinatal HIV Research Unit (PHRU), Faculty of Health Sciences, University of the 
+      Witwatersrand, Johannesburg, South Africa.
+AD  - African Social Sciences Unit of Research and Evaluation (ASSURE), Faculty of 
+      Health Sciences, University of the Witwatersrand, Johannesburg, South Africa.
+FAU - Singh, Rishav
+AU  - Singh R
+AD  - Faculty of Health Sciences, Simon Fraser University, Burnaby, BC, Canada.
+FAU - Pakhomova, Tatiana
+AU  - Pakhomova T
+AD  - Faculty of Health Sciences, Simon Fraser University, Burnaby, BC, Canada.
+FAU - Dietrich, Janan
+AU  - Dietrich J
+AD  - Perinatal HIV Research Unit (PHRU), Faculty of Health Sciences, University of the 
+      Witwatersrand, Johannesburg, South Africa.
+AD  - African Social Sciences Unit of Research and Evaluation (ASSURE), Wits Health 
+      Consortium, Johannesburg, South Africa.
+AD  - Health Systems Research Unit, South African Medical Research Council, Bellville, 
+      South Africa.
+FAU - Kaida, Angela
+AU  - Kaida A
+AD  - Faculty of Health Sciences, Simon Fraser University, Burnaby, BC, Canada.
+AD  - Women's Health Research Institute, Vancouver, BC, Canada.
+LA  - eng
+PT  - Journal Article
+DEP - 20240523
+PL  - England
+TA  - Public Health Nutr
+JT  - Public health nutrition
+JID - 9808463
+SB  - IM
+MH  - Humans
+MH  - *COVID-19/epidemiology
+MH  - South Africa/epidemiology
+MH  - Female
+MH  - Male
+MH  - Cross-Sectional Studies
+MH  - Adolescent
+MH  - Young Adult
+MH  - *Food Insecurity
+MH  - *Income
+MH  - *SARS-CoV-2
+MH  - Pandemics
+MH  - Surveys and Questionnaires
+MH  - Food Supply/statistics & numerical data
+MH  - Food Assistance/statistics & numerical data
+OTO - NOTNLM
+OT  - COVID-19
+OT  - Developing countries
+OT  - Food security
+OT  - Income
+OT  - Young adult
+EDAT- 2024/05/23 06:43
+MHDA- 2024/08/05 06:43
+CRDT- 2024/05/23 02:43
+PHST- 2024/08/05 06:43 [medline]
+PHST- 2024/05/23 06:43 [pubmed]
+PHST- 2024/05/23 02:43 [entrez]
+AID - S1368980024001174 [pii]
+AID - 10.1017/S1368980024001174 [doi]
+PST - epublish
+SO  - Public Health Nutr. 2024 May 23;27(1):e145. doi: 10.1017/S1368980024001174.
+
+PMID- 38229136
+OWN - NLM
+STAT- PubMed-not-MEDLINE
+LR  - 20240118
+IS  - 2197-1714 (Print)
+IS  - 2197-1714 (Electronic)
+IS  - 2197-1714 (Linking)
+VI  - 11
+IP  - 1
+DP  - 2024 Jan 16
+TI  - Economic hardship and perpetration of intimate partner violence by young men in 
+      South Africa during the COVID-19 pandemic (2021-2022): a cross-sectional study.
+PG  - 2
+LID - 10.1186/s40621-024-00483-8 [doi]
+LID - 2
+AB  - BACKGROUND: Economic hardship is a potential trigger for intimate partner 
+      violence (IPV) perpetration. While higher IPV rates have been reported in 
+      low-income regions, few African studies have focused on IPV being triggered by 
+      economic hardship among young men during the COVID-19 pandemic. We therefore 
+      estimated economic hardship's effect on IPV perpetration by young men in 
+      eThekwini District, South Africa, during the COVID-19 pandemic. METHODS: A 
+      cross-sectional survey of COVID-19 pandemic experiences was conducted among youth 
+      aged 16-24 years through an anonymous self-administered questionnaire, including 
+      questions about economic hardship (increased difficulty accessing food or 
+      decreased income) and IPV perpetration. A prespecified statistical analysis plan 
+      with a directed acyclic graph of assumed exposure, outcome, and confounder 
+      relationships guided our analyses. We measured association of economic hardship 
+      and IPV perpetration through odds ratios (ORs) computed from a multivariable 
+      logistic regressions adjusted for measured confounders. Secondary outcomes of 
+      physical and sexual IPV perpetration were analyzed separately using the same 
+      specifications. Propensity score matching weights (PS-MW) were used in 
+      sensitivity analyses. Analysis code 
+      repository: https://github.com/CAndrewBasham/Economic_Hardship_IPV_perpetration/ 
+      RESULTS: Among 592 participants, 12.5% reported perpetrating IPV, 67.6% of whom 
+      reported economic hardship, compared with 45.6% of those not reporting IPV 
+      perpetration (crude OR = 2.49). Median age was 22 years (interquartile range 
+      20-24). Most (80%) were in a relationship and living together. Three quarters 
+      identified as Black, 92.1% were heterosexual, and half had monthly 
+      household income < R1600. We estimated an effect of economic hardship on the odds 
+      of perpetrating IPV as OR = 1.83 (CI 0.98-3.47) for IPV perpetration overall, 
+      OR = 6.99 (CI 1.85-36.59) for sexual IPV perpetration, and OR = 1.34 (CI 
+      0.69-2.63) for physical IPV perpetration. PS-MW-weighted ORs for IPV perpetration 
+      by economic hardship were 1.57 (overall), 4.45 (sexual), and 1.26 (physical). 
+      CONCLUSION: We estimated 83% higher odds of self-reported IPV perpetration by 
+      self-reported economic hardship among young South African men during the COVID-19 
+      pandemic. The odds of sexual IPV perpetration were The seven-times higher by 
+      economic hardship, although with limited precision. Among young men in South 
+      Africa, economic hardship during COVID-19 was associated with IPV perpetration by 
+      men. Our findings warrant culturally relevant and youth-oriented interventions 
+      among young men to reduce the likelihood of IPV perpetration should they 
+      experience economic hardship. Further research into possible causal mechanisms 
+      between economic hardship and IPV perpetration could inform public health 
+      measures in future pandemic emergencies.
+CI  - © 2024. The Author(s).
+FAU - Zharima, Campion
+AU  - Zharima C
+AD  - Perinatal HIV Research Unit (PHRU), Faculty of Health Sciences, University of the 
+      Witwatersrand, Johannesburg, South Africa.
+AD  - Centre for Health Policy, School of Public Health, University of the 
+      Witwatersrand, Johannesburg, South Africa.
+FAU - Singh, Rishav
+AU  - Singh R
+AD  - Vaccine Evaluation Centre, BC Children's Hospital and Research Institute, 
+      Vancouver, BC, Canada.
+FAU - Closson, Kalysha
+AU  - Closson K
+AD  - Center On Gender Equity and Health, School of Medicine, University of California 
+      San Diego, La Jolla, CA, USA.
+AD  - Faculty of Health Sciences, Simon Fraser University, Blusson Hall Rm 10522, 8888 
+      University Drive, Burnaby, BC, V5A1S6, Canada.
+FAU - Beksinska, Mags
+AU  - Beksinska M
+AD  - MRU (MatCH Research Unit), Department of Obstetrics and Gynaecology, Faculty of 
+      Health Sciences, University of the Witwatersrand, Durban, South Africa.
+FAU - Zulu, Bongiwe
+AU  - Zulu B
+AD  - MRU (MatCH Research Unit), Department of Obstetrics and Gynaecology, Faculty of 
+      Health Sciences, University of the Witwatersrand, Durban, South Africa.
+FAU - Jesson, Julie
+AU  - Jesson J
+AD  - Center for Epidemiology and Research in POPulation Health (CERPOP), Inserm, 
+      Université de Toulouse, Université Paul Sabatier, Toulouse, France.
+FAU - Pakhomova, Tatiana
+AU  - Pakhomova T
+AD  - Faculty of Health Sciences, Simon Fraser University, Blusson Hall Rm 10522, 8888 
+      University Drive, Burnaby, BC, V5A1S6, Canada.
+FAU - Dong, Erica
+AU  - Dong E
+AD  - Faculty of Health Sciences, Simon Fraser University, Blusson Hall Rm 10522, 8888 
+      University Drive, Burnaby, BC, V5A1S6, Canada.
+FAU - Dietrich, Janan
+AU  - Dietrich J
+AD  - Perinatal HIV Research Unit (PHRU), Faculty of Health Sciences, University of the 
+      Witwatersrand, Johannesburg, South Africa.
+AD  - Health Systems Research Unit, South African Medical Research Council, Bellville, 
+      South Africa.
+AD  - African Social Sciences Unit of Research and Evaluation (ASSURE), A Division of 
+      the Wits Health Consortium, Johannesburg, South Africa.
+FAU - Kaida, Angela
+AU  - Kaida A
+AUID- ORCID: 0000-0003-0329-1926
+AD  - Faculty of Health Sciences, Simon Fraser University, Blusson Hall Rm 10522, 8888 
+      University Drive, Burnaby, BC, V5A1S6, Canada. angela_kaida@sfu.ca.
+AD  - Women's Health Research Institute, Vancouver, BC, Canada. angela_kaida@sfu.ca.
+FAU - Basham, C Andrew
+AU  - Basham CA
+AD  - Faculty of Health Sciences, Simon Fraser University, Blusson Hall Rm 10522, 8888 
+      University Drive, Burnaby, BC, V5A1S6, Canada.
+AD  - Division of Pharmacoepidemiology and Pharmacoeconomics, Department of Medicine, 
+      Brigham and Women's Hospital/Harvard Medical School, Boston, MA, USA.
+LA  - eng
+GR  - IT25554/Mitacs/
+PT  - Journal Article
+DEP - 20240116
+PL  - England
+TA  - Inj Epidemiol
+JT  - Injury epidemiology
+JID - 101652639
+PMC - PMC10790426
+OTO - NOTNLM
+OT  - Adolescents
+OT  - Cross-Sectional Studies
+OT  - Financial Stress
+OT  - Food Insecurity
+OT  - Intimate Partner Violence
+OT  - Logistic Models
+OT  - Masculinity
+OT  - Pandemics
+OT  - Propensity Score
+OT  - SARS-CoV-2
+OT  - South Africa
+OT  - Surveys and Questionnaires
+OT  - Young Adults
+COIS- The funders had no role in study design, data collection and analysis, decision 
+      to publish or preparation of the manuscript.
+EDAT- 2024/01/17 00:42
+MHDA- 2024/01/17 00:43
+PMCR- 2024/01/16
+CRDT- 2024/01/16 23:40
+PHST- 2023/10/12 00:00 [received]
+PHST- 2024/01/01 00:00 [accepted]
+PHST- 2024/01/17 00:43 [medline]
+PHST- 2024/01/17 00:42 [pubmed]
+PHST- 2024/01/16 23:40 [entrez]
+PHST- 2024/01/16 00:00 [pmc-release]
+AID - 10.1186/s40621-024-00483-8 [pii]
+AID - 483 [pii]
+AID - 10.1186/s40621-024-00483-8 [doi]
+PST - epublish
+SO  - Inj Epidemiol. 2024 Jan 16;11(1):2. doi: 10.1186/s40621-024-00483-8.
+
+PMID- 32667879
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20210531
+LR  - 20231112
+IS  - 2368-738X (Electronic)
+IS  - 2368-738X (Linking)
+VI  - 40
+IP  - 7-8
+DP  - 2020 Aug
+TI  - Regional variation in multimorbidity prevalence in British Columbia, Canada: a 
+      cross-sectional analysis of Canadian Community Health Survey data, 2015/16.
+PG  - 225-234
+LID - 10.24095/hpcdp.40.7/8.02 [doi]
+AB  - INTRODUCTION: Multimorbidity represents a major concern for population health and 
+      service delivery planners. Information about the population prevalence (absolute 
+      numbers and proportions) of multimorbidity among regional health service delivery 
+      populations is needed for planning for multimorbidity care. In Canada, health 
+      region-specific estimates of multimorbidity prevalence are not routinely 
+      presented. The Canadian Community Health Survey (CCHS) is a potentially valuable 
+      source of data for these estimates. METHODS: Data from the 2015/16 cycle of the 
+      CCHS for British Columbia (BC) were used to estimate and compare multimorbidity 
+      prevalence (3+ chronic conditions) through survey-weighted analyses. Crude 
+      frequencies and proportions of multimorbidity prevalence were calculated by BC 
+      Health Service Delivery Area (HSDA). Logistic regression was used to estimate 
+      differences in multimorbidity prevalence by HSDA, adjusting for known 
+      confounders. Multiple imputation using chained equations was performed for 
+      missing covariate values as a sensitivity analysis. The definition of 
+      multimorbidity was also altered as an additional sensitivity analysis. RESULTS: A 
+      total of 681 921 people were estimated to have multimorbidity in BC (16.9% of the 
+      population) in 2015/16. Vancouver (adj-OR = 0.65; 95% CI: 0.44-0.97) and Richmond 
+      (adj-OR = 0.55; 95% CI: 0.37-0.82) had much lower prevalence of multimorbidity 
+      than Fraser South (reference HSDA). Missing data analysis and sensitivity 
+      analysis showed results consistent with the main analysis. CONCLUSION: 
+      Multimorbidity prevalence estimates varied across BC health regions, and were 
+      lowest in Vancouver and Richmond after controlling for multiple potential 
+      confounders. There is a need for provincial and regional multimorbidity care 
+      policy development and priority setting. In this context, the CCHS represents a 
+      valuable source of information for regional multimorbidity analyses in Canada.
+FAU - Basham, C Andrew
+AU  - Basham CA
+AD  - University of British Columbia, Vancouver, British Columbia, Canada.
+AD  - Provincial TB Services, British Columbia Centre for Disease Control, Vancouver, 
+      British Columbia, Canada.
+LA  - eng
+LA  - fre
+PT  - Journal Article
+TT  - Variations régionales de prévalence de la multimorbidité en Colombie-Britannique 
+      (Canada) : analyse transversale des données de l’Enquête sur la santé dans les 
+      collectivités canadiennes de 2015-2016.
+PL  - Canada
+TA  - Health Promot Chronic Dis Prev Can
+JT  - Health promotion and chronic disease prevention in Canada : research, policy and 
+      practice
+JID - 101648506
+SB  - IM
+MH  - Adolescent
+MH  - Adult
+MH  - Aged
+MH  - Aged, 80 and over
+MH  - British Columbia/epidemiology
+MH  - Catchment Area, Health
+MH  - Child
+MH  - Chronic Disease/*epidemiology
+MH  - Cross-Sectional Studies
+MH  - Female
+MH  - Health Surveys
+MH  - Humans
+MH  - Male
+MH  - Middle Aged
+MH  - *Multimorbidity
+MH  - Prevalence
+MH  - Socioeconomic Factors
+MH  - Young Adult
+PMC - PMC7450904
+OAB - Multimorbidity prevalence is a growing phenomenon with major cost and service 
+      delivery planning implications for health systems. This paper presents methods 
+      and results for analysis of Canadian Community Health Survey data for British 
+      Columbia (BC) during 2015/16. Estimated multimorbidity prevalence was lower in 
+      Vancouver and Richmond compared to other regions in BC, after adjusting for 
+      multiple confounding factors. Future research may seek to integrate multiple 
+      health administrative and survey datasets to better characterize multimorbidity 
+      among BC health regions. Policy development and priority setting for 
+      multimorbidity care in BC are warranted provincially and within each RHA.
+OABL- eng
+OTO - NOTNLM
+OT  - British Columbia
+OT  - Canada
+OT  - cross-sectional studies
+OT  - multimorbidity
+OT  - prevalence
+OT  - surveys and questionnaires
+COIS- None.
+EDAT- 2020/07/16 06:00
+MHDA- 2021/06/01 06:00
+PMCR- 2020/07/01
+CRDT- 2020/07/16 06:00
+PHST- 2020/07/16 06:00 [entrez]
+PHST- 2020/07/16 06:00 [pubmed]
+PHST- 2021/06/01 06:00 [medline]
+PHST- 2020/07/01 00:00 [pmc-release]
+AID - 150421_Willis_v7-mthighlights_clean_SD [pii]
+AID - 10.24095/hpcdp.40.7/8.02 [doi]
+PST - ppublish
+SO  - Health Promot Chronic Dis Prev Can. 2020 Aug;40(7-8):225-234. doi: 
+      10.24095/hpcdp.40.7/8.02.
+
+PMID- 32265305
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20210621
+LR  - 20210621
+IS  - 1399-3003 (Electronic)
+IS  - 0903-1936 (Linking)
+VI  - 56
+IP  - 2
+DP  - 2020 Aug
+TI  - Towards a "fourth 90": A population-based analysis of post-tuberculosis pulmonary 
+      function testing in British Columbia, Canada, 1985-2015.
+LID - 2000384 [pii]
+LID - 10.1183/13993003.00384-2020 [doi]
+FAU - Basham, C Andrew
+AU  - Basham CA
+AD  - School of Population and Public Health, University of British Columbia, 
+      Vancouver, BC, Canada umbashac@myumanitoba.ca.
+AD  - British Columbia Centre for Disease Control, Vancouver, BC, Canada.
+FAU - Cook, Victoria J
+AU  - Cook VJ
+AD  - British Columbia Centre for Disease Control, Vancouver, BC, Canada.
+AD  - Division of Respiratory Medicine, University of British Columbia, Vancouver, BC, 
+      Canada.
+FAU - Johnston, James C
+AU  - Johnston JC
+AD  - School of Population and Public Health, University of British Columbia, 
+      Vancouver, BC, Canada.
+AD  - British Columbia Centre for Disease Control, Vancouver, BC, Canada.
+AD  - Division of Respiratory Medicine, University of British Columbia, Vancouver, BC, 
+      Canada.
+LA  - eng
+GR  - PJT #153213/Canadian Institutes for Health Research/International
+PT  - Letter
+PT  - Research Support, Non-U.S. Gov't
+DEP - 20200813
+PL  - England
+TA  - Eur Respir J
+JT  - The European respiratory journal
+JID - 8803460
+SB  - IM
+MH  - British Columbia/epidemiology
+MH  - Humans
+MH  - *Tuberculosis
+COIS- Conflict of interest: C.A. Basham reports grants from Canadian Institutes for 
+      Health Research, during the conduct of the study. Conflict of interest: V.J. Cook 
+      has nothing to disclose. Conflict of interest: J.C. Johnston reports grants from 
+      Canadian Institutes for Health Research and Michael Smith Foundation for Health 
+      Research, during the conduct of the study.
+EDAT- 2020/04/09 06:00
+MHDA- 2021/06/22 06:00
+CRDT- 2020/04/09 06:00
+PHST- 2020/02/21 00:00 [received]
+PHST- 2020/03/24 00:00 [accepted]
+PHST- 2020/04/09 06:00 [pubmed]
+PHST- 2021/06/22 06:00 [medline]
+PHST- 2020/04/09 06:00 [entrez]
+AID - 13993003.00384-2020 [pii]
+AID - 10.1183/13993003.00384-2020 [doi]
+PST - epublish
+SO  - Eur Respir J. 2020 Aug 13;56(2):2000384. doi: 10.1183/13993003.00384-2020. Print 
+      2020 Aug.
