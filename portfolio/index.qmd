@@ -3,6 +3,8 @@ title: "Portfolio"
 by: C Andrew Basham
 ---
 
-[LinkedIn Summary](https://orcid.org/0000-0003-0506-7936/print "LinkedIn Summary")
+# [ORCiD Summary](https://orcid.org/0000-0003-0506-7936/print "LinkedIn Summary")
 
-![](images/clipboard-2426066357.png)
+![](images/clipboard-1365040634.png)
+
+# LinkedIn Summary
