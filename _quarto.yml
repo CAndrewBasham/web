@@ -10,7 +10,7 @@ website:
         text: Home
       - href: projects.qmd
       - href: portfolio/index.qmd
-      
+      - href: Education/index.qmd
       
     tools:      
       - icon: twitter
