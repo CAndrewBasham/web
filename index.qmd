@@ -1,5 +1,7 @@
 ---
 by: C Andrew Basham
+execute: 
+  warning: false
 ---
 
 ![](images/Basham_headshot.jpg){width="329"}
@@ -12,7 +14,11 @@ Population and Public Health University of British Columbia
 
 Thesis: [Tuberculosis Survivor Health](https://dx.doi.org/10.14288/1.0402446)
 
-Enrolled: September 2017 Completed: October 2021 Graduated: November 2021
+Enrolled: September 2017
+
+Completed: October 2021
+
+Graduated: November 2021
 
 ### Master of Science (2016)
 
@@ -20,20 +26,31 @@ Community Health Sciences University of Manitoba
 
 Thesis: [Tuberculosis prevention, diagnosis, and care in Manitoba, 2008-2010: a performance analysis](http://hdl.handle.net/1993/31050)
 
-Enrolled: September 2010 Completed: January 2016 Graduated: February 2016
+Enrolled: September 2010
+
+Completed: January 2016
+
+Graduated: February 2016
 
 ### Bachelor of Arts (2008)
 
 Environmental/Urban Studies University of Winnipeg Concentration: Issues in Sustainability
 
-Enrolled: September 2004 Completed: March 2008 Graduated: May 2008
+Enrolled: September 2004
+
+Completed: March 2008
+
+Graduated: May 2008
 
 ------------------------------------------------------------------------
 
 ##### Last Modified
 
-```{r}
-as.Date(as.POSIXlt(Sys.time()))
+```{r, echo=F}
+#renv::install("Publish")
+library(Publish)
+dd <- as.Date(as.POSIXlt(Sys.time()))
+Publish::publish(dd)
 ```
 
 ------------------------------------------------------------------------
