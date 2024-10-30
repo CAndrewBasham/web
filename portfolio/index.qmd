@@ -3,6 +3,38 @@ title: "Portfolio"
 by: C Andrew Basham
 ---
 
+# Tuberculosis Survivor Health
+
+## Tuberculosis and Mental Health
+
+Through knowledge generation and synthesis, my research has informed mental health research and care for TB survivors internationally.
+
+### **World TB Day Webinar on TB-Mental Health Integration** 
+
+I was a co-organizer of this webinar as a member of the TB-Mental Health Working Group of the International Union Against TB and Lung Disease.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eDH98iF-CBo?si=H-_njMnvc5CFMIob" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### [**USAID Report on TB and Mental Health**](https://www.usaid.gov/sites/default/files/2022-05/TB_and_Mental_Health_USAID_REPORT_FINALTRACKED_EDITS_AG_508c_1.pdf) 
+
+This review of evidence was structured based on an overview of systematic reviews that I presented on World TB Day during a TB-Mental Health Integration.
+
+![](images/clipboard-3950523054.png){width="216"}![](images/clipboard-2091207824.png){width="243"}![](images/clipboard-2313812908.png){width="238"}
+
+### TB and the risk of depression
+
+Can TB lead to a higher risk of depression? Does the lenght of stay in hospital following TB diagnosis mediate the risk of depression caused by TB? To answer these research questions, I planned and conducted a causal mediation analysis of depression risk following tuberculosis diagnosis. Furthermore, I formally evaluated the potential mediating role of the length of stay in hospital following TB diagnosis. Results were presented at two conferences and then published.
+
+[![](images/clipboard-2877180391.png){width="667"}](https://www.sciencedirect.com/science/article/abs/pii/S1047279721001253?via%3Dihub)
+
+[![](images/clipboard-1855321609.png){width="682"}](https://bclung.ca/wp-content/uploads/2024/06/Abstract-Book_final-2022-End-TB-Conference.pdf)
+
+# TB and Indigenous Peoples
+
+As [Chair of the Global Stop TB Initiative (GISI) of the International Union Against TB and Lung Disease](https://theunion.org/global-indigenous-stop-tb-initiative), I strengthened our organization and bond with Communities, Alliances, and Networks (CAAN).
+
+[![](images/GISI blanket.png)](https://theunion.org/global-indigenous-stop-tb-initiative)
+
 # [ORCiD Summary](https://orcid.org/0000-0003-0506-7936/print "LinkedIn Summary")
 
 ![](images/clipboard-1365040634.png)
