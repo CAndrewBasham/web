@@ -54,7 +54,7 @@ Can TB lead to a higher risk of depression? Does the lenght of stay in hospital 
 
 # Health Equity
 
-## Race and Ethnicity in Pharmacoepidemiology
+## Race and Ethnicity in Real-World Data and Evidence
 
 ### RECORD-Race and Ethnicity
 
