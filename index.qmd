@@ -2,7 +2,7 @@
 by: C Andrew Basham
 ---
 
-![](images/Basham_headshot.jpg){width="360"}
+![](images/Basham_headshot.jpg){width="329"}
 
 ## Education
 
@@ -27,3 +27,15 @@ Enrolled: September 2010 Completed: January 2016 Graduated: February 2016
 Environmental/Urban Studies University of Winnipeg Concentration: Issues in Sustainability
 
 Enrolled: September 2004 Completed: March 2008 Graduated: May 2008
+
+------------------------------------------------------------------------
+
+##### Last Modified
+
+```{r}
+as.Date(as.POSIXlt(Sys.time()))
+```
+
+------------------------------------------------------------------------
+
+## 

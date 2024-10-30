@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -123,6 +157,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#master-of-science-2016" id="toc-master-of-science-2016" class="nav-link" data-scroll-target="#master-of-science-2016">Master of Science (2016)</a></li>
   <li><a href="#bachelor-of-arts-2008" id="toc-bachelor-of-arts-2008" class="nav-link" data-scroll-target="#bachelor-of-arts-2008">Bachelor of Arts (2008)</a></li>
   </ul></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
   </ul>
 </nav>
     </div>
@@ -132,7 +167,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><img src="images/Basham_headshot.jpg" class="img-fluid" width="360"></p>
+<p><img src="images/Basham_headshot.jpg" class="img-fluid" width="329"></p>
 <section id="education" class="level2">
 <h2 class="anchored" data-anchor-id="education">Education</h2>
 <section id="doctor-of-philosophy-2021" class="level3">
@@ -151,9 +186,27 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="bachelor-of-arts-2008">Bachelor of Arts (2008)</h3>
 <p>Environmental/Urban Studies University of Winnipeg Concentration: Issues in Sustainability</p>
 <p>Enrolled: September 2004 Completed: March 2008 Graduated: May 2008</p>
-
-
+<hr>
+<section id="last-modified" class="level5">
+<h5 class="anchored" data-anchor-id="last-modified">Last Modified</h5>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.Date</span>(<span class="fu">as.POSIXlt</span>(<span class="fu">Sys.time</span>()))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in as.POSIXlt.POSIXct(Sys.time()): unable to identify current timezone 'H':
+please set environment variable 'TZ'</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "2024-10-30"</code></pre>
+</div>
+</div>
+<hr>
 </section>
+</section>
+</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
+
+
 </section>
 
 </main> <!-- /main -->

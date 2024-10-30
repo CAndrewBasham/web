@@ -11,7 +11,7 @@
     "href": "index.html#education",
     "title": "C. Andrew Basham",
     "section": "Education",
-    "text": "Education\n\nDoctor of Philosophy (2021)\nPopulation and Public Health University of British Columbia\nThesis: Tuberculosis Survivor Health\nEnrolled: September 2017 Completed: October 2021 Graduated: November 2021\n\n\nMaster of Science (2016)\nCommunity Health Sciences University of Manitoba\nThesis: Tuberculosis prevention, diagnosis, and care in Manitoba, 2008-2010: a performance analysis\nEnrolled: September 2010 Completed: January 2016 Graduated: February 2016\n\n\nBachelor of Arts (2008)\nEnvironmental/Urban Studies University of Winnipeg Concentration: Issues in Sustainability\nEnrolled: September 2004 Completed: March 2008 Graduated: May 2008"
+    "text": "Education\n\nDoctor of Philosophy (2021)\nPopulation and Public Health University of British Columbia\nThesis: Tuberculosis Survivor Health\nEnrolled: September 2017 Completed: October 2021 Graduated: November 2021\n\n\nMaster of Science (2016)\nCommunity Health Sciences University of Manitoba\nThesis: Tuberculosis prevention, diagnosis, and care in Manitoba, 2008-2010: a performance analysis\nEnrolled: September 2010 Completed: January 2016 Graduated: February 2016\n\n\nBachelor of Arts (2008)\nEnvironmental/Urban Studies University of Winnipeg Concentration: Issues in Sustainability\nEnrolled: September 2004 Completed: March 2008 Graduated: May 2008\n\n\nLast Modified\n\nas.Date(as.POSIXlt(Sys.time()))\n\nWarning in as.POSIXlt.POSIXct(Sys.time()): unable to identify current timezone 'H':\nplease set environment variable 'TZ'\n\n\n[1] \"2024-10-30\""
   },
   {
     "objectID": "projects.html",
