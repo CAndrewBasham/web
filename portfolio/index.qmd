@@ -7,6 +7,14 @@ by: C Andrew Basham
 
 Through knowledge generation and synthesis, my research informs prevention, diagnosis, and care for people diagnosed with TB internationally.
 
+## Tuberculosis Program Performance Measurement 
+
+#### Master of Science Thesis 
+
+My MSc thesis was based on working with the Manitoba Keewatinowi Okimakanak (MKO) in Northern Manitoba on their TB Strategy, including a project called "Finding Our Ancestors".
+
+### Community Voices in Evaluation
+
 ## Tuberculosis Survivor Health
 
 My PhD thesis [Tuberculosis Survivor Health](https://dx.doi.org/10.14288/1.0402446) investigated long-term health outcomes of people diagnosed with TB compared with non-TB controls using causal inference epidemiological methods.
