@@ -16,7 +16,7 @@ editor: visual
 #### Diploma
 
 ::: {#fig-phd_diploma}
-\[![](images/PHD.png){width="515"}\]
+\[![](images/PHD.png){width="635"}\]
 :::
 
 #### Thesis
