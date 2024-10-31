@@ -3,16 +3,6 @@ title: "Portfolio"
 by: C Andrew Basham
 ---
 
-# Pharmacoepidemiology
-
-## Comparative Safety Research
-
-### Drug-drug interaction between oxycodone and calcium channel blockers (CCBs) in risk of opioid overdose
-
-#### Poster Presentation at ICPE 2024, Berlin, Germany
-
-[![](images/clipboard-3801969806.png)](https://2024ispe.eventscribe.net/ajaxcalls/PosterInfo.asp?efp=SlhNSlFEQk0yMjQ0Nw&PosterID=678353&rnd=0.6030437)
-
 # Tuberculosis (TB)
 
 Through knowledge generation and synthesis, my research informs prevention, diagnosis, and care for people diagnosed with TB internationally.
@@ -31,9 +21,9 @@ I was a co-organizer of this World TB Day 2021 Webinar *Integrating TB and Menta
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/eDH98iF-CBo?si=H-_njMnvc5CFMIob" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-#### **USAID Evidence on TB and Mental Health** {#sec-usaid-evidence-on-tb-and-mental-health-}
+This presentation led to a 1:1 knowledge exchange with Dr Paula Fujiwara, which informed the structure and content of the USAID discussion document she was authoring on this topic.
 
-This review of evidence was structured based on the overview of systematic reviews presented during theWorld TB Day 2021 Webinar: *Integrating TB and Mental Health Services to End the Epidemic* ([above](https://youtu.be/eDH98iF-CBo)).
+#### **USAID Evidence on TB and Mental Health** {#sec-usaid-evidence-on-tb-and-mental-health-}
 
 ![](images/clipboard-3950523054.png){width="216"}![](images/clipboard-2091207824.png){width="243"}![](images/clipboard-2313812908.png){width="238"}
 
@@ -51,13 +41,43 @@ Can TB lead to a higher risk of depression? Does the lenght of stay in hospital 
 
 ![](images/clipboard-2730942737.png){fig-align="left" width="499"}
 
-# Health Equity
+## Pharmacoepidemiology
 
-## Race and Ethnicity in Real-World Data and Evidence
+### Drug Utilization Research
 
-### RECORD-Race and Ethnicity
+#### Tramadol Use in the United States, 2005-2021
 
-### Poster at ICPE 2024, Berlin, Germany
+##### Poster Presentation
+
+##### Journal Article
+
+Published in the [*American Journal of Preventive Medicine*](https://www.ajpmonline.org/article/S0749-3797(24)00199-5/abstract)*,* the most comprehensive analysis of tramadol dispensations estimated trends in rates of new and ongoing use of tramadol by state since August 2014: when tramadol was placed into Schedule IV of the Controlled Drugs and Substances Act. Amounts, prescribers, co-dispensed medications, comorbidities, care settings, and demographics were analyzed among people newly initiating tramadol from 2005-2021 using commercial health insurance claims.
+
+[![](images/clipboard-1551124323.png){fig-align="center" width="616"}](https://www.ajpmonline.org/article/S0749-3797(24)00199-5/abstract)
+
+#### Multilevel and mixed effects modelling in drug utilization trend analysis: a reproducible tutorial in R and SAS
+
+This project was borne from the tramadol study above, detailing methods and code for negative binomial random intercept and random slope trend models in simulated aggregate count data on opioid initiations in fictional regions. Still under development.
+
+### Comparative Safety Research
+
+#### Drug-drug interaction between oxycodone and calcium channel blockers (CCBs) in risk of opioid overdose
+
+##### Poster Presentation
+
+The first presentation of this work was at ICPE on August 28th, 2024 in Berlin, Germany.
+
+![](images/clipboard-3801969806.png)
+
+## Health Equity
+
+### Race and Ethnicity in Real-World Data and Evidence
+
+#### RECORD-Race and Ethnicity
+
+##### Poster Presentation
+
+RECORD-Race and Ethnicity was first presented at the International Conference on Pharmacoepidemiology, August 28th, 2024 in Berlin, Germany.
 
 [![](images/clipboard-3628636280.png)](https://2024ispe.eventscribe.net/ajaxcalls/PosterInfo.asp?efp=SlhNSlFEQk0yMjQ0Nw&PosterID=677829&rnd=0.3118372)
 
