@@ -5,9 +5,13 @@ editor: visual
 
 ## Research Fellow (2022-2024)
 
-**Harvard Medical School and Brigham and Women's Hospital**
+### **Harvard Medical School, Division of Pharmacoepidemiology and Pharmacoeconomics**
 
-**Division of Pharmacoepidemiology and Pharmacoeconomics**
+#### **Certificate**
+
+::: {#fit-postdoc_dip}
+![](images/POSTDOC.png)
+:::
 
 ## Doctor of Philosophy (2017-2021)
 
@@ -22,7 +26,7 @@ editor: visual
 #### Thesis
 
 ::: {#fig-phd_thesis}
-[![](images/clipboard-2463031712.png){width="521"}](https://dx.doi.org/10.14288/1.0402446)
+[![](images/clipboard-2463031712.png){fig-align="center" width="521"}](https://dx.doi.org/10.14288/1.0402446)
 :::
 
 ## Master of Science (2010-2016)
