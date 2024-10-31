@@ -71,7 +71,8 @@ Can TB lead to a higher risk of depression? Does the lenght of stay in hospital 
 
 Published in the [*American Journal of Preventive Medicine*](https://www.ajpmonline.org/article/S0749-3797(24)00199-5/abstract)*,* the most comprehensive analysis of tramadol dispensations estimated trends in rates of new and ongoing use of tramadol by state since August 2014: when tramadol was placed into Schedule IV of the Controlled Drugs and Substances Act. Amounts, prescribers, co-dispensed medications, comorbidities, care settings, and demographics were analyzed among people newly initiating tramadol from 2005-2021 using commercial health insurance claims.
 
-::: {#fig-tramadol_paper}
+
+:::{#fig-tramadol_paper}
 [![](images/clipboard-1551124323.png){fig-align="center" width="616"}](https://www.ajpmonline.org/article/S0749-3797(24)00199-5/abstract)
 :::
 
