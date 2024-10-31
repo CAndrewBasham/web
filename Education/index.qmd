@@ -3,7 +3,7 @@ title: "Education"
 editor: visual
 ---
 
-## Postdoctoral Research Fellow (2022-2024)
+## Research Fellow (2022-2024)
 
 **Harvard Medical School and Brigham and Women's Hospital**
 
@@ -11,19 +11,35 @@ editor: visual
 
 ## Doctor of Philosophy (2017-2021)
 
-**University of British Columbia**
+### **University of British Columbia, School of Population and Public Health**
 
-**School of Population and Public Health**
+#### Diploma
 
-**Thesis**: [Tuberculosis Survivor Health](https://dx.doi.org/10.14288/1.0402446)
+::: {#fig-phd_diploma}
+\[![](images/PHD.png){width="515"}\]
+:::
+
+#### Thesis
+
+::: {#fig-phd_thesis}
+[![](images/clipboard-2463031712.png){width="521"}](https://dx.doi.org/10.14288/1.0402446)
+:::
 
 ## Master of Science (2010-2016)
 
-**University of Manitoba**
+### **University of Manitoba, Department of Community Health Sciences**
 
-**Department of Community Health Sciences**
+#### Diploma
 
-Thesis: [Tuberculosis prevention, diagnosis, and care in Manitoba, 2008-2010: a performance analysis](http://hdl.handle.net/1993/31050)
+::: {#fig-msc_diploma)
+![](images/MSC.PNG)
+:::
+
+#### Thesis
+
+::: {fig-msc_thesis}
+[![](images/msc_thesis_cover.PNG)](http://hdl.handle.net/1993/31050)
+:::
 
 ## Bachelor of Arts (2004-2008)
 
