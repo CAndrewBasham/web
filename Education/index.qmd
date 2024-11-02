@@ -42,7 +42,7 @@ editor: visual
 #### Thesis
 
 ::: {fig-msc_thesis}
-[![](images/msc_thesis_cover.PNG)](http://hdl.handle.net/1993/31050)
+[![Source: University of Manitoba; <https://mspace.lib.umanitoba.ca/server/api/core/bitstreams/c5bc5dab-9622-451d-92e4-1e289ba70998/content> Accessed: Nov 2, 2024).](images/msc_thesis_cover.PNG)](https://github.com/CAndrewBasham/web/blob/55f73f44c84420844cbc2556ae0b7cdb1e4eb4f0/docs/Education/Basham_C.Andrew_MSC_thesis.pdf)
 :::
 
 ## Bachelor of Arts (2004-2008)
