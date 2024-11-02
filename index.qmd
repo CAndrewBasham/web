@@ -8,7 +8,11 @@ execute:
 # About Me
 
 ::: {#fig-headshot}
+<<<<<<< HEAD
 [![](images/Basham_headshot.jpg){width="200"}]
+=======
+[![](images/Basham_headshot.jpg){width="100"}]
+>>>>>>> e41b8a520fe7cf4111b5c68e95eb9219e1be2086
 :::
 My career path has been anything but linear. My values, principles, and vision however, remain as true today as when I first learned to identify, embody, and express them. Although making the world a better place is a bit cliche, it is so because so many of us understand it on a base level and do so instinctively or reflexively in our day to day lives. Whether personally, publicly, or professionally, we aim to leave a better world for the next generation and those that will follow.
 
