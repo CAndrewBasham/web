@@ -145,6 +145,7 @@
     "title": "Portfolio",
     "section": "",
     "text": "Figure 8\n\n\n\n\n\n\nA project developed in PhD coursework."
+<<<<<<< HEAD
   },
   {
     "objectID": "CV/index.html",
@@ -194,5 +195,7 @@
     "title": "CV",
     "section": "Contact Information",
     "text": "Contact Information\n\n\n\nDate Prepared:\nNovember \\(8^{th}\\), 2024\n\n\nName:\nChristopher Andrew Basham\n\n\nOffice:\n1620 Tremont Street - Unit 3030\nBoston, MA 02120\n\n\nEmail:\ncv@andrewbasham.com\n\n\nWebsite:\nhttps://andrewbasham.com/\n\n\nLinkedIn:\nhttps://www.linkedin.com/in/candrewbasham/\n\n\nORCiD:\nhttps://orcid.org/0000-0003-0506-7936\n\n\nGitHub Profile:\nhttps://github.com/CAndrewBasham\n\n\nGitHub Pages:\nhttps://candrewbasham.github.io/web/\n\n\nResearchGate:\nhttps://www.researchgate.net/profile/C-Andrew-Basham\n\n\nGoogle Scholar:\nhttps://tinyurl.com/3wz4sken\n\n\nOpen Science Framework:\nhttps://osf.io/mny8b/"
+=======
+>>>>>>> 3e8ac3704201d3abf079c5f35d4021fcad116a1a
   }
 ]
