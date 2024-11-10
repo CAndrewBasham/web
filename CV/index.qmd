@@ -1,6 +1,5 @@
 ---
 title: "CV"
-editor: visual
 ---
 
 **The** **Faculty of Medicine of Harvard University** **Curriculum Vitae**
