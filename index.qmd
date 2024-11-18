@@ -10,23 +10,30 @@ execute:
 \[![](images/Basham_headshot.jpg){width="200"}\]
 :::
 
-My career path has been anything but linear.
-My values, principles, and vision however, remain as true today as when I first learned to identify, embody, and express them.
-Although making the world a better place is a bit cliche, it is so because so many of us understand it on a base level and do so instinctively or reflexively in our day to day lives.
-Whether personally, publicly, or professionally, we aim to leave a better world for the next generation and those that will follow.
+Thank you for visiting my open-source website! This website was developed in RStudio as an RProject coded in Quarto documents pushed to public GitHub repository, making it reproducible.
+
+This website was created to illustrate the items listed in my CV and to increase my coding skills. My career path has been anything but linear; however, my values, principles, and vision remain the same.
 
 My goal as an epidemiologist is to advance community narratives within causal epidemiological research to enable individuals and communities to contribute to the meaningful design and interpretation of statistical analyses about their lived experiences.
-In particular, direct involvement of survivors of critical illnesses in epidemiological modelling of survivorship as a long-term life-altering process with many exposures, treatments, and outcomes (short, medium, and long-term).
 
-Thank you for visiting my site and please let me know if you have any questions, comments, or spot an error in the site.
-And of course I am open to communicating about collaboration if you see potential synergy between our work.
+I am open to communicating about collaboration if you see potential synergy between our work. If you see anything that needs attention or have any suggestions, please feel free to send me an email or reach through any of the platforms below.
 
 Sincerely,
 
+![](images/Basham_signature.png){width="222"}
+
 **C. Andrew Basham, PhD**
 
-November 10th, 2024
+Email: [git\@andrewbasham.com](git@andrewbasham.com)
 
-Cambridge, MA
+Web (static): <https://andrewbasham.com/> 
 
-git\@andrewbasham.com
+Web (dynamic): <https://candrewbasham.github.io/web/> 
+
+LinkedIn: <https://www.linkedin.com/in/candrewbasham/>
+
+Open Science Framework: <https://osf.io/mny8b/> 
+
+GitHub: <https://github.com/CAndrewBasham> 
+
+Bluesky: <https://bsky.app/profile/andrewbasham.bsky.social>  
