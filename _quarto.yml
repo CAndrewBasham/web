@@ -9,9 +9,9 @@ website:
       - href: index.qmd
         text: Home
       - href: projects.qmd
-      - text: Projects
-      - href: cv/index.qmd
-      - text: CV
+      - href: portfolio/index.qmd
+      - href: Education/index.qmd
+      - href: cv1.qmd
       
     tools:      
       - icon: twitter

@@ -1,41 +1,32 @@
 ---
-title: "C Andrew Basham"
-about:
-  id: me
-  template: broadside
-  image: img/profile.png
+by: C Andrew Basham
+execute: 
+  warning: false
 ---
 
-## Education
+# About Me
 
-### Doctor of Philosophy (2021) 
-Population and Public Health
-University of British Columbia
+::: {#fig-headshot}
+\[![](images/Basham_headshot.jpg){width="200"}\]
+:::
 
-Thesis: [Tuberculosis Survivor
-Health](https://dx.doi.org/10.14288/1.0402446)
+My career path has been anything but linear.
+My values, principles, and vision however, remain as true today as when I first learned to identify, embody, and express them.
+Although making the world a better place is a bit cliche, it is so because so many of us understand it on a base level and do so instinctively or reflexively in our day to day lives.
+Whether personally, publicly, or professionally, we aim to leave a better world for the next generation and those that will follow.
 
-Enrolled: September 2017
-Completed: October 2021
-Graduated: November 2021
+My goal as an epidemiologist is to advance community narratives within causal epidemiological research to enable individuals and communities to contribute to the meaningful design and interpretation of statistical analyses about their lived experiences.
+In particular, direct involvement of survivors of critical illnesses in epidemiological modelling of survivorship as a long-term life-altering process with many exposures, treatments, and outcomes (short, medium, and long-term).
 
-### Master of Science (2016)
-Community Health Sciences
-University of Manitoba
+Thank you for visiting my site and please let me know if you have any questions, comments, or spot an error in the site.
+And of course I am open to communicating about collaboration if you see potential synergy between our work.
 
-Thesis: [Tuberculosis prevention, diagnosis, and care in Manitoba,
-2008-2010: a performance analysis](http://hdl.handle.net/1993/31050)
+Sincerely,
 
-Enrolled: September 2010
-Completed: January 2016
-Graduated: February 2016
+**C. Andrew Basham, PhD**
 
+November 10th, 2024
 
-### Bachelor of Arts (2008)
-Environmental/Urban Studies
-University of Winnipeg
-Concentration: Issues in Sustainability
+Cambridge, MA
 
-Enrolled: September 2004 
-Completed: March 2008
-Graduated: May 2008
+git\@andrewbasham.com

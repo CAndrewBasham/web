@@ -1,0 +1,54 @@
+---
+title: "Education"
+editor: visual
+---
+
+## Research Fellow (2022-2024)
+
+### **Harvard Medical School, Division of Pharmacoepidemiology and Pharmacoeconomics**
+
+#### **Certificate**
+
+::: {#fit-postdoc_dip}
+![](images/POSTDOC.png)
+:::
+
+## Doctor of Philosophy (2017-2021)
+
+### **University of British Columbia, School of Population and Public Health**
+
+#### Diploma
+
+::: {#fig-phd_diploma}
+\[![](images/PHD.png){width="635"}\]
+:::
+
+#### Thesis
+
+::: {#fig-phd_thesis}
+[![](images/clipboard-2463031712.png){fig-align="center" width="521"}](https://dx.doi.org/10.14288/1.0402446)
+:::
+
+## Master of Science (2010-2016)
+
+### **University of Manitoba, Department of Community Health Sciences**
+
+#### Diploma
+
+::: {#fig-msc_diploma)
+![](images/MSC.PNG)
+:::
+
+#### Thesis
+
+::: {fig-msc_thesis}
+[![Source: University of Manitoba; <https://mspace.lib.umanitoba.ca/server/api/core/bitstreams/c5bc5dab-9622-451d-92e4-1e289ba70998/content> Accessed: Nov 2, 2024).](images/msc_thesis_cover.PNG)](https://github.com/CAndrewBasham/web/blob/55f73f44c84420844cbc2556ae0b7cdb1e4eb4f0/docs/Education/Basham_C.Andrew_MSC_thesis.pdf)
+:::
+
+## Bachelor of Arts (2004-2008)
+
+### **University of Winnipeg, Environmental/Urban Studies, Issues in Sustainability (GPA: 4.01/4.50)**
+
+#### Diploma![](images/clipboard-1436043536.png)
+
+------------------------------------------------------------------------
