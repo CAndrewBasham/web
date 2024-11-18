@@ -7,13 +7,41 @@ by: C Andrew Basham
 
 Through knowledge generation and synthesis, my research informs prevention, diagnosis, and care for people diagnosed with TB internationally.
 
+### International Journal of TB and Lung Disease - Editorial
+
+::: {#editorial}
+[![](images/clipboard-3138368266.png)](https://doi.org/10.5588/ijtld.20.0126)
+:::
+
+### Chair of the Global Stop TB Initiative (GISI)
+
+As (past) [Chair of the Global Stop TB Initiative (GISI) of the International Union Against TB and Lung Disease](https://theunion.org/global-indigenous-stop-tb-initiative), I expanded and deepened our organization's bond with Communities, Alliances, and Networks (CAAN).
+
+::: {#fig-gisi}
+[![](images/GISI%20blanket.png){width="504"}](https://theunion.org/global-indigenous-stop-tb-initiative)
+:::
+
+### One Vision Many Paths: Podcast Interview
+
+During this interview, I was invited to share information about TB for a podcast raising awareness of TB among Indigenous Peoples and advancing Indigenous solutions. I also shared perspectives and from my experience working in Northern Manitoba on TB.
+
+::: {#fig-podcast}
+[![](images/clipboard-916353267.png)](https://open.spotify.com/episode/4ZHkrBJ1XsUktLdktplkSK?si=ZcGq9j46ToKO6XKORqRwOQ)
+:::
+
 ## Tuberculosis Program Performance Measurement
 
 My first research interest was in TB epidemiology and program performance measurement through an equity lens. This interest was borne from my work with the Manitoba Keewatinowi Okimakanak (\textit{Cree} for "Northern Manitoba Chiefs"), as a Health Policy Analyst My MSc thesis was based on working on the MKO TB Strategy, which included a project called "Finding Our Ancestors" and a call for the US-CDC Program Objectives and Performance Targets to be applied to the TB programming provided to MKO First Nations to ensure transparent review aimed at eliminating TB with community partnership established based on that common goal.
 
+::: {#fig-article-tb-north-perform}
+[![](images/clipboard-3786676068.png)](https://https://doi.org/10.17269/s41997-019-00231-2)
+:::
+
+
 ## Tuberculosis Survivor Health
 
 My PhD thesis [Tuberculosis Survivor Health](https://dx.doi.org/10.14288/1.0402446) investigated long-term health outcomes of people diagnosed with TB compared with non-TB controls using causal inference epidemiological methods.
+
 
 ## Tuberculosis and Mental Health
 
@@ -104,28 +132,6 @@ RECORD-Race and Ethnicity was first presented at the International Conference on
 ## Indigenous Peoples' Health
 
 Working for Indigenous Political/Territorial Organizations, MKO and AMC, opened my eyes to the massive inequities in health between Indigenous and non-Indigenous Canadians, and the political structures that create and maintain them, formed the basis of my public health worldview and lifelong commitment to health equity.
-
-### International Journal of TB and Lung Disease - Editorial
-
-::: {#editorial}
-[![](images/clipboard-3138368266.png)](https://doi.org/10.5588/ijtld.20.0126)
-:::
-
-### Chair of the Global Stop TB Initiative (GISI)
-
-As (past) [Chair of the Global Stop TB Initiative (GISI) of the International Union Against TB and Lung Disease](https://theunion.org/global-indigenous-stop-tb-initiative), I expanded and deepened our organization's bond with Communities, Alliances, and Networks (CAAN).
-
-::: {#fig-gisi}
-[![](images/GISI%20blanket.png){width="504"}](https://theunion.org/global-indigenous-stop-tb-initiative)
-:::
-
-### One Vision Many Paths: Podcast Interview
-
-During this interview, I was invited to share information about TB for a podcast raising awareness of TB among Indigenous Peoples and advancing Indigenous solutions. I also shared perspectives and from my experience working in Northern Manitoba on TB.
-
-::: {#fig-podcast}
-[![](images/clipboard-916353267.png)](https://open.spotify.com/episode/4ZHkrBJ1XsUktLdktplkSK?si=ZcGq9j46ToKO6XKORqRwOQ)
-:::
 
 ## Violent Injury Prevention and Research
 
