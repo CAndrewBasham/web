@@ -12,6 +12,7 @@ website:
       - href: portfolio/index.qmd
       - href: Education/index.qmd
       - href: cv/index.qmd
+      - href: cv1.qmd
       
     tools:      
       - icon: twitter
