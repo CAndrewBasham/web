@@ -3,6 +3,10 @@ title: "Portfolio"
 by: C Andrew Basham
 ---
 
+::: {#portfolio}
+[![](images/vsaranphotodotcom-WEB-65.jpg
+:::
+
 # Tuberculosis (TB)
 
 Through knowledge generation and synthesis, my research informs prevention, diagnosis, and care for people diagnosed with TB internationally.
