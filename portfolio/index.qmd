@@ -5,9 +5,7 @@ by: C Andrew Basham
 
 Below are short descriptions of my professional work with links to research articles, policy documents, and media coverage.
 
-::: {#fig-portfolio}
-\[![](images/vsaranphotodotcom-WEB-65.jpg){width="504"}\]
-:::
+
 
 # Tuberculosis (TB)
 
