@@ -10,26 +10,53 @@ execute:
 \[![](images/Basham_headshot.jpg){width="200"}\]
 :::
 
-Thank you for visiting my open-source website! This website was created to illustrate the items listed in my CV and to increase my coding skills. This website was developed in RStudio as an RProject coded in Quarto documents pushed to public GitHub repository, making it reproducible.
+Thank you for visiting my open-source
+website! This website was created to
+illustrate the items listed in my CV and to
+increase my coding skills. This website was
+developed in RStudio as an RProject coded
+in Quarto documents pushed to public GitHub
+repository, making it reproducible.
 
-My career path has been anything but linear; however, my values, principles, and vision remain the same. My goal as an epidemiologist is to advance community narratives within causal epidemiological research to enable individuals and communities to contribute to thedesign and interpretation of statistical analyses describing their lived experiences and influencing the policies, programs, and practices that impact their lives.
+My career path has been anything but
+linear; however, my values, principles, and
+vision remain the same. My goal as an
+epidemiologist is to advance community
+narratives within causal epidemiological
+research to enable individuals and
+communities to contribute to thedesign and
+interpretation of statistical analyses
+describing their lived experiences and
+influencing the policies, programs, and
+practices that impact their lives.
 
-I am open to communicating about collaboration if you see potential synergy between our work. If you see anything that needs attention or have any suggestions, please feel free to send me an email or reach through any of the platforms below.
+I am open to communicating about
+collaboration if you see potential synergy
+between our work. If you see anything that
+needs attention or have any suggestions,
+please feel free to send me an email or
+reach through any of the platforms below.
 
 Sincerely,
 
 **C. Andrew Basham, PhD**
 
-Email: [git\@andrewbasham.com](git@andrewbasham.com)
+Email:
+[git\@andrewbasham.com](git@andrewbasham.com)
 
 Web (static): <https://andrewbasham.com/> 
 
-Web (dynamic): <https://candrewbasham.github.io/web/> 
+Web (dynamic):
+<https://candrewbasham.github.io/web/> 
 
-LinkedIn: <https://www.linkedin.com/in/candrewbasham/>
+LinkedIn:
+<https://www.linkedin.com/in/candrewbasham/>
 
-Open Science Framework: <https://osf.io/mny8b/> 
+Open Science Framework:
+<https://osf.io/mny8b/> 
 
 GitHub: <https://github.com/CAndrewBasham> 
 
-Bluesky: <https://bsky.app/profile/andrewbasham.bsky.social>  
+Bluesky:
+<https://bsky.app/profile/andrewbasham.bsky.social>
+ 
