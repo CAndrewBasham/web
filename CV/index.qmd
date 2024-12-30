@@ -3,9 +3,8 @@ title: "CV"
 by: C Andrew Basham
 ---
 
-::: {#hms_cv_title}
-**The** **Faculty of Medicine of Harvard University** **Curriculum Vitae**
-:::
+# The Faculty of Medicine of Harvard University Curriculum Vitae 
+
 
 ## Contact Information
 
