@@ -7,7 +7,7 @@ execute:
 # About Me
 
 ::: {#fig-headshot}
-\[![](images/Basham_headshot.jpg){width="200"}\]
+![](images/Basham_headshot.jpg){width="200"}
 :::
 
 Thank you for visiting my open-source website! This website was created to illustrate the items listed in my CV and to increase my coding skills. This website was developed in RStudio as an RProject coded in Quarto documents pushed to public GitHub repository, making it reproducible.
