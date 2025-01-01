@@ -22,9 +22,7 @@ Sincerely,
 
 Email: [git\@andrewbasham.com](git@andrewbasham.com)
 
-Web (static): <https://andrewbasham.com/> 
-
-Web (dynamic): <https://candrewbasham.github.io/web/> 
+Web: <https://andrewbasham.com/> 
 
 LinkedIn: <https://www.linkedin.com/in/candrewbasham/>
 
