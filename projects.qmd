@@ -7,7 +7,7 @@ bibliography: references.bib
 
 The goal of this program of methodological research is to advance theory, concepts, models, and tools for descriptive, predictive, and inferences about critical illness survivor health outcomes, their pathology and diagnosis, biomedical treatment, the physiological and psychological changes associated with these processes, and their sociocultural contexts, including financial and economic burdens, healthcare services, and advances in pharmaceutical treatment , aprocesses, services relevant to them.
 
-I am creating an international network of epidemiologists studying critical illness survivorship. The object of this network is the establishment of an academic society dedicated to advancing dialogue, theory, methods, and applications to advance the epidemiological study of critical illness survivors.
+I am creating an international network of epidemiologists studying critical illness survivorship. The object of this network is the establishment of an academic society dedicated to advancing dialogue, theory, methods, and applications to improve the rigor, representativeness, relevance, and reproducibility of the epidemiological study of critical illness survivorship.
 
 #### Specific Aims
 
