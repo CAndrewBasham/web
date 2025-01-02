@@ -5,7 +5,17 @@ bibliography: references.bib
 
 ## Survivorship Epidemiology:
 
-The goal of this program of methodological research is to advance theory, concepts, models, and tools for descriptive, predictive, and causal inference about critical illness survivor health outcomes and services.
+The goal of this program of methodological research is to advance theory, concepts, models, and tools for descriptive, predictive, and inferences about critical illness survivor health outcomes, their pathology and diagnosis, biomedical treatment, the physiological and psychological changes associated with these processes, and their sociocultural contexts, including financial and economic burdens, healthcare services, and advances in pharmaceutical treatment , aprocesses, services relevant to them.
+
+I am creating an international network of epidemiologists studying critical illness survivorship. The object of this network is the establishment of an academic society dedicated to advancing dialogue, theory, methods, and applications to advance the epidemiological study of critical illness survivors. Questions about clinically-important and survivor-relevant estimands are the first thing that needs to be interrogated with international collaborators,
+
+I will develop grant applications aimed at:
+
+1.  Distilling epidemiological principles common to survivorship and forming them into coherent quantitative theory,
+
+2.  Developing epidemiological methods to analyze survivor health outcomes selecting relevant com- parator groups, and coupling them with estimators that can reasonably be assumed to estimate quantities of interest in survivorship research;
+
+3.  Define the limits of generalizability for estimands and estimators within and across fields of medicine, patient populations, and geographies.
 
 ### Publications
 
@@ -29,8 +39,24 @@ The goal of this program of methodological research is to advance theory, concep
 
 ## Foundations for Pharmacoequity:
 
-Data provenance, lineage, and epidemiological analysis methods for health equity, focusing on race and ethnicity data use in pharmacoepidemiology;
+Data provenance, lineage, and epidemiological analysis methods for health equity, focusing on race and ethnicity data use in pharmacoepidemiology. I created this program of research to increase the rigor, transparency, and reproducibility of race and ethnicity data collection, analysis, and reporting. Without valid, complete, and reliable race and ethnicity data, health equity initiatives are hampered in terms of identifying population trends in health outcomes, including disparities between people identifying in different groups. Missing race and ethnicity data often leads to differential exclusion from observational research when complete case analyses are employed.
 
-## Causing Careers:
+### REVIEW-RWD (Race and ethnicity variables investigation for epidemiology weaknessed in real-world)
 
-epidemiological approaches to education and career planning, delivery, and evaluation.
+I conceptualized and obtained funding for a structural missing data investigation of race and ethnicity variables within a novel linkage of MGB’s Research Patient Data Registry (EHR) data and the Centers for Medicaid and Medicare Services (claims) data I designed the database linkage to preserve as many row values for any and all race and ethnicity variables in these three databases spanning 2015-2019.
+
+### RECORD-Race and Ethnicity
+
+A key research question I am pursuing within the Foundations for Pharmacoequity program is: ”How do race and ethnicity influence real-world data (RWD) and what effect do these influences have on the reproducibility of real-world evidence (RWE), generally, and pharmacoepidemiology, specifically?” Towards answering this question I reviewed the literature and considered, theoretically, the influence of race and ethnicity, and the phenomena for which they are used as proxy measures or otherwise may represent, within pharmacoepidemiological research and how that may affect the reproducibility of methods, results, and inferences of RWE. As an initial contribution I have a manuscript in requested revision stage that at Pharmacoepidemiology and Drug Safety calling for improved reporting of race and ethnicity variable-related decisions by authors and interpretations that consider race and ethnicity variables’ roles and impacts on RWE. This manuscript included a draft checklist, RECORD-Race and Ethnicity, was included in this manuscript, building on The REporting of studies Conducted using Observational Routinely-collected health Data (RECORD) statement. RECORD-RE incorporates evidence of poor reporting of race and ethnicity variables and their handling in epidemiological research articles drawing on recent systematic reviews and expert recommendations and reproducibility guidance.
+
+## Causing careers: causal inference approaches to epidemiological education
+
+In this program of research, I am developing novel epidemiological approaches to education and career planning.
+
+### Self-DAG: 
+
+causal pathways from educational exposures to career outcomes Travelling backwards through time to identify the causal mechanisms in generating desired educational and career outcomes - the long-term trainee goals - to the current time, we will ”backcast” from the outcome to the preconditions for that outcome, and then ascertain the exposure(s) necessary, and sufficient, to cause the all the intermediate educational and career outcomes they are aiming for.
+
+### Epidemiological concept mapping: 
+
+Modelling epidemiological knowledge and learning Engaging learners in mapping their understanding of epidemiology, the connections between concepts such as the concept of a study population, and how descriptive and causal inferences are drawn from analytic samples to those study populations, and how such inferences could be biased. The screen recording feature of Cmap software will allow tracking the development of learners’ epidemiological knowledge model (<https://cmap.ihmc.us/docs/learn.php).> Transparent evaluation of knowledge maps, including instructional team maps, pre/post-course will demonstrate varying shapes and levels of conceptual understanding, guiding development of lessons building on those conceptualizations. This is an unexplored potentially scalable innovation for epidemiological education and knowledge modelling. I provide an example of one I created
