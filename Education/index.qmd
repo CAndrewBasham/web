@@ -1,7 +1,5 @@
 ---
-o---
 title: "Education"
-editor: visual
 ---
 
 ## Research Fellow (2022-2024)

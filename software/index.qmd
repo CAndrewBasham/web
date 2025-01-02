@@ -1,0 +1,12 @@
+---
+title: "Software"
+by: C Andrew Basham
+bibliography: references.bib
+---
+
+## Survival Analysis
+
+## Robust Poisson Regression
+
+## Propensity Score Methods
+
