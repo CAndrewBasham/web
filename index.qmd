@@ -4,8 +4,6 @@ execute:
   warning: false
 ---
 
-# About Me
-
 ::: {#fig-headshot}
 ![](images/Basham_headshot.jpg){width="200"}
 :::
