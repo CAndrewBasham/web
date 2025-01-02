@@ -9,7 +9,6 @@ website:
       - href: index.qmd
         text: Home
       - href: projects.qmd
-        text: Projects
       - href: portfolio/index.qmd
       - href: Education/index.qmd
       - href: cv1.qmd
