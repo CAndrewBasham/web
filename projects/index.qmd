@@ -37,4 +37,3 @@ I am creating an international network of epidemiologists studying critical illn
 
 9.  Basham CA, Karim ME, Johnston JC. Multimorbidity prevalence and chronic disease patterns among tuberculosis survivors in a high-income setting. Can J Public Heal. 2023 Apr;114(2):264-276.
 
-##
