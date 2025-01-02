@@ -1,11 +1,8 @@
 ---
 by: C Andrew Basham
 ---
-
-# The Faculty of Medicine of Harvard University Curriculum Vitae 
-
-
-## Contact Information
+# CV
+## The Faculty of Medicine of Harvard University Curriculum Vitae 
 
 +-----------------------------+--------------------------------------------------------+
 | **Date Prepared:**          | November $8^{th}$, 2024                                |
