@@ -1,11 +1,36 @@
 ---
 title: "Portfolio"
 by: C Andrew Basham
+bibliography: references.bib
 ---
 
 Below are short descriptions of my professional work with links to research articles, policy documents, and media coverage.
 
+-   Expert knowledge of epidemiological theory and methods, specialized in causal inference with observational data.
 
+-   Advanced knowledge in tuberculosis epidemiology, survivorship research, observational data, opioid utilization and safety, multimorbidity prevalence, violent injuries epidemiology, race and ethnicity data in Medicaid, Medicare, and electronic health records, Indigenous health policy and programming experience, & over a decade of experience linking and analyzing population administrative data.
+
+-   Advanced statistical modeling of binomial, count, and survival outcomes, including standard regression, propensity score methods, causal mediation analysis, multilevel models, structural equation models, and complex survey data analysis methods. Multilevel modelling course at York University – Summer Program in Data Analysis using the R language.
+
+-   Proficient in SAS and R statistical programming. Strong data documentation and literate programming in both, including use of R markdown and Quarto documents within Rprojects version-controlled through Git with remote GitHub repositoryies for reproducible analysis reports.
+
+-   Skilled in applying macros for health administrative data linkage and analysis, including:
+
+    -   the Division of Pharmacoepidemiology and Pharmacoeconomics' (DoPE's) Pharmacoepidemiology Toolbox's implemetation of the high-dimensional propensity score (hdPS), @schneeweiss2009
+
+    -   %CEM (coarsened exact matching) @berta2017
+
+    -   Charlson, Elixhauser, and Combined Comorbidity Index ascertainment macros. @quan2005; @quan2011; @vanwalraven2009; @gagne2011.
+
+-   Detailed knowledge of tuberculosis registry data in Manitoba and British Columbia through direct experience with these data, including developing case definitions based on laboratory, contact, diagnostic, and treatment data. & Privacy Training in Population Data BC Privacy 101, 201 Training, Manitoba Centre for Health Policy (MCHP) Accreditation, and University of Manitoba Personal Health Information Act (PHIA) and Freedom of Information and Privacy Protection Act (FIPPA) online training. \
+
+-   Health Policy Analysis working in Indigenous health policy, planning, and program evaluation. Produced briefing notes, position papers, resolutions, and correspondence for First Nations political leaders.
+
+-   Organized an MKO Chiefs’ Special Assembly on Health (Long Plains First Nation, Manitoba, April 2010).
+
+-   Grant Writing: Successful grants totaling \>\$500,000.
+
+-   Communications and Organizational Development: Experience public speaking and speech-writing; have given newspaper, radio, and TV interviews. Served on teams, boards, committees, and in other collaborative settings. Planned political \# meetings and events in various settings. & Drafted Terms of Reference for Global Indigenous Stop TB Initiative Working Group and the TB-Mental Health Working Group, of the International Union Against Tuberculosis and Lung Disease. \\ \hline \\end{tabularx}
 
 # Tuberculosis (TB)
 
