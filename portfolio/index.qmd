@@ -8,9 +8,9 @@ Below are short descriptions of my professional work with links to research arti
 
 -   Expert knowledge of epidemiological theory and methods, specialized in causal inference with observational data.
 
--   Advanced knowledge in tuberculosis epidemiology, survivorship research, observational data, opioid utilization and safety, multimorbidity prevalence, violent injuries epidemiology, race and ethnicity data in Medicaid, Medicare, and electronic health records, Indigenous health policy and programming experience, & over a decade of experience linking and analyzing population administrative data.
+-   Expert knowledge of tuberculosis epidemiology, survivorship research, observational (real-world) data sources, cutting-edge confounding control methodology, assessment of multiple forms of bias in causal inference epidemiology, prescription opioid drug-drug interaction safety research, multimorbidity measurement, violent injury epidemiology, race and ethnicity data,  Medicaid, Medicare, and electronic health records, Indigenous health policy and programming experience, & over a decade of experience linking and analyzing population administrative data.
 
--   Advanced statistical modeling of binomial, count, and survival outcomes, including standard regression, propensity score methods, causal mediation analysis, multilevel models, structural equation models, and complex survey data analysis methods. Multilevel modelling course at York University – Summer Program in Data Analysis using the R language.
+-   Regularly specify and fit statistical models for binomial, count, and survival outcomes, from standard regression, propensity score methods, causal mediation analysis, multilevel models, structural equation models, and complex survey data analysis methods. Multilevel modelling course at York University – Summer Program in Data Analysis using the R language.
 
 -   Proficient in SAS and R statistical programming. Strong data documentation and literate programming in both, including use of R markdown and Quarto documents within Rprojects version-controlled through Git with remote GitHub repositoryies for reproducible analysis reports.
 
