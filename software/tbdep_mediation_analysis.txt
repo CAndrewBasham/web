@@ -1,0 +1,200 @@
+#####################################################################
+# The University of British Columbia
+# PhD Dissertation by C. Andrew Basham
+# Programmers: C. Andrew Basham and Ehsan Karim
+# Date last modified: October 30, 2020
+
+# Mediation analysis of depression risk by TB via hospital LOS (ordinal measure)
+# hospital admission dates from 0 to 120 post-TB diagnosis or random reference date
+
+
+# Based on Lange et al.'s weighting approach to mediation analysis 
+# and the code of Rochon et al. BMC Medical Research Methodology 2014;14(9)
+#####################################################################
+
+R.version
+library(medflex)
+library(VGAM)
+require(Publish)
+ds<-read.csv("R:/working/Basham_Thesis_Research/hdPS/tb_dep_mediation_120post.csv")
+#save(ds, file="R:/working/Basham_Thesis_Research/TB_DEP/mediation/Relevant papers/ds.RData")
+#load("R:/working/Basham_Thesis_Research/TB_DEP/mediation/Relevant papers/ds.RData")
+head(ds)
+length(ds$STUDYID)
+length(unique(ds$STUDYID))
+ds <- ds[order(ds$STUDYID), ]
+
+
+# check the outcome, exposure, and mediator variables
+summary(ds$status_dep)
+summary(ds$tb_dx)
+#summary(ds$med_var)
+#summary(ds$med_var2)
+
+
+# Total effect
+TE<-coxph(Surv(time_dep,status_dep==1)~I(tb_dx=='1')+gender+age_index+imclass2+cab_tbinc_grp3+
+            qaippe_rev2+educqual+year0+elixgrp1+whoregion_birthc2+elixgrp3+elixgrp7+elixgrp9+
+            elixgrp10+elixgrp11+elixgrp13+elixgrp14+elixgrp16+elixgrp17+elixgrp20+elixgrp21+
+            elixgrp22+elixgrp25+elixgrp27, data=ds)
+# exp(summary(TE)$coef["tb_dx","Estimate"])
+publish(TE)
+
+
+# Mediator: categorical LOS
+
+## original variable
+summary(ds$los_count)
+hist(ds$los_count[ds$los_count != 0 & ds$los_count < 30])
+
+
+#### by TB dx
+sub1<-subset(ds, tb_dx==1 & los_count != 0)
+sub2<-subset(ds, tb_dx==0 & los_count != 0)
+summary(sub1$los_count)
+summary(sub2$los_count)
+
+
+### SAS version of LOS categorical variable, turn into facto
+ds$Med<-factor(ds$med_var2, ordered = T)
+ds <- ds[order(ds$Med), ]
+table(ds$Med)
+levels(ds$Med)
+
+# percent in each hosp LOS group
+    
+a<-734268/nrow(ds)*100
+b<-10654/nrow(ds)*100
+c<-4988  /nrow(ds)*100
+d<-3007 /nrow(ds)*100
+e<-2917 /nrow(ds)*100
+
+
+# export the numbers
+tab_med_pct<-c(a,b,c,d,e)    
+tab_med_count<-table(ds$Med)
+tab_med<-rbind(tab_med_count,tab_med_pct)
+tab_med<-as.table(tab_med)
+tab_med
+
+# file 
+write.csv(tab_med,file="R:/working/Basham_Thesis_Research/TB_DEP/mediation/Relevant papers/tab_med.csv")
+
+
+
+
+# Effect of TB on the mediator (hosp length)
+ME <- vglm(Med~tb_dx+gender+age_index+educqual+imclass2+cab_tbinc_grp3+qaippe_rev2+whoregion_birthc2
+           +elixgrp1 + elixgrp3+  elixgrp7 + elixgrp9 + elixgrp10 + elixgrp11 + elixgrp13 + elixgrp14 + elixgrp16 + elixgrp17 + elixgrp20 + elixgrp21 + elixgrp22 + elixgrp25 + elixgrp27, 
+           family = propodds(), data = ds)
+exp(coef(ME))
+exp(confint(ME))
+
+
+
+
+####################################
+# MEDIATION ANALYSIS FUNCTION
+####################################
+med.analysis <- function(ds=ds,indicator = FALSE, write = FALSE){
+  # indicator : use it only in boostraps 
+  # write : use it only in boostraps
+  # Step 1: Replicate exposure variable, predict mediator
+  ds$Ex <- ds$tb_dx
+  ds$ExTemp <- ds$Ex
+  ME = vglm(Med ~ ExTemp + gender+age_index+educqual+imclass2+cab_tbinc_grp3+qaippe_rev2+year0+
+              whoregion_birthc2+elixgrp1+elixgrp3+elixgrp7+
+              elixgrp9+elixgrp10+elixgrp11+elixgrp13+elixgrp14+elixgrp16+
+              elixgrp17+elixgrp20+elixgrp21+elixgrp22+elixgrp25+elixgrp27,
+            family=propodds(), data=ds)
+  # Step 2: Replicate data with different exposures
+  d1 = d2 = ds
+  d1$ExStar = TRUE
+  d2$ExStar = FALSE
+  newd = rbind(d1, d2)
+  # Step 3: Compute weights for the mediator
+  newd$ExTemp = newd$Ex
+  direct = predict(ME, newdata=newd,
+                   type='response')[cbind(1:nrow(newd), newd$Med)]
+  newd$ExTemp = newd$ExStar
+  indirect = predict(ME, newdata=newd,
+                     type='response')[cbind(1:nrow(newd), newd$Med)]
+  newd$W = indirect/direct
+  mnw <- min(newd$W)
+  mxw <- max(newd$W)
+  # Step 4: Weighted outcome Model
+  AE = coxph(Surv(time_dep,status_dep==1)~Ex+ExStar+gender+age_index+educqual+imclass2+cab_tbinc_grp3+qaippe_rev2+year0+
+               whoregion_birthc2+elixgrp1+elixgrp3+elixgrp7+
+               elixgrp9+elixgrp10+elixgrp11+elixgrp13+elixgrp14+elixgrp16+
+               elixgrp17+elixgrp20+elixgrp21+elixgrp22+elixgrp25+elixgrp27, 
+             data = newd, weight = W)
+  # Return value: Estimates for total, direct, indirect effect
+  TE = exp(sum(coef(AE)[c('Ex', 'ExStarTRUE')]))
+  DE = exp(unname(coef(AE)['Ex']))
+  IE = exp(sum(coef(AE)['ExStarTRUE']))
+  PM = log(IE) / log(TE)
+  res <- c(exp(coef(AE))[1:2], TE=TE, DE=DE, IE = IE, PM = PM, mnw = mnw, mxw = mxw)
+  if (write == TRUE){
+    write.csv(res, file = paste0("R:/working/Basham_Thesis_Research/TB_DEP/mediation/Relevant papers/bootresults/120post/result",i,".csv"))
+  }
+  if (indicator == TRUE) {
+    print(i)
+    i <<- i+1
+  }
+  return(res)
+}
+
+####################################################
+# run the mediation analysis function on the data set
+####################################################
+CSamp = function(ds)
+{
+  s = sample(1:nrow(ds), replace=TRUE)
+  ds <- ds[s,]
+  return(ds)
+}
+
+
+#test.ds <- ds[1:755834,]
+#med.analysis(test.ds)
+#i <<- 1
+#ORs = replicate(5, med.analysis(CSamp(test.ds), indicator = TRUE, write = TRUE))
+#apply(ORs, 1, quantile, c(0.025, 0.975))
+
+
+##############################################################################
+# Run the mediation analysis using function and put the results into a file
+##############################################################################
+sink(paste0("R:/working/Basham_Thesis_Research/TB_DEP/mediation/Relevant papers/bootresults/120post/MainresultOR_rev.txt"))
+med.analysis(ds)
+sink()
+
+# cpu cores
+library(parallel)
+cores<-detectCores()
+
+####################################################
+# Reliable CI from bootstrap (n=200 resamples)
+####################################################
+i <<- 1
+HRs = replicate(200, med.analysis(CSamp(ds), indicator = TRUE, write = TRUE))
+
+HRs.read <- read.csv(paste0("R:/working/Basham_Thesis_Research/TB_DEP/mediation/Relevant papers/bootresults/120post/result",i,".csv"))
+HRs.temp <- as.data.frame(t(HRs.read[,2]))
+for (i in 2:200){
+  HRs.read <- read.csv(paste0("R:/working/Basham_Thesis_Research/TB_DEP/mediation/Relevant papers/bootresults/120post/result",i,".csv"))
+  HRs.temp <- rbind(HRs.temp, unlist(t(HRs.read[,2])))
+}
+names(HRs.temp) <- HRs.read[,1]
+head(HRs.temp)
+HRs <- as.data.frame(HRs.temp)
+HRs
+
+# dataset
+#save.image("R:/working/Basham_Thesis_Research/TB_DEP/tb_dep_mediation.RData")
+#write.csv(file="R:/working/Basham_Thesis_Research/TB_DEP/tb_.csv",header=T,sep=",")
+
+sink(paste0("R:/working/Basham_Thesis_Research/TB_DEP/mediation/Relevant papers/bootresults/120post/MainresultCI_machine_rev.txt"))
+apply(HRs, 1, mean, na.rm=TRUE)
+round(apply(HRs, 1, quantile, c(0.025, 0.975)),2)
+sink()

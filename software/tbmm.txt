@@ -1,0 +1,1416 @@
+---
+title: "TB MM Prev Analysis"
+author: "C. Andrew Basham"
+date: "27/12/2021"
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
+  word_document: default
+---
+
+# Update Notes
+This version uses a different Elix dataset that captures hosp admission dates and MSP services dates occurring 1-day after TB-dx date up to 365 days after TB-dx date, rather than TBdx date to 365 days after.  Dropped the excl of people with <1yr post-Dx coverage in BC (added >100k people), and also corrected the matching program in SAS to include ptime (time-since-arrival), and age at Dx (rather than immigration) to the matching algorithm, which reduces the number of TB survivors with CEM matches to ~1,962
+
+# Clean slate
+```{r}
+rm()
+R.Version()
+```
+
+# Libraries
+```{r}
+library(jtools)
+library(survival)
+library(ggplot2)
+library(ggfortify)
+library(survminer)
+library(Publish)
+library(tableone)
+library(car)
+library(pROC)
+require(MatchIt)
+require(DescTools)
+require(lattice)
+require(mice)
+require(DataExplorer)
+require(survey)
+require(cobalt)
+library(SuperLearner)
+```
+
+
+# Data
+```{r}
+
+# dataset
+dset.ind<-read.csv(file="R:/working/Basham_Thesis_Research/TB_multimorbidity/tb_MM_elix1yr_matched_29dec_agedx.csv",header=T,sep=",")
+
+str(dset.ind)
+dim(dset.ind)#correct number of people
+#head(dset.ind)#correct variables
+#str(dset.ind)
+
+
+#TB Diagnosed and Tx Completed = 1
+table(dset.ind$tb_dx)
+dset.ind$tb<-as.factor(dset.ind$tb_dx)
+
+## MM 3 elix
+table(dset.ind$mm3_elix)
+sum(dset.ind$mm3_elix)
+dset.ind$mm3elix<-as.factor(dset.ind$mm3_elix)
+
+## MM 2 elix - no copd or deficiency anemia
+dset.ind$mm3_elix_noCOPD<-ifelse(dset.ind$totalelix_noCOPD>2,1,0)
+table(dset.ind$mm3_elix_noCOPD)
+sum(dset.ind$mm3_elix_noCOPD)
+dset.ind$mm3elixnoCOPD<-as.factor(dset.ind$mm3_elix_noCOPD)
+
+
+## MM 2 elix
+dset.ind$mm2_elix<-ifelse(dset.ind$totalelix>1,1,0)
+table(dset.ind$mm2_elix)
+sum(dset.ind$mm2_elix)
+dset.ind$mm2elix<-as.factor(dset.ind$mm2_elix)
+
+## MM 2 elix - no copd or deficiency anemia
+dset.ind$mm2_elix_noCOPD<-ifelse(dset.ind$totalelix_noCOPD>1,1,0)
+table(dset.ind$mm2_elix_noCOPD)
+sum(dset.ind$mm2_elix_noCOPD)
+dset.ind$mm2elixnoCOPD<-as.factor(dset.ind$mm2_elix_noCOPD)
+
+
+# check covariates
+summary(dset.ind$age_dx)
+
+# TB incidence rate group
+table(dset.ind$cab_tbinc_grp3)
+dset.ind$cab_tbinc_grp3<-as.character(dset.ind$cab_tbinc_grp3)
+
+
+# age groups
+
+dset.ind$age_group<-as.factor(dset.ind$cab_age_grp2)
+summary(dset.ind$age_group)
+
+# recode blank values as NA values
+
+## income quintile
+table(dset.ind$qaippe_rev2)
+dset.ind$quint<-recode(dset.ind$qaippe_rev2,"''=NA")
+table(dset.ind$quint)
+
+## education qualification
+table(dset.ind$educqual)
+dset.ind$educqual2<-recode(dset.ind$educqual,"''=NA")
+table(dset.ind$educqual2)
+
+##check missing values for other vars
+table(dset.ind$imclass2)
+table(dset.ind$year0)
+table(dset.ind$cab_tbinc_grp3)
+table(dset.ind$gender)
+
+```
+
+
+## Table 1a - Covariates by Exposure (TB) Status
+This is to compare the balance between the TB and non-TB groups.
+```{r}
+catvars<-c("mm2elix","mm3elix","gender","age_dx","quint","educqual2","imclass2","cab_tbinc_grp3","year0","whoregion_birthc2","ptime")
+
+t1a<-CreateTableOne(vars=catvars, data=dset.ind, strata = "tb_dx", test=F)
+t1a
+p1a<-print(t1a,smd=T)
+
+write.csv(p1a,file="R:/working/Basham_Thesis_Research/TB_multimorbidity/tb_multimorbidity_Table1a_29dec_agedx.csv")
+
+t1a.chisq<-CreateTableOne(vars=catvars, data = dset.ind ,strata = "tb", test=T)
+t1a.chisq
+
+```
+
+### Interpretation
+There are minimal differences between TB and non-TB for covariates.
+
+
+## Table 1b - Covariates by Outcome (MM2_elix)
+This is to assess the association between each variable in the analysis model with the outcome.
+```{r}
+catvars<-c("tb","gender","age_dx","cab_age_grp2","quint","educqual2","imclass2","cab_tbinc_grp3","year0","whoregion_birthc2","ptime")
+
+t1b<-CreateTableOne(vars=catvars, data = dset.ind , strata = "mm2elix",test=T)
+
+p1b<-print(t1b,smd=F)
+
+
+write.csv(p1b,file="R:/working/Basham_Thesis_Research/TB_multimorbidity/tb_multimorbidity_Table1b_29dec_agedx.csv")
+```
+
+## Table 1b - Covariates by Outcome (MM3_elix)
+This is to assess the association between each variable in the analysis model with the outcome.
+```{r}
+catvars<-c("tb","gender","age_dx","cab_age_grp2","quint","educqual2","imclass2","cab_tbinc_grp3","year0","whoregion_birthc2","ptime")
+
+t1b<-CreateTableOne(vars=catvars, data = dset.ind , strata = "mm3elix",test=T)
+
+p1b<-print(t1b,smd=F)
+
+
+write.csv(p1b,file="R:/working/Basham_Thesis_Research/TB_multimorbidity/tb_multimorbidity_3elix_Table1b_29dec_agedx.csv")
+```
+
+### Interpretation
+TB and all covariates are significantly associated with the MM.
+
+
+# CEM-Matched Analyses
+
+# MM3 analysis
+
+```{r}
+# make variable for 3+ conditions - without COPD/deficiency
+dset.ind$mm3noCOPD<-ifelse(dset.ind$totalelix_noCOPD>2,1,0)
+summary(as.factor(dset.ind$mm3noCOPD))
+summary(as.factor(dset.ind$mm3_elix_noCOPD))
+```
+
+## Robust Poisson
+### Crude analysis
+```{r}
+
+fit_matched_crude_RP<-glm(mm3_elix~I(dset.ind$tb_dx=='1'), data=dset.ind, family=poisson(link=log))
+
+# results
+print(summ(fit_matched_crude_RP, exp=T, robust=T))
+
+```
+
+### Age/sex-adjusted analysis
+```{r}
+fit_matched_agesex_RP<-glm(mm3_elix~I(dset.ind$tb_dx=='1')+gender+age_dx, data=dset.ind, family=poisson(link=log))
+
+# RRs 
+print(summ(fit_matched_agesex_RP, exp=T, robust=T))
+```
+
+
+### Covariate-adjusted
+```{r}
+fit_matched_RP<-glm(mm3_elix~I(dset.ind$tb_dx=='1')+gender+age_dx+imclass2+cab_tbinc_grp3+qaippe_rev2+educqual+year0+whoregion_birthc2+ptime, data=dset.ind, family=poisson(link=log))
+
+# RR results
+print(summ(fit_matched_RP, exp=T, robust=T))
+
+
+```
+
+### Covariate-adjusted - no COPD/deficiency
+```{r}
+fit_matched_RP_noCOPD<-glm(mm3noCOPD~I(dset.ind$tb_dx=='1')+gender+age_dx+imclass2+cab_tbinc_grp3+qaippe_rev2+educqual+year0+whoregion_birthc2+ptime, data=dset.ind, family=poisson(link=log))
+
+# RR results
+print(summ(fit_matched_RP_noCOPD, exp=T, robust=T))
+```
+
+
+
+## Effect Mod
+### sex
+```{r}
+
+xtabs(~tb_dx+gender, data=dset.ind)
+
+
+fit_em1_sex<-glm(mm3_elix~I(dset.ind$tb_dx=='1')+gender+I(dset.ind$tb_dx=='1'):gender+age_dx+imclass2+cab_tbinc_grp3+qaippe_rev2+educqual+year0+whoregion_birthc2+ptime, data=dset.ind, poisson(link="log"))
+
+publish(fit_em1_sex, se="robust")
+
+```
+
+### Age Group
+Create <40 and 40+ age group
+```{r}
+dset.ind$age_group40<-ifelse(dset.ind$age_dx<40,"a 0-39", "b 40+")
+summary(as.factor(dset.ind$age_group40))
+xtabs(~tb_dx+age_group40, data=dset.ind)
+
+#  model
+fit_em0<-glm(mm3_elix~I(tb_dx=='1')+age_group40+I(tb_dx=='1'):age_group40+gender+age_group40+imclass2+cab_tbinc_grp3+qaippe_rev2+educqual+year0+whoregion_birthc2+ptime, data=dset.ind, poisson(link="log"))
+
+publish(fit_em0, se="robust")
+```
+
+# MM2 analysis 
+```{r}
+# check distribution of Elix count
+summary(dset.ind$totalelix)
+hist(dset.ind$totalelix, probability = T)
+
+# make variable for 2+ conditions
+dset.ind$mm2<-ifelse(dset.ind$totalelix>1,1,0)
+summary(as.factor(dset.ind$mm2))
+summary(as.factor(dset.ind$mm2_elix))
+
+# make variable for 2+ conditions - without COPD/deficiency
+dset.ind$mm2noCOPD<-ifelse(dset.ind$totalelix_noCOPD>1,1,0)
+summary(as.factor(dset.ind$mm2noCOPD))
+summary(as.factor(dset.ind$mm2_elix_noCOPD))
+```
+
+#### crude
+```{r}
+#  model
+fit_mm2_def_crude<-glm(mm2~I(dset.ind$tb_dx=='1'), data=dset.ind, poisson(link="log"))
+
+publish(fit_mm2_def_crude, se="robust")
+summ(fit_mm2_def_crude, se="robust", exp=T)
+```
+
+
+#### double-adjustment
+```{r}
+#  model
+fit_mm2_def<-glm(mm2~I(dset.ind$tb=='1')+gender+age_dx+imclass2+cab_tbinc_grp3+qaippe_rev2+educqual+year0+whoregion_birthc2+ptime, data=dset.ind, poisson(link="log"))
+
+publish(fit_mm2_def, se="robust")
+
+```
+
+#### double-adjustment - no COPD and no deficiency anemia
+```{r}
+#  model
+fit_mm2_def_noCOPD<-glm(mm2noCOPD~I(dset.ind$tb_dx=='1')+gender+age_dx+imclass2+cab_tbinc_grp3+qaippe_rev2+educqual+year0+whoregion_birthc2+ptime, data=dset.ind, poisson(link="log"))
+
+publish(fit_mm2_def_noCOPD, se="robust")
+
+
+
+```
+
+
+### Univariable analyses by covariates
+This section does RP regressions of outcome on each covariate.
+```{r}
+# TB diagnosis
+m1x<-glm(mm2_elix~I(dset.ind$tb_dx=='1'), data=dset.ind, family=poisson(link=log))
+  
+  #view HRs and CIs
+  hr.m1x<-cbind(exp(coef(m1x)),exp(confint(m1x)))
+  #anova(m1x)
+  print(summ(m1x, exp=T, robust=T))
+
+# sex
+m1a<-glm(mm2_elix~gender, data=dset.ind, family=poisson(link=log))
+
+  #view HRs and CIs
+  hr.m1a<-cbind(exp(coef(m1a)),exp(confint(m1a)))
+  #anova(m1a)
+  print(summ(m1a, exp=T, robust=T))
+# age (continuous)
+m1b.i<-glm(mm2_elix~age_dx, data=dset.ind, family=poisson(link=log))
+
+  #view HRs and CIs
+  hr.m1b.i<-cbind(exp(coef(m1b.i)),exp(confint(m1b.i)))
+  #anova(m1b.i)
+  print(summ(m1b.i, exp=T, robust=T))
+# age (categorical)
+m1b.ii<-glm(mm2_elix~cab_age_grp2, data=dset.ind, family=poisson(link=log))
+
+  #view HRs and CIs
+  hr.m1b.ii<-cbind(exp(coef(m1b.ii)),exp(confint(m1b.ii)))
+  #anova(m1b.ii)
+print(summ(m1b.ii, exp=T, robust=T))
+
+# TB incidence in birth country
+m1d<-glm(mm2_elix~cab_tbinc_grp3, data=dset.ind, family=poisson(link=log))
+
+  #view HRs and CIs
+  hr.m1d<-cbind(exp(coef(m1d)),exp(confint(m1d)))
+  #anova(m1d)
+  print(summ(m1d, exp=T, robust=T))
+
+# education
+m1e<-glm(mm2_elix~educqual, data=dset.ind, family=poisson(link=log))
+
+  #view HRs and CIs
+  hr.m1e<-cbind(exp(coef(m1e)),exp(confint(m1e)))
+  #anova(m1e)
+  print(summ(m1e, exp=T, robust=T))
+
+  
+  # neighbourhood income quintile
+m1f<-glm(mm2_elix~qaippe_rev2, data=dset.ind, family=poisson(link=log))
+
+  #view HRs and CIs
+  hr.m1f<-cbind(exp(coef(m1f)),exp(confint(m1f)))
+  #anova(m1f)
+  print(summ(m1f, exp=T, robust=T))
+summary(m1f)
+  
+# immigration class
+m1g<-glm(mm2_elix~imclass2, data=dset.ind, family=poisson(link=log))
+
+  #view HRs and CIs
+  hr.m1g<-cbind(exp(coef(m1g)),exp(confint(m1g)))
+  #anova(m1g)
+#hr.m1g
+print(summ(m1g, exp=T, robust=T))
+#summary(m1g)
+
+# Index Year
+m1h<-glm(mm2_elix~year0, data=dset.ind, family=poisson(link=log))
+
+  #view HRs and CIs
+  hr.m1h<-cbind(exp(coef(m1h)),exp(confint(m1h)))
+  #anova(m1h)
+  print(summ(m1h, exp=T, robust=T))
+  
+# WHO region
+m1i<-glm(mm2_elix~whoregion_birthc2, data=dset.ind, family=poisson(link=log))
+
+  #view HRs and CIs
+  hr.m1i<-cbind(exp(coef(m1i)),exp(confint(m1i)))
+  #anova(m1h)
+  print(summ(m1i, exp=T, robust=T))
+  
+  
+#time from arrival to index date
+m1j<-glm(mm2_elix~ptime, data=dset.ind, family=poisson(link=log))
+
+  #view HRs and CIs
+  hr.m1j<-cbind(exp(coef(m1j)),exp(confint(m1j)))
+  #anova(m1h)
+  print(summ(m1j, exp=T, robust=T))
+  
+  
+## concatenate the HRs
+table1b.HRs<-rbind(hr.m1x,hr.m1a,hr.m1b.i,hr.m1f,hr.m1e,hr.m1g,hr.m1d,hr.m1h, hr.m1i,hr.m1j)
+
+table1b.HRs<-round(table1b.HRs, 2)
+table1b.HRs
+#table1b.HRs<-as.data.frame(table1b.HRs)
+#colnames(table1b.HRs)[1]<-"OR"
+
+#str(table1b.HRs)
+#table1b.HRs
+#head(table1b.HRs)
+#data=table1b.HRs[!table1b.HRs$1=="(Intercept)",]
+
+
+# print to file
+write.csv(table1b.HRs,file="R:/working/Basham_Thesis_Research/TB_multimorbidity/TB_multimorbidity_univariable_PRs_29dec2021_agedx.csv")
+```    
+# Effect Modification
+
+### Age Group
+```{r}
+#Create <40 and 40+ age group
+dset.ind$age_group40<-ifelse(dset.ind$age_dx<40,"a 0-39", "b 40+")
+summary(as.factor(dset.ind$age_group40))
+summary(dset.ind$age_group40)
+
+#  model
+fit_em0<-glm(mm2~I(tb_dx=='1')+age_group40+I(tb_dx=='1'):age_group40+gender+age_group40+imclass2+cab_tbinc_grp3+qaippe_rev2+educqual+year0+whoregion_birthc2+ptime, data=dset.ind, poisson(link="log"))
+
+publish(fit_em0, se="robust")
+```
+
+### sex
+```{r}
+
+xtabs(~tb_dx+gender, data=dset.ind)
+
+
+fit_em1<-glm(mm2_elix~I(dset.ind$tb_dx=='1')+gender+I(dset.ind$tb_dx=='1'):gender+age_dx+imclass2+cab_tbinc_grp3+qaippe_rev2+educqual+year0+whoregion_birthc2+ptime, data=dset.ind, poisson(link="log"))
+
+publish(fit_em1, se="robust")
+
+
+```
+
+
+### income quintile
+```{r}
+fit_em2<-glm(mm2_elix~I(dset.ind$tb_dx=='1')+qaippe_rev2+I(dset.ind$tb_dx=='1'):qaippe_rev2, data=dset.ind, poisson(link="log"))
+
+publish(fit_em2, se="robust")
+```
+
+No pattern.
+
+           qaippe_rev2(a Highest 20%): I(dset.ind$tb_dx == "1")(TRUE vs FALSE)robust     robust       1.64robust[1.00;2.70]robust  0.05123 
+          qaippe_rev2(b Middle-High 20%): I(dset.ind$tb_dx == "1")(TRUE vs FALSE)robust     robust       1.53robust[0.99;2.36]robust  0.05405 
+               qaippe_rev2(c Middle 20%): I(dset.ind$tb_dx == "1")(TRUE vs FALSE)robust     robust       2.53robust[1.74;3.68]robust  < 1e-04 
+           qaippe_rev2(d Low-Middle 20%): I(dset.ind$tb_dx == "1")(TRUE vs FALSE)robust     robust       1.70robust[1.31;2.20]robust  < 1e-04 
+               qaippe_rev2(e Lowest 20%): I(dset.ind$tb_dx == "1")(TRUE vs FALSE)robust     robust       2.16robust[1.72;2.71]robust  < 1e-04 
+
+### education
+```{r}
+fit_em3<-glm(mm2_elix~I(dset.ind$tb_dx=='1')+educqual2+I(dset.ind$tb_dx=='1'):educqual2, data=dset.ind, poisson(link="log"))
+
+publish(fit_em3, se="robust")
+```
+
+No pattern.
+
+ educqual2(None/Unknown): I(dset.ind$tb_dx == "1")(TRUE vs FALSE)robust     robust       1.98robust[1.39;2.81]robust  0.0001371 
+         educqual2(Secondary or less): I(dset.ind$tb_dx == "1")(TRUE vs FALSE)robust     robust       1.86robust[1.55;2.24]robust    < 1e-04 
+             educqual2(Trade/diploma): I(dset.ind$tb_dx == "1")(TRUE vs FALSE)robust     robust       2.17robust[1.50;3.16]robust    < 1e-04 
+         educqual2(University degree): I(dset.ind$tb_dx == "1")(TRUE vs FALSE)robust     robust       2.09robust[1.38;3.17]robust  0.0004922 
+
+### immigration 
+```{r}
+fit_em4<-glm(mm2_elix~I(dset.ind$tb_dx=='1')+imclass2+I(dset.ind$tb_dx=='1'):imclass2, data=dset.ind, poisson(link="log"))
+
+publish(fit_em4, se="robust")
+```
+    
+Unclear meaning....
+
+    imclass2(economic): I(dset.ind$tb_dx == "1")(TRUE vs FALSE)robust     robust       2.39robust[1.78;3.23]robust    < 1e-04 
+    
+      imclass2(family): I(dset.ind$tb_dx == "1")(TRUE vs FALSE)robust     robust       1.73robust[1.45;2.06]robust    < 1e-04 
+
+       imclass2(other): I(dset.ind$tb_dx == "1")(TRUE vs FALSE)robust     robust       3.33robust[1.58;7.02]robust  0.0015356 
+
+     imclass2(refugee): I(dset.ind$tb_dx == "1")(TRUE vs FALSE)robust     robust       2.12robust[1.32;3.41]robust  0.0019549 
+     
+     
+### TB inc grp 
+```{r}
+fit_em5<-glm(mm2_elix~I(dset.ind$tb_dx=='1')+cab_tbinc_grp3+I(dset.ind$tb_dx=='1'):cab_tbinc_grp3, data=dset.ind, poisson(link="log"))
+
+publish(fit_em5, se="robust")
+```
+no clear pattern...
+
+               cab_tbinc_grp3(a <100 per 100,000): I(dset.ind$tb_dx == "1")(TRUE vs FALSE)robust     robust       1.71robust[1.03;2.83]robust  0.037196 
+               
+               cab_tbinc_grp3(b 100 to <200 per 100,000): I(dset.ind$tb_dx == "1")(TRUE vs FALSE)robust     robust       2.23robust[1.72;2.90]robust   < 1e-04 
+               
+               cab_tbinc_grp3(c 200 to <300 per 100,000): I(dset.ind$tb_dx == "1")(TRUE vs FALSE)robust     robust       1.84robust[1.48;2.29]robust   < 1e-04 
+               
+                      cab_tbinc_grp3(d 300+ per 100,000): I(dset.ind$tb_dx == "1")(TRUE vs FALSE)robust     robust       1.89robust[1.39;2.57]robust   < 1e-04 
+
+### WHO 
+```{r}
+fit_em6<-glm(mm2_elix~I(dset.ind$tb_dx=='1')+whoregion_birthc2+I(dset.ind$tb_dx=='1'):whoregion_birthc2, data=dset.ind, poisson(link="log"))
+
+publish(fit_em6, se="robust")
+```
+
+No clear pattern...
+
+whoregion_birthc2(AFR): I(dset.ind$tb_dx == "1")(TRUE vs FALSE)robust     robust       3.20robust [1.17;8.73]robust  0.02319 
+
+ whoregion_birthc2(AMR): I(dset.ind$tb_dx == "1")(TRUE vs FALSE)robust     robust       3.00robust[0.61;14.86]robust  0.17846 
+
+ whoregion_birthc2(EMR): I(dset.ind$tb_dx == "1")(TRUE vs FALSE)robust     robust       1.45robust [0.68;3.13]robust  0.33875 
+
+ whoregion_birthc2(EUR): I(dset.ind$tb_dx == "1")(TRUE vs FALSE)robust     robust       1.83robust [0.68;4.96]robust  0.23236 
+ 
+ whoregion_birthc2(SEA): I(dset.ind$tb_dx == "1")(TRUE vs FALSE)robust     robust       1.80robust [1.43;2.27]robust  < 1e-04 
+ 
+ whoregion_birthc2(WPR): I(dset.ind$tb_dx == "1")(TRUE vs FALSE)robust     robust       2.04robust [1.69;2.46]robust  < 1e-04 
+
+### year of immigration 
+```{r}
+
+summary(dset.ind$year0)
+
+dset.ind$immig_year<-recode(dset.ind$year0,"
+                           0:10='a 1985-1995';
+                           10:20='b 1995-2005';
+                           20:30='c 2005-2015';
+                           ")
+                           
+
+summary(as.factor(dset.ind$immig_year))
+
+fit_em7<-glm(mm2_elix~I(dset.ind$tb_dx=='1')+immig_year+I(dset.ind$tb_dx=='1'):immig_year, data=dset.ind, poisson(link="log"))
+
+publish(fit_em7, se="robust")
+```
+
+No pattern.
+
+       immig_year(a 1985-1995): I(dset.ind$tb_dx == "1")(TRUE vs FALSE)robust     robust       1.95robust[1.63;2.33]robust   < 1e-04 
+        immig_year(b 1995-2005): I(dset.ind$tb_dx == "1")(TRUE vs FALSE)robust     robust       1.92robust[1.48;2.48]robust   < 1e-04 
+        immig_year(c 2005-2015): I(dset.ind$tb_dx == "1")(TRUE vs FALSE)robust     robust       2.03robust[1.22;3.38]robust  0.006735 
+
+
+### time since arrival 
+```{r}
+
+summary(dset.ind$ptime)
+
+dset.ind$ptime_cat<-recode(dset.ind$ptime,"
+                           0:2='a 0-2';
+                           2:5='b 3-5';
+                           5:10='c 6-10';
+                           10:15='d 11-15';
+                           15:100='e 16+';
+                           ")
+                           
+
+summary(as.factor(dset.ind$ptime_cat))
+
+fit_em8<-glm(mm2_elix~I(dset.ind$tb_dx=='1')+ptime_cat+I(dset.ind$tb_dx=='1'):ptime_cat, data=dset.ind, poisson(link="log"))
+
+publish(fit_em8, se="robust")
+```
+
+# Elix comorb freqencies (2+  conditions in CEM-matched)
+```{r}
+
+# dataset
+dset.diag.matched<-dset.ind
+dput(names(dset.diag.matched))
+
+dset.diag.matched$elixgrp01<-as.factor(dset.diag.matched$elixgrp1)
+dset.diag.matched$elixgrp02<-as.factor(dset.diag.matched$elixgrp2)
+dset.diag.matched$elixgrp03<-as.factor(dset.diag.matched$elixgrp3)
+dset.diag.matched$elixgrp04<-as.factor(dset.diag.matched$elixgrp4)
+dset.diag.matched$elixgrp05<-as.factor(dset.diag.matched$elixgrp5)
+dset.diag.matched$elixgrp06<-as.factor(dset.diag.matched$elixgrp6)
+dset.diag.matched$elixgrp07<-as.factor(dset.diag.matched$elixgrp7)
+dset.diag.matched$elixgrp08<-as.factor(dset.diag.matched$elixgrp8)
+dset.diag.matched$elixgrp09<-as.factor(dset.diag.matched$elixgrp9)
+dset.diag.matched$elixgrp10<-as.factor(dset.diag.matched$elixgrp10)
+dset.diag.matched$elixgrp11<-as.factor(dset.diag.matched$elixgrp11)
+dset.diag.matched$elixgrp12<-as.factor(dset.diag.matched$elixgrp12)
+dset.diag.matched$elixgrp13<-as.factor(dset.diag.matched$elixgrp13)
+dset.diag.matched$elixgrp14<-as.factor(dset.diag.matched$elixgrp14)
+dset.diag.matched$elixgrp15<-as.factor(dset.diag.matched$elixgrp15)
+dset.diag.matched$elixgrp16<-as.factor(dset.diag.matched$elixgrp16)
+dset.diag.matched$elixgrp17<-as.factor(dset.diag.matched$elixgrp17)
+dset.diag.matched$elixgrp18<-as.factor(dset.diag.matched$elixgrp18)
+dset.diag.matched$elixgrp19<-as.factor(dset.diag.matched$elixgrp19)
+dset.diag.matched$elixgrp20<-as.factor(dset.diag.matched$elixgrp20)
+dset.diag.matched$elixgrp21<-as.factor(dset.diag.matched$elixgrp21)
+dset.diag.matched$elixgrp22<-as.factor(dset.diag.matched$elixgrp22)
+dset.diag.matched$elixgrp23<-as.factor(dset.diag.matched$elixgrp23)
+dset.diag.matched$elixgrp24<-as.factor(dset.diag.matched$elixgrp24)
+dset.diag.matched$elixgrp25<-as.factor(dset.diag.matched$elixgrp25)
+dset.diag.matched$elixgrp26<-as.factor(dset.diag.matched$elixgrp26)
+dset.diag.matched$elixgrp27<-as.factor(dset.diag.matched$elixgrp27)
+dset.diag.matched$elixgrp28<-as.factor(dset.diag.matched$elixgrp28)
+dset.diag.matched$elixgrp29<-as.factor(dset.diag.matched$elixgrp29)
+dset.diag.matched$elixgrp30<-as.factor(dset.diag.matched$elixgrp30)
+dset.diag.matched$elixgrp31<-as.factor(dset.diag.matched$elixgrp31)
+
+# Elix vars 
+catvars<-c("elixgrp01", "elixgrp02", "elixgrp03", "elixgrp04", 
+"elixgrp05", "elixgrp06", "elixgrp07", "elixgrp08", "elixgrp09", "elixgrp10", 
+"elixgrp11", "elixgrp12", "elixgrp13", "elixgrp14", "elixgrp15", 
+"elixgrp16", "elixgrp17", "elixgrp18", "elixgrp19", "elixgrp20", 
+"elixgrp21", "elixgrp22", "elixgrp23", "elixgrp24", "elixgrp25", 
+"elixgrp26", "elixgrp27", "elixgrp28", "elixgrp29", "elixgrp30", 
+"elixgrp31")
+
+# Overall 
+xtabs(~mm2+tb_dx, data=dset.diag.matched)
+
+## among ppl w/ MM strat by TB diag
+t1c_MM<-CreateTableOne(vars=catvars, data = dset.diag.matched[dset.diag.matched$mm2==1,], strata = "tb_dx",test=T)
+p1c_MM<-print(t1c_MM,smd=F, freq=F, )
+ 
+write.csv(p1c_MM,"R:/working/Basham_Thesis_Research/TB_multimorbidity/tb_multi_elix_comorbs_tb_pts_withMM_29dec_agedx.csv")
+```
+
+#### strat by time vars
+```{r}
+p1c_MM
+list(t1c_MM)
+# by arrival year
+dset1985_1995<-subset(dset.diag.matched, year0==c(0:10))
+dset1995_2005<-subset(dset.diag.matched, year0==c(10:20))
+dset2005_2015<-subset(dset.diag.matched, year0==c(20:30))
+
+# table1's by year of immigration
+t1c_MM_1985_1995<-CreateTableOne(vars=catvars, data = dset1985_1995[dset1985_1995$mm2==1,], strata = "tb_dx",test=T)
+
+t1c_MM_1995_2005<-CreateTableOne(vars=catvars, data = dset1995_2005[dset1995_2005$mm2==1,], strata = "tb_dx",test=T)
+
+t1c_MM_2005_2015<-CreateTableOne(vars=catvars, data = dset2005_2015[dset2005_2015$mm2==1,], strata = "tb_dx",test=T)
+
+
+t1c_MM_1985_1995
+t1c_MM_1995_2005
+t1c_MM_2005_2015
+
+
+# by ptime (time since arrival)
+histogram(dset.diag.matched$ptime)
+
+dset0_5<-subset(dset.diag.matched, ptime>=0 & ptime<=5)
+dset5_10<-subset(dset.diag.matched, ptime>5 & ptime<=10)
+dset10_15<-subset(dset.diag.matched,ptime>10 & ptime<=15)
+dset15_30<-subset(dset.diag.matched,ptime>15)
+
+# table1's by year of immigration
+t1c_MM_1985_1995<-CreateTableOne(vars=catvars, data = dset0_5[dset0_5$mm2==1,], strata = "tb_dx",test=T)
+
+t1c_MM_1995_2005<-CreateTableOne(vars=catvars, data = dset5_10[dset5_10$mm2==1,], strata = "tb_dx",test=T)
+
+t1c_MM_2005_2015<-CreateTableOne(vars=catvars, data = dset10_15[dset10_15$mm2==1,], strata = "tb_dx",test=T)
+
+t1c_MM_15plus<-CreateTableOne(vars=catvars, data = dset15_30[dset15_30$mm2==1,], strata = "tb_dx",test=T)
+
+
+t1c_MM_1985_1995
+t1c_MM_1995_2005
+t1c_MM_2005_2015
+t1c_MM_15plus
+
+
+#### PRs for MM in each sub-group of time-since-arrival
+
+# fit modified Poisson models
+fit_mm2_def_0_5<-glm(mm2~I(dset0_5$tb=='1'), data=dset0_5, poisson(link="log"))
+fit_mm2_def_5_10<-glm(mm2~I(dset5_10$tb=='1'), data=dset5_10, poisson(link="log"))
+fit_mm2_def_10_15<-glm(mm2~I(dset10_15$tb=='1'), data=dset10_15, poisson(link="log"))
+fit_mm2_def_15plus<-glm(mm2~I(dset15_30$tb=='1'), data=dset15_30, poisson(link="log"))
+
+# PRs for TB vs non-TB
+publish(fit_mm2_def_0_5, se="robust")
+publish(fit_mm2_def_5_10, se="robust")
+publish(fit_mm2_def_10_15, se="robust")
+publish(fit_mm2_def_15plus, se="robust")
+```
+
+
+
+
+# UNMATCHED ANALYSES
+
+## data
+```{r}
+
+# dataset
+dset.unmatched<-read.csv(file="R:/working/Basham_Thesis_Research/TB_multimorbidity/tb_MM_1yr_unmatched_29dec_agedx.csv",header=T,sep=",")
+
+dim(dset.unmatched)#correct number of people = 
+#head(dset.unmatched)#correct variables
+#str(dset.unmatched)
+
+#library(mice)
+#plot_missing(dset.unmatched)
+
+#TB Diagnosed and Tx Completed = 1
+table(dset.unmatched$tb_dx)
+dset.unmatched$tb<-as.factor(dset.unmatched$tb_dx)
+
+## MM 3 elix
+table(dset.unmatched$mm3_elix)
+sum(dset.unmatched$mm3_elix)
+dset.unmatched$mm3elix<-as.factor(dset.unmatched$mm3_elix)
+
+
+## MM 2 elix
+table(dset.unmatched$mm2_elix)
+sum(dset.unmatched$mm2_elix)
+dset.unmatched$mm2elix<-as.factor(dset.unmatched$mm2_elix)
+
+# check covariates
+summary(dset.unmatched$age_dx)
+
+# TB incidence rate group
+table(dset.unmatched$cab_tbinc_grp3)
+dset.unmatched$cab_tbinc_grp3<-as.character(dset.unmatched$cab_tbinc_grp3)
+
+
+
+# recode blank values as NA values
+
+## income quintile
+table(dset.unmatched$qaippe_rev2)
+dset.unmatched$quint<-recode(dset.unmatched$qaippe_rev2,"''=NA")
+table(dset.unmatched$quint)
+
+## education qualification
+table(dset.unmatched$educqual)
+dset.unmatched$educqual2<-recode(dset.unmatched$educqual,"''=NA")
+table(dset.unmatched$educqual2)
+
+##check missing values for other vars
+table(dset.unmatched$imclass2)
+table(dset.unmatched$year0)
+table(dset.unmatched$cab_tbinc_grp3)
+table(dset.unmatched$gender)
+
+
+# make variable for 2+ conditions
+dset.unmatched$mm2<-ifelse(dset.unmatched$totalelix>1,1,0)
+summary(as.factor(dset.unmatched$mm2))
+```
+
+## Table 1a - Covariates by Exposure (TB) Status
+This is to compare the balance between the TB and non-TB groups in the unmatched sample, except in sex.
+```{r}
+catvars<-c("mm2elix","mm3elix","gender","age_dx","quint","educqual2","imclass2","cab_tbinc_grp3","year0","whoregion_birthc2","ptime")
+
+t1a<-CreateTableOne(vars=catvars, data=dset.unmatched, strata = "tb_dx", test=F)
+t1a
+p1a<-print(t1a,smd=T)
+
+write.csv(p1a,file="R:/working/Basham_Thesis_Research/TB_multimorbidity/tb_multimorbidity_Table1a_unmatched_29dec_agedx.csv")
+
+t1a.chisq<-CreateTableOne(vars=catvars, data = dset.unmatched ,strata = "tb", test=T)
+t1a.chisq
+```
+
+### Interpretation
+Large differences between TB and non-TB for covariates on SMD prior to matching.
+
+## M3 Analysis  
+
+#### Univariable analyses by covariates
+This section does RP regressions of outcome on each covariate.
+```{r}
+# TB diagnosis
+m1x<-glm(mm2_elix~I(tb_dx=='1'), data=dset.unmatched, family=poisson(link=log))
+  
+  #view HRs and CIs
+  #hr.m1x<-cbind(exp(coef(m1x)),exp(confint(m1x)))
+  #anova(m1x)
+  print(summ(m1x, exp=T, robust=T))
+
+# sex
+m1a<-glm(mm2_elix~gender, data=dset.unmatched, family=poisson(link=log))
+
+  #view HRs and CIs
+  #hr.m1a<-cbind(exp(coef(m1a)),exp(confint(m1a)))
+  #anova(m1a)
+  print(summ(m1a, exp=T, robust=T))
+# age (continuous)
+m1b.i<-glm(mm2_elix~age_dx, data=dset.unmatched, family=poisson(link=log))
+
+  #view HRs and CIs
+  #hr.m1b.i<-cbind(exp(coef(m1b.i)),exp(confint(m1b.i)))
+  #anova(m1b.i)
+  print(summ(m1b.i, exp=T, robust=T))
+# age (categorical)
+m1b.ii<-glm(mm2_elix~cab_age_grp2, data=dset.unmatched, family=poisson(link=log))
+
+  #view HRs and CIs
+  #hr.m1b.ii<-cbind(exp(coef(m1b.ii)),exp(confint(m1b.ii)))
+  #anova(m1b.ii)
+print(summ(m1b.ii, exp=T, robust=T))
+
+# TB incidence in birth country
+m1d<-glm(mm2_elix~cab_tbinc_grp3, data=dset.unmatched, family=poisson(link=log))
+
+  #view HRs and CIs
+  #hr.m1d<-cbind(exp(coef(m1d)),exp(confint(m1d)))
+  #anova(m1d)
+  print(summ(m1d, exp=T, robust=T))
+
+# education
+m1e<-glm(mm2_elix~educqual, data=dset.unmatched, family=poisson(link=log))
+
+  #view HRs and CIs
+  #hr.m1e<-cbind(exp(coef(m1e)),exp(confint(m1e)))
+  #anova(m1e)
+  print(summ(m1e, exp=T, robust=T))
+# neighbourhood income quintile
+m1f<-glm(mm2_elix~qaippe_rev2, data=dset.unmatched, family=poisson(link=log))
+
+  #view HRs and CIs
+  #hr.m1f<-cbind(exp(coef(m1f)),exp(confint(m1f)))
+  #anova(m1f)
+  print(summ(m1f, exp=T, robust=T))
+
+  
+# immigration class
+m1g<-glm(mm2_elix~imclass2, data=dset.unmatched, family=poisson(link=log))
+
+  #view HRs and CIs
+  #hr.m1g<-cbind(exp(coef(m1g)),exp(confint(m1g)))
+  #anova(m1g)
+#hr.m1g
+print(summ(m1g, exp=T, robust=T))
+
+
+# Index Year
+m1h<-glm(mm2_elix~year0, data=dset.unmatched, family=poisson(link=log))
+
+  #view HRs and CIs
+  #hr.m1h<-cbind(exp(coef(m1h)),exp(confint(m1h)))
+  #anova(m1h)
+  print(summ(m1h, exp=T, robust=T))
+  
+# WHO region
+m1i<-glm(mm2_elix~whoregion_birthc2, data=dset.unmatched, family=poisson(link=log))
+
+  #view HRs and CIs
+  #hr.m1i<-cbind(exp(coef(m1i)),exp(confint(m1i)))
+  #anova(m1h)
+  print(summ(m1i, exp=T, robust=T))
+  
+  
+  # timne since arrival
+m1j<-glm(mm2_elix~ptime, data=dset.unmatched, family=poisson(link=log))
+
+  #view HRs and CIs
+  print(summ(m1j, exp=T, robust=T))
+  
+## concatenate the HRs
+#table1b.HRs<-rbind(hr.m1x,hr.m1a,hr.m1b.i,hr.m1d,hr.m1e,hr.m1f,hr.m1g,hr.m1h, hr.m1i)
+
+#table1b.HRs<-round(table1b.HRs, 2)
+#table1b.HRs
+#table1b.HRs<-as.data.frame(table1b.HRs)
+#colnames(table1b.HRs)[1]<-"OR"
+
+#str(table1b.HRs)
+#table1b.HRs
+#head(table1b.HRs)
+#data=table1b.HRs[!table1b.HRs$1=="(Intercept)",]
+
+
+# print to file
+#write.csv(table1b.HRs,file="R:/working/Basham_Thesis_Research/TB_multimorbidity/TB_multimorbidity_univariable_ORs_25feb2021.csv")
+  
+```    
+
+#### Crude analysis
+```{r}
+
+fit_unmatched_crude<-glm(mm3_elix~I(dset.unmatched$tb_dx=='1'), data=dset.unmatched, family=poisson(link=log))
+
+# RRs
+print(summ(fit_unmatched_crude, exp=T, robust=T))
+  
+```
+
+#### Age/sex-adjusted analysis
+```{r}
+fit_unmatched_agesex<-glm(mm3_elix~I(dset.unmatched$tb_dx=='1')+gender+age_dx, data=dset.unmatched, family=poisson(link=log))
+
+# RRs
+print(summ(fit_unmatched_agesex, exp=T, robust=T))
+
+```
+
+#### Covariate-Adjusted
+```{r}
+table(dset.unmatched$tb_dx)
+
+fit_unmatched<-glm(mm3_elix~I(dset.unmatched$tb_dx=='1')+gender+age_dx+imclass2+cab_tbinc_grp3+qaippe_rev2+educqual+year0+whoregion_birthc2+ptime, data=dset.unmatched, family=poisson(link=log))
+
+# RRs
+print(summ(fit_unmatched, exp=T, robust=T))
+```
+
+
+
+## MM2 analysis
+
+#### cov-adjustment
+```{r}
+#  model
+fit_mm2_def_unmatched<-glm(mm2~I(dset.unmatched$tb_dx=='1')+gender+age_dx+imclass2+cab_tbinc_grp3+qaippe_rev2+educqual+year0+whoregion_birthc2+ptime, data=dset.unmatched, poisson(link="log"))
+
+publish(fit_mm2_def_unmatched, se="robust")
+nobs(fit_mm2_def_unmatched)
+
+summary(as.factor(dset.unmatched$tb_dx))
+```
+
+
+#### cov-adjustment - minus WHO
+```{r}
+#  model
+fit_mm2_def_unmatched_noWHO<-glm(mm2~I(dset.unmatched$tb_dx=='1')+gender+age_dx+imclass2+cab_tbinc_grp3+qaippe_rev2+educqual+year0, data=dset.unmatched, poisson(link="log"))
+
+publish(fit_mm2_def_unmatched_noWHO, se="robust")
+```
+
+
+
+#### EM by sex
+```{r}
+
+xtabs(~tb_dx+gender, data=dset.unmatched)
+
+fit_em1<-glm(mm2_elix~I(dset.unmatched$tb_dx=='1')+gender+I(dset.unmatched$tb_dx=='1'):gender+age_dx+imclass2+cab_tbinc_grp3+qaippe_rev2+educqual+year0+whoregion_birthc2+ptime, data=dset.unmatched, poisson(link="log"))
+
+publish(fit_em1, se="robust")
+```
+significant!
+
+#### EM by age group
+```{r}
+
+#Create <40 and 40+ age group
+dset.unmatched$age_group40<-ifelse(dset.unmatched$age_dx<40,"a 0-39", "b 40+")
+summary(as.factor(dset.unmatched$age_group40))
+
+xtabs(~tb_dx+age_group40, data=dset.unmatched)
+
+fit_em1<-glm(mm2_elix~I(dset.unmatched$tb_dx=='1')+gender+I(dset.unmatched$tb_dx=='1'):age_group40+age_group40+imclass2+cab_tbinc_grp3+qaippe_rev2+educqual+year0+whoregion_birthc2+ptime, data=dset.unmatched, poisson(link="log"))
+
+publish(fit_em1, se="robust")
+```
+
+
+## Elix comorb freqencies (2+ in unmatched)
+```{r}
+
+# dataset
+dset.diag.unmatched<-dset.unmatched
+dput(names(dset.diag.unmatched))
+
+dset.diag.unmatched$elixgrp1<-as.factor(dset.diag.unmatched$elixgrp1)
+dset.diag.unmatched$elixgrp2<-as.factor(dset.diag.unmatched$elixgrp2)
+dset.diag.unmatched$elixgrp3<-as.factor(dset.diag.unmatched$elixgrp3)
+dset.diag.unmatched$elixgrp4<-as.factor(dset.diag.unmatched$elixgrp4)
+dset.diag.unmatched$elixgrp5<-as.factor(dset.diag.unmatched$elixgrp5)
+dset.diag.unmatched$elixgrp6<-as.factor(dset.diag.unmatched$elixgrp6)
+dset.diag.unmatched$elixgrp7<-as.factor(dset.diag.unmatched$elixgrp7)
+dset.diag.unmatched$elixgrp8<-as.factor(dset.diag.unmatched$elixgrp8)
+dset.diag.unmatched$elixgrp9<-as.factor(dset.diag.unmatched$elixgrp9)
+dset.diag.unmatched$elixgrp10<-as.factor(dset.diag.unmatched$elixgrp10)
+dset.diag.unmatched$elixgrp11<-as.factor(dset.diag.unmatched$elixgrp11)
+dset.diag.unmatched$elixgrp12<-as.factor(dset.diag.unmatched$elixgrp12)
+dset.diag.unmatched$elixgrp13<-as.factor(dset.diag.unmatched$elixgrp13)
+dset.diag.unmatched$elixgrp14<-as.factor(dset.diag.unmatched$elixgrp14)
+dset.diag.unmatched$elixgrp15<-as.factor(dset.diag.unmatched$elixgrp15)
+dset.diag.unmatched$elixgrp16<-as.factor(dset.diag.unmatched$elixgrp16)
+dset.diag.unmatched$elixgrp17<-as.factor(dset.diag.unmatched$elixgrp17)
+dset.diag.unmatched$elixgrp18<-as.factor(dset.diag.unmatched$elixgrp18)
+dset.diag.unmatched$elixgrp19<-as.factor(dset.diag.unmatched$elixgrp19)
+dset.diag.unmatched$elixgrp20<-as.factor(dset.diag.unmatched$elixgrp20)
+dset.diag.unmatched$elixgrp21<-as.factor(dset.diag.unmatched$elixgrp21)
+dset.diag.unmatched$elixgrp22<-as.factor(dset.diag.unmatched$elixgrp22)
+dset.diag.unmatched$elixgrp23<-as.factor(dset.diag.unmatched$elixgrp23)
+dset.diag.unmatched$elixgrp24<-as.factor(dset.diag.unmatched$elixgrp24)
+dset.diag.unmatched$elixgrp25<-as.factor(dset.diag.unmatched$elixgrp25)
+dset.diag.unmatched$elixgrp26<-as.factor(dset.diag.unmatched$elixgrp26)
+dset.diag.unmatched$elixgrp27<-as.factor(dset.diag.unmatched$elixgrp27)
+dset.diag.unmatched$elixgrp28<-as.factor(dset.diag.unmatched$elixgrp28)
+dset.diag.unmatched$elixgrp29<-as.factor(dset.diag.unmatched$elixgrp29)
+dset.diag.unmatched$elixgrp30<-as.factor(dset.diag.unmatched$elixgrp30)
+dset.diag.unmatched$elixgrp31<-as.factor(dset.diag.unmatched$elixgrp31)
+
+# Elix vars 
+catvars<-c("elixgrp1", "elixgrp2", "elixgrp3", "elixgrp4", 
+"elixgrp5", "elixgrp6", "elixgrp7", "elixgrp8", "elixgrp9", "elixgrp10", 
+"elixgrp11", "elixgrp12", "elixgrp13", "elixgrp14", "elixgrp15", 
+"elixgrp16", "elixgrp17", "elixgrp18", "elixgrp19", "elixgrp20", 
+"elixgrp21", "elixgrp22", "elixgrp23", "elixgrp24", "elixgrp25", 
+"elixgrp26", "elixgrp27", "elixgrp28", "elixgrp29", "elixgrp30", 
+"elixgrp31")
+
+# MM vars
+t1c<-CreateTableOne(vars=catvars, data= dset.diag.unmatched[dset.diag.unmatched$mm2_elix==1,], strata = "tb_dx",test=T)
+p1c<-print(t1c,smd=F)
+
+write.csv(p1c,"R:/working/Basham_Thesis_Research/TB_multimorbidity/tb_multi_elix_comorbs_tb_pts_unmatched_29dec_agedx.csv")
+```
+
+
+# PS Approaches
+
+## PS-matched analysis (1:1)
+```{r}
+
+
+# PS formula for matching on TB diagnosis (exposure)
+ps.formula<-as.formula(tb_dx~gender+age_dx+imclass2+cab_tbinc_grp3+qaippe_rev2+educqual+year0+whoregion_birthc2+ptime)
+
+varsPS<-c("tb_dx","mm3_elix","mm2","elixgrp1", "elixgrp2", "elixgrp3", "elixgrp4", "elixgrp5", "elixgrp6", "elixgrp7", "elixgrp8", "elixgrp9", "elixgrp10","elixgrp11", "elixgrp12", "elixgrp13", "elixgrp14", "elixgrp15", 
+"elixgrp16", "elixgrp17", "elixgrp18", "elixgrp19", "elixgrp20", 
+"elixgrp21", "elixgrp22", "elixgrp23", "elixgrp24", "elixgrp25", 
+"elixgrp26", "elixgrp27", "elixgrp28", "elixgrp29", "elixgrp30", 
+"elixgrp31","gender","age_dx","imclass2","cab_tbinc_grp3","qaippe_rev2","educqual","year0","whoregion_birthc2","ptime","d_comparison")
+
+# 1:1 NN matching with caliper = 0.2 SD
+set.seed(123)
+match.obj<-matchit(ps.formula,dset.unmatched[,varsPS], caliper=0.2)
+    #summary(match.obj)
+
+# select matched data
+dset.psmatch<-match.data(match.obj)
+dim(dset.psmatch)
+dset.psmatch$mm3_elix_f<-as.factor(dset.psmatch$mm3_elix)
+dset.psmatch$mm2_f<-as.factor(dset.psmatch$mm2)
+# view balance SMD
+catvars<-c("mm3_elix_f","mm2_f","gender","age_dx","qaippe_rev2","educqual","imclass2","cab_tbinc_grp3","year0","whoregion_birthc2","ptime","d_comparison")
+
+t1a_ps<-CreateTableOne(vars=catvars, data=dset.psmatch, strata = "tb_dx", test=F)
+t1a_ps
+p1a_ps<-print(t1a_ps,smd=T)
+
+write.csv(p1a_ps,file="R:/working/Basham_Thesis_Research/TB_multimorbidity/tb_multimorbidity_Table1a_matched_ps_29dec_agedx.csv")
+```
+
+
+
+### MM2 - outcome analysis (1:1)
+```{r}
+# crude PS
+fit_PSmatched_RP.mm2<-glm(as.numeric(mm2)~I(dset.psmatch$tb_dx=='1'), data=dset.psmatch, family=poisson(link=log))
+
+# RR results from robust poisson regression on matched data
+print(summ(fit_PSmatched_RP.mm2, exp=T, robust=T))
+
+# with age/sex adjustment
+fit_PSmatched_RP.mm2_agesex<-glm(as.numeric(mm2)~I(dset.psmatch$tb_dx=='1')+gender+age_dx, data=dset.psmatch, family=poisson(link=log))
+
+# RR results from robust poisson regression on matched data
+print(summ(fit_PSmatched_RP.mm2_agesex, exp=T, robust=T))
+
+# with doubly robust covariate adjustment
+fit_PSmatched_RP.mm2_cov<-glm(as.numeric(mm2)~I(dset.psmatch$tb_dx=='1')+gender+age_dx+imclass2+cab_tbinc_grp3+qaippe_rev2+educqual+year0+whoregion_birthc2+ptime, data=dset.psmatch, family=poisson(link=log))
+
+# RR results from robust poisson regression on matched data
+print(summ(fit_PSmatched_RP.mm2_cov, exp=T, robust=T))
+```
+
+
+
+
+### MM3 - outcome analysis
+```{r}
+
+fit_PSmatched_RPcrude<-glm(as.numeric(mm3_elix)~I(dset.psmatch$tb_dx=='1'), data=dset.psmatch, family=poisson(link=log))
+
+# RR results from robust poisson regression on matched data
+print(summ(fit_PSmatched_RPcrude, exp=T, robust=T))
+
+
+#### age/sex
+# with doubly robust age/sex-adjustment
+fit_PSmatched_RPagesex<-glm(as.numeric(mm3_elix)~I(dset.psmatch$tb_dx=='1')+gender+age_dx, data=dset.psmatch, family=poisson(link=log))
+
+# RR results from robust poisson regression on matched data
+print(summ(fit_PSmatched_RPagesex, exp=T, robust=T))
+    
+
+#### double-adjusted 
+# with doubly covariate adjustment
+fit_PSmatched_RP<-glm(as.numeric(mm3_elix)~I(dset.psmatch$tb_dx=='1')+gender+age_dx+imclass2+cab_tbinc_grp3+qaippe_rev2+educqual+year0+whoregion_birthc2+ptime, data=dset.psmatch, family=poisson(link=log))
+
+# RR results from robust poisson regression on matched data
+print(summ(fit_PSmatched_RP, exp=T, robust=T))
+
+
+```
+
+
+### Elix comorb freqencies (2+ in PS matched)
+```{r}
+
+# dataset
+dset.diag.ps<-dset.psmatch
+dput(names(dset.diag.ps))
+
+dset.diag.ps$elixgrp1<-as.factor(dset.diag.ps$elixgrp1)
+dset.diag.ps$elixgrp2<-as.factor(dset.diag.ps$elixgrp2)
+dset.diag.ps$elixgrp3<-as.factor(dset.diag.ps$elixgrp3)
+dset.diag.ps$elixgrp4<-as.factor(dset.diag.ps$elixgrp4)
+dset.diag.ps$elixgrp5<-as.factor(dset.diag.ps$elixgrp5)
+dset.diag.ps$elixgrp6<-as.factor(dset.diag.ps$elixgrp6)
+dset.diag.ps$elixgrp7<-as.factor(dset.diag.ps$elixgrp7)
+dset.diag.ps$elixgrp8<-as.factor(dset.diag.ps$elixgrp8)
+dset.diag.ps$elixgrp9<-as.factor(dset.diag.ps$elixgrp9)
+dset.diag.ps$elixgrp10<-as.factor(dset.diag.ps$elixgrp10)
+dset.diag.ps$elixgrp11<-as.factor(dset.diag.ps$elixgrp11)
+dset.diag.ps$elixgrp12<-as.factor(dset.diag.ps$elixgrp12)
+dset.diag.ps$elixgrp13<-as.factor(dset.diag.ps$elixgrp13)
+dset.diag.ps$elixgrp14<-as.factor(dset.diag.ps$elixgrp14)
+dset.diag.ps$elixgrp15<-as.factor(dset.diag.ps$elixgrp15)
+dset.diag.ps$elixgrp16<-as.factor(dset.diag.ps$elixgrp16)
+dset.diag.ps$elixgrp17<-as.factor(dset.diag.ps$elixgrp17)
+dset.diag.ps$elixgrp18<-as.factor(dset.diag.ps$elixgrp18)
+dset.diag.ps$elixgrp19<-as.factor(dset.diag.ps$elixgrp19)
+dset.diag.ps$elixgrp20<-as.factor(dset.diag.ps$elixgrp20)
+dset.diag.ps$elixgrp21<-as.factor(dset.diag.ps$elixgrp21)
+dset.diag.ps$elixgrp22<-as.factor(dset.diag.ps$elixgrp22)
+dset.diag.ps$elixgrp23<-as.factor(dset.diag.ps$elixgrp23)
+dset.diag.ps$elixgrp24<-as.factor(dset.diag.ps$elixgrp24)
+dset.diag.ps$elixgrp25<-as.factor(dset.diag.ps$elixgrp25)
+dset.diag.ps$elixgrp26<-as.factor(dset.diag.ps$elixgrp26)
+dset.diag.ps$elixgrp27<-as.factor(dset.diag.ps$elixgrp27)
+dset.diag.ps$elixgrp28<-as.factor(dset.diag.ps$elixgrp28)
+dset.diag.ps$elixgrp29<-as.factor(dset.diag.ps$elixgrp29)
+dset.diag.ps$elixgrp30<-as.factor(dset.diag.ps$elixgrp30)
+dset.diag.ps$elixgrp31<-as.factor(dset.diag.ps$elixgrp31)
+
+# Elix vars 
+catvars<-c("elixgrp1", "elixgrp2", "elixgrp3", "elixgrp4", 
+"elixgrp5", "elixgrp6", "elixgrp7", "elixgrp8", "elixgrp9", "elixgrp10",
+"elixgrp11", "elixgrp12", "elixgrp13", "elixgrp14", "elixgrp15", 
+"elixgrp16", "elixgrp17", "elixgrp18", "elixgrp19", "elixgrp20", 
+"elixgrp21", "elixgrp22", "elixgrp23", "elixgrp24", "elixgrp25", 
+"elixgrp26", "elixgrp27", "elixgrp28", "elixgrp29", "elixgrp30", 
+"elixgrp31")
+
+# MM vars
+list(dset.diag.ps)
+t1c<-CreateTableOne(vars=catvars, data= dset.diag.ps[dset.diag.ps$mm2_f==1,], strata = "tb_dx",test=T)
+p1c<-print(t1c,smd=F)
+
+write.csv(p1c,"R:/working/Basham_Thesis_Research/TB_multimorbidity/tb_multi_elix_comorbs_tb_pts_PS_MATCHED_29dec_agedx.csv")
+```
+
+
+#### EM by sex
+```{r}
+
+xtabs(~tb_dx+gender, data=dset.psmatch)
+
+fit_em1<-glm(mm2~I(dset.psmatch$tb_dx=='1')+gender+I(dset.psmatch$tb_dx=='1'):gender+age_dx+imclass2+cab_tbinc_grp3+qaippe_rev2+educqual+year0+whoregion_birthc2+ptime, data=dset.psmatch, poisson(link="log"))
+
+publish(fit_em1, se="robust")
+```
+
+
+#### EM by age group
+```{r}
+
+#Create <40 and 40+ age group
+dset.psmatch$age_group40<-ifelse(dset.psmatch$age_dx<40,"a 0-39", "b 40+")
+summary(as.factor(dset.psmatch$age_group40))
+
+xtabs(~tb_dx+age_group40, data=dset.psmatch)
+
+fit_em1<-glm(mm2~I(dset.psmatch$tb_dx=='1')+gender+I(dset.psmatch$tb_dx=='1'):age_group40+age_group40+imclass2+cab_tbinc_grp3+qaippe_rev2+educqual+year0+whoregion_birthc2+ptime, data=dset.psmatch, poisson(link="log"))
+
+publish(fit_em1, se="robust")
+```
+
+# SuperLearner
+```{r}
+library(car)
+library(MatchIt)
+library(Matching)
+library(survey)
+library(DescTools)
+library(SuperLearner)
+library(tableone)
+library(lattice)
+library(cobalt)
+library(survival)
+```
+
+
+## MM2 - PS from superlearner
+```{r}
+
+# Extract our outcome variable from the dataframe.
+Y = ifelse(dset.unmatched$mm2==1,1,0)
+summary(Y)
+# Treatment
+A <- ifelse(dset.unmatched$tb_dx==1,1,0)
+summary(A)
+# Create a dataframe to contain our explanatory variables only
+X = subset(dset.unmatched,select = -c(tb_dx))
+X = subset(X, select = c(gender,age_dx,imclass2,cab_tbinc_grp3,qaippe_rev2,educqual,year0,whoregion_birthc2,ptime))
+
+# Check structure of dataframe:
+## make sure that "outcome" (i.e. propensity variable) is removed and update character to factor variables
+str(X)
+dput(names(X))
+
+X$gender<-as.factor(X$gender)
+X$imclass2<-as.factor(X$imclass2)
+X$cab_tbinc_grp3<-as.factor(X$cab_tbinc_grp3)
+X$qaippe_rev2<-as.factor(X$qaippe_rev2)
+X$educqual<-as.factor(X$educqual)
+X$whoregion_birthc2<-as.factor(X$whoregion_birthc2)
+
+# fix the ordering for this variable
+
+#order this factor for work in lasso
+levels(X$qaippe_rev2)
+X$qaippe_rev2<-factor(X$qaippe_rev2,levels=c("a Highest 20%","b Middle-High 20%","c Middle 20%","d Low-Middle 20%","e Lowest 20%"))
+summary(X$qaippe_rev2)
+#X$qaippe_rev2<-as.numeric(X$qaippe_rev2)
+
+# note: is WHO region being used as ordered factor??? This would be wrong...
+
+# Implement SuperLearner
+cv.fold.set <- 5
+SL.library <- c("SL.glm","SL.biglasso","SL.gam","SL.ranger","SL.xgboost") #tree-based methods only
+cv.fit<- CV.SuperLearner(Y = A, X = X, family="binomial", SL.library=SL.library, verbose=TRUE, V=cv.fold.set, method = "method.NNLS")
+
+### check the CV risk estimates for SL propensity score model
+# summary on the cv.fit object
+summary(cv.fit)
+# Plot the performance with 95% CI.
+plot(cv.fit)
+
+
+# assign PS based on SuperLearner predictions to the unmatched dataset
+predictions <- cbind(cv.fit$SL.predict,cv.fit$library.predict)
+head(predictions)
+dim(predictions)
+summary(predictions)
+dset.unmatched$ps.sl2<-predictions[,1]
+summary(dset.unmatched$ps.sl2)
+par(mfrow=c(1,2))
+hist(dset.unmatched$ps.sl2[A==1])
+hist(dset.unmatched$ps.sl2[A==0])
+```
+
+### MM2 - SL-PS Matched Dataset
+```{r}
+match.mm2<-Match(Y=Y, Tr=A, X=dset.unmatched$ps.sl2, caliper=0.2,
+             M=1,estimand="ATT",ties=TRUE,
+             version="standard",replace=FALSE)
+summary(match.mm2)
+matched.mm2 <- rbind(dset.unmatched[match.mm2$index.treated,],
+                 dset.unmatched[match.mm2$index.control,])
+
+dim(matched.mm2)
+```
+
+### MM2-Outcome Analysis modifed Poisson reg (Zou 2003)
+```{r}
+fit.SL.matched.mm2<-glm(mm2==1~tb_dx, family=poisson(link="log"), data=matched.mm2)
+summ(fit.SL.matched.mm2, exp=T, se="Robust")
+
+fit.SL.matched.agesex.mm2<-glm(mm2==1~tb_dx+age_dx+gender, family=poisson(link="log"), data=matched.mm2)
+summ(fit.SL.matched.agesex.mm2, exp=T, se="Robust")
+
+fit.SL.matched.cov.mm2<-glm(mm2==1~tb_dx+gender+age_dx+imclass2+cab_tbinc_grp3+qaippe_rev2+educqual+year0+whoregion_birthc2+ptime, family=poisson(link="log"), data=matched.mm2)
+summ(fit.SL.matched.cov.mm2, exp=T, se="Robust")
+
+```
+
+
+## MM3 - PS from superlearner
+```{r}
+
+# Extract our outcome variable from the dataframe.
+Y = ifelse(dset.unmatched$mm3elix==1,1,0)
+summary(Y)
+# Treatment
+A <- ifelse(dset.unmatched$tb_dx==1,1,0)
+summary(A)
+# Create a dataframe to contain our explanatory variables only
+X = subset(dset.unmatched,select = -c(tb_dx))
+X = subset(X, select = c(gender,age_dx,imclass2,cab_tbinc_grp3,qaippe_rev2,educqual,year0,whoregion_birthc2,ptime))
+
+# Check structure of dataframe:
+## make sure that "outcome" (i.e. propensity variable) is removed and update character to factor variables
+str(X)
+dput(names(X))
+
+X$gender<-as.factor(X$gender)
+X$imclass2<-as.factor(X$imclass2)
+X$cab_tbinc_grp3<-as.factor(X$cab_tbinc_grp3)
+X$qaippe_rev2<-as.factor(X$qaippe_rev2)
+X$educqual<-as.factor(X$educqual)
+X$whoregion_birthc2<-as.factor(X$whoregion_birthc2)
+
+# fix the ordering for this variable
+
+#order this factor for work in lasso
+levels(X$qaippe_rev2)
+X$qaippe_rev2<-factor(X$qaippe_rev2,levels=c("a Highest 20%","b Middle-High 20%","c Middle 20%","d Low-Middle 20%","e Lowest 20%"))
+summary(X$qaippe_rev2)
+
+# note: is WHO region being used as ordered factor??? This would be wrong...
+
+# Implement SuperLearner
+cv.fold.set <- 5
+SL.library <- c("SL.glm","SL.biglasso","SL.gam","SL.ranger","SL.xgboost") #tree-based methods only
+cv.fit<- CV.SuperLearner(Y = A, X = X, family="binomial", SL.library=SL.library, verbose=TRUE, V=cv.fold.set, method = "method.NNLS")
+
+### check the CV risk estimates for SL propensity score model
+# summary on the cv.fit object
+summary(cv.fit)
+# Plot the performance with 95% CI.
+plot(cv.fit)
+
+
+# assign PS based on SuperLearner predictions to the unmatched dataset
+predictions <- cbind(cv.fit$SL.predict,cv.fit$library.predict)
+head(predictions)
+dim(predictions)
+summary(predictions)
+dset.unmatched$ps.sl<-predictions[,1]
+summary(dset.unmatched$ps.sl)
+par(mfrow=c(1,2))
+hist(dset.unmatched$ps.sl[A==1])
+hist(dset.unmatched$ps.sl[A==0])
+```
+
+### Covariate balance check function
+```{r}
+######## BALANCE CHECKING FUNCTION ##########
+# written by Dr. Ehsan Karim(c) and revised by C. Andrew Basham for use with TB multimorbidity project
+
+# PS variables (covariates to check)
+vars<-c("gender","age_dx","imclass2","cab_tbinc_grp3","qaippe_rev2","educqual","year0","whoregion_birthc2","ptime")
+require(Hmisc)
+bal.check2<-
+  function(k=1){
+    SL.lib <- c("SL", SL.library)
+    ps<-predictions[,k]
+    require(Matching)
+    match<-Match(Y=Y, Tr=A, X=ps, caliper=0.2,
+                 M=1,estimand="ATT",ties=TRUE,
+                 version="standard",replace=FALSE)
+    summary(match)
+    matched <- rbind(dset.unmatched[match$index.treated,],
+                     dset.unmatched[match$index.control,])
+    require(tableone)
+    tab0 <- CreateTableOne(data=dset.unmatched, var = vars, strata= "tb_dx")
+    sdiff.before <- ExtractSmd(tab0)
+    tab1 <- CreateTableOne(data=matched, var = vars, strata= "tb_dx")
+    sdiff.after<- ExtractSmd(tab1)
+    plot(sdiff.before,1:ncol(X),type="l", col = "gray",
+         xlab="Std.diff", main = SL.lib[k],
+         xlim=c(-1,1), ylab = "Parameters")
+    lines(sdiff.after,1:ncol(X),type="l", col = "blue")
+    abline(v=0, col = "green", lty = 2)
+    abline(v=.25, col = "green", lty = 2)
+    abline(v=-.25, col = "green", lty = 2)
+  }
+################  END FUNCTION ########################
+```
+
+
+### Check Blanace of each Learner 
+```{r}
+# using bal.check2 Function from Dr.Karim
+#assignInNamespace("[.labelled", Hmisc:::"[.labelled", asNamespace("haven"))
+## blue is after matching
+## gray is before matching
+#bal.check2(1)
+#bal.check2(3)
+#################### balance check finished ###########
+```
+
+
+### SL-PS Matched Dataset
+```{r}
+match<-Match(Y=Y, Tr=A, X=dset.unmatched$ps.sl, caliper=0.2,
+             M=1,estimand="ATT",ties=TRUE,
+             version="standard",replace=FALSE)
+summary(match)
+matched <- rbind(dset.unmatched[match$index.treated,],
+                 dset.unmatched[match$index.control,])
+
+dim(matched)
+```
+
+### Outcome Analysis - modifed Poisson reg (Zou 2003)
+```{r}
+fit.SL.matched<-glm(mm3elix==1~tb_dx, family=poisson(link="log"), data=matched)
+summ(fit.SL.matched, exp=T, se="Robust")
+
+fit.SL.matched.agesex<-glm(mm3elix==1~tb_dx+age_dx+gender, family=poisson(link="log"), data=matched)
+summ(fit.SL.matched.agesex, exp=T, se="Robust")
+
+fit.SL.matched.cov<-glm(mm3elix==1~tb_dx+gender+age_dx+imclass2+cab_tbinc_grp3+qaippe_rev2+educqual+year0+whoregion_birthc2+ptime, family=poisson(link="log"), data=matched)
+summ(fit.SL.matched.cov, exp=T, se="Robust")
+```
+
