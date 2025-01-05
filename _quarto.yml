@@ -9,6 +9,7 @@ website:
       - href: index.qmd
         text: Home
       - href: software/index.qmd
+        text: Software
       - href: projects/index.qmd
         text: Projects
       - href: portfolio/index.qmd

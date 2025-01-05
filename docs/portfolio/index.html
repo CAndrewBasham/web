@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.39">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -55,10 +55,10 @@ div.csl-indent {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-a7b5731b1417f1941cb4ae285f028602.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -112,7 +112,11 @@ div.csl-indent {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../projects.html"> 
+    <a class="nav-link" href="../software/index.html"> 
+<span class="menu-text">Software</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../projects/index.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
@@ -129,9 +133,11 @@ div.csl-indent {
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
-    <a href="https://twitter.com/CAndrewBasham/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-twitter"></i></a>
+            <div class="quarto-navbar-tools tools-wide">
+    <a href="https://andrewbasham.com/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-website"></i></a>
     <a href="https://github.com/CAndrewBasham/web" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+    <a href="https://www.linkedin.com/in/candrewbasham/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-linkedin"></i></a>
+    <a href="https://osf.io/mny8b/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-osf"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -202,8 +208,8 @@ div.csl-indent {
 <p>Below are short descriptions of my professional work with links to research articles, policy documents, and media coverage.</p>
 <ul>
 <li><p>Expert knowledge of epidemiological theory and methods, specialized in causal inference with observational data.</p></li>
-<li><p>Advanced knowledge in tuberculosis epidemiology, survivorship research, observational data, opioid utilization and safety, multimorbidity prevalence, violent injuries epidemiology, race and ethnicity data in Medicaid, Medicare, and electronic health records, Indigenous health policy and programming experience, &amp; over a decade of experience linking and analyzing population administrative data.</p></li>
-<li><p>Advanced statistical modeling of binomial, count, and survival outcomes, including standard regression, propensity score methods, causal mediation analysis, multilevel models, structural equation models, and complex survey data analysis methods. Multilevel modelling course at York University – Summer Program in Data Analysis using the R language.</p></li>
+<li><p>Expert knowledge of tuberculosis epidemiology, survivorship research, observational (real-world) data sources, cutting-edge confounding control methodology, assessment of multiple forms of bias in causal inference epidemiology, prescription opioid drug-drug interaction safety research, multimorbidity measurement, violent injury epidemiology, race and ethnicity data, Medicaid, Medicare, and electronic health records, Indigenous health policy and programming experience, &amp; over a decade of experience linking and analyzing population administrative data.</p></li>
+<li><p>Regularly specify and fit statistical models for binomial, count, and survival outcomes, from standard regression, propensity score methods, causal mediation analysis, multilevel models, structural equation models, and complex survey data analysis methods. Multilevel modelling course at York University – Summer Program in Data Analysis using the R language.</p></li>
 <li><p>Proficient in SAS and R statistical programming. Strong data documentation and literate programming in both, including use of R markdown and Quarto documents within Rprojects version-controlled through Git with remote GitHub repositoryies for reproducible analysis reports.</p></li>
 <li><p>Skilled in applying macros for health administrative data linkage and analysis, including:</p>
 <ul>
@@ -569,8 +575,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -681,7 +685,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
