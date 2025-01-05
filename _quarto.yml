@@ -16,7 +16,6 @@ website:
         text: Projects
       - href: software/index.qmd
         text: Software
-      - href: sci_med_writing/index.qmd
       
     tools:      
       - icon: website

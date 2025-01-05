@@ -1,6 +1,5 @@
 ---
 title: "Writing and Reviewing"
-author: "C. Andrew Basham"
 ---
 
 ## Overview
@@ -13,9 +12,11 @@ This page is a collection of guidance documents for reporting and reviewing quan
 
 [**Basic Statistical Reporting for Articles Published in Biomedical Journals: The “Statistical Analyses and Methods in the Published Literature” or The SAMPLGuidelines**](https://www.equator-network.org/wp-content/uploads/2013/07/SAMPL-Guidelines-6-27-13.pdf "SAMPL - Basic Statistical Reporting for Articles Published in Biomedical Journals: The “Statistical Analyses and Methods in the Published Literature” or The SAMPLGuidelines")
 
+::: {#fig-1}
 [![Lang and Altman (2013) SAMPL](/images/SAMPL.png){fig-alt="Basic Statistical Reporting for Articles Published in Biomedical Journals: The “Statistical Analyses and Methods in the Published Literature” or The SAMPLGuidelines" fig-align="center"}](https://www.equator-network.org/reporting-guidelines/sampl/)
+:::
 
-## BMC (Springer Nature) Standards of Reporting
+## BioMed Central (BMC) Standards of Reporting
 
 This list was derived from [BMC's Standards of Reporting](https://www.biomedcentral.com/p/the-bmc-series-journals/for-reviewers#reviewing+a+bmc+series+manuscript), which I shortened to the tools' name with URL link and the type of study they are designed for:
 
