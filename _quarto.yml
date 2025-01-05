@@ -17,7 +17,6 @@ website:
       - href: software/index.qmd
         text: Software
       - href: sci_med_writing/index.qmd
-      - text: Writing/Reviewing
       
     tools:      
       - icon: website
