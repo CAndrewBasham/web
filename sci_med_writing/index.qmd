@@ -1,0 +1,88 @@
+---
+title: "Writing and Reviewing"
+author: "C. Andrew Basham"
+---
+
+## Overview
+
+This page is a collection of guidance
+documents for reporting and reviewing
+quantitative bioscience research provided
+as a resource for authors, reviewers, and
+readers of biomedical and scientific
+research articles.
+
+### Statistical Analysis and Reporting
+
+#### SAMPL (Lang and Altman, 2013)
+
+[**Basic Statistical Reporting for Articles
+Published in Biomedical Journals: The
+“Statistical Analyses and Methods in the
+Published Literature” or The
+SAMPLGuidelines**](https://www.equator-network.org/wp-content/uploads/2013/07/SAMPL-Guidelines-6-27-13.pdf "SAMPL - Basic Statistical Reporting for Articles Published in Biomedical Journals: The “Statistical Analyses and Methods in the Published Literature” or The SAMPLGuidelines")
+
+[![Lang and Altman (2013)
+SAMPL](images/SAMPL.png){fig-alt="Basic Statistical Reporting for Articles Published in Biomedical Journals: The “Statistical Analyses and Methods in the Published Literature” or The SAMPLGuidelines"
+fig-align="center"}](https://www.equator-network.org/reporting-guidelines/sampl/)
+
+## BMC (Springer Nature) Standards of Reporting
+
+This list was derived from [BMC's Standards
+of
+Reporting](https://www.biomedcentral.com/p/the-bmc-series-journals/for-reviewers#reviewing+a+bmc+series+manuscript),
+which I shortened to the tools' name with
+URL link and the type of study they are
+designed for:
+
+> -   Randomized controlled trials
+>     ([CONSORT](http://www.consort-statement.org/downloads))
+>
+> -   Protocols for randomized controlled
+>     protocols
+>     ([SPIRIT](http://www.spirit-statement.org/))
+>
+> -   Systematic reviews and
+>     meta-analyses\*
+>     ([PRISMA](http://www.prisma-statement.org/))
+>     and protocols
+>     ([PRISMA-P](http://www.equator-network.org/reporting-guidelines/prisma-protocols/))
+>
+> -   Observational studies
+>     ([STROBE](http://www.strobe-statement.org/))
+>
+> -   Case reports
+>     ([CARE](http://www.care-statement.org/))
+>
+> -   Qualitative research
+>     ([COREQ](http://intqhc.oxfordjournals.org/content/19/6/349.long))
+>
+> -   Diagnostic/prognostic studies ([STARD
+>     ](http://www.equator-network.org/reporting-guidelines/stard/)and
+>     [TRIPOD](http://www.tripod-statement.org/TRIPOD/TRIPOD-Checklists/TRIPOD-Checklist-Prediction-Model-Development-and-Validation))
+>
+> -   Economic evaluations
+>     ([CHEERS](http://www.biomedcentral.com/1741-7015/11/80))
+>
+> -   Pre-clinical animal studies
+>     ([ARRIVE](http://www.nc3rs.org.uk/arrive-guidelines))
+>
+> -   Statistics checklists for editors and
+>     reviewers to use when evaluating the
+>     statistics in manuscripts:
+>
+>     -   [Life Sciences
+>         journals](https://resource-cms.springernature.com/springer-cms/rest/v1/content/19375388/data/v1)
+>
+>     -   [Medical
+>         journals](https://resource-cms.springernature.com/springer-cms/rest/v1/content/19375438/data/v1)
+>
+>     -   [Statistics, Mathematics and
+>         Computer Science
+>         journals](https://resource-cms.springernature.com/springer-cms/rest/v1/content/19375444/data/v1)
+>
+> -   systematic reviews [Cochrane
+>     Reviewers'
+>     Handbook](http://handbook.cochrane.org/).
+
+<https://www.biomedcentral.com/p/the-bmc-series-journals/for-reviewers#reviewing+a+bmc+series+manuscript>

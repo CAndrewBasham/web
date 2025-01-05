@@ -7,8 +7,7 @@ execute:
 # About 
 
 ::: {#fig-headshot}
-![](images/Basham_headshot.jpg){fig-align="center"
-width="400"}
+![](images/Basham_headshot.jpg){width="425"}
 
 Dr. C Andrew Basham, B.A., M.Sc., Ph.D.
 :::
@@ -37,11 +36,10 @@ influencing the policies, programs, and
 practices that impact their lives.
 
 If you see potential synergy between our
-work and want to initiate a dialogue or
-potential collaboration, please do not
-hesitate to reach out. Also, if see
-anything needs attention on this site
-please let me know.
+work and want to initiate a dialogue,
+please do not hesitate to reach out. Also,
+if see anything needs attention on this
+site please let me know.
 
 Sincerely,
 

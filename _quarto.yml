@@ -8,14 +8,16 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: software/index.qmd
-        text: Software
-      - href: projects/index.qmd
-        text: Projects
-      - href: portfolio/index.qmd
-      - href: Education/index.qmd
       - href: cv1.qmd
         text: CV
+      - href: Education/index.qmd
+      - href: portfolio/index.qmd
+      - href: projects/index.qmd
+        text: Projects
+      - href: software/index.qmd
+        text: Software
+      - href: sci_med_writing/index.qmd
+      - text: Writing/Reviewing
       
     tools:      
       - icon: website
