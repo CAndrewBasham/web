@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.39">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,10 +35,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a7b5731b1417f1941cb4ae285f028602.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -91,8 +91,12 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link active" href="./index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="./software/index.qmd"> 
+<span class="menu-text"></span></a>
+  </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> 
+    <a class="nav-link" href="./projects/index.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
@@ -109,9 +113,11 @@ ul.task-list li input[type="checkbox"] {
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
-    <a href="https://twitter.com/CAndrewBasham/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-twitter"></i></a>
+            <div class="quarto-navbar-tools tools-wide">
+    <a href="https://andrewbasham.com/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-website"></i></a>
     <a href="https://github.com/CAndrewBasham/web" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+    <a href="https://www.linkedin.com/in/candrewbasham/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-linkedin"></i></a>
+    <a href="https://osf.io/mny8b/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-osf"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -120,23 +126,15 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#about-me" id="toc-about-me" class="nav-link active" data-scroll-target="#about-me">About Me</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
 
 
 
 
-<section id="about-me" class="level1">
-<h1>About Me</h1>
 <div id="fig-headshot" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-headshot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -149,7 +147,7 @@ Figure&nbsp;1
 </div>
 <p>Thank you for visiting my open-source website! This website was created to illustrate the items listed in my CV and to increase my coding skills. This website was developed in RStudio as an RProject coded in Quarto documents pushed to public GitHub repository, making it reproducible.</p>
 <p>My career path has been anything but linear; however, my values, principles, and vision remain the same. My goal as an epidemiologist is to advance community narratives within causal epidemiological research to enable individuals and communities to contribute to thedesign and interpretation of statistical analyses describing their lived experiences and influencing the policies, programs, and practices that impact their lives.</p>
-<p>I am open to communicating about collaboration if you see potential synergy between our work. If you see anything that needs attention or have any suggestions, please feel free to send me an email or reach through any of the platforms below.</p>
+<p>I am open to communicating about collaboration if you see potential synergy between our work. If you see anything that needs attention or have any suggestions, please feel free to send me an email or reach out through any of the platforms below.</p>
 <p>Sincerely,</p>
 <p><strong>C. Andrew Basham, PhD</strong></p>
 <p>Email: <a href="git@andrewbasham.com">git@andrewbasham.com</a></p>
@@ -160,7 +158,6 @@ Figure&nbsp;1
 <p>Bluesky: <a href="https://bsky.app/profile/andrewbasham.bsky.social" class="uri">https://bsky.app/profile/andrewbasham.bsky.social</a></p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -245,6 +242,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -355,6 +354,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
+      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

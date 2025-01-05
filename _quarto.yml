@@ -8,17 +8,22 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: projects.qmd
+      - href: software/index.qmd
+      - href: projects/index.qmd
         text: Projects
       - href: portfolio/index.qmd
       - href: Education/index.qmd
       - href: cv1.qmd
       
     tools:      
-      - icon: twitter
-        href: https://twitter.com/CAndrewBasham/
+      - icon: website
+        href: https://andrewbasham.com/
       - icon: github
         href: https://github.com/CAndrewBasham/web
+      - icon: linkedin
+        href: https://www.linkedin.com/in/candrewbasham/
+      - icon: osf
+        href: https://osf.io/mny8b/
   page-footer:
     right: "Built with [Quarto](https://quarto.org/)"
     left: "&copy; Copyright 2024, C. Andrew Basham"

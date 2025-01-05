@@ -5,7 +5,17 @@ bibliography: references.bib
 
 ## Survivorship Epidemiology:
 
-The goal of this program of methodological research is to advance theory, concepts, models, and tools for descriptive, predictive, and causal inference about critical illness survivor health outcomes and services.
+The goal of this program of methodological research is to advance theory, concepts, models, and tools for descriptive, predictive, and inferences about critical illness survivor health outcomes, their pathology and diagnosis, biomedical treatment, the physiological and psychological changes associated with these processes, and their sociocultural contexts, including financial and economic burdens, healthcare services, and advances in pharmaceutical treatment , aprocesses, services relevant to them.
+
+I am creating an international network of epidemiologists studying critical illness survivorship. The object of this network is the establishment of an academic society dedicated to advancing dialogue, theory, methods, and applications to improve the rigor, representativeness, relevance, and reproducibility of the epidemiological study of critical illness survivorship.
+
+#### Specific Aims
+
+1.  Distilling epidemiological principles common to survivorship and forming them into coherent quantitative theory,
+
+2.  Developing epidemiological methods to analyze survivor health outcomes selecting relevant com- parator groups, and coupling them with estimators that can reasonably be assumed to estimate quantities of interest in survivorship research;
+
+3.  Define the limits of generalizability for estimands and estimators within and across fields of medicine, patient populations, and geographies.
 
 ### Publications
 
@@ -27,10 +37,3 @@ The goal of this program of methodological research is to advance theory, concep
 
 9.  Basham CA, Karim ME, Johnston JC. Multimorbidity prevalence and chronic disease patterns among tuberculosis survivors in a high-income setting. Can J Public Heal. 2023 Apr;114(2):264-276.
 
-## Foundations for Pharmacoequity:
-
-Data provenance, lineage, and epidemiological analysis methods for health equity, focusing on race and ethnicity data use in pharmacoepidemiology;
-
-## Causing Careers:
-
-epidemiological approaches to education and career planning, delivery, and evaluation.
