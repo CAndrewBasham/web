@@ -16,6 +16,10 @@ co-authored.
 
 ### Post-TB Airway Disease
 
+Survival analysis (.rmd) with hdPS,
+lasso-hdPS, robust Poisson, and other
+sensitivity analyses.
+
 ## Robust Poisson Regression
 
 ## Propensity Score Methods
