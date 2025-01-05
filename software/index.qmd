@@ -4,9 +4,18 @@ by: C Andrew Basham
 bibliography: references.bib
 ---
 
-## Survival Analysis
+## Overview
+
+This page contains software I've written
+over the years. Will be uploading
+sporadically but my aim is to publish all
+code used in papers I've first authored or
+co-authored.
+
+## PhD Thesis Research
+
+### Post-TB Airway Disease
 
 ## Robust Poisson Regression
 
 ## Propensity Score Methods
-
