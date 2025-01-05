@@ -1,36 +1,90 @@
 ---
 title: "Projects"
-bibliography: references.bib
 ---
 
 ## Survivorship Epidemiology:
 
-The goal of this program of methodological research is to advance theory, concepts, models, and tools for descriptive, predictive, and causal inference about critical illness survivor health outcomes and services.
+The goal of this program of methodological
+research is to advance theory, concepts,
+models, and tools for descriptive,
+predictive, and causal inference about
+critical illness survivor health outcomes
+and services.
 
 ### Publications
 
-1.  Basham CA, Romanowski K, Johnston JC. Life after tuberculosis: planning for health. Lancet Respiratory Medicine. 2019;7(12):1004–1006.
+1.  Basham CA, Romanowski K, Johnston JC.
+    Life after tuberculosis: planning for
+    health. Lancet Respiratory Medicine.
+    2019;7(12):1004–1006.
 
-2.  Basham CA. Post–tuberculosis outcomes science: a sub–discipline for TB survivorship research? International Journal of Tuberculosis and Lung Disease. 2021; 25(6):498-501.
+2.  Basham CA. Post–tuberculosis outcomes
+    science: a sub–discipline for TB
+    survivorship research? International
+    Journal of Tuberculosis and Lung
+    Disease. 2021; 25(6):498-501.
 
-3.  Basham CA, Smith S, Romanowski K, Johnston JC. Cardiovascular morbidity and mortality among people diagnosed with tuberculosis: a systematic review and meta-analysis. PLoS ONE 15(7):e0235821.
+3.  Basham CA, Smith S, Romanowski K,
+    Johnston JC. Cardiovascular morbidity
+    and mortality among people diagnosed
+    with tuberculosis: a systematic review
+    and meta-analysis. PLoS ONE
+    15(7):e0235821.
 
-4.  Basham CA, Cook, VJ, Johnston JC. Towards a ‘fourth 90’: A population–based analysis of post–tuberculosis pulmonary function testing in British Columbia, Canada, 1985–2015. European Respiratory Journal. April 2020:2000384.
+4.  Basham CA, Cook, VJ, Johnston JC.
+    Towards a ‘fourth 90’: A
+    population–based analysis of
+    post–tuberculosis pulmonary function
+    testing in British Columbia, Canada,
+    1985–2015. European Respiratory
+    Journal. April 2020:2000384.
 
-5.  Basham CA, Karim ME, Cook VJ, Patrick DM, Johnston JC. Post–tuberculosis mortality risk among immigrants to British Columbia, Canada, 1985–2015: a time–dependent Cox regression analysis of linked immigration, public health, and vital statistics data. Can J Public Heal. 2021;112(1):132–141.
+5.  Basham CA, Karim ME, Cook VJ, Patrick
+    DM, Johnston JC. Post–tuberculosis
+    mortality risk among immigrants to
+    British Columbia, Canada, 1985–2015: a
+    time–dependent Cox regression analysis
+    of linked immigration, public health,
+    and vital statistics data. Can J Public
+    Heal. 2021;112(1):132–141.
 
-6.  Basham CA, Karim ME, Cook, VJ, Patrick DM, Johnston JC. Post–tuberculosis airway disease among people immigrating to British Columbia, Canada, 1985–2015: a population–based cohort study. EClinicalMedicine. 2021;33:100752.
+6.  Basham CA, Karim ME, Cook, VJ, Patrick
+    DM, Johnston JC. Post–tuberculosis
+    airway disease among people immigrating
+    to British Columbia, Canada, 1985–2015:
+    a population–based cohort study.
+    EClinicalMedicine. 2021;33:100752.
 
-7.  Basham CA, Karim ME, Cook, VJ, Patrick DM, Johnston JC. Tuberculosis–associated depression risk: a population–based cohort study of people immigrating to British Columbia, Canada, 1985–2015. Annals of Epidemiology. 2021; 63: 7-14.
+7.  Basham CA, Karim ME, Cook, VJ, Patrick
+    DM, Johnston JC.
+    Tuberculosis–associated depression
+    risk: a population–based cohort study
+    of people immigrating to British
+    Columbia, Canada, 1985–2015. Annals of
+    Epidemiology. 2021; 63: 7-14.
 
-8.  Basham CA, Karim ME. An E–value analysis of potential unmeasured or residual confounding in systematic reviews of post–TB mortality, respiratory disease, and cardiovascular disease. Annals of Epidemiology. 2022; 68: 24-31.
+8.  Basham CA, Karim ME. An E–value
+    analysis of potential unmeasured or
+    residual confounding in systematic
+    reviews of post–TB mortality,
+    respiratory disease, and cardiovascular
+    disease. Annals of Epidemiology. 2022;
+    68: 24-31.
 
-9.  Basham CA, Karim ME, Johnston JC. Multimorbidity prevalence and chronic disease patterns among tuberculosis survivors in a high-income setting. Can J Public Heal. 2023 Apr;114(2):264-276.
+9.  Basham CA, Karim ME, Johnston JC.
+    Multimorbidity prevalence and chronic
+    disease patterns among tuberculosis
+    survivors in a high-income setting. Can
+    J Public Heal. 2023 Apr;114(2):264-276.
 
 ## Foundations for Pharmacoequity:
 
-Data provenance, lineage, and epidemiological analysis methods for health equity, focusing on race and ethnicity data use in pharmacoepidemiology;
+Data provenance, lineage, and
+epidemiological analysis methods for health
+equity, focusing on race and ethnicity data
+use in pharmacoepidemiology;
 
 ## Causing Careers:
 
-epidemiological approaches to education and career planning, delivery, and evaluation.
+epidemiological approaches to education and
+career planning, delivery, and evaluation.

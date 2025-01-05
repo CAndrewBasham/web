@@ -1,0 +1,1735 @@
+---
+title: "TB_RESP"
+author: "C. Andrew Basham"
+date: "7/13/2020"
+execute: false
+output:
+  word_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Clean slate
+```{r}
+rm()
+R.Version()
+```
+
+
+
+# Libraries
+```{r}
+library(jtools)
+library(survival)
+library(ggplot2)
+library(ggfortify)
+library(survminer)
+library(Publish)
+library(tableone)
+library(car)
+library(pROC)
+require(MatchIt)
+require(DescTools)
+require(lattice)
+require(mice)
+require(DataExplorer)
+require(survey)
+require(cobalt)
+library(SuperLearner)
+```
+
+
+# Data
+```{r}
+
+# dataset
+dset.ind<-read.csv(file="R:/working/Basham_Thesis_Research/TB-RESP/tb_resp_final.csv",header=T,sep=",")
+
+summary(dset.ind$elixVWscore)
+
+# dataset with hdPS proxy vars
+hdset<-read.csv(file="R:/working/Basham_Thesis_Research/TB-RESP/DATASET_WITH_PS_resp_REVISION.csv", header=T)
+
+
+dim(dset.ind)#correct number of people June 12, 2020
+#head(dset.ind)#correct variables
+#str(dset.ind)
+
+# distribution of the time-to-resp disease variable
+dset.ind$time_resp2<-as.numeric(dset.ind$time_resp)
+summary(dset.ind$time_resp2)
+
+
+#TB Diagnosed and Tx Completed = 1
+table(dset.ind$tb_dx)
+dset.ind$tb<-as.factor(dset.ind$tb_dx)
+
+## resp disease/death
+table(dset.ind$status_resp)
+table(hdset$status_resp)
+sum(hdset$status_resp)
+dset.ind$status_resp<-as.factor(dset.ind$status_resp)
+
+dset.ind$smoke<-as.factor(dset.ind$smoke)
+hdset$smoke<-as.factor(hdset$smoke)
+
+# check covariates
+summary(dset.ind$age_index)
+
+# TB incidence rate group
+table(dset.ind$cab_tbinc_grp3)
+dset.ind$cab_tbinc_grp3<-as.character(dset.ind$cab_tbinc_grp3)
+
+# elix vars alcohol, drugs, psych, depress
+table(dset.ind$elixgrp28)
+dset.ind$elixgrp28<-as.factor(dset.ind$elixgrp28)
+table(dset.ind$elixgrp29)
+dset.ind$elixgrp29<-as.factor(dset.ind$elixgrp29)
+table(dset.ind$elixgrp30)
+dset.ind$elixgrp30<-as.factor(dset.ind$elixgrp30)
+table(dset.ind$elixgrp31)
+dset.ind$elixgrp31<-as.factor(dset.ind$elixgrp31)
+
+
+# recode blank values as NA values
+
+## income quintile
+table(dset.ind$qaippe_rev2)
+dset.ind$quint<-recode(dset.ind$qaippe_rev2,"''=NA")
+table(dset.ind$quint)
+
+## education qualification
+table(dset.ind$educqual)
+dset.ind$educqual2<-recode(dset.ind$educqual,"''=NA")
+table(dset.ind$educqual2)
+
+##check missing values for other vars
+table(dset.ind$imclass2)
+table(dset.ind$year0)
+table(dset.ind$cab_tbinc_grp3)
+table(dset.ind$gender)
+
+# total follow-up time
+sum(dset.ind$time_resp2)
+
+# van Walraven summary score 
+summary(dset.ind$elixVWscore)
+
+# incident resp disease
+sum(dset.ind$resp_inc)
+sum(as.numeric(dset.ind$status_resp))
+summary(dset.ind$status_resp)
+
+#as.numeric(dset.ind$status_resp)
+
+#overall incidence
+sum(as.numeric(dset.ind$resp_inc))/sum(dset.ind$time_resp2)*1000
+sum(as.numeric(dset.ind$resp_inc))
+
+#tb group
+sum(dset.ind$resp_inc[dset.ind$tb_dx==1])
+sum(dset.ind$resp_inc[dset.ind$tb_dx==1])/sum(dset.ind$time_resp2[dset.ind$tb_dx==1])*1000
+
+
+#non-tb group
+sum(dset.ind$resp_inc[dset.ind$tb_dx==0])
+sum(dset.ind$resp_inc[dset.ind$tb_dx==0])/sum(dset.ind$time_resp2[dset.ind$tb_dx==0])*1000
+
+# mean follow-up per person
+mean(dset.ind$time_resp2)
+
+```
+
+
+#### Incidence Rates of Airway Disese
+```{r}
+
+## AGE
+
+#age<40
+sum(dset.ind$resp_inc[dset.ind$age_index<40])/sum(dset.ind$time_resp2[dset.ind$age_index<40])*1000
+
+#age 40+
+sum(dset.ind$resp_inc[dset.ind$age_index>=40])/sum(dset.ind$time_resp2[dset.ind$age_index>=40])*1000
+
+## SEX
+
+# Sex Male
+sum(dset.ind$resp_inc[dset.ind$gender=="M"])/sum(dset.ind$time_resp2[dset.ind$gender=="M"])*1000
+
+# Sex Female
+sum(dset.ind$resp_inc[dset.ind$gender=="F"])/sum(dset.ind$time_resp2[dset.ind$gender=="F"])*1000
+
+## COMORBIDITY
+
+# Charlson 0 to <1
+sum(dset.ind$resp_inc[dset.ind$wgtcc<1])/sum(dset.ind$time_resp2[dset.ind$wgtcc<1])*1000
+
+# Charlson 1 to <2
+sum(dset.ind$resp_inc[dset.ind$wgtcc>=1 & dset.ind$wgtcc<2])/sum(dset.ind$time_resp2[dset.ind$wgtcc>=1 & dset.ind$wgtcc<2])*1000
+
+# Charlson 2+
+sum(dset.ind$resp_inc[dset.ind$wgtcc>=2])/sum(dset.ind$time_resp2[dset.ind$wgtcc>=2])*1000
+
+
+######### TB Only Absolute Risk Calculation ###############
+
+## AGE 
+
+#age<40
+sum(dset.ind$resp_inc[dset.ind$tb_dx==1 & dset.ind$age_index<40])/sum(dset.ind$time_resp2[dset.ind$tb_dx==1 & dset.ind$age_index<40])*1000
+
+#age 40+
+sum(dset.ind$resp_inc[dset.ind$tb_dx==1 & dset.ind$age_index>=40])/sum(dset.ind$time_resp2[dset.ind$tb_dx==1 & dset.ind$age_index>=40])*1000
+
+## SEX
+# Sex Male
+sum(dset.ind$resp_inc[dset.ind$tb_dx==1 &  dset.ind$gender=="M"])/sum(dset.ind$time_resp2[dset.ind$tb_dx==1 & dset.ind$gender=="M"])*1000
+
+# Sex Female
+sum(dset.ind$resp_inc[dset.ind$tb_dx==1 & dset.ind$gender=="F"])/sum(dset.ind$time_resp2[dset.ind$tb_dx==1 & dset.ind$gender=="F"])*1000
+
+## COMORBIDITY
+# Charlson 0 to <1
+sum(dset.ind$resp_inc[dset.ind$tb_dx==1 & dset.ind$wgtcc<1])/sum(dset.ind$time_resp2[dset.ind$tb_dx==1 & dset.ind$wgtcc<1])*1000
+
+# Charlson 1 to <2
+sum(dset.ind$resp_inc[dset.ind$tb_dx==1 & dset.ind$wgtcc>=1 & dset.ind$wgtcc<2])/sum(dset.ind$time_resp2[dset.ind$tb_dx==1 & dset.ind$wgtcc>=1 & dset.ind$wgtcc<2])*1000
+
+# Charlson 2+
+sum(dset.ind$resp_inc[dset.ind$tb_dx==1 & dset.ind$wgtcc>=2])/sum(dset.ind$time_resp2[dset.ind$tb_dx==1 & dset.ind$wgtcc>=2])*1000
+
+## TB INCIDENCE GROUP
+# TB incidence rate group table(dset.ind$cab_tbinc_grp3)
+sum(dset.ind$resp_inc[dset.ind$tb_dx==1 & dset.ind$cab_tbinc_grp3=="a <100 per 100,000"])/sum(dset.ind$time_resp2[dset.ind$tb_dx==1 & dset.ind$cab_tbinc_grp3=="a <100 per 100,000"])*1000
+
+sum(dset.ind$resp_inc[dset.ind$tb_dx==1 & dset.ind$cab_tbinc_grp3=="b 200 to <300 per 100,000"])/sum(dset.ind$time_resp2[dset.ind$tb_dx==1 & dset.ind$cab_tbinc_grp3=="b 200 to <300 per 100,000"])*1000
+
+sum(dset.ind$resp_inc[dset.ind$tb_dx==1 & dset.ind$cab_tbinc_grp3=="c 100 to <200 per 100,000"])/sum(dset.ind$time_resp2[dset.ind$tb_dx==1 & dset.ind$cab_tbinc_grp3=="c 100 to <200 per 100,000"])*1000
+
+sum(dset.ind$resp_inc[dset.ind$tb_dx==1 & dset.ind$cab_tbinc_grp3=="d 300+ per 100,000"])/sum(dset.ind$time_resp2[dset.ind$tb_dx==1 & dset.ind$cab_tbinc_grp3=="d 300+ per 100,000"])*1000
+
+
+## SMOKING
+# Tobacco Use
+table(dset.ind$Tobacco_Use__Amount)
+
+sum(dset.ind$resp_inc[dset.ind$tb_dx==1 & dset.ind$Tobacco_Use__Amount=="YES"])/sum(dset.ind$time_resp2[dset.ind$tb_dx==1 & dset.ind$Tobacco_Use__Amount=="YES"])*1000
+
+sum(dset.ind$resp_inc[dset.ind$tb_dx==1 & dset.ind$Tobacco_Use__Amount=="NO"])/sum(dset.ind$time_resp2[dset.ind$tb_dx==1 & dset.ind$Tobacco_Use__Amount=="NO"])*1000
+
+
+## DEPRESSION
+table(dset.ind$elixgrp31)
+
+# No dep
+sum(dset.ind$resp_inc[dset.ind$tb_dx==1 & dset.ind$elixgrp31==1])/sum(dset.ind$time_resp2[dset.ind$tb_dx==1 & dset.ind$elixgrp31==1])*1000
+
+# Dep
+sum(dset.ind$resp_inc[dset.ind$tb_dx==1 & dset.ind$elixgrp31==0])/sum(dset.ind$time_resp2[dset.ind$tb_dx==1 & dset.ind$elixgrp31==0])*1000
+
+
+## INCOME QUNINTILE
+table(dset.ind$qaippe_rev2)
+
+# highest
+sum(dset.ind$resp_inc[dset.ind$tb_dx==1 & dset.ind$qaippe_rev2=="a Highest 20%"])/sum(dset.ind$time_resp2[dset.ind$tb_dx==1 & dset.ind$qaippe_rev2=="a Highest 20%"])*1000
+       
+# middle-high
+sum(dset.ind$resp_inc[dset.ind$tb_dx==1 & dset.ind$qaippe_rev2=="b Middle-High 20%"])/sum(dset.ind$time_resp2[dset.ind$tb_dx==1 & dset.ind$qaippe_rev2=="b Middle-High 20%"])*1000
+
+# middle
+sum(dset.ind$resp_inc[dset.ind$tb_dx==1 & dset.ind$qaippe_rev2=="c Middle 20%"])/sum(dset.ind$time_resp2[dset.ind$tb_dx==1 & dset.ind$qaippe_rev2=="c Middle 20%"])*1000
+
+# middle-low
+sum(dset.ind$resp_inc[dset.ind$tb_dx==1 & dset.ind$qaippe_rev2=="d Low-Middle 20%"])/sum(dset.ind$time_resp2[dset.ind$tb_dx==1 & dset.ind$qaippe_rev2=="d Low-Middle 20%"])*1000
+
+# lowest
+sum(dset.ind$resp_inc[dset.ind$tb_dx==1 & dset.ind$qaippe_rev2=="e Lowest 20%"])/sum(dset.ind$time_resp2[dset.ind$tb_dx==1 & dset.ind$qaippe_rev2=="e Lowest 20%"])*1000
+
+
+
+
+# Education
+table(dset.ind$educqual)
+
+sum(dset.ind$resp_inc[dset.ind$tb_dx==1 & dset.ind$educqual=="None/Unknown"])/sum(dset.ind$time_resp2[dset.ind$tb_dx==1 & dset.ind$educqual=="None/Unknown"])*1000
+
+sum(dset.ind$resp_inc[dset.ind$tb_dx==1 & dset.ind$educqual=="Secondary or less"])/sum(dset.ind$time_resp2[dset.ind$tb_dx==1 & dset.ind$educqual=="Secondary or less"])*1000
+
+sum(dset.ind$resp_inc[dset.ind$tb_dx==1 & dset.ind$educqual=="Trade/diploma"])/sum(dset.ind$time_resp2[dset.ind$tb_dx==1 & dset.ind$educqual=="Trade/diploma"])*1000
+
+sum(dset.ind$resp_inc[dset.ind$tb_dx==1 & dset.ind$educqual=="University degree"])/sum(dset.ind$time_resp2[dset.ind$tb_dx==1 & dset.ind$educqual=="University degree"])*1000
+
+
+```
+
+
+## Table 1a - Covariates by Exposure (TB) Status
+This is to compare the balance between the TB and non-TB groups.
+```{r}
+catvars<-c("status_resp","time_resp","gender","age_index","quint","educqual2","imclass2","cab_tbinc_grp3","year0","wgtcc","elixgrp28", "elixgrp29", "elixgrp30", "elixgrp31","smoke")
+
+t1a<-CreateTableOne(vars=catvars, data=dset.ind, strata = "tb_dx", test=F)
+t1a
+p1a<-print(t1a,smd=T)
+
+write.csv(p1a,file="R:/working/Basham_Thesis_Research/TB-RESP/tb_resp_Table1a_REVISED.csv")
+
+t1a.chisq<-CreateTableOne(vars=catvars, data = dset.ind ,strata = "tb", test=T)
+t1a.chisq
+
+```
+
+### Interpretation
+There are large differences between TB and non-TB for most covariate.
+
+
+## Table 1b - Covariates by Censor Status
+This is to assess the association between each variable in the analysis model with the outcome.
+```{r}
+catvars<-c("tb","time_resp","gender","age_index","quint","educqual2","imclass2","cab_tbinc_grp3", "year0","wgtcc","elixgrp28", "elixgrp29", "elixgrp30", "elixgrp31","smoke")
+
+t1b<-CreateTableOne(vars=catvars, data = dset.ind , strata = "status_resp",test=T)
+
+p1b<-print(t1b,smd=F)
+
+
+write.csv(p1b,file="R:/working/Basham_Thesis_Research/TB-RESP/tb_resp_Table1b_REVISED.csv")
+```
+
+### Interpretation
+TB and all covariates are significantly associated with the outcome (cesoring or event at end of follow-up), with exception of psychoses.
+
+# Univariable analyses
+This section does Cox regressions of outcome on each covariate.
+```{r}
+# TB diagnosis
+m1x<-coxph(Surv(time_resp,status_resp)~tb_dx, data=hdset)
+
+  #view HRs and CIs
+  hr.m1x<-cbind(exp(coef(m1x)),exp(confint(m1x)))
+  #anova(m1x)
+  
+
+# sex
+m1a<-coxph(Surv(time_resp,status_resp)~gender, data=hdset)
+
+  #view HRs and CIs
+  hr.m1a<-cbind(exp(coef(m1a)),exp(confint(m1a)))
+  #anova(m1a)
+  
+# age (continuous)
+m1b.i<-coxph(Surv(time_resp,status_resp)~age_index, data=hdset)
+
+  #view HRs and CIs
+  hr.m1b.i<-cbind(exp(coef(m1b.i)),exp(confint(m1b.i)))
+  #anova(m1b.i)
+
+# age (categorical)
+#m1b.ii<-coxph(Surv(time_resp,status_resp)~dset.ind$age_group, data=hdset)
+
+  #view HRs and CIs
+ # hr.m1b.ii<-cbind(exp(coef(m1b.ii)),exp(confint(m1b.ii)))
+  #anova(m1b.ii)
+
+# Charlson Comorbidity Index (Weighted score)
+m1c<-coxph(Surv(time_resp,status_resp)~wgtcc, data=hdset)
+
+  #view HRs and CIs
+  hr.m1c<-cbind(exp(coef(m1c)),exp(confint(m1c)))
+  #anova(m1c)
+
+  
+# TB incidence in birth country
+m1d<-coxph(Surv(time_resp,status_resp)~cab_tbinc_grp3, data=hdset)
+
+  #view HRs and CIs
+  hr.m1d<-cbind(exp(coef(m1d)),exp(confint(m1d)))
+  #anova(m1d)
+  
+
+# education
+m1e<-coxph(Surv(time_resp,status_resp)~educqual,data=hdset)
+
+  #view HRs and CIs
+  hr.m1e<-cbind(exp(coef(m1e)),exp(confint(m1e)))
+  #anova(m1e)
+
+# neighbourhood income quintile
+m1f<-coxph(Surv(time_resp,status_resp)~qaippe_rev2, data=hdset)
+
+  #view HRs and CIs
+  hr.m1f<-cbind(exp(coef(m1f)),exp(confint(m1f)))
+  #anova(m1f)
+
+# immigration class
+m1g<-coxph(Surv(time_resp,status_resp)~imclass2, data=hdset)
+
+  #view HRs and CIs
+  hr.m1g<-cbind(exp(coef(m1g)),exp(confint(m1g)))
+  #anova(m1g)
+hr.m1g
+# Index Year
+m1h<-coxph(Surv(time_resp,status_resp)~year0, data=hdset)
+
+  #view HRs and CIs
+  hr.m1h<-cbind(exp(coef(m1h)),exp(confint(m1h)))
+  #anova(m1h)
+  
+# alcohol
+m1i<-coxph(Surv(time_resp,status_resp)~elixgrp28, data=hdset)
+    #view HRs and CIs
+  hr.m1i<-cbind(exp(coef(m1i)),exp(confint(m1i)))
+  #anova(m1i)
+
+# drugs
+m1j<-coxph(Surv(time_resp,status_resp)~elixgrp29, data=hdset)
+    #view HRs and CIs
+  hr.m1j<-cbind(exp(coef(m1j)),exp(confint(m1j)))
+  #anova(m1j)
+
+# psychoses
+m1k<-coxph(Surv(time_resp,status_resp)~elixgrp30, data=hdset)
+    #view HRs and CIs
+  hr.m1k<-cbind(exp(coef(m1k)),exp(confint(m1k)))
+  #anova(m1k)
+  
+# depression
+m1l<-coxph(Surv(time_resp,status_resp)~elixgrp31, data=hdset)
+    #view HRs and CIs
+  hr.m1l<-cbind(exp(coef(m1l)),exp(confint(m1l)))
+  #anova(m1l)
+  
+# proxy var
+m1m<-coxph(Surv(time_resp,status_resp)~smoke, data=hdset)
+    #view HRs and CIs
+  hr.m1m<-cbind(exp(coef(m1m)),exp(confint(m1m)))
+  
+  
+  
+## concatenate the HRs
+table1b.HRs<-rbind(hr.m1x,hr.m1a,hr.m1b.i,hr.m1c,hr.m1d,hr.m1e,hr.m1f,hr.m1g,hr.m1h,hr.m1i,hr.m1j,hr.m1k,hr.m1l,hr.m1m)
+
+table1b.HRs<-round(table1b.HRs, 2)
+table1b.HRs
+
+# print to file
+write.csv(table1b.HRs,file="R:/working/Basham_Thesis_Research/TB-RESP/tb_resp_univariable_HRs_REVISED.csv")
+```    
+
+
+## Interpretation
+
+
+# K-M Plot
+```{r}
+# check person-time variable
+hist(as.numeric(dset.ind$time_resp))
+summary(dset.ind$time_resp2)
+summary(dset.ind$status_resp)
+summary(hdset$time_resp)
+summary(hdset$status_resp)
+
+mean(as.numeric(dset.ind$time_resp))
+
+
+# Respiratory disease from cohort entry date
+a<-survfit(Surv(time_resp,hdset$status_resp)~tb_dx, data=hdset)
+
+# km plot
+ggsurvplot(a, data=hdset)
+a.table<-ggsurvplot(a, data=dset.ind,ylim=c(.7,1), risk.table = T)
+a.table.file<-a.table$data.survtable
+
+str(a.table.file)
+a.table.file$n.risk
+a.table.file$n.event
+
+
+# outfile
+jpeg('km_curve.jpg')
+ggsurvplot(a, data=hdset)
+dev.off()
+
+# put survival table 
+write.csv(a.table.file,"R:/working/Basham_Thesis_Research/TB-RESP/tb_resp_KM_table_REVISED.csv")
+```
+
+#### km from time of diagnosis
+```{r}
+# dataset
+dset.km<-read.csv(file="R:/working/Basham_Thesis_Research/TB-RESP/tb_resp_final_km.csv",header=T,sep=",")
+
+# K-M Plot
+
+# check person-time variable
+hist(as.numeric(dset.km$time_from_dx))
+summary(dset.km$time_from_dx)
+summary(dset.km$status_resp)
+mean(as.numeric(dset.km$time_from_dx))
+
+
+# Respiratory disease from cohort entry date
+a<-survfit(Surv(time_from_dx,dset.km$status_resp)~1, data=dset.km, subset = tb_dx==1)
+
+# km plot
+ggsurvplot(a, data=dset.km)
+a.table<-ggsurvplot(a, data=dset.km, risk.table = T)
+a.table.file<-a.table$data.survtable
+a.table.file
+# outfile
+jpeg('km_curve_from_dx.jpg')
+ggsurvplot(a, data=dset.km)
+dev.off()
+
+# put survival table 
+write.csv(a.table.file,"R:/working/Basham_Thesis_Research/TB-RESP/tb_resp_KM_table_fromDXdate_REVISED.csv")
+
+
+# Respiratory disease from cohort entry date
+b<-survfit(Surv(time_from_dx,dset.km$status_resp)~1, data=dset.km, subset = tb_dx==0)
+
+# km plot
+ggsurvplot(b, data=dset.km)
+```
+
+
+```{r}
+# airway disease diagnoses freqencies 
+
+# dataset
+dset.diag<-read.csv(file="R:/working/Basham_Thesis_Research/TB-RESP/tb_resp_final.csv",header=T,sep=",")
+
+str(dset.diag)
+catvars<-c("resp_dx_desc")
+t1c<-CreateTableOne(vars=catvars, data = dset.diag[dset.diag$status_resp==1,], strata = "tb_dx",test=T)
+p1c<-print(t1c,smd=F)
+write.csv(p1c,"R:/working/Basham_Thesis_Research/TB-RESP/tb_resp_airway_diag_REVISED.csv")
+
+
+```
+
+
+# Primary analyses: Cox regression
+
+## Crude analysis
+```{r}
+fit.crude<-coxph(Surv(time_resp,status_resp)~tb_dx, data=hdset)
+summary(fit.crude)
+publish(fit.crude)
+
+hr.fit.crude<-cbind(exp(coef(fit.crude)),exp(confint(fit.crude)))
+tab2.crude<-round(hr.fit.crude,2)
+```
+
+## Age/sex-adjusted analysis
+```{r}
+fit.agesex<-coxph(Surv(time_resp,status_resp)~tb_dx+gender+age_index, data=hdset)
+summary(fit.agesex)
+publish(fit.agesex)
+
+hr.fit.agesex<-cbind(exp(coef(fit.agesex)),exp(confint(fit.agesex)))
+tab2.agesex<-round(hr.fit.agesex,2)[1,]
+```
+
+## Covariate adjusted analysis
+```{r}
+# full model
+fit<-coxph(Surv(time_resp,status_resp)~I(tb_dx=='1')+gender+age_index+imclass2+cab_tbinc_grp3+qaippe_rev2+wgtcc+educqual+year0+elixgrp28+elixgrp29+elixgrp30+elixgrp31, data=hdset)
+
+# model info
+summary(fit)
+
+# view HRs and CIs
+cbind(exp(coef(fit)),exp(confint(fit)))
+plot_coefs(fit,exp=T)
+
+
+hr.fit<-cbind(exp(coef(fit)),exp(confint(fit)))
+tab2.cov<-round(hr.fit,2)[1,]
+
+```
+
+### reduced model: drop alc+drug+psych+depress vars
+```{r}
+# reduced model
+fit.reduced<-coxph(Surv(time_resp,status_resp)~I(tb_dx=='1')+gender+age_index+imclass2+qaippe_rev2+cab_tbinc_grp3+wgtcc+educqual+year0, data=hdset)
+
+# model info
+summary(fit.reduced)
+
+# view HRs and CIs
+cbind(exp(coef(fit.reduced)),exp(confint(fit.reduced)))
+plot_coefs(fit.reduced,exp=T)
+
+# compare with full model
+anova(fit, fit.reduced)
+
+# make object for table 2
+hr.fit.reduced<-cbind(exp(coef(fit.reduced)),exp(confint(fit.reduced)))
+tab2.cov.reduced<-round(hr.fit.reduced,2)[1,]
+
+```
+
+
+### Intepretation
+The reduced model appears to perform better in terms of higher log-likelihood (p=0.04162).  More importantly, the SE for the 4 dropped variables was high, indicating substantial random error and thus imprecision in the estimate HR for these presumed confounders.  The effect estimate changed <1% with the exclusion of these three variables, making the more parsimonious model preferrable.  
+
+## Table 2: Combined HR Results
+```{r}
+rbind(tab2.crude,tab2.agesex,tab2.cov, tab2.cov.reduced)
+```
+
+# Test for proportional hazards using variables selected for final model
+```{r}
+test.ph<-cox.zph(fit.reduced,transform = "log")
+test.ph
+#ggcoxzph(test.ph)
+```
+
+### EM over time
+```{r}
+
+summary(hdset$time_resp)
+
+hdset$time_divided5<-recode(hdset$time_resp,"
+                           0:2='a 0-2';
+                           2:5='b 2-5';
+                           5:10='c 5-10';
+                           10:30='d 10-30'")
+                           
+
+summary(as.factor(hdset$time_divided5))
+table(hdset$time_divided5)
+summary(is.na(hdset$time_divided5))
+
+# full model
+fit_em_time<-coxph(Surv(time_resp,status_resp)~I(tb_dx=='1')+gender+age_index+imclass2+cab_tbinc_grp3+qaippe_rev2+wgtcc+educqual+year0+elixgrp28+elixgrp29+elixgrp30+elixgrp31+I(tb_dx=='1'):time_resp, data=hdset)
+summary(fit_em_time)
+publish(fit_em_time)
+```
+
+
+# Sensitivity Analyses
+(0) Van Walraven Score, (1) personal health risk proxy, (2) non-resp TB [Nopte: need to add], (3) PS, (4) hdPS, (5) hdPS-LASSO.  In these models, retained the alc, drug, psychoses, variables as thesemay provide some additional predicive value.
+
+
+### (0) Van Walraven Score instead of Charlson score
+Note: dropped the alc, drug, psych, and depression vars from main analysis as they are part of van Walraven.
+```{r}
+# VW score instead of charl
+
+# attach VW score
+hdset <- hdset[order(hdset$SID), ]
+dset.ind<-dset.ind[order(dset.ind$studyid), ]
+
+dim(hdset)
+dim(dset.ind)
+hdset$elixVWscore <- dset.ind$elixVWscore
+
+
+# cox
+fit.vw<-coxph(Surv(time_resp,status_resp)~I(tb_dx=='1')+gender+age_index+imclass2+qaippe_rev2+cab_tbinc_grp3+elixVWscore+educqual+year0, data=hdset)
+
+# model info
+summary(fit.vw)
+
+# view HRs and CIs
+cbind(exp(coef(fit.vw)),exp(confint(fit.vw)))
+plot_coefs(fit.vw,exp=T)
+
+# compare with full model
+anova(fit, fit.vw)
+
+# make object for table 2
+hr.fit.vw<-cbind(exp(coef(fit.vw)),exp(confint(fit.vw)))
+tab2.cov.vw<-round(hr.fit.vw,2)[1,]
+tab2.cov.vw
+```
+
+## (1) Personal health risk proxy variable
+```{r}
+fit.personalrisk<-coxph(Surv(time_resp,status_resp)~tb_dx+gender+age_index+imclass2+qaippe_rev2+cab_tbinc_grp3+wgtcc+educqual+year0+elixgrp28+elixgrp29+elixgrp30+elixgrp31+smoke, data=hdset)
+summary(fit.personalrisk)
+
+## HR and CI 
+exp(fit.personalrisk$coef[1])
+exp(confint((fit.personalrisk))[1,])
+
+# for table 2
+hr.proxy<-cbind(exp(coef(fit.personalrisk)),exp(confint(fit.personalrisk)))
+tab2.proxyvar<-round(hr.proxy,2)[1,]
+
+tab2.proxyvar
+```
+
+## (2) Non-Resp TB
+
+### dataset with only nonresp TB
+```{r}
+dset.nonresp<-read.csv(file="R:/working/Basham_Thesis_Research/Cohort_Setup/tb_resp_nonrespTB.csv", header=T,sep=",")
+
+dim(dset.nonresp)#correct number of people June 12, 2020
+#head(dset.nonresp)#correct variables
+#str(dset.nonresp)
+
+# distribution of the time-to-resp disease variable
+dset.nonresp$time_resp2<-as.numeric(dset.nonresp$time_resp)
+summary(dset.nonresp$time_resp2)
+
+# age group
+
+
+#TB Diagnosed and Tx Completed = 1
+table(dset.nonresp$tb_dx)
+dset.nonresp$tb<-as.factor(dset.nonresp$tb_dx)
+table(dset.nonresp$tb)
+## resp disease/death
+table(dset.nonresp$status_resp)
+dset.nonresp$status_resp<-as.factor(dset.nonresp$status_resp)
+
+dset.nonresp$smoke<-as.factor(dset.nonresp$smoke)
+hdset$smoke<-as.factor(hdset$smoke)
+
+# check covariates
+summary(dset.nonresp$age_index)
+
+# TB incidence rate group
+table(dset.nonresp$cab_tbinc_grp3)
+dset.nonresp$cab_tbinc_grp3<-as.character(dset.nonresp$cab_tbinc_grp3)
+
+# elix vars alcohol, drugs, psych, depress
+table(dset.nonresp$elixgrp28)
+dset.nonresp$elixgrp28<-as.factor(dset.nonresp$elixgrp28)
+table(dset.nonresp$elixgrp29)
+dset.nonresp$elixgrp29<-as.factor(dset.nonresp$elixgrp29)
+table(dset.nonresp$elixgrp30)
+dset.nonresp$elixgrp30<-as.factor(dset.nonresp$elixgrp30)
+table(dset.nonresp$elixgrp31)
+dset.nonresp$elixgrp31<-as.factor(dset.nonresp$elixgrp31)
+
+
+# recode blank values as NA values
+
+## income quintile
+table(dset.nonresp$qaippe_rev2)
+dset.nonresp$quint<-recode(dset.nonresp$qaippe_rev2,"''=NA")
+table(dset.nonresp$quint)
+
+## education qualification
+table(dset.nonresp$educqual)
+dset.nonresp$educqual2<-recode(dset.nonresp$educqual,"''=NA")
+table(dset.nonresp$educqual2)
+
+##check missing values for other vars
+table(dset.nonresp$imclass2)
+table(dset.nonresp$year0)
+table(dset.nonresp$cab_tbinc_grp3)
+table(dset.nonresp$gender)
+
+
+# total follow-up time
+sum(dset.nonresp$time_resp2)
+```
+
+### Cox reg
+```{r}
+dset.nonresp$Event<-as.numeric(dset.nonresp$status_resp)
+fit.nonrespTB<-coxph(Surv(time_resp,Event)~I(tb_dx=='1')+gender+age_index+imclass2+qaippe_rev2+cab_tbinc_grp3+wgtcc+educqual+year0+elixgrp28+elixgrp29+elixgrp30+elixgrp31, data=dset.nonresp)
+
+summary(fit.nonrespTB)
+
+## HR and CI 
+exp(fit.nonrespTB$coef[1])
+exp(confint((fit.nonrespTB))[1,])
+
+# for table 2
+hr.nonresp<-cbind(exp(coef(fit.nonrespTB)),exp(confint(fit.nonrespTB)))
+
+tab2.nonresp<-round(hr.nonresp,2)[1,]
+```
+
+## (3) Standard PS Analysis
+```{r}
+# formula for PS model with only investigator-specified vars
+ps.form <-as.formula("I(tb_dx==1)~wgtcc+imclass2+gender+age_index+
+                educqual+qaippe_rev2+year0+cab_tbinc_grp3+
+                      elixgrp28+elixgrp29+elixgrp30+elixgrp31")
+
+# ps model using logistic regression
+ps.logistic<-glm(formula=ps.form,family="quasibinomial", data=hdset)
+
+# fit summary
+summary(ps.logistic)
+nobs(ps.logistic)
+summary(ps.logistic$fitted.values)
+
+# ps summary
+summary(ps.logistic$fitted.values, na.action("include"))
+
+# make PS var from fitted values
+hdset$ps.inv<-ps.logistic$fitted.values
+
+# overlap in PS between TB and non-TB
+histogram(~hdset$ps.inv|hdset$tb_dx)
+```
+
+### outcome analysis with PS deciles as covariate
+```{r}
+
+# make deciles of PS
+hdset$ps.inv.deciles<-cut(hdset$ps.inv,quantile(hdset$ps.inv, prob=seq(0,1, length=11)), include.lowest = T)
+ 
+#quantile(hdset$ps.inv, prob=seq(0,1, length=11))
+
+#check deciles
+summary(hdset$ps.inv.deciles)
+table(hdset$ps.inv.deciles)
+
+
+## use deciles as covariate in Cox regression
+ps.inv.decile.fit<-coxph(Surv(time_resp,status_resp)~tb_dx+ps.inv.deciles, data=hdset)
+
+# outcome model summary
+summary(ps.inv.decile.fit)
+anova(ps.inv.decile.fit)
+
+## PS-adjusted HR and CI for TB-Resp association
+exp(ps.inv.decile.fit$coef[1])
+exp(confint((ps.inv.decile.fit))[1,])
+
+# for table 2
+hr.ps<-cbind(exp(coef(ps.inv.decile.fit)),exp(confint(ps.inv.decile.fit)))
+tab2.ps<-round(hr.ps,2)[1,]
+tab2.ps
+```
+
+### outcome analysis with ATT weighting
+```{r}
+
+## use IPT weights (ATT) in Cox PH regression modelling
+hdset$ps.att.weight<-ifelse(hdset$tb_dx==1, 1, hdset$ps.inv/(1-hdset$ps.inv))
+summary(hdset$ps.att.weight)
+
+ps.att.fit<-coxph(Surv(time_resp,status_resp)~tb_dx, data=hdset, weights = ps.att.weight)
+
+# outcome model summary
+summary(ps.att.fit)
+
+publish(ps.att.fit)
+```
+
+
+
+## (4) hdPS
+```{r}
+
+dput(names(hdset))
+
+event <- "status_resp"
+exposure <- "tb_dx"
+investigator.specified.vars<-c("wgtcc", "imclass2", "gender", "age_index",
+                               "educqual", "qaippe_rev2", "year0", "cab_tbinc_grp3", 
+                               "elixgrp28", "elixgrp29", "elixgrp30", 
+                               "elixgrp31")
+
+# hdPS empirical vars
+hdvars<-c("D01V000Freq", "D01V000Once", "D01V002Freq", "D01V002Once", "D01V002Spor", 
+"D01V004Once", "D01V004Spor", "D01V005Freq", "D01V005Once", "D01V005Spor", 
+"D01V006Once", "D01V006Spor", "D01V007Freq", "D01V007Once", "D01V008Once", 
+"D01V009Freq", "D01V009Once", "D01V009Spor", "D01V010Freq", "D01V010Once", 
+"D01V014Once", "D01V014Spor", "D01V015Freq", "D01V015Once", "D01V016Freq", 
+"D01V016Once", "D01V017Freq", "D01V017Once", "D01V018Freq", "D01V018Once", 
+"D01V019Freq", "D01V019Once", "D01V021Freq", "D01V021Once", "D01V022Freq", 
+"D01V022Once", "D01V023Freq", "D01V023Once", "D01V024Freq", "D01V024Once", 
+"D01V026Freq", "D01V026Once", "D01V026Spor", "D01V027Once", "D01V027Spor", 
+"D01V028Once", "D01V029Freq", "D01V029Once", "D01V029Spor", "D01V031Freq", 
+"D01V031Once", "D01V032Freq", "D01V032Once", "D01V032Spor", "D01V033Freq", 
+"D01V033Once", "D01V034Freq", "D01V034Once", "D01V037Freq", "D01V037Once", 
+"D01V039Freq", "D01V039Once", "D01V040Freq", "D01V040Once", "D01V041Freq", 
+"D01V041Once", "D01V042Freq", "D01V042Once", "D01V046Once", "D01V048Freq", 
+"D01V048Once", "D01V050Freq", "D01V050Once", "D01V052Freq", "D01V052Once", 
+"D01V053Freq", "D01V053Once", "D01V053Spor", "D01V054Freq", "D01V054Once", 
+"D01V054Spor", "D01V055Freq", "D01V055Once", "D01V056Freq", "D01V056Once", 
+"D01V057Freq", "D01V057Once", "D01V058Once", "D01V058Spor", "D01V059Freq", 
+"D01V059Once", "D01V060Once", "D01V060Spor", "D01V061Once", "D01V061Spor", 
+"D01V062Freq", "D01V062Once", "D01V062Spor", "D01V063Freq", "D01V063Once", 
+"D01V064Freq", "D01V064Once", "D01V065Freq", "D01V065Once", "D01V066Freq", 
+"D01V066Once", "D01V067Freq", "D01V067Once", "D01V067Spor", "D01V068Once", 
+"D01V068Spor", "D01V071Freq", "D01V071Once", "D01V072Freq", "D01V072Once", 
+"D01V073Freq", "D01V073Once", "D01V074Once", "D01V074Spor", "D01V076Freq", 
+"D01V076Once", "D01V077Freq", "D01V078Freq", "D01V078Once", "D01V078Spor", 
+"D01V080Freq", "D01V080Once", "D01V081Once", "D01V083Once", "D01V084Freq", 
+"D01V084Once", "D01V085Freq", "D01V085Once", "D01V086Freq", "D01V086Once", 
+"D01V086Spor", "D01V087Freq", "D01V087Once", "D01V088Freq", "D01V088Once", 
+"D01V088Spor", "D01V089Freq", "D01V089Once", "D01V090Once", "D01V091Freq", 
+"D01V091Once", "D01V092Once", "D01V092Spor", "D01V093Freq", "D01V093Once", 
+"D01V099Once", "D01V102Once", "D01V103Freq", "D01V103Once", "D01V104Freq", 
+"D01V104Once", "D01V107Freq", "D01V107Once", "D01V109Freq", "D01V109Once", 
+"D01V110Freq", "D01V110Once", "D01V111Freq", "D01V111Once", "D01V112Freq", 
+"D01V112Once", "D01V115Freq", "D01V115Once", "D01V117Freq", "D01V117Once", 
+"D01V118Once", "D01V119Once", "D01V119Spor", "D01V121Freq", "D01V121Once", 
+"D01V122Freq", "D01V122Once", "D01V123Freq", "D01V123Once", "D01V125Freq", 
+"D01V125Once", "D01V127Once", "D01V127Spor", "D01V129Once", "D01V131Once", 
+"D01V132Freq", "D01V132Once", "D01V135Once", "D01V137Freq", "D01V137Once", 
+"D01V138Once", "D01V138Spor", "D01V140Freq", "D01V140Once", "D01V142Freq", 
+"D01V142Once", "D01V142Spor", "D01V143Freq", "D01V143Once", "D01V143Spor", 
+"D01V144Once", "D01V144Spor", "D01V148Freq", "D01V148Once", "D01V148Spor", 
+"D01V149Once", "D01V149Spor", "D01V150Freq", "D01V150Once", "D01V151Once", 
+"D01V152Once", "D01V152Spor", "D01V153Once", "D01V154Once", "D01V161Freq", 
+"D01V161Once", "D01V163Once", "D01V165Freq", "D01V165Once", "D01V165Spor", 
+"D01V166Once", "D01V167Once", "D01V167Spor", "D01V168Once", "D01V169Once", 
+"D01V169Spor", "D01V171Freq", "D01V171Once", "D01V172Once", "D01V174Freq", 
+"D01V174Once", "D01V175Once", "D01V176Once", "D01V179Freq", "D01V179Once", 
+"D01V180Freq", "D01V180Once", "D01V181Freq", "D01V181Once", "D01V181Spor", 
+"D01V183Freq", "D01V183Once", "D01V185Once", "D01V188Freq", "D01V188Once", 
+"D01V189Freq", "D01V189Once", "D01V190Freq", "D01V190Once", "D01V190Spor", 
+"D01V192Freq", "D01V192Once", "D01V198Freq", "D01V198Once", "D01V201Freq", 
+"D01V201Once", "D01V201Spor", "D01V203Once", "D01V206Once", "D01V207Freq", 
+"D01V207Once", "D01V208Once", "D01V209Freq", "D01V209Once", "D01V214Freq", 
+"D01V214Once", "D01V214Spor", "D01V218Once", "D01V224Freq", "D01V224Once", 
+"D01V225Freq", "D01V225Once", "D01V230Once", "D01V231Freq", "D01V231Once", 
+"D01V232Freq", "D01V232Once", "D01V233Freq", "D01V233Once", "D01V236Freq", 
+"D01V236Once", "D01V237Freq", "D01V237Once", "D01V240Freq", "D01V240Once", 
+"D01V240Spor", "D01V242Freq", "D01V242Once", "D01V244Freq", "D01V244Once", 
+"D01V244Spor", "D01V246Freq", "D01V246Once", "D01V249Freq", "D01V249Once", 
+"D01V251Once", "D01V251Spor", "D01V253Freq", "D01V253Once", "D01V258Freq", 
+"D01V258Once", "D01V261Once", "D01V268Once", "D01V268Spor", "D01V271Freq", 
+"D01V271Once", "D01V271Spor", "D01V288Freq", "D01V288Once", "D01V290Freq", 
+"D01V290Once", "D01V291Freq", "D01V291Once", "D01V292Freq", "D01V292Once", 
+"D01V292Spor", "D01V298Once", "D01V299Once", "D01V303Once", "D01V308Freq", 
+"D01V308Once", "D01V311Freq", "D01V311Once", "D01V314Freq", "D01V314Once", 
+"D01V319Spor", "D01V321Once", "D01V333Freq", "D01V333Once", "D01V333Spor", 
+"D01V337Once", "D01V340Freq", "D01V340Once", "D01V341Freq", "D01V341Once", 
+"D01V341Spor", "D01V356Once", "D01V356Spor", "D01V361Freq", "D01V361Once", 
+"D01V361Spor", "D01V362Once", "D01V362Spor", "D01V367Once", "D01V380Freq", 
+"D01V380Once", "D01V381Once", "D01V382Once", "D01V395Once", "D01V417Freq", 
+"D01V417Once", "D01V417Spor", "D01V446Once", "D01V446Spor", "D01_INT_ALL_Q2Ser", 
+"D01_INT_ALL_Q3Ser", "D01_INT_ALL_Q4Ser", "D01_INT_UNIQ_Q1Se", 
+"D01_INT_UNIQ_Q2Se", "D01_INT_UNIQ_Q3Se", "D01_INT_UNIQ_Q4Se", 
+"D02V001Once", "D02V007Once", "D02V012Once", "D02V029Once", "D02V030Once", 
+"D02V033Once", "D02V039Once", "D02V049Once", "D02V057Once", "D02V069Once", 
+"D02V072Once", "D02V073Once", "D02V079Once", "D02V088Once", "D02V090Once", 
+"D02V113Once", "D02V126Once", "D02V131Once", "D02V133Once", "D02V145Once", 
+"D02V158Once", "D02V171Once", "D02V194Once", "D02V199Once", "D02V201Once", 
+"D02V238Once", "D02V325Once", "D02V347Once", "D02V389Once", "D02V393Once", 
+"D02V497Freq", "D02V497Once", "D02V561Once", "D02V572Once", "D02V574Once", 
+"D02_INT_ALL_Q1Ser", "D02_INT_ALL_Q4Ser", "D02_INT_UNIQ_Q1Se", 
+"D02_INT_UNIQ_Q4Se")
+
+
+length(hdvars)
+```
+
+### hdPS prediction model
+```{r}
+PS.covars <- c(investigator.specified.vars,hdvars)
+ps.eq.rhs <- paste0(PS.covars, collapse = "+")
+ps.formula.hdvars = as.formula(paste0(exposure,"~", ps.eq.rhs))
+ps.hd.standard.logistic<-glm(formula=ps.formula.hdvars,family="binomial", data=hdset)
+
+# fit summary
+summary(ps.hd.standard.logistic)
+
+# ps summary
+summary(ps.hd.standard.logistic$fitted.values)
+
+# make PS var from fitted values
+hdset$hdps<-ps.hd.standard.logistic$fitted.values
+
+
+# Overlap in LASSO-hdPS
+histogram(~hdset$hdps|hdset$tb_dx)
+
+```
+
+### hdPS outcome analysis model
+```{r}
+# make deciles of hdPS
+hdset$hdps.deciles<-cut(hdset$hdps,quantile(hdset$hdps, prob=seq(0,1, length=11) ), include.lowest = T)
+#check deciles
+summary(hdset$hdps.deciles)
+
+table(hdset$hdps.deciles)
+
+## use deciles as covariate in GLM
+#ps.hd.decile.fit<-glm(as.formula("I(dep_inc==1)~tb_dx+hdps.deciles" ),family="quasibinomial", data=hdset)
+
+# Outcome Cox regression
+ps.hdps.decile.fit<-coxph(Surv(time_resp,status_resp)~tb_dx+hdps.deciles, data=hdset)
+
+# outcome model summary
+summary(ps.hdps.decile.fit)
+
+## hdPS-adj HR and CI from outcome model adjusted for LASSO-hdPS deciles
+exp(ps.hdps.decile.fit$coef[1])
+exp(confint((ps.hdps.decile.fit))[1,])
+
+
+# for table 2
+hr.hdps<-cbind(exp(coef(ps.hdps.decile.fit)),exp(confint(ps.hdps.decile.fit)))
+tab2.hdps<-round(hr.hdps,2)[1,]
+
+```
+
+
+## (5) LASSO-hdPS
+```{r}
+set.seed(1)
+
+all.covars <- c(investigator.specified.vars,hdvars)
+eq.rhs <- paste0(all.covars, collapse = "+")
+test.formula = as.formula(paste0(event,"~", exposure,"+", eq.rhs)) 
+zb = model.frame(test.formula, data = hdset)
+source("R:\\working\\Basham_Thesis_Research\\hdPS\\LASSO\\Ehsan_glmnet_source.R")
+test.model = cv.glmnet.formula1(formula(zb),data=zb)
+
+lambda.min1 <- test.model$object$lambda.min
+lambdapos1 <- which(test.model$object$lambda == test.model$object$lambda.min)
+lassocoef1 <- test.model$object$glmnet.fit$beta[,lambdapos1]
+coef1 = lassocoef1["exposure"]
+retained.var1o  <- names(lassocoef1[lassocoef1!=0 &names(lassocoef1)!="exposure"])
+retained.hdps.vars<- Reduce(intersect, list(retained.var1o,hdvars))
+
+length(retained.hdps.vars)
+dput(retained.hdps.vars)
+
+
+## LASSO-selected hdPS proxy vars
+retained.hdps.vars<-c("D01V000Freq", "D01V000Once", "D01V002Once", "D01V004Once", 
+"D01V005Spor", "D01V006Once", "D01V007Freq", "D01V007Once", "D01V009Freq", 
+"D01V009Once", "D01V009Spor", "D01V010Freq", "D01V010Once", "D01V014Spor", 
+"D01V015Freq", "D01V015Once", "D01V016Freq", "D01V016Once", "D01V017Freq", 
+"D01V017Once", "D01V018Freq", "D01V019Freq", "D01V019Once", "D01V021Once", 
+"D01V022Freq", "D01V022Once", "D01V024Once", "D01V026Freq", "D01V026Spor", 
+"D01V027Once", "D01V027Spor", "D01V028Once", "D01V029Freq", "D01V029Spor", 
+"D01V031Once", "D01V032Freq", "D01V033Freq", "D01V033Once", "D01V034Freq", 
+"D01V034Once", "D01V037Freq", "D01V037Once", "D01V039Once", "D01V040Freq", 
+"D01V040Once", "D01V041Freq", "D01V041Once", "D01V042Once", "D01V046Once", 
+"D01V048Freq", "D01V048Once", "D01V050Freq", "D01V050Once", "D01V053Freq", 
+"D01V053Once", "D01V054Freq", "D01V054Once", "D01V055Once", "D01V056Once", 
+"D01V057Freq", "D01V057Once", "D01V059Freq", "D01V059Once", "D01V060Once", 
+"D01V060Spor", "D01V062Freq", "D01V062Once", "D01V062Spor", "D01V063Once", 
+"D01V064Freq", "D01V064Once", "D01V065Once", "D01V066Once", "D01V067Once", 
+"D01V067Spor", "D01V068Once", "D01V071Freq", "D01V072Once", "D01V073Once", 
+"D01V074Once", "D01V076Freq", "D01V076Once", "D01V078Once", "D01V078Spor", 
+"D01V080Freq", "D01V080Once", "D01V081Once", "D01V083Once", "D01V084Once", 
+"D01V085Once", "D01V086Once", "D01V086Spor", "D01V089Once", "D01V090Once", 
+"D01V091Freq", "D01V091Once", "D01V092Spor", "D01V093Once", "D01V099Once", 
+"D01V102Once", "D01V103Freq", "D01V103Once", "D01V104Freq", "D01V104Once", 
+"D01V107Freq", "D01V107Once", "D01V110Freq", "D01V110Once", "D01V111Once", 
+"D01V112Freq", "D01V112Once", "D01V115Once", "D01V117Freq", "D01V118Once", 
+"D01V121Freq", "D01V121Once", "D01V122Once", "D01V123Once", "D01V127Once", 
+"D01V131Once", "D01V132Once", "D01V135Once", "D01V138Once", "D01V138Spor", 
+"D01V140Freq", "D01V142Spor", "D01V143Spor", "D01V144Once", "D01V148Freq", 
+"D01V148Once", "D01V149Spor", "D01V150Freq", "D01V150Once", "D01V151Once", 
+"D01V152Once", "D01V152Spor", "D01V153Once", "D01V154Once", "D01V161Once", 
+"D01V163Once", "D01V165Freq", "D01V166Once", "D01V167Once", "D01V167Spor", 
+"D01V168Once", "D01V169Once", "D01V171Freq", "D01V171Once", "D01V172Once", 
+"D01V174Freq", "D01V174Once", "D01V175Once", "D01V176Once", "D01V179Freq", 
+"D01V180Once", "D01V181Once", "D01V181Spor", "D01V183Once", "D01V188Once", 
+"D01V189Freq", "D01V189Once", "D01V190Freq", "D01V192Freq", "D01V192Once", 
+"D01V198Freq", "D01V201Once", "D01V208Once", "D01V209Once", "D01V214Once", 
+"D01V218Once", "D01V224Freq", "D01V225Freq", "D01V230Once", "D01V231Once", 
+"D01V233Once", "D01V236Freq", "D01V237Once", "D01V240Once", "D01V242Freq", 
+"D01V242Once", "D01V244Freq", "D01V244Once", "D01V246Freq", "D01V246Once", 
+"D01V249Once", "D01V251Once", "D01V253Freq", "D01V253Once", "D01V258Once", 
+"D01V268Once", "D01V271Freq", "D01V271Once", "D01V288Freq", "D01V288Once", 
+"D01V290Freq", "D01V291Once", "D01V292Freq", "D01V298Once", "D01V303Once", 
+"D01V308Freq", "D01V308Once", "D01V311Freq", "D01V319Spor", "D01V321Once", 
+"D01V333Freq", "D01V333Once", "D01V337Once", "D01V340Freq", "D01V340Once", 
+"D01V361Once", "D01V361Spor", "D01V362Spor", "D01V367Once", "D01V380Freq", 
+"D01V380Once", "D01V381Once", "D01V382Once", "D01V395Once", "D01V417Spor", 
+"D01V446Once", "D01_INT_ALL_Q2Ser", "D01_INT_ALL_Q3Ser", "D01_INT_ALL_Q4Ser", 
+"D01_INT_UNIQ_Q1Se", "D01_INT_UNIQ_Q2Se", "D01_INT_UNIQ_Q3Se", 
+"D01_INT_UNIQ_Q4Se", "D02V007Once", "D02V012Once", "D02V029Once", 
+"D02V030Once", "D02V033Once", "D02V073Once", "D02V090Once", "D02V113Once", 
+"D02V126Once", "D02V131Once", "D02V133Once", "D02V145Once", "D02V171Once", 
+"D02V194Once", "D02V201Once", "D02V325Once", "D02V393Once", "D02V497Freq", 
+"D02V572Once", "D02_INT_ALL_Q1Ser", "D02_INT_ALL_Q4Ser", "D02_INT_UNIQ_Q1Se", 
+"D02_INT_UNIQ_Q4Se")
+
+
+```
+
+
+### hdPS Model (lasso vars) - logistic regression
+```{r}
+# LASSO-selected hdPS vars added to investigator vars for hdPS estimation
+PS.covars <- c(investigator.specified.vars,retained.hdps.vars)
+ps.eq.rhs <- paste0(PS.covars, collapse = "+")
+ps.formula.hdvars = as.formula(paste0(exposure,"~", ps.eq.rhs))
+ps.hd.logistic<-glm(formula=ps.formula.hdvars,family="binomial", data=hdset)
+
+# fit summary
+summary(ps.hd.logistic)
+
+# ps summary
+summary(ps.hd.logistic$fitted.values)
+
+# make PS var from fitted values
+hdset$ps.lasso<-ps.hd.logistic$fitted.values
+
+
+# Overlap in LASSO-hdPS
+histogram(~hdset$ps.lasso|hdset$tb_dx)
+#densityplot(~hdset$ps.lasso|hdset$tb_dx)
+```
+
+### outcome analysis with lasso-hdPS deciles as covariate
+```{r}
+# make deciles of hdPS
+hdset$ps.lasso.deciles<-cut(hdset$ps.lasso,quantile(hdset$ps.lasso, prob =seq(0,1, length=11)), include.lowest = T)
+
+#check deciles
+summary(hdset$ps.lasso.deciles)
+
+table(hdset$ps.lasso.deciles)
+
+## use deciles as covariate in GLM
+#ps.hd.decile.fit<-glm(as.formula("I(dep_inc==1)~tb_dx+ps.lasso.deciles" ),family="quasibinomial", data=hdset)
+
+# Outcome Cox regression
+ps.lasso.decile.fit<-coxph(Surv(time_resp,status_resp)~tb_dx+ps.lasso.deciles, data=hdset)
+
+# outcome model summary
+summary(ps.lasso.decile.fit)
+
+## hdPS-adj HR and CI from outcome model adjusted for LASSO-hdPS deciles
+exp(ps.lasso.decile.fit$coef[1])
+exp(confint((ps.lasso.decile.fit))[1,])
+
+
+# for table 2
+hr.lasso<-cbind(exp(coef(ps.lasso.decile.fit)),exp(confint(ps.lasso.decile.fit)))
+tab2.lasso<-round(hr.lasso,2)[1,]
+tab2.lasso
+```
+
+## (6) bronchiectasis and fibrosis (ILD) added
+```{r}
+
+dset.ind.bron<-read.csv(file="R:/working/Basham_Thesis_Research/Cohort_Setup/tbresp_final_bron_REVISION.csv",header=T,sep=",")
+
+
+dim(dset.ind.bron)#correct number of people June 12, 2020
+#head(dset.ind)#correct variables
+#str(dset.ind)
+
+# distribution of the time-to-resp disease variable
+dset.ind.bron$time_resp2<-as.numeric(dset.ind.bron$time_resp)
+summary(dset.ind.bron$time_resp2)
+
+
+#TB Diagnosed and Tx Completed = 1
+table(dset.ind.bron$tb_dx)
+dset.ind.bron$tb<-as.factor(dset.ind.bron$tb_dx)
+
+## resp disease/death
+table(dset.ind.bron$status_resp)
+dset.ind.bron$status_resp<-as.factor(dset.ind.bron$status_resp)
+
+dset.ind.bron$smoke<-as.factor(dset.ind.bron$smoke)
+dset.ind.bron$smoke<-as.factor(dset.ind.bron$smoke)
+
+# check covariates
+summary(dset.ind.bron$age_index)
+
+# TB incidence rate group
+table(dset.ind.bron$cab_tbinc_grp3)
+dset.ind.bron$cab_tbinc_grp3<-as.character(dset.ind.bron$cab_tbinc_grp3)
+
+# elix vars alcohol, drugs, psych, depress
+table(dset.ind.bron$elixgrp28)
+dset.ind.bron$elixgrp28<-as.factor(dset.ind.bron$elixgrp28)
+table(dset.ind.bron$elixgrp29)
+dset.ind.bron$elixgrp29<-as.factor(dset.ind.bron$elixgrp29)
+table(dset.ind.bron$elixgrp30)
+dset.ind.bron$elixgrp30<-as.factor(dset.ind.bron$elixgrp30)
+table(dset.ind.bron$elixgrp31)
+dset.ind.bron$elixgrp31<-as.factor(dset.ind.bron$elixgrp31)
+
+
+# recode blank values as NA values
+
+## income quintile
+table(dset.ind.bron$qaippe_rev2)
+dset.ind.bron$quint<-recode(dset.ind.bron$qaippe_rev2,"''=NA")
+table(dset.ind.bron$quint)
+
+## education qualification
+table(dset.ind.bron$educqual)
+dset.ind.bron$educqual2<-recode(dset.ind.bron$educqual,"''=NA")
+table(dset.ind.bron$educqual2)
+
+##check missing values for other vars
+table(dset.ind.bron$imclass2)
+table(dset.ind.bron$year0)
+table(dset.ind.bron$cab_tbinc_grp3)
+table(dset.ind.bron$gender)
+
+## Covariate adjusted analysis
+# full model
+fit.bron<-coxph(Surv(time_resp,status_resp==1)~I(tb_dx=='1')+gender+age_index+imclass2+qaippe_rev2+wgtcc+cab_tbinc_grp3+educqual+year0+elixgrp28+elixgrp29+elixgrp30+elixgrp31, data=dset.ind.bron)
+
+# model info
+summary(fit.bron)
+
+# view HRs and CIs
+cbind(exp(coef(fit.bron)),exp(confint(fit.bron)))
+plot_coefs(fit.bron,exp=T)
+
+
+hr.fit.bron<-cbind(exp(coef(fit.bron)),exp(confint(fit.bron)))
+tab2.cov.bron<-round(hr.fit.bron,2)[1,]
+tab2.cov.bron
+```
+
+
+##(7) smoking variable in TB reg
+```{r}
+
+#subset with tobacco use var non-missing
+summary(hdset$Tobacco_Use__Amount)
+tobac<-subset(hdset,hdset$Tobacco_Use__Amount=="Y"|hdset$Tobacco_Use__Amount=="N")
+summary(tobac$Tobacco_Use__Amount)
+
+# recode into new variable
+tobac$tobacco<-ifelse(tobac$Tobacco_Use__Amount==" ", NA, as.character(tobac$Tobacco_Use__Amount))
+summary(tobac$tobacco)
+table(tobac$tobacco)
+
+# Cox PH model
+fit.tbreg.tobacco<-coxph(Surv(time_resp,status_resp)~I(tb_dx=='1')+gender+age_index+imclass2+qaippe_rev2+cab_tbinc_grp3+wgtcc+educqual+elixgrp28+elixgrp29+elixgrp30+elixgrp31+tobacco, data=tobac)
+
+# model info
+summary(fit.tbreg.tobacco)
+
+# view HRs and CIs
+cbind(exp(coef(fit.tbreg.tobacco)),exp(confint(fit.tbreg.tobacco)))
+plot_coefs(fit.tbreg.tobacco,exp=T)
+
+
+hr.fit.tobac<-cbind(exp(coef(fit.tbreg.tobacco)),exp(confint(fit.tbreg.tobacco)))
+tab2.cov.tobac<-round(hr.fit.tobac,2)[1,]
+
+```
+
+
+### Table 2 - HRs: sensitivity analyses
+```{r}
+tab2.results<-rbind(tab2.crude,
+      tab2.agesex,
+      tab2.cov,
+      tab2.cov.reduced,
+      tab2.cov.bron,
+      tab2.nonresp,
+      tab2.proxyvar,
+      tab2.cov.tobac,
+      tab2.ps,
+      tab2.hdps,
+      tab2.lasso)
+
+write.csv(tab2.results,file="R:/working/Basham_Thesis_Research/TB-RESP/tb_resp_table2_adjusted_HRs_REVISED.csv")
+
+tab2.results
+```
+
+
+
+# Sex-stratified analysis
+```{r}
+
+# split data
+summary(hdset$gender)
+males<-subset(hdset, hdset$gender=="M")
+females<-subset(hdset, hdset$gender=="F")
+```
+
+## males
+```{r}
+fit_males<-coxph(Surv(time_resp,status_resp)~I(tb_dx=='1')+age_index+imclass2+cab_tbinc_grp3+qaippe_rev2+wgtcc+educqual+year0+elixgrp28+elixgrp29+elixgrp30+elixgrp31, data=males)
+
+# model info
+summary(fit_males)
+
+# view HRs and CIs
+cbind(exp(coef(fit_males)),exp(confint(fit_males)))
+plot_coefs(fit_males,exp=T)
+
+
+```
+
+## females
+```{r}
+fit_females<-coxph(Surv(time_resp,status_resp)~I(tb_dx=='1')+age_index+imclass2+cab_tbinc_grp3+qaippe_rev2+wgtcc+educqual+year0+elixgrp28+elixgrp29+elixgrp30+elixgrp31, data=females)
+
+# model info
+summary(fit_females)
+
+# view HRs and CIs
+cbind(exp(coef(fit_females)),exp(confint(fit_females)))
+plot_coefs(fit_females,exp=T)
+```
+
+
+
+# EM analyses: Covariate-adjusted
+
+## Sex
+```{r}
+
+summary(hdset$gender)
+# full model
+fit_em1<-coxph(Surv(time_resp,status_resp)~I(tb_dx=='1')+gender+age_index+imclass2+cab_tbinc_grp3+qaippe_rev2+wgtcc+educqual+year0+elixgrp28+elixgrp29+elixgrp30+elixgrp31+I(tb_dx=='1'):gender, data=hdset)
+
+publish(fit_em1)
+
+```
+
+
+## Age Group
+Create <40 and 40+ age group as per Byrne et al.
+```{r}
+
+
+
+hdset$age_group40<-ifelse(dset.ind$age_index<40,"a 0-39", "b 40+")
+summary(as.factor(hdset$age_group40))
+
+# full model
+fit_em2<-coxph(Surv(time_resp,status_resp)~I(tb_dx=='1')+gender+age_group40+imclass2+qaippe_rev2+wgtcc+educqual+year0+elixgrp28+elixgrp29+elixgrp30+elixgrp31+I(tb_dx=='1'):age_group40, data=hdset)
+
+publish(fit_em2)
+
+```
+## Age continuous
+```{r}
+# full model
+fit_em2b<-coxph(Surv(time_resp,status_resp)~I(tb_dx=='1')+gender+age_index+imclass2+qaippe_rev2+wgtcc+educqual+year0+elixgrp28+elixgrp29+elixgrp30+elixgrp31+I(tb_dx=='1'):age_index, data=hdset)
+
+publish(fit_em2b)
+
+```
+
+## TB Incidence Rate Group
+
+```{r}
+# effect modifier
+summary(hdset$cab_tbinc_grp3)
+
+# full model
+fit_em3<-coxph(Surv(time_resp,status_resp)~I(tb_dx=='1')+gender+age_index+imclass2+cab_tbinc_grp3+qaippe_rev2+wgtcc+educqual+year0+elixgrp28+elixgrp29+elixgrp30+elixgrp31+I(tb_dx=='1'):+cab_tbinc_grp3, data=hdset)
+
+# HRs
+publish(fit_em3)
+
+```
+
+### <200 vs 200+ 
+```{r}
+summary(hdset$cab_tbinc_grp3)
+
+#new variable 
+hdset$tb_group200<-car::recode(hdset$cab_tbinc_grp3,"'a <100 per 100,000'='<200';'b 100 to <200 per 100,000'='<200';'c 200 to <300 per 100,000'='200+';'d 300+ per 100,000'='200+'")
+  
+summary(as.factor(hdset$tb_group200))
+
+
+# EM model for TB incidence group
+fit_em3b<-coxph(Surv(time_resp,status_resp)~I(tb_dx=='1')+gender+age_index+imclass2+tb_group200+qaippe_rev2+wgtcc+educqual+year0+elixgrp28+elixgrp29+elixgrp30+elixgrp31+I(tb_dx=='1'):+tb_group200, data=hdset)
+
+# HRs
+publish(fit_em3b)
+
+```
+
+
+
+
+
+
+## Personal health risk proxy
+
+```{r}
+
+# effect modifier
+summary(hdset$smoke)
+
+# full model
+fit_em4<-coxph(Surv(time_resp,status_resp)~I(tb_dx=='1')+gender+age_index+imclass2+cab_tbinc_grp3+qaippe_rev2+wgtcc+educqual+year0+elixgrp28+elixgrp29+elixgrp30+elixgrp31+smoke+I(tb_dx=='1'):smoke, data=hdset)
+
+# HR and CIs
+publish(fit_em4)
+
+
+```
+
+## tobacco use var (TB registry)
+
+```{r}
+
+# effect modifier
+summary(tobac$tobacco)
+
+# full model
+fit_em5<-coxph(Surv(time_resp,status_resp)~I(tb_dx=='1')+gender+age_index+imclass2+cab_tbinc_grp3+qaippe_rev2+wgtcc+educqual+year0+elixgrp28+elixgrp29+elixgrp30+elixgrp31+smoke+I(tb_dx=='1'):tobacco, data=tobac)
+
+# HR and CIs
+publish(fit_em5)
+
+
+```
+
+## income quintile
+
+```{r}
+
+# effect modifier
+summary(hdset$qaippe_rev2)
+
+# full model
+fit_em6<-coxph(Surv(time_resp,status_resp)~I(tb_dx=='1')+gender+age_index+imclass2+cab_tbinc_grp3+qaippe_rev2+wgtcc+educqual+year0+elixgrp28+elixgrp29+elixgrp30+elixgrp31+I(tb_dx=='1'):qaippe_rev2, data=hdset)
+
+# HR and CIs
+publish(fit_em6)
+
+
+```
+
+## education
+
+```{r}
+
+# effect modifier
+summary(hdset$educqual)
+
+# full model
+fit_em7<-coxph(Surv(time_resp,status_resp)~I(tb_dx=='1')+gender+age_index+imclass2+cab_tbinc_grp3+qaippe_rev2+wgtcc+educqual+year0+elixgrp28+elixgrp29+elixgrp30+elixgrp31+I(tb_dx=='1'):educqual, data=hdset)
+
+# HR and CIs
+publish(fit_em7)
+
+
+```
+
+
+
+## immigration class
+```{r}
+
+# effect modifier
+summary(hdset$imclass2)
+
+# full model
+fit_em8<-coxph(Surv(time_resp,status_resp)~I(tb_dx=='1')+gender+age_index+imclass2+cab_tbinc_grp3+qaippe_rev2+wgtcc+educqual+year0+elixgrp28+elixgrp29+elixgrp30+elixgrp31+I(tb_dx=='1'):imclass2, data=hdset)
+
+# HR and CIs
+publish(fit_em8)
+
+
+```
+
+
+## Comorbidity 
+```{r}
+
+# effect modifier
+summary(hdset$wgtcc)
+
+hdset$charl_group<-ifelse(hdset$wgtcc<1,'0',
+                          ifelse(hdset$wgtcc<2,'1','2+'))
+table(hdset$charl_group)
+# full model
+fit_em9<-coxph(Surv(time_resp,status_resp)~I(tb_dx=='1')+gender+age_index+imclass2+cab_tbinc_grp3+qaippe_rev2+charl_group+educqual+year0+elixgrp28+elixgrp29+elixgrp30+elixgrp31+I(tb_dx=='1'):charl_group, data=hdset)
+
+# HR and CIs
+publish(fit_em9)
+
+
+```
+
+
+## Depression
+```{r}
+
+# effect modifier
+table(hdset$elixgrp31)
+
+# full model
+fit_em10<-coxph(Surv(time_resp,status_resp)~I(tb_dx=='1')+gender+age_index+imclass2+cab_tbinc_grp3+qaippe_rev2+wgtcc+educqual+year0+elixgrp28+elixgrp29+elixgrp30+elixgrp31+I(tb_dx=='1'):elixgrp31, data=hdset)
+
+# HR and CIs
+publish(fit_em10)
+
+```
+
+
+
+# Predictors of airway disease among resp TB patientis
+
+
+## Table XX. Covariates by Censor Status among TB patients
+This is to assess the association between each variable in the analysis model with the outcome.
+```{r}
+
+catvars<-c("tb","time_resp","gender","age_index","age_group","qaippe_rev2","educqual","imclass2","cab_tbinc_grp3", "year0","wgtcc","smoke")
+dat.sub<-hdset[hdset$tb_dx==1,]
+
+dat.sub$elixgrp28<-as.factor(dat.sub$elixgrp28)
+dat.sub$elixgrp29<-as.factor(dat.sub$elixgrp29)
+dat.sub$elixgrp30<-as.factor(dat.sub$elixgrp30)
+dat.sub$elixgrp31<-as.factor(dat.sub$elixgrp31)
+
+t1b_tbpatients<-CreateTableOne(vars=catvars, data = dat.sub , strata = "status_resp",test=T)
+
+p1b_tbpatients<-print(t1b_tbpatients,smd=F)
+
+
+write.csv(p1b_tbpatients,file="R:/working/Basham_Thesis_Research/TB-RESP/tb_resp_Table1b_TBpatients_only_REVISED.csv")
+```
+
+
+## Cox PH model
+```{r}
+summary(hdset$qaippe_rev2)
+# new income var
+hdset$income_grp<-recode(hdset$qaippe_rev2,"'a Highest 20%'='high';'b Middle-High 20%'='high';'c Middle 20%'='middle';'d Low-Middle 20%'='a low';'e Lowest 20%'='a low'")
+
+# full model
+fit_tb_patients<-coxph(Surv(time_resp,status_resp)~gender+age_index+qaippe_rev2+educqual+imclass2+cab_tbinc_grp3+year0+wgtcc, data=hdset, subset = (tb_dx==1))
+
+# model info
+summary(fit_tb_patients)
+
+# HR and CIs
+publish(fit_tb_patients)
+
+hr.fit.tbpatients<-cbind(exp(coef(fit_tb_patients)),exp(confint(fit_tb_patients)))
+hr.fit.tbpatients
+tab2.cov.tbpatients<-round(hr.fit.tbpatients,2)
+tab2.cov.tbpatients
+
+write.csv(tab2.cov.tbpatients,file="R:/working/Basham_Thesis_Research/TB-RESP/tb_resp_Coxmodel_HRs_TBpatients_only_REVISED.csv")
+
+```
+
+## Coxnet
+```{r}
+
+############# Timing using CV ###############
+#library("glmpath")
+library("glmnet")
+#attach("LymphomaData.rda")
+patient.data<-dat.sub
+
+xgrp<-c("gender","age_index","qaippe_rev2","educqual","imclass2","cab_tbinc_grp3", "year0","wgtcc")
+
+# Putting the data in the proper format
+data <- list(x = t(patient.data[xgrp,]), time = patient.data$time_resp, status = patient.data$status_resp)
+
+x <- t(patient.data[xgrp,])
+y <- patient.data$time_resp
+status <- patient.data$status_resp
+z <- Surv(y, status)
+x
+## Finding the minimum lambda ##
+fit <- glmnet(x,z,family="cox", alpha = 1, standardize = TRUE, maxit = 1000)
+min.lam <- min(fit$lambda)*nrow(x) # Scaling lambda values because coxpath uses a different scale than coxnet
+
+## Finding the solution path ##
+fit.path <- coxpath(data, min.lambda = min.lam)
+
+
+## Calculating timings along the solution path
+cv.times.path <- system.time(fit1 <- cv.coxpath(data, min.lambda = min.lam, nfold = 10))[1]
+
+cv.times.net <- system.time(fit2 <- cv.glmnet(x,z,family="cox", alpha = 1, lambda = fit.path$lambda/nrow(x), maxit = 1000))[1]
+
+cv.times.pen <- system.time(fit3<-profL1(z, x, minlambda1 = min(fit.path$lambda), maxlambda1 = max(fit.path$lambda), lambda2 = 0, positive = FALSE, model = "cox", startbeta = rep(0,ncol(x)), steps = 100, minsteps = 100, log = TRUE, fold = 10, maxiter = Inf, standardize = TRUE, trace = FALSE))[1]
+
+######### Section 3.4 ##########
+library("glmpath")
+library("glmnet")
+load("LymphomaData.rda")
+x <- t(patient.data$x)
+y <- patient.data$time
+status <- patient.data$status
+
+cv.fit <- cv.glmnet(x,Surv(y, status),family="cox", alpha = 1, maxit = 1000)
+
+
+## Figure 2 plots ##
+
+pdf("CVerror.pdf")
+par(cex = 1.6)
+plot(cv.fit)
+dev.off()
+
+pdf("CVerrorZoom.pdf")
+par(cex = 1.6)
+plot(fit2, xlim = c(log(0.08),log(0.2)), ylim=c(11.3,12.4))
+dev.off()
+```
+
+## Coxnet - simple
+```{r}
+
+all.covars <- c(investigator.specified.vars)
+eq.rhs <- paste0(all.covars, collapse = "+")
+test.formula = as.formula(paste0(event,"~", exposure,"+",eq.rhs))
+
+y <- as.numeric(patient.data$time_resp)
+summary(y)
+status <- patient.data$status_resp
+z <- Surv(y, status)
+
+fit.coxnet <- cv.glmnet(patient.data$gender+patient.data$age_index,z,family="cox", alpha = 1, standardize = TRUE, maxit = 10)
+
+min.lam <- min(fit$lambda)*nrow(x) # Scaling lambda values because coxpath uses a different scale than coxnet
+
+```
+
+
+
+### LASSO Model
+```{r}
+
+# dataset with only TB patients
+tb_dset<-subset(hdset, tb_dx==1)
+event <- "status_resp"
+exposure <- "tb_dx"
+
+# potential predictors
+investigator.specified.vars<-c("wgtcc", "imclass2", "gender","cab_tbinc_grp3c", "age_index","educqual", "qaippe_rev2", "year0", 
+"elixgrp28", "elixgrp29", "elixgrp30", "elixgrp31")
+
+# LASSO
+all.covars <- c(investigator.specified.vars)
+eq.rhs <- paste0(all.covars, collapse = "+")
+test.formula = as.formula(paste0(event,"~", exposure,"+", eq.rhs)) 
+zb = model.frame(test.formula, data = tb_dset)
+source("R:\\working\\Basham_Thesis_Research\\hdPS\\LASSO\\Ehsan_glmnet_source.R")
+test.model = cv.glmnet.formula1(formula(zb),data=zb)
+
+lambda.min1 <- test.model$object$lambda.min
+lambdapos1 <- which(test.model$object$lambda == test.model$object$lambda.min)
+lassocoef1 <- test.model$object$glmnet.fit$beta[,lambdapos1]
+coef1 = lassocoef1["exposure"]
+retained.var1o  <- names(lassocoef1[lassocoef1!=0 &names(lassocoef1)!="exposure"])
+retained.hdps.vars<- Reduce(intersect, list(retained.var1o))
+
+# LASSO-selected variables from CV LASSO
+length(retained.hdps.vars)
+dput(retained.hdps.vars)
+
+predctor_vars<-c("genderM", "age_index", "year0", "cab_tbinc_grp3c 200 to <300 per 100,000", "cab_tbinc_grp3d 300+ per 100,000")
+
+
+# prediction model
+fit_tb_patients_lasso<-coxph(Surv(time_resp,status_resp)~gender+age_index+cab_tbinc_grp3+year0, data=tb_dset)
+
+#summary(fit_tb_patients_lasso)
+publish(fit_tb_patients_lasso)
+```
+
+
+
+
+
+# Reviewer Comment: TB Incidence rate group and comorbidity level
+```{r}
+catvars<-c("tb","time_resp","gender","age_index","age_group","quint","educqual2","imclass2", "year0","wgtcc","elixgrp28", "elixgrp29", "elixgrp30", "elixgrp31","smoke")
+
+t1b_tbIncidenceGrp<-CreateTableOne(vars=catvars, data = dset.ind , strata = "cab_tbinc_grp3",test=T)
+
+t1b_tbIncidenceGrp_print<-print(t1b_tbIncidenceGrp,smd=F)
+
+
+write.csv(t1b_tbIncidenceGrp_print,file="R:/working/Basham_Thesis_Research/TB-RESP/tb_resp_Table1b_TB_INCIDENCE_GRP_REVISED.csv")
+```
+
+
+
+# Reviewer Comment: comorbidity level and smoke status
+```{r}
+catvars<-c("tb","time_resp","gender","age_index","age_group","quint","educqual2","imclass2", "year0","elixgrp28", "elixgrp29", "elixgrp30", "elixgrp31","cab_tbinc_grp3","smoke")
+
+
+dset.ind$charl_grp<-ifelse(dset.ind$wgtcc>0,"1","0")
+
+t1b_comorb_grp<-CreateTableOne(vars=catvars, data = dset.ind , strata = "charl_grp",test=T)
+
+t1b_comorb_grp
+t1b_comorb_grp_print<-print(t1b_comorb_grp,smd=F)
+
+write.csv(t1b_comorb_grp_print,file="R:/working/Basham_Thesis_Research/TB-RESP/tb_resp_Table1b_CHARLSON_GRP_REVISED.csv")
+```
+
+# Reviewer comment: check for lower comorbidity in 200+ TB inc grp
+```{r}
+xtabs(~tb_group200+charl_group, data=hdset)
+hdset$elixgrp28f<-as.factor(hdset$elixgrp28)
+hdset$elixgrp29f<-as.factor(hdset$elixgrp29)
+hdset$elixgrp30f<-as.factor(hdset$elixgrp30)
+hdset$elixgrp31f<-as.factor(hdset$elixgrp31)
+
+catvars<-c("charl_group","wgtcc","elixgrp28f", "elixgrp29f", "elixgrp30f", "elixgrp31f","smoke")
+
+t1_tbinc_comorbs<-CreateTableOne(vars=catvars, data=hdset, strata = "tb_group200", test=T)
+t1_tbinc_comorbs
+```
+
+
+#  PS-matched Analysis
+```{r}
+# formula for PS model with only investigator-specified vars
+ps.formula <-as.formula("I(tb_dx==1)~wgtcc+imclass2+gender+age_index+educqual+qaippe_rev2+year0+cab_tbinc_grp3+elixgrp28+elixgrp29+elixgrp30+elixgrp31")
+
+varsPS<-c("tb_dx","wgtcc","imclass2","gender","age_index","educqual","qaippe_rev2","year0","cab_tbinc_grp3","elixgrp28","elixgrp29","elixgrp30","elixgrp31","time_resp","status_resp")
+
+# 1:1 NN matching with caliper = 0.2 SD
+set.seed(123)
+match.obj<-matchit(ps.formula,hdset[,varsPS], caliper=0.2)
+    #summary(match.obj)
+
+# select matched data
+dset.psmatch<-match.data(match.obj)
+dim(dset.psmatch)
+
+# view balance SMD
+catvars<-c("wgtcc","imclass2","gender","age_index",
+                "educqual","qaippe_rev2","year0","cab_tbinc_grp3",
+                      "elixgrp28","elixgrp29","elixgrp30","elixgrp31")
+
+t1a_ps<-CreateTableOne(vars=catvars, data=dset.psmatch, strata = "tb_dx", test=F)
+t1a_ps
+p1a_ps<-print(t1a_ps,smd=T)
+
+```
+
+## outcome model
+```{r}
+fit.matched<-coxph(Surv(time_resp,status_resp)~tb_dx, data=dset.psmatch)
+summary(fit.matched)
+publish(fit.matched)
+
+hr.fit.matched<-cbind(exp(coef(fit.matched)),exp(confint(fit.matched)))
+tab2.matched<-round(hr.fit.matched,2)
+tab2.matched
+```
+
+
+# Test for proportional hazards in matched analysis
+```{r}
+test.ph<-cox.zph(fit.matched,transform = "log")
+test.ph
+#ggcoxzph(test.ph)
+```
+
+
+

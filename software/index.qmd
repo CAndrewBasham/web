@@ -1,7 +1,6 @@
 ---
 title: "Software"
 by: C Andrew Basham
-bibliography: references.bib
 ---
 
 ## Overview
@@ -16,10 +15,7 @@ co-authored.
 
 ### Post-TB Airway Disease
 
-Survival analysis (.rmd) with hdPS,
+[Survival analysis (Rmd) with hdPS,
 lasso-hdPS, robust Poisson, and other
-sensitivity analyses.
-
-## Robust Poisson Regression
-
-## Propensity Score Methods
+sensitivity
+analyses.](https://github.com/CAndrewBasham/web/blob/9e0d25a3f20aba0bda48ffece8ea698d7cd19b63/software/tbresp.txt)
