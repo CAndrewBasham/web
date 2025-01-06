@@ -5,17 +5,44 @@ by: C Andrew Basham
 
 ## Overview
 
-This page contains software I've written
-over the years. Will be uploading
-sporadically but my aim is to publish all
-code used in papers I've first authored or
-co-authored.
+This page contains software I have developed over the years.
+
+I will be uploading sporadically but my aim is to publish all code used in papers I've first authored or co-authored.
 
 ## PhD Thesis Research
 
 ### Post-TB Airway Disease
 
-[Survival analysis (Rmd) with hdPS,
-lasso-hdPS, robust Poisson, and other
-sensitivity
-analyses.](https://github.com/CAndrewBasham/web/blob/9e0d25a3f20aba0bda48ffece8ea698d7cd19b63/software/tbresp.txt)
+#### R code
+
+[Survival analysis (Rmd) with hdPS, lasso-hdPS, robust Poisson, and other sensitivity analyses.](https://github.com/CAndrewBasham/web/blob/9e0d25a3f20aba0bda48ffece8ea698d7cd19b63/software/tbresp.txt)
+
+#### Journal Article
+
+[![](images/paste-2.png){width="658"}](https://doi.org/10.1016/j.eclinm.2021.100752)
+
+<https://doi.org/10.1016/j.eclinm.2021.100752>
+
+### TB-Associated Depression
+
+#### R code
+
+[Mediation analysis of depression risk by TB via hospital LOS (ordinal measure)](https://github.com/CAndrewBasham/web/blob/e3fe7de7ff56d8dcc1d36d0076474720054bc344/software/tbdep_mediation_analysis.txt)
+
+#### Journal Article
+
+[![](/portfolio/images\clipboard-2877180391.png){width="504"}](https://www.sciencedirect.com/science/article/abs/pii/S1047279721001253?via%3Dihub)
+
+<https://www.sciencedirect.com/science/article/abs/pii/S1047279721001253?via%3Dihub>
+
+### Multimorbidity Prevalence and Chronic Disease Patterns
+
+#### R code
+
+[Multimorbidity prevalence ratios comparing TB survivors with non-TB controls](https://github.com/CAndrewBasham/web/blob/e3fe7de7ff56d8dcc1d36d0076474720054bc344/software/tbmm.txt)
+
+#### Journal Article
+
+[![](images/paste-1.png){width="512"}](https://doi.org/10.17269/s41997-022-00711-y)
+
+<https://doi.org/10.17269/s41997-022-00711-y>
