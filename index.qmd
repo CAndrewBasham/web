@@ -12,9 +12,9 @@ execute:
 Dr. C Andrew Basham, B.A., M.Sc., Ph.D.
 :::
 
-Thank you for visiting my open-source [Quarto website](https://quarto.org/docs/websites/). 
+Thank you for visiting my open-source [Quarto website](https://quarto.org/docs/websites/). This website was created to illustrate my CV and advance my Quarto skill.  
 
-This website was created to illustrate my CV and advance my Quarto skill. 
+My goal as an epidemiologist is to advance community narratives within causal epidemiological research to enable individuals and communities to contribute to the design and interpretation of statistical analyses describing their lived experiences and influencing the policies, programs, and practices that impact their lives.
 
 If you see potential synergy between our work or have any suggestions/corrections for this site, please do not hesitate to reach out.
 
