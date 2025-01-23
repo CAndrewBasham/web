@@ -4,15 +4,16 @@ by: C Andrew Basham
 
 ## [The Faculty of Medicine of Harvard University Curriculum Vitae](https://andrewbasham.com/images/document/13048616/CAndrewBasham_HarvardCV_2025jan04b.pdf)
 
-![![](images/clipboard-4001204927.png)](images/clipboard-2188505394.png){fig-align="center"}
+![![](images/clipboard-4001204927.png)](images/clipboard-2188505394.png){fig-align="left"}
 
-![![](images/clipboard-654238987.png)](images/clipboard-509353462.png){fig-align="center"}
+![![](images/clipboard-654238987.png)](images/clipboard-509353462.png){fig-align="left"}
 
-![![](images/clipboard-2174882003.png){width="459"}](images/clipboard-2174882003.png){fig-align="center"
+![![](images/clipboard-2174882003.png){width="478"}](images/clipboard-2174882003.png){fig-align="left"
 width="470"}
 
-![![](images/clipboard-2924364510.png)![](images/clipboard-2048674836.png)](images/clipboard-3127294263.png){fig-align="center"}
+![![](images/clipboard-2924364510.png)![](images/clipboard-2048674836.png)](images/clipboard-3127294263.png){fig-align="left"}
 
-![](images/clipboard-1587813459.png){fig-align="center"}
+![](images/clipboard-1587813459.png){fig-align="left"}
 
-![![](images/clipboard-509042800.png)![](images/clipboard-1366839879.png)](images/clipboard-3750453538.png)
+![![](images/clipboard-509042800.png){width="461"}![](images/clipboard-1366839879.png){width="467"}](images/clipboard-3750453538.png){fig-align="left"
+width="463"}
