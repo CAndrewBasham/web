@@ -4,7 +4,7 @@ execute:
   warning: false
 ---
 
-# Overview of Website
+# Welcome
 
 ::: {#fig-headshot}
 ![](images/Basham_headshot.jpg){fig-align="center" width="284"}
@@ -12,24 +12,25 @@ execute:
 Dr. C Andrew Basham, B.A., M.Sc., Ph.D.
 :::
 
-Thank you for visiting my open-source website! This is a [Quarto website ](https://quarto.org/docs/websites/)built in [RStudio ](https://posit.co/download/rstudio-desktop/)and now maintained mostly in [Positron](https://positron.posit.co/). Each page is coded in a Quarto document. A [YAML file ](https://yaml.org/)`quarto.yaml` organizes the Quarto docs for each webpage into a functional website, which is first rendered in RStudio or Positron (or other IDE supporting quarto). Once rendered and committed locally to my local [**Git** Repository](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository) used for version control, the files are pushed to a remote [**GitHub** Repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories) The files are then processed by [GitHub Actions](https://github.com/features/actions) automatically - triggered the git push - and building deployed to [GitHub Pages](https://pages.github.com/), i.e., this website! <https://candrewbasham.github.io/web/>.
+Thank you for visiting my open-source [Quarto website](https://quarto.org/docs/websites/). 
 
-This website was created to illustrate my CV and advance my Quarto skill. My goal as an epidemiologist is to advance community narratives within causal epidemiological research to enable individuals and communities to contribute to the design and interpretation of statistical analyses describing their lived experiences and influencing the policies, programs, and practices that impact their lives.
+This website was created to illustrate my CV and advance my Quarto skill. 
 
-If you see potential synergy between our work and want to initiate a dialogue, please do not hesitate to reach out. Also, if see anything needs attention on this site please let me know.
+If you see potential synergy between our work or have any suggestions/corrections for this site, please do not hesitate to reach out.
+
 
 Sincerely,
 
 **C. Andrew Basham, PhD**
 
-Email: [git\@andrewbasham.com](git@andrewbasham.com)
+Email: git\@andrewbasham.com
 
-Web: <https://andrewbasham.com/> 
+Web: <https://andrewbasham.com/> 
 
 LinkedIn: <https://www.linkedin.com/in/candrewbasham/>
 
-Open Science Framework: <https://osf.io/mny8b/> 
+Open Science Framework: <https://osf.io/mny8b/> 
 
-GitHub: <https://github.com/CAndrewBasham> 
+GitHub: <https://github.com/CAndrewBasham>
 
-Bluesky: <https://bsky.app/profile/andrewbasham.bsky.social>
+Bluesky: <https://bsky.app/profile/andrewbasham.bsky.social> 

@@ -4,245 +4,253 @@ by: C Andrew Basham
 
 ## [The Faculty of Medicine of Harvard University Curriculum Vitae](https://andrewbasham.com/images/document/13048616/CAndrewBasham_HarvardCV_2025jan04b.pdf)
 
-+-------------+---------------------------+
-| **Date      | November $8^{th}$, 2024   |
-| Prepared:** |                           |
-+-------------+---------------------------+
-| **Name:**   | Christopher               |
-|             | [Andrew]{.underline}      |
-|             | Basham                    |
-+-------------+---------------------------+
-| **Office:** | 1620 Tremont Street -     |
-|             | Unit 3030                 |
-|             |                           |
-|             | Boston, MA 02120          |
-+-------------+---------------------------+
-| **Email:**  | cv\@andrewbasham.com      |
-+-------------+---------------------------+
-| *           | <h                        |
-| *Website:** | ttps://andrewbasham.com/> |
-+-------------+---------------------------+
-| **          | <https://www.linked       |
-| LinkedIn:** | in.com/in/candrewbasham/> |
-+-------------+---------------------------+
-| **ORCiD:**  | <https://orcid            |
-|             | .org/0000-0003-0506-7936> |
-+-------------+---------------------------+
-| **GitHub    | <https://                 |
-| Profile:**  | github.com/CAndrewBasham> |
-+-------------+---------------------------+
-| **GitHub    | <https://cand             |
-| Pages:**    | rewbasham.github.io/web/> |
-+-------------+---------------------------+
-| **Rese      | <htt                      |
-| archGate:** | ps://www.researchgate.net |
-|             | /profile/C-Andrew-Basham> |
-+-------------+---------------------------+
-| **Google    | <http                     |
-| Scholar:**  | s://tinyurl.com/3wz4sken> |
-+-------------+---------------------------+
-| **Open      | <https://osf.io/mny8b/>   |
-| Science     |                           |
-| F           |                           |
-| ramework:** |                           |
-+-------------+---------------------------+
++--------+-------------------------------+
+| **Date | January $23^{rd}$, 2024       |
+| Prepa  |                               |
+| red:** |                               |
++--------+-------------------------------+
+| **N    | Christopher                   |
+| ame:** | [Andrew]{.underline} Basham   |
++--------+-------------------------------+
+| **Off  | 1620 Tremont Street - Unit    |
+| ice:** | 3030                          |
+|        |                               |
+|        | Boston, MA 02120              |
++--------+-------------------------------+
+| **Em   | cv\@andrewbasham.com          |
+| ail:** |                               |
++--------+-------------------------------+
+| We     | \<https://andrewbasham.com/\> |
+| bsite: |                               |
++--------+-------------------------------+
+| *      | \<https://www.lin             |
+| *Linke | kedin.com/in/candrewbasham/\> |
+| dIn:** |                               |
++--------+-------------------------------+
+| **OR   | \<https://orcid               |
+| CiD:** | .org/0000-0003-0506-7936\>    |
++--------+-------------------------------+
+| **     | \<https                       |
+| GitHub | ://github.com/CAndrewBasham\> |
+| Prof   |                               |
+| ile:** |                               |
++--------+-------------------------------+
+| **     | \<https://c                   |
+| GitHub | andrewbasham.github.io/web/\> |
+| Pa     |                               |
+| ges:** |                               |
++--------+-------------------------------+
+| **Re   | \<https://www.researchgate.   |
+| search | net/profile/C-Andrew-Basham\> |
+| G      |                               |
+| ate:** |                               |
++--------+-------------------------------+
+| **     | \<h                           |
+| Google | ttps://tinyurl.com/3wz4sken\> |
+| Scho   |                               |
+| lar:** |                               |
++--------+-------------------------------+
+| **Open | <https://osf.io/mny8b/>       |
+| S      |                               |
+| cience |                               |
+| Framew |                               |
+| ork:** |                               |
++--------+-------------------------------+
 
 ## Education:
 
-+:------+:------+:---------+:----------+
-| 09/20 | PhD   | Po       | U         |
-| 17-10 |       | pulation | niversity |
-| /2021 |       | and      | of        |
-|       |       | Public   | British   |
-|       |       | Health   | Columbia  |
-+-------+-------+----------+-----------+
-| 09/20 | MSc   | C        | U         |
-| 10-02 |       | ommunity | niversity |
-| /2016 |       | Health   | of        |
-|       |       | Sciences | Manitoba  |
-+-------+-------+----------+-----------+
-| 09/20 | BA    | Env      | U         |
-| 04-05 |       | ironment | niversity |
-| /2008 |       | al/Urban | of        |
-|       |       | Studies  | Winnipeg  |
-+-------+-------+----------+-----------+
++:------+:----+:----------------+:-------+
+| 09/20 | PhD | Population and  | Univ   |
+| 17-10 |     | Public Health   | ersity |
+| /2021 |     |                 | of     |
+|       |     |                 | B      |
+|       |     |                 | ritish |
+|       |     |                 | Co     |
+|       |     |                 | lumbia |
++-------+-----+-----------------+--------+
+| 09/20 | MSc | Community       | Univ   |
+| 10-02 |     | Health Sciences | ersity |
+| /2016 |     |                 | of     |
+|       |     |                 | Ma     |
+|       |     |                 | nitoba |
++-------+-----+-----------------+--------+
+| 09/20 | BA  | Envi            | Univ   |
+| 04-05 |     | ronmental/Urban | ersity |
+| /2008 |     | Studies         | of     |
+|       |     |                 | Wi     |
+|       |     |                 | nnipeg |
++-------+-----+-----------------+--------+
 
 ## Postdoctoral Training:
 
-+-------+-------+:---------------+:------+
-| 03/20 | Res   | Division of    | Ha    |
-| 22-06 | earch | Pharma         | rvard |
-| /2024 | F     | coepidemiology | Me    |
-|       | ellow | and            | dical |
-|       |       | Pha            | S     |
-|       |       | rmacoeconomics | chool |
-+-------+-------+----------------+-------+
++------+------+:----------------+:-----+
+| 03/  | Rese | Division of     | Har  |
+| 2022 | arch | Pharm           | vard |
+| -06/ | Fe   | acoepidemiology | Med  |
+| 2024 | llow | and             | ical |
+|      |      | Ph              | Sc   |
+|      |      | armacoeconomics | hool |
++------+------+-----------------+------+
 
 ## Appointments at Hospitals/Affiliated Institutions:
 
-+-------+-------+---------------+:------+
-| 03/   | Res   | Division of   | Br    |
-| 2022– | earch | Pharmac       | igham |
-| 06    | F     | oepidemiology | and   |
-| /2024 | ellow | and           | Wo    |
-|       |       | Phar          | men's |
-|       |       | macoeconomics | Hos   |
-|       |       |               | pital |
-+-------+-------+---------------+-------+
++------+------+-----------------+:--------+
+| 03/  | Rese | Division of     | Brigham |
+| 2022 | arch | Pharm           | and     |
+| -06/ | Fe   | acoepidemiology | Women's |
+| 2024 | llow | and             | H       |
+|      |      | Ph              | ospital |
+|      |      | armacoeconomics |         |
++------+------+-----------------+---------+
 
-**Other Professional Positions:**
+## **Other Professional Positions:**
 
-+-------+-------+-------------+--------+
-| *     | **    | **D         | **I    |
-| *Year | Posit | epartment** | nstitu |
-| (s)** | ion** |             | tion** |
-+=======+=======+=============+========+
-| 2008  | H     | Health      | Ma     |
-| -2010 | ealth | Department  | nitoba |
-|       | P     |             | Keewa  |
-|       | olicy |             | tinowi |
-|       | An    |             | Okim   |
-|       | alyst |             | akanak |
-+-------+-------+-------------+--------+
-| 2012  | Res   | Department  | Univ   |
-|       | earch | of          | ersity |
-|       | Assi  | Emergency   | of     |
-|       | stant | Medicine    | Ma     |
-|       |       |             | nitoba |
-+-------+-------+-------------+--------+
-| 2012  | S     | First       | As     |
-| -2013 | tatis | Nations     | sembly |
-|       | tical | Regional    | of     |
-|       | An    | L           | Ma     |
-|       | alyst | ongitudinal | nitoba |
-|       |       | Health      | Chiefs |
-|       |       | Survey      |        |
-+-------+-------+-------------+--------+
-| 2013  | Pr    | Aboriginal  | Wi     |
-|       | ogram | Health      | nnipeg |
-|       | Speci | Programs    | Re     |
-|       | alist |             | gional |
-|       |       |             | Health |
-|       |       |             | Aut    |
-|       |       |             | hority |
-+-------+-------+-------------+--------+
-| 2014  | Res   | Centre for  | Univ   |
-| -2015 | earch | Aboriginal  | ersity |
-|       | Assi  | Health      | of     |
-|       | stant | Research    | Ma     |
-|       |       |             | nitoba |
-+-------+-------+-------------+--------+
-| 2015  | Res   | Health      | Ma     |
-|       | earch | Department  | nitoba |
-|       | Consu |             | Keewa  |
-|       | ltant |             | tinowi |
-|       |       |             | Okim   |
-|       |       |             | akanak |
-+-------+-------+-------------+--------+
-| 2015  | Data  | Manitoba    | Univ   |
-| -2017 | An    | Centre for  | ersity |
-|       | alyst | Health      | of     |
-|       |       | Policy      | Ma     |
-|       |       |             | nitoba |
-+-------+-------+-------------+--------+
-| 2017  | Gra   | T           | BC     |
-| -2021 | duate | uberculosis | Centre |
-|       | Res   | Program     | for    |
-|       | earch |             | D      |
-|       | Assi  |             | isease |
-|       | stant |             | C      |
-|       |       |             | ontrol |
-+-------+-------+-------------+--------+
-| 2018  | Tea   | School of   | Univ   |
-|       | ching | Population  | ersity |
-|       | Assi  | and Public  | of     |
-|       | stant | Health      | B      |
-|       |       |             | ritish |
-|       |       |             | Co     |
-|       |       |             | lumbia |
-+-------+-------+-------------+--------+
-| 2019  | Gra   | Pathology   | Univ   |
-|       | duate | and         | ersity |
-|       | Res   | Laboratory  | of     |
-|       | earch | Medicine    | B      |
-|       | Assi  |             | ritish |
-|       | stant |             | Co     |
-|       |       |             | lumbia |
-+-------+-------+-------------+--------+
-| 2020  | Gra   | Canadian    | Univ   |
-| -2021 | duate | Disability  | ersity |
-|       | Res   | Pa          | of     |
-|       | earch | rticipation | B      |
-|       | Assi  | Project     | ritish |
-|       | stant |             | Co     |
-|       |       |             | lumbia |
-+-------+-------+-------------+--------+
-| 2021  | Evi   | McGill      | McGill |
-| -2022 | dence | In          | Univ   |
-|       | Rev   | ternational | ersity |
-|       | iewer | TB Centre   |        |
-+-------+-------+-------------+--------+
-| 2022- | S     | Faculty of  | Simon  |
-|       | tatis | Health      | Fraser |
-|       | tical | Sciences    | Univ   |
-|       | Consu |             | ersity |
-|       | ltant |             |        |
-+-------+-------+-------------+--------+
++----+-------+--------------+-----------+
+| Y  | **    | **           | **Inst    |
+| ea | Posit | Department** | itution** |
+| r( | ion** |              |           |
+| s) |       |              |           |
++====+=======+==============+===========+
+| 2  | Healt | Health       | Manitoba  |
+| 00 | P     | Department   | Ke        |
+| 8- | olicy |              | ewatinowi |
+| 20 | An    |              | O         |
+| 10 | alyst |              | kimakanak |
++----+-------+--------------+-----------+
+| 20 | Res   | Department   | U         |
+| 12 | earch | of Emergency | niversity |
+|    | Assi  | Medicine     | of        |
+|    | stant |              | Manitoba  |
++----+-------+--------------+-----------+
+| 2  | S     | First        | Assembly  |
+| 01 | tatis | Nations      | of        |
+| 2- | tical | Regional     | Manitoba  |
+| 20 | An    | Longitudinal | Chiefs    |
+| 13 | alyst | Health       |           |
+|    |       | Survey       |           |
++----+-------+--------------+-----------+
+| 20 | Pr    | Aborigginal  | Winnipeg  |
+| 13 | ogram | Health       | Regional  |
+|    | Speci | Programs     | Health    |
+|    | alist |              | Aut       |
+|    |       |              | hority    |
++----+-------+--------------+-----------+
+| 2  | Res   | Centre for   | Univ      |
+| 01 | earch | Aboriginal   | ersity of |
+| 4- | Assi  | Health       | Ma nitoba |
+| 20 | stant | Research     |           |
+| 15 |       |              |           |
++----+-------+--------------+-----------+
+| 20 | Res   | Health       | Manitoba  |
+| 15 | earch | Department   | Ke        |
+|    | Consu |              | ewatinowi |
+|    | ltant |              | O         |
+|    |       |              | kimakanak |
++----+-------+--------------+-----------+
+| 2  | Data  | Manitoba     | U         |
+| 01 | An    | Centre for   | niversity |
+| 5- | alyst | Health       | of        |
+| 20 |       | Policy       | Manitoba  |
+| 17 |       |              |           |
++----+-------+--------------+-----------+
+| 2  | Gra   | Tuberculosis | BC Centre |
+| 01 | duate | Program      | for       |
+| 7- | Res   |              | Disease   |
+| 20 | earch |              | Control   |
+| 21 | Assi  |              |           |
+|    | stant |              |           |
++----+-------+--------------+-----------+
+| 20 | Tea   | School of    | U         |
+| 18 | ching | Population   | niversity |
+|    | Assi  | and Public   | of        |
+|    | stant | Health       | British   |
+|    |       |              | Columbia  |
++----+-------+--------------+-----------+
+| 20 | Gra   | Pathology    | U         |
+| 19 | duate | and          | niversity |
+|    | Res   | Laboratory   | of        |
+|    | earch | Medicine     | British   |
+|    | Assi  |              | Columbia  |
+|    | stant |              |           |
++----+-------+--------------+-----------+
+| 2  | Gra   | Canadian     | U         |
+| 02 | duate | Disability   | niversity |
+| 0- | Res   | P            | of        |
+| 20 | earch | articipation | British   |
+| 21 | Assi  | Project      | Columbia  |
+|    | stant |              |           |
++----+-------+--------------+-----------+
+| 2  | Evi   | McGill       | McGill    |
+| 02 | dence | I            | U         |
+| 1- | Rev   | nternational | niversity |
+| 20 | iewer | TB Centre    |           |
+| 22 |       |              |           |
++----+-------+--------------+-----------+
+| 2  | S     | Faculty of   | Simon     |
+| 02 | tatis | Health       | Fraser    |
+| 2- | tical | Sciences     | U         |
+|    | Consu |              | niversity |
+|    | ltant |              |           |
++----+-------+--------------+-----------+
 
-**Committee Service:**
+## **Committee Service:**
 
-**Local**
+### **Local**
 
-+-------+--------------+-----------------+
-| 2022  | Lead,        | Brigham and     |
-| -2024 | Ph           | Women’s         |
-|       | armacoequity | Hospital        |
-|       | Team         |                 |
-+-------+--------------+-----------------+
++------+---------------+-----------------+
+| 2    | Lead,         | Brigham and     |
+| 022- | P             | Women’s         |
+| 2024 | harmacoequity | Hospital        |
+|      | Team          |                 |
++------+---------------+-----------------+
 
-**National**
+### **National**
 
-+--------+------------+-------------------+
-| 201    | Judge,     | Canadian Society  |
-| 5-2016 | National   | for Epidemiology  |
-|        | Student    | and Biostatistics |
-|        | Conference |                   |
-+--------+------------+-------------------+
++----+-------------+--------------------+
+| 2  | Judge,      | Canadian Society   |
+| 01 | National    | for Epidemiology   |
+| 5- | Student     | and Biostatistics  |
+| 20 | Conference  |                    |
+| 16 |             |                    |
++----+-------------+--------------------+
 
-**International**
+### **International**
 
-+--------+---------+---------------------+
-| 201    | Member, | International Union |
-| 8-2023 | TB and  | Against TB and Lung |
-|        | Mental  | Disease             |
-|        | Health  |                     |
-|        | Working |                     |
-|        | Group   |                     |
-+--------+---------+---------------------+
-| 202    | Member, | International Union |
-| 2-2024 | A       | Against TB and Lung |
-|        | bstract | Disease-North       |
-|        | Co      | America Region      |
-|        | mmittee |                     |
-+--------+---------+---------------------+
++-----+-----------+----------------------+
+| 201 | Member,   | International Union  |
+| 8-2 | TB and    | Against TB and Lung  |
+| 023 | Mental    | Disease              |
+|     | Health    |                      |
+|     | Working   |                      |
+|     | Group     |                      |
++-----+-----------+----------------------+
+| 202 | Member,   | International Union  |
+| 2-2 | Abstract  | Against TB and Lung  |
+| 024 | Committee | Disease-North        |
+|     |           | America Region       |
++-----+-----------+----------------------+
 
-**Professional Societies**
+## **Professional Societies**
 
-+--------+--------------------------------+
-| 201    | Canadian Association of Health |
-| 1-2012 | Services and Policy Research   |
-+--------+--------------------------------+
-| 201    | Canadian Society for           |
-| 2-2016 | Epidemiology and Biostatistics |
-+--------+--------------------------------+
-| 2012 - | International Union Against    |
-|        | Tuberculosis and Lung Disease  |
-+--------+--------------------------------+
-| 2023 - | International Society for      |
-|        | Pharmacoepidemiology           |
-+--------+--------------------------------+
++-----+----------------------------------+
+| 201 | Canadian Association of Health   |
+| 1-2 | Services and Policy Research     |
+| 012 |                                  |
++-----+----------------------------------+
+| 201 | Canadian Society for             |
+| 2-2 | Epidemiology and Biostatistics   |
+| 016 |                                  |
++-----+----------------------------------+
+| 2   | International Union Against      |
+| 012 | Tuberculosis and Lung Disease    |
+| -   |                                  |
++-----+----------------------------------+
+| 2   | International Society for        |
+| 023 | Pharmacoepidemiology             |
+| -   |                                  |
++-----+----------------------------------+
 
-### Editorial Activities:
+## Editorial Activities:
 
 **Ad hoc Reviewer**
 
@@ -260,90 +268,92 @@ Postgraduate Medicine; Risk Management and
 Healthcare Policy; Tropical Medicine and
 International Health; Virology; Virulence.*
 
-**Honors and Prizes:**
+## **Honors and Prizes:**
 
-+:-:+:-------------:+:------------:+----+
-| 2 | Student of    | University   | G  |
-| 0 | Distinction   | of Winnipeg  | PA |
-| 0 |               |              |    |
-| 6 |               |              |    |
-+---+---------------+--------------+----+
-| 2 | Academic      |              | G  |
-| 0 | Proficiency   |              | PA |
-| 0 | Scholarship   |              |    |
-| 7 | University of |              |    |
-|   | Winnipeg      |              |    |
-+---+---------------+--------------+----+
-| 2 | Academic      | University   |    |
-| 0 | Proficiency   | of Winnipeg  | G  |
-| 0 | Scholarship   |              | PA |
-| 7 |               |              |    |
-+---+---------------+--------------+----+
-| 2 | United        | University   |    |
-| 0 | College Class | of Winnipeg  |    |
-| 0 | of ’50        |              |    |
-| 7 | Reunion       |              |    |
-|   | Scholarship   |              |    |
-+---+---------------+--------------+----+
-| 2 | Student of    | University   | G  |
-| 0 | Highest       | of Winnipeg  | PA |
-| 0 | Distinction   |              |    |
-| 7 |               |              |    |
-+---+---------------+--------------+----+
-| 2 | Student of    | University   | G  |
-| 0 | Distinction   | of Winnipeg  | PA |
-| 0 |               |              |    |
-| 8 |               |              |    |
-+---+---------------+--------------+----+
-| 2 | Network       | Manitoba     | C  |
-| 0 | Environment   | First        | om |
-| 1 | for           | Nations -    | p. |
-| 0 | Aboriginal    | Centre for   |    |
-|   | Health        | Aboriginal   |    |
-|   | Research      | Health       |    |
-|   | Fellowship    | Research     |    |
-+---+---------------+--------------+----+
-| 2 | Health        | Western      | C  |
-| 0 | Services and  | Regional     | om |
-| 1 | Policy        | Training     | p. |
-| 0 | Research      | Centre       |    |
-|   | Studentship   |              |    |
-+---+---------------+--------------+----+
-| 2 | University of | Faculty of   | C  |
-| 0 | Manitoba      | Medicine,    | om |
-| 1 | Graduate      | University   | p. |
-| 1 | Fellowship    | of Manitoba  |    |
-| - | Comp.         |              |    |
-| 2 |               |              |    |
-| 0 |               |              |    |
-| 1 |               |              |    |
-| 2 |               |              |    |
-+---+---------------+--------------+----+
-| 2 | Summer        | York         | C  |
-| 0 | Program in    | University   | om |
-| 1 | Data Analysis |              | p. |
-| 2 | Travel Award  |              |    |
-+---+---------------+--------------+----+
-| 2 | National      | Canadian     | C  |
-| 0 | Student       | Society of   | om |
-| 1 | Conference    | Epidemiology | p. |
-| 2 | Travel Award  | and          |    |
-|   |               | B            |    |
-|   |               | iostatistics |    |
-+---+---------------+--------------+----+
-| 2 | Travel Award, | I            | C  |
-| 0 | North America | nternational | om |
-| 1 | Region, 16th  | Union        | p. |
-| 2 | Annual TB     | Against      |    |
-|   | Conference    | Tuberculosis |    |
-|   |               | and Lung     |    |
-|   |               | Disease      |    |
-+---+---------------+--------------+----+
-| 2 | Graduate      | Manitoba     | C  |
-| 0 | Fellowship    | Health       | om |
-| 1 |               | Research     | p. |
-| 2 |               | Council      |    |
-+---+---------------+--------------+----+
++:--:+:---------------:+:---------:+----+
+| 20 | Student of      | U         | G  |
+| 06 | Distinction     | niversity | PA |
+|    |                 | of        |    |
+|    |                 | Winnipeg  |    |
++----+-----------------+-----------+----+
+| 20 | Academic        | U         | G  |
+| 07 | Proficiency     | niversity | PA |
+|    | Scholarship     | of        |    |
+|    |                 | Winnipeg  |    |
++----+-----------------+-----------+----+
+| 20 | Academic        | U         | G  |
+| 07 | Proficiency     | niversity | PA |
+|    | Scholarship     | of        |    |
+|    |                 | Winnipeg  |    |
++----+-----------------+-----------+----+
+| 20 | United College  | U         | C  |
+| 07 | Class of ’50    | niversity | om |
+|    | Reunion         | of        | p. |
+|    | Scholarship     | Winnipeg  |    |
++----+-----------------+-----------+----+
+| 20 | Student of      | U         | G  |
+| 07 | Highest         | niversity | PA |
+|    | Distinction     | of        |    |
+|    |                 | Winnipeg  |    |
++----+-----------------+-----------+----+
+| 20 | Student of      | U         | G  |
+| 08 | Distinction     | niversity | PA |
+|    |                 | of        |    |
+|    |                 | Winnipeg  |    |
++----+-----------------+-----------+----+
+| 20 | Network         | Manitoba  | C  |
+| 10 | Environment for | First     | om |
+|    | Aboriginal      | Nations - | p. |
+|    | Health Research | Centre    |    |
+|    | Fellowship      | for       |    |
+|    |                 | A         |    |
+|    |                 | boriginal |    |
+|    |                 | Health    |    |
+|    |                 | Research  |    |
++----+-----------------+-----------+----+
+| 20 | Health Services | Western   | C  |
+| 10 | and Policy      | Regional  | om |
+|    | Research        | Training  | p. |
+|    | Studentship     | Centre    |    |
++----+-----------------+-----------+----+
+| 2  | University of   | Faculty   | C  |
+| 01 | Manitoba        | of        | om |
+| 1- | Graduate        | Medicine, | p. |
+| 20 | Fellowship      | U         |    |
+| 12 |                 | niversity |    |
+|    |                 | of        |    |
+|    |                 | Manitoba  |    |
++----+-----------------+-----------+----+
+| 20 | Summer Program  | York      | C  |
+| 12 | in Data         | U         | om |
+|    | Analysis Travel | niversity | p. |
+|    | Award           |           |    |
++----+-----------------+-----------+----+
+| 20 | National        | Canadian  | C  |
+| 12 | Student         | Society   | om |
+|    | Conference      | of        | p. |
+|    | Travel Award    | Epi       |    |
+|    |                 | demiology |    |
+|    |                 | and       |    |
+|    |                 | Bios      |    |
+|    |                 | tatistics |    |
++----+-----------------+-----------+----+
+| 20 | Travel Award,   | N. Am.    | C  |
+| 12 | 16th Annual TB  | Region,   | om |
+|    | Conference      | Inte      | p. |
+|    |                 | rnational |    |
+|    |                 | Union     |    |
+|    |                 | Against   |    |
+|    |                 | Tub       |    |
+|    |                 | erculosis |    |
+|    |                 | and Lung  |    |
+|    |                 | Disease   |    |
++----+-----------------+-----------+----+
+| 20 | Graduate        | Manitoba  | C  |
+| 12 | Fellowship      | Health    | om |
+|    |                 | Research  | p. |
+|    |                 | Council   |    |
++----+-----------------+-----------+----+
 
 ## **Knowledge, Experience, and Skills**
 
@@ -422,7 +432,7 @@ International Health; Virology; Virulence.*
     Manitoba Personal Health Information
     Act (PHIA) and Freedom of Information
     and Privacy Protection Act (FIPPA)
-    online training.\
+    online training.
 
 -   Health Policy Analysis working in
     Indigenous health policy, planning, and
@@ -450,6 +460,8 @@ International Health; Virology; Virulence.*
     Served on teams, boards, committees,
     and in other collaborative settings.
     Planned political meetings and events
-    in various settings.Drafted Terms of
-    Reference, Constitutional and by-law
-    documents, policy resolutions.
+    in various settings.
+
+-   Drafting Terms of Reference,
+    Constitutional and by-law documents,
+    policy resolutions.
