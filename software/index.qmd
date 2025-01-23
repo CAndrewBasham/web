@@ -5,9 +5,53 @@ by: C Andrew Basham
 
 ## Overview
 
-This page contains software I have developed over the years.
+This page contains software I have
+developed over the years. I will be
+uploading sporadically but my aim is to
+publish all code used in papers I've first
+authored or co-authored.
 
-I will be uploading sporadically but my aim is to publish all code used in papers I've first authored or co-authored.
+## This Website
+
+1.  This is a [Quarto
+    Website](https://quarto.org/docs/websites/)
+    .
+
+2.  Quarto websites are a type of [RStudio
+    Project](https://support.posit.co/hc/en-us/articles/200526207-Using-RStudio-Projects).
+
+3.  Built and is maintained in
+    [RStudio](https://posit.co/download/rstudio-desktop/)
+    and
+    [Positron](https://positron.posit.co/).
+
+4.  Each webpage is edited as a [Quarto
+    document](https://quarto.org/).
+
+5.  A [YAML file](https://yaml.org/) is
+    used to organize the Quarto document
+    webpages into a functional website.
+
+6.  The updated files are committed to my
+    local [**Git**
+    Repository](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository)
+    used for version control.
+
+7.  The committed changes are pushed to the
+    remote [**GitHub**
+    Repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories)
+    which uploading any new files
+    simultaneously
+
+8.  The remote repository GitHub files are
+    then processed with [GitHub
+    Actions](https://github.com/features/actions) -
+    automatically triggered by the git
+    push - which builds and deploys the
+    Quarto website to [GitHub
+    Pages](https://pages.github.com/),
+    forming this website:
+    <https://candrewbasham.github.io/web/>.
 
 ## PhD Thesis Research
 
@@ -15,7 +59,10 @@ I will be uploading sporadically but my aim is to publish all code used in paper
 
 #### R code
 
-[Survival analysis (Rmd) with hdPS, lasso-hdPS, robust Poisson, and other sensitivity analyses.](https://github.com/CAndrewBasham/web/blob/9e0d25a3f20aba0bda48ffece8ea698d7cd19b63/software/tbresp.txt)
+[Survival analysis (Rmd) with hdPS,
+lasso-hdPS, robust Poisson, and other
+sensitivity
+analyses.](https://github.com/CAndrewBasham/web/blob/9e0d25a3f20aba0bda48ffece8ea698d7cd19b63/software/tbresp.txt)
 
 #### Journal Article
 
@@ -27,7 +74,9 @@ I will be uploading sporadically but my aim is to publish all code used in paper
 
 #### R code
 
-[Mediation analysis of depression risk by TB via hospital LOS (ordinal measure)](https://github.com/CAndrewBasham/web/blob/e3fe7de7ff56d8dcc1d36d0076474720054bc344/software/tbdep_mediation_analysis.txt)
+[Mediation analysis of depression risk by
+TB via hospital LOS (ordinal
+measure)](https://github.com/CAndrewBasham/web/blob/e3fe7de7ff56d8dcc1d36d0076474720054bc344/software/tbdep_mediation_analysis.txt)
 
 #### Journal Article
 
@@ -39,7 +88,9 @@ I will be uploading sporadically but my aim is to publish all code used in paper
 
 #### R code
 
-[Multimorbidity prevalence ratios comparing TB survivors with non-TB controls](https://github.com/CAndrewBasham/web/blob/e3fe7de7ff56d8dcc1d36d0076474720054bc344/software/tbmm.txt)
+[Multimorbidity prevalence ratios comparing
+TB survivors with non-TB
+controls](https://github.com/CAndrewBasham/web/blob/e3fe7de7ff56d8dcc1d36d0076474720054bc344/software/tbmm.txt)
 
 #### Journal Article
 

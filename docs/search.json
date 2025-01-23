@@ -4,14 +4,21 @@
     "href": "software/index.html",
     "title": "Software",
     "section": "",
-    "text": "This page contains software I have developed over the years.\nI will be uploading sporadically but my aim is to publish all code used in papers I’ve first authored or co-authored."
+    "text": "This page contains software I have developed over the years. I will be uploading sporadically but my aim is to publish all code used in papers I’ve first authored or co-authored."
   },
   {
     "objectID": "software/index.html#overview",
     "href": "software/index.html#overview",
     "title": "Software",
     "section": "",
-    "text": "This page contains software I have developed over the years.\nI will be uploading sporadically but my aim is to publish all code used in papers I’ve first authored or co-authored."
+    "text": "This page contains software I have developed over the years. I will be uploading sporadically but my aim is to publish all code used in papers I’ve first authored or co-authored."
+  },
+  {
+    "objectID": "software/index.html#this-website",
+    "href": "software/index.html#this-website",
+    "title": "Software",
+    "section": "This Website",
+    "text": "This Website\n\nThis is a Quarto Website .\nQuarto websites are a type of RStudio Project.\nBuilt and is maintained in RStudio and Positron.\nEach webpage is edited as a Quarto document.\nA YAML file is used to organize the Quarto document webpages into a functional website.\nThe updated files are committed to my local Git Repository used for version control.\nThe committed changes are pushed to the remote GitHub Repository which uploading any new files simultaneously\nThe remote repository GitHub files are then processed with GitHub Actions - automatically triggered by the git push - which builds and deploys the Quarto website to GitHub Pages, forming this website: https://candrewbasham.github.io/web/."
   },
   {
     "objectID": "software/index.html#phd-thesis-research",
