@@ -34,6 +34,6 @@ format:
     theme: vapor
     toc: true
 
-editor: source
+editor: visual
 
 
