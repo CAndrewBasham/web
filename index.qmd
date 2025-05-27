@@ -12,18 +12,25 @@ execute:
 Dr. C Andrew Basham, B.A., M.Sc., Ph.D.
 :::
 
-Thank you for visiting my open-source [Quarto website](https://quarto.org/docs/websites/).
-This website was created to illustrate my CV and advance my Quarto skill.
+Thank you for visiting my open-source [Quarto
+website](https://quarto.org/docs/websites/).
 
-My goal as an epidemiologist is to advance community narratives within causal epidemiological research to enable individuals and communities to contribute to the design and interpretation of statistical analyses describing their lived experiences and influencing the policies, programs, and practices that impact their lives.
+<!--# >My goal as an epidemiologist is to advance causal inference in the epidemiological research to enable individuals and communities to contribute to the design and interpretation of statistical analyses describing their lived experiences and influencing the policies, programs, and practices that impact their lives. <!--#  -->
 
-If you see potential synergy between our work or have any suggestions/corrections for this site, please do not hesitate to reach out.
+<!--# The extensive skills and knowledge I bring to teaching are built on research integrity: relevance, rigour, reviewability, and reproducibility.  -->
+
+I am an epidemiologist specializing in causal inference using large
+relational healthcare databases. I have over 15 years experience using
+SAS and R working in professional collaborative coding environments
+producing decision-grade evidence with open science principles. As an
+educator, I provide world-class training that students require to
+prevail in highly competitive job markets.
 
 Sincerely,
 
 **C. Andrew Basham, PhD**
 
-Email: git\@andrewbasham.com
+Email: info\\\@\\andrewbasham.com
 
 Web: <https://andrewbasham.com/>
 
