@@ -1,41 +1,31 @@
 ---
 title: "Portfolio"
 by: C Andrew Basham
+date: last-modified
 bibliography: references.bib
 ---
 
-Below are short descriptions of my professional work with links to research articles, policy documents, and media coverage.
-
+Below are short descriptions of my professional work with links to
+research articles, policy documents, and media coverage.
 
 # Tuberculosis (TB)
 
-Through knowledge generation and synthesis, my research informs prevention, diagnosis, and care for people diagnosed with TB internationally.
-
-### International Journal of TB and Lung Disease - Editorial
-
-::: {#fig-editorial}
-[![](images/clipboard-3138368266.png){width="504"}](https://doi.org/10.5588/ijtld.20.0126)
-:::
-
-### Chair of the Global Stop TB Initiative (GISI)
-
-As (past) [Chair of the Global Stop TB Initiative (GISI) of the International Union Against TB and Lung Disease](https://theunion.org/global-indigenous-stop-tb-initiative), I expanded and deepened our organization's bond with Communities, Alliances, and Networks (CAAN).
-
-::: {#fig-gisi}
-[![](images/GISI%20blanket.png){width="504"}](https://theunion.org/global-indigenous-stop-tb-initiative)
-:::
-
-### One Vision Many Paths: Podcast Interview
-
-During this interview, I was invited to share information about TB for a podcast raising awareness of TB among Indigenous Peoples and advancing Indigenous solutions. I also shared perspectives and from my experience working in Northern Manitoba on TB.
-
-::: {#fig-podcast}
-[![](images/clipboard-916353267.png)](https://open.spotify.com/episode/4ZHkrBJ1XsUktLdktplkSK?si=ZcGq9j46ToKO6XKORqRwOQ)
-:::
+Through knowledge generation and synthesis, my research informs
+prevention, diagnosis, and care for people diagnosed with TB
+internationally.
 
 ## Tuberculosis Program Performance Measurement
 
-My first research interest was in TB epidemiology and program performance measurement through an equity lens. This interest was borne from my work with the Manitoba Keewatinowi Okimakanak (\textit{Cree} for "Northern Manitoba Chiefs"), as a Health Policy Analyst My MSc thesis was based on working on the MKO TB Strategy, which included a project called "Finding Our Ancestors" and a call for the US-CDC Program Objectives and Performance Targets to be applied to the TB programming provided to MKO First Nations to ensure transparent review aimed at eliminating TB with community partnership established based on that common goal.
+My first research interest was in TB epidemiology and program
+performance measurement through an equity lens. This interest was borne
+from my work with the Manitoba Keewatinowi Okimakanak (\textit{Cree} for
+"Northern Manitoba Chiefs"), as a Health Policy Analyst My MSc thesis
+was based on working on the MKO TB Strategy, which included a project
+called "Finding Our Ancestors" and a call for the US-CDC Program
+Objectives and Performance Targets to be applied to the TB programming
+provided to MKO First Nations to ensure transparent review aimed at
+eliminating TB with community partnership established based on that
+common goal.
 
 ::: {#fig-article-tb-north-perform}
 [![](images/basham-cjph2019.png)](https://https://doi.org/10.17269/s41997-019-00231-2)
@@ -43,21 +33,31 @@ My first research interest was in TB epidemiology and program performance measur
 
 ## Tuberculosis Survivor Health
 
-My PhD thesis [Tuberculosis Survivor Health](https://dx.doi.org/10.14288/1.0402446) investigated long-term health outcomes of people diagnosed with TB compared with non-TB controls using causal inference epidemiological methods.
+My PhD thesis [Tuberculosis Survivor
+Health](https://dx.doi.org/10.14288/1.0402446) investigated long-term
+health outcomes of people diagnosed with TB compared with non-TB
+controls using causal inference epidemiological methods.
 
 ## Tuberculosis and Mental Health
 
-I focused on TB and mental health as a key component of my PhD thesis research on TB survivor health. In addition to my research I served as an Executive Member on the International Union Against TB and Lung Disease TB-Mental Health Working Group.
+I focused on TB and mental health as a key component of my PhD thesis
+research on TB survivor health. In addition to my research I served as
+an Executive Member on the International Union Against TB and Lung
+Disease TB-Mental Health Working Group.
 
 ### **World TB Day Webinar on TB-Mental Health Integration** {#sec-world-tb-day-webinar-on-tb-mental-health-integration-}
 
-I was a co-organizer of a World TB Day 2021 Webinar *Integrating TB and Mental Health Services to End the Epidemic* and presented an overview of systematic reviews on TB and mental health - focused on depression.
+I was a co-organizer of a World TB Day 2021 Webinar *Integrating TB and
+Mental Health Services to End the Epidemic* and presented an overview of
+systematic reviews on TB and mental health - focused on depression.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/eDH98iF-CBo?si=H-_njMnvc5CFMIob" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
 
 </iframe>
 
-This presentation led to a 1:1 knowledge exchange with Dr Paula Fujiwara, which informed the structure and content of the USAID discussion document she was authoring on this topic.
+This presentation led to a 1:1 knowledge exchange with Dr Paula
+Fujiwara, which informed the structure and content of the USAID
+discussion document she was authoring on this topic.
 
 ### USAID Evidence on TB and Mental Health {#sec-usaid-evidence-on-tb-and-mental-health-}
 
@@ -67,7 +67,13 @@ This presentation led to a 1:1 knowledge exchange with Dr Paula Fujiwara, which 
 
 ### TB and the risk of depression
 
-Can TB lead to a higher risk of depression? Does the lenght of stay in hospital following TB diagnosis mediate the risk of depression caused by TB? To answer these research questions, I planned and conducted a causal mediation analysis of depression risk following tuberculosis diagnosis. In that analysis, the potential mediating role of the length of stay in hospital following TB diagnosis was evaluated. Results were presented at two conferences and then published in an academic journal.
+Can TB lead to a higher risk of depression? Does the lenght of stay in
+hospital following TB diagnosis mediate the risk of depression caused by
+TB? To answer these research questions, I planned and conducted a causal
+mediation analysis of depression risk following tuberculosis diagnosis.
+In that analysis, the potential mediating role of the length of stay in
+hospital following TB diagnosis was evaluated. Results were presented at
+two conferences and then published in an academic journal.
 
 #### Symposium Speaker - World Conference on Lung Health 2021
 
@@ -75,7 +81,7 @@ Can TB lead to a higher risk of depression? Does the lenght of stay in hospital 
 [![](images/clipboard-2730942737.png){width="504"}](https://theunion.org/sites/default/files/2021-10/UNION2021_Abstracts_High.pdf)
 :::
 
-#### Oral Abstract - International Union Against TB and Lund Disease, North America Region 2021
+#### Oral Abstract - International Union Against TB and Lung Disease, North America Region 2021
 
 ::: {#fig-union_nar_2022_dep}
 [![](images/clipboard-1855321609.png){width="504"}](https://bclung.ca/wp-content/uploads/2024/06/Abstract-Book_final-2022-End-TB-Conference.pdf)
@@ -94,20 +100,33 @@ Can TB lead to a higher risk of depression? Does the lenght of stay in hospital 
 ##### Poster Presentation
 
 ::: {#fig-tramadol_poster}
-[![](images/clipboard-1964780203.png){fig-align="center" width="504"}](https://doi.org/10.1002/pds.5687)
+[![](images/clipboard-1964780203.png){fig-align="center"
+width="504"}](https://doi.org/10.1002/pds.5687)
 :::
 
 ##### Journal Article
 
-Published in the [*American Journal of Preventive Medicine*](https://www.ajpmonline.org/article/S0749-3797(24)00199-5/abstract)*,* the most comprehensive analysis of tramadol dispensations estimated trends in rates of new and ongoing use of tramadol by state since August 2014: when tramadol was placed into Schedule IV of the Controlled Drugs and Substances Act. Amounts, prescribers, co-dispensed medications, comorbidities, care settings, and demographics were analyzed among people newly initiating tramadol from 2005-2021 using commercial health insurance claims.
+Published in the [*American Journal of Preventive
+Medicine*](https://www.ajpmonline.org/article/S0749-3797(24)00199-5/abstract)*,*
+the most comprehensive analysis of tramadol dispensations estimated
+trends in rates of new and ongoing use of tramadol by state since August
+2014: when tramadol was placed into Schedule IV of the Controlled Drugs
+and Substances Act. Amounts, prescribers, co-dispensed medications,
+comorbidities, care settings, and demographics were analyzed among
+people newly initiating tramadol from 2005-2021 using commercial health
+insurance claims.
 
 ::: {#fig-tramadol_paper}
-[![](images/clipboard-1551124323.png){fig-align="center" width="504"}](https://www.ajpmonline.org/article/S0749-3797(24)00199-5/abstract)
+[![](images/clipboard-1551124323.png){fig-align="center"
+width="504"}](https://www.ajpmonline.org/article/S0749-3797(24)00199-5/abstract)
 :::
 
 #### Multilevel and mixed effects modelling in drug utilization trend analysis: a reproducible tutorial in R and SAS
 
-This project was borne from the tramadol study above, detailing methods and code for negative binomial random intercept and random slope trend models in simulated aggregate count data on opioid initiations in fictional regions. Still under development.
+This project was borne from the tramadol study above, detailing methods
+and code for negative binomial random intercept and random slope trend
+models in simulated aggregate count data on opioid initiations in
+fictional regions. Still under development.
 
 ### Comparative Safety Research
 
@@ -115,21 +134,50 @@ This project was borne from the tramadol study above, detailing methods and code
 
 ##### Poster Presentation
 
-The first presentation of this work was at ICPE on August 28th, 2024 in Berlin, Germany.
+The first presentation of this work was at ICPE on August 28th, 2024 in
+Berlin, Germany.
 
 ::: {#fig-4-opioids-ccb-oxy}
-![#fig-4](images/clipboard-3801969806.png){#fig-4-opioid-ccb-oxy width="504"}
+![#fig-4](images/clipboard-3801969806.png){#fig-4-opioid-ccb-oxy
+width="504"}
 :::
 
 ## Health Equity
 
-### Race and Ethnicity in Real-World Data and Evidence
+### What will it take to achieve meaningful action on TB among Indigenous Peoples?
+
+::: {#fig-editorial}
+![](images/clipboard-3138368266.png){width="504"}
+:::
+
+### Chair of the Global Stop TB Initiative (GISI)
+
+As (past) [Chair of the Global Stop TB Initiative (GISI) of the
+International Union Against TB and Lung
+Disease](https://theunion.org/global-indigenous-stop-tb-initiative), I
+expanded and deepened our organization's bond with Communities,
+Alliances, and Networks (CAAN).
+
+::: {#fig-gisi}
+![](images/GISI%20blanket.png){width="504"}
+:::
+
+### One Vision Many Paths: Podcast Interview
+
+During this interview, I was invited to share information about TB for a
+podcast raising awareness of TB among Indigenous Peoples and advancing
+Indigenous solutions. I also shared perspectives and from my experience
+working in Northern Manitoba on TB.
+
+::: {#fig-podcast}
+![](images/clipboard-916353267.png)
+:::
 
 #### RECORD-Race and Ethnicity
 
-##### Poster Presentation
-
-RECORD-Race and Ethnicity was first presented at the International Conference on Pharmacoepidemiology, August 28th, 2024 in Berlin, Germany.
+RECORD-Race and Ethnicity was first presented at the International
+Conference on Pharmacoepidemiology, August 28th, 2024 in Berlin,
+Germany.
 
 ::: {#fig-icpe2024-RECORD-RE}
 [![](images/clipboard-3628636280.png)](https://2024ispe.eventscribe.net/ajaxcalls/PosterInfo.asp?efp=SlhNSlFEQk0yMjQ0Nw&PosterID=677829&rnd=0.3118372)
@@ -137,7 +185,11 @@ RECORD-Race and Ethnicity was first presented at the International Conference on
 
 ## Indigenous Peoples' Health
 
-Working for Indigenous Political/Territorial Organizations, MKO and AMC, opened my eyes to the massive inequities in health between Indigenous and non-Indigenous Canadians, and the political structures that create and maintain them, formed the basis of my public health worldview and lifelong commitment to health equity.
+Working for Indigenous Political/Territorial Organizations, MKO and AMC,
+opened my eyes to massive inequities in health between Indigenous and
+non-Indigenous Canadians, and the political structures that create and
+maintain them, formed the basis of my public health worldview and
+lifelong commitment to health equity.
 
 ## Injury Epidemiology Research
 
@@ -146,7 +198,3 @@ Working for Indigenous Political/Territorial Organizations, MKO and AMC, opened 
 ::: {#fig-homicide_rate}
 [![](images/clipboard-3786676068.png){width="504"}](https://doi.org/10.17269/CJPH.107.5391)
 :::
-
-### Vancouver Violent Injury Surveillance Network (Vancouver-VISN)
-
-A project developed in PhD coursework.
