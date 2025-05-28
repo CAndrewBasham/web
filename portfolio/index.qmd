@@ -8,7 +8,7 @@ bibliography: references.bib
 Below are short descriptions of my professional work with links to
 research articles, policy documents, and media coverage.
 
-# Tuberculosis (TB)
+# TB (TB)
 
 Through knowledge generation and synthesis, my research informs
 prevention, diagnosis, and care for people diagnosed with TB
@@ -18,14 +18,15 @@ internationally.
 
 My first research interest was in TB epidemiology and program
 performance measurement through an equity lens. This interest was borne
-from my work with the Manitoba Keewatinowi Okimakanak (\textit{Cree} for
-"Northern Manitoba Chiefs"), as a Health Policy Analyst My MSc thesis
-was based on working on the MKO TB Strategy, which included a project
-called "Finding Our Ancestors" and a call for the US-CDC Program
-Objectives and Performance Targets to be applied to the TB programming
-provided to MKO First Nations to ensure transparent review aimed at
-eliminating TB with community partnership established based on that
-common goal.
+from my work in northern Manitoba. I was a Health Policy Analyst working
+for the Manitoba Keewatinowi Okimakanak (MKO), Inc. Working on the
+Northern Manitoba First Nations Health Strategy, listeningcollecting and
+quantitative (health statisticommunity health survey . My MSc thesis was
+based on working on the MKO TB Strategy, which included a project called
+"Finding Our Ancestors" and a call for the US-CDC Program Objectives and
+Performance Targets to be applied to the TB programming provided to MKO
+First Nations to ensure transparent review aimed at eliminating TB with
+community partnership established based on that common goal.
 
 ::: {#fig-article-tb-north-perform}
 [![](images/basham-cjph2019.png)](https://https://doi.org/10.17269/s41997-019-00231-2)
