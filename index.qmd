@@ -9,7 +9,6 @@ execute:
 ![](images/Basham_headshot.jpg){fig-align="center" width="284"}
 
 Dr. C Andrew Basham, B.A., M.Sc., Ph.D.
-<<<<<<< HEAD
 
 <!--# >My goal as an epidemiologist is to advance causal inference in the epidemiological research to enable individuals and communities to contribute to the design and interpretation of statistical analyses describing their lived experiences and influencing the policies, programs, and practices that impact their lives. <!--#  -->
 
@@ -35,9 +34,6 @@ investigations.
 Sincerely,
 
 **C. Andrew Basham, PhD**
-=======
-:::
->>>>>>> 13dcbd1f8bfc4e1dfb10054a323234444787a4d0
 
 Email: info\\\@\\andrewbasham.com
 
