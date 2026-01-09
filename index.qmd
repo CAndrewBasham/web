@@ -6,25 +6,30 @@ execute:
 
 # Welcome
 
-::: {#fig-headshot}
 ![](images/Basham_headshot.jpg){fig-align="center" width="284"}
 
 Dr. C Andrew Basham, B.A., M.Sc., Ph.D.
-:::
-
-Thank you for visiting my open-source [Quarto
-website](https://quarto.org/docs/websites/).
 
 <!--# >My goal as an epidemiologist is to advance causal inference in the epidemiological research to enable individuals and communities to contribute to the design and interpretation of statistical analyses describing their lived experiences and influencing the policies, programs, and practices that impact their lives. <!--#  -->
 
 <!--# The extensive skills and knowledge I bring to teaching are built on research integrity: relevance, rigour, reviewability, and reproducibility.  -->
 
-I am an epidemiologist specializing in causal inference using large
-relational healthcare databases. I have over 15 years experience using
-SAS and R working in professional collaborative coding environments
-producing decision-grade evidence with open science principles. As an
-educator, I provide world-class training that students require to
-prevail in highly competitive job markets.
+Hello World,
+
+Thank you for visiting my website.
+
+I am an epidemiologist specializing in causal inference based on
+observational data analyses. I have extensive data science experience
+using SAS and R to manage and analyze large relational healthcare
+databases in collaborative coding environments to produce decision-grade
+evidence. I educate trainees in epidemiology and biostatistics through
+grounded in the principles of open science learned through practical
+experience conducting applied research. My research interests include
+critical illness survivorship, pharmacoepidemiology (drug safety and
+effectiveness), pharmacoequity, drug utilization, public health program
+performance measurement, infectious disease modelling, violence
+epidemiology, race and ethnicity data, and structural missing data
+investigations.
 
 Sincerely,
 
