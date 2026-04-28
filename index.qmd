@@ -14,8 +14,6 @@ Dr. C Andrew Basham, B.A., M.Sc., Ph.D.
 
 <!--# The extensive skills and knowledge I bring to teaching are built on research integrity: relevance, rigour, reviewability, and reproducibility.  -->
 
-Hello World,
-
 Thank you for visiting my website.
 
 I am an epidemiologist specializing in causal inference based on
