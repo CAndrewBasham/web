@@ -17,6 +17,22 @@ or have any questions for me, please reach out through email:
 web{at}andrewbasham.com
 
 Thank you for visiting, I look forward to hearing from you.
+<!--# The extensive skills and knowledge I bring to teaching are built on research integrity: relevance, rigour, reviewability, and reproducibility.  -->
+
+Thank you for visiting my website.
+
+I am an epidemiologist specializing in causal inference based on
+observational data analyses. I have extensive data science experience
+using SAS and R to manage and analyze large relational healthcare
+databases in collaborative coding environments to produce decision-grade
+evidence. I educate trainees in epidemiology and biostatistics through
+grounded in the principles of open science learned through practical
+experience conducting applied research. My research interests include
+critical illness survivorship, pharmacoepidemiology (drug safety and
+effectiveness), pharmacoequity, drug utilization, public health program
+performance measurement, infectious disease modelling, violence
+epidemiology, race and ethnicity data, and structural missing data
+investigations.
 
 Sincerely,
 
