@@ -6,43 +6,18 @@ execute:
 
 # Welcome
 
-![](images/Basham_headshot.jpg){fig-align="center" width="284"}
+On this website you will find information about me and my professional
+experiences, academic work, and community service.
 
-Dr. C Andrew Basham, B.A., M.Sc., Ph.D.
+I provide software generated during my academic research as well as
+links to published articles presenting those works.
 
-<!--# >My goal as an epidemiologist is to advance causal inference in the epidemiological research to enable individuals and communities to contribute to the design and interpretation of statistical analyses describing their lived experiences and influencing the policies, programs, and practices that impact their lives. <!--#  -->
+I hope you find this useful and if you see anything missing or in error,
+or have any questions for me, please reach out through email:
+web{at}andrewbasham.com
 
-<!--# The extensive skills and knowledge I bring to teaching are built on research integrity: relevance, rigour, reviewability, and reproducibility.  -->
-
-Hello World,
-
-Thank you for visiting my website.
-
-I am an epidemiologist specializing in causal inference based on
-observational data analyses. I have extensive data science experience
-using SAS and R to manage and analyze large relational healthcare
-databases in collaborative coding environments to produce decision-grade
-evidence. I educate trainees in epidemiology and biostatistics through
-grounded in the principles of open science learned through practical
-experience conducting applied research. My research interests include
-critical illness survivorship, pharmacoepidemiology (drug safety and
-effectiveness), pharmacoequity, drug utilization, public health program
-performance measurement, infectious disease modelling, violence
-epidemiology, race and ethnicity data, and structural missing data
-investigations.
+Thank you for visiting, I look forward to hearing from you.
 
 Sincerely,
 
-**C. Andrew Basham, PhD**
-
-Email: info\\\@\\andrewbasham.com
-
-Web: <https://andrewbasham.com/>
-
-LinkedIn: <https://www.linkedin.com/in/candrewbasham/>
-
-Open Science Framework: <https://osf.io/mny8b/>
-
-GitHub: <https://github.com/CAndrewBasham>
-
-Bluesky: <https://bsky.app/profile/andrewbasham.bsky.social>
+C. Andrew Basham
