@@ -6,8 +6,8 @@ execute:
 
 # Welcome
 
-On this website you will find information about me and my professional
-experiences, academic work, and community service.
+On this website you will find information about my professional work,
+academic research, and community service.
 
 I provide software generated during my academic research as well as
 links to published articles presenting those works.
